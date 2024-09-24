@@ -1,0 +1,111 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- 项目模型版本 -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Spring Boot 父项目配置 -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.3.4</version> <!-- Spring Boot 版本 -->
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <!-- 项目信息 -->
+    <groupId>com.xiuxian</groupId>
+    <artifactId>xiuxian-server</artifactId>
+    <version>0.0.1-SNAPSHOT</version> <!-- 项目版本 -->
+    <name>Xiuxian Server</name> <!-- 项目名称 -->
+    <description>Xiuxian Server</description> <!-- 项目描述 -->
+
+    <!-- 项目属性配置 -->
+    <properties>
+        <!-- Java 版本，使用 JDK 17 -->
+        <java.version>17</java.version>
+    </properties>
+
+    <!-- Maven 仓库配置 -->
+    <repositories>
+        <!-- 使用阿里云的 Maven 仓库镜像，加快依赖下载速度 -->
+        <repository>
+            <id>aliyun-maven</id>
+            <url>https://maven.aliyun.com/repository/public</url>
+        </repository>
+    </repositories>
+
+    <!-- 项目依赖配置 -->
+    <dependencies>
+        <!-- Spring Boot Data JPA，提供与数据库的交互 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <!-- Spring Boot Web Starter，提供 REST API 支持 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- Spring Boot Validation，提供输入数据验证 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+        <!-- Lombok，简化 Java 代码，自动生成常用方法（如getters、setters等） -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- MySQL 连接器，用于连接 MySQL 数据库 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.32</version>  <!-- 具体版本可以根据需要调整 -->
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- Spring Boot DevTools，提供开发时的热部署功能 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- Spring Boot Test Starter，提供测试框架支持 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <!-- 项目构建配置 -->
+    <build>
+        <!-- 插件配置 -->
+        <plugins>
+            <!-- Spring Boot Maven 插件，用于打包和运行 Spring Boot 项目 -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+            <!-- Maven Compiler 插件，用于指定 Java 编译版本 -->
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <configuration>
+                    <source>17</source> <!-- 使用 JDK 17 编译源代码 -->
+                    <target>17</target> <!-- 目标 JDK 版本 -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
