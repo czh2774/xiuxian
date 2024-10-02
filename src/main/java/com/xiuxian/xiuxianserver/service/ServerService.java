@@ -4,35 +4,36 @@ import com.xiuxian.xiuxianserver.entity.Server;
 import com.xiuxian.xiuxianserver.repository.ServerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
+import java.util.Optional;
 
 /**
- * 服务器服务类，负责处理服务器相关的业务逻辑
+ * 服务层，处理与服务器相关的业务逻辑。
  */
 @Service
 public class ServerService {
 
-    @Autowired
-    private ServerRepository serverRepository;
+    private final ServerRepository serverRepository;
 
-    /**
-     * 获取所有服务器，按创建时间倒序排列
-     *
-     * @return 所有服务器的列表
-     */
-    public List<Server> getAllServers() {
-        return serverRepository.findAllByOrderByCreatedAtDesc();
+    @Autowired
+    public ServerService(ServerRepository serverRepository) {
+        this.serverRepository = serverRepository;
     }
 
     /**
-     * 通过ID选择服务器
-     *
-     * @param serverId 服务器ID
-     * @return 服务器信息
+     * 获取所有服务器。
+     * @return 服务器列表
      */
-    public Server selectServerById(Long serverId) {
-        return serverRepository.findById(serverId)
-                .orElseThrow(() -> new IllegalArgumentException("服务器未找到: " + serverId));
+    public List<Server> getAllServers() {
+        return serverRepository.findAll();  // 可能抛出数据库异常
+    }
+
+    /**
+     * 根据服务器 ID 选择服务器。
+     * @param id 服务器 ID
+     * @return 选中的服务器，如果不存在则返回空
+     */
+    public Optional<Server> selectServer(Long id) {
+        return serverRepository.findById(id);  // 可能抛出数据库异常
     }
 }

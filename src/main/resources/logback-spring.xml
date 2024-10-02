@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds">
+    <!-- 从 Spring 配置中读取应用程序名称 -->
+    <springProperty scope="context" name="springAppName" source="spring.application.name"/>
+
+    <!-- 控制台输出的日志配置 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} [%X{X-B3-TraceId}/%X{X-B3-SpanId}] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 日志文件的滚动配置，每天生成一个新的日志文件，并且保留30天的历史日志 -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_DIR}/${springAppName}.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_DIR}/${springAppName}.%d{yyyy-MM-dd}.log.zip</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 全局日志的根配置，默认级别为 INFO，可以根据需要调整为 DEBUG、WARN 等 -->
+    <root level="info">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FILE" />
+    </root>
+
+    <!-- 增加全局异常和请求响应日志的配置 -->
+    <logger name="com.yourpackage.GlobalExceptionHandler" level="info" additivity="false">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FILE" />
+    </logger>
+
+    <logger name="com.yourpackage.ApiResponseAdvice" level="info" additivity="false">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FILE" />
+    </logger>
+</configuration>

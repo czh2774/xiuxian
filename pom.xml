@@ -13,7 +13,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <!-- 项目信息 -->
+    <!-- 项目信息 --><!-- 项目依赖配置 -->
     <groupId>com.xiuxian</groupId>
     <artifactId>xiuxian-server</artifactId>
     <version>0.0.1-SNAPSHOT</version> <!-- 项目版本 -->
@@ -26,13 +26,19 @@
         <java.version>17</java.version>
     </properties>
 
+
     <!-- Maven 仓库配置 -->
-    <repositories>
-        <!-- 使用阿里云的 Maven 仓库镜像，加快依赖下载速度 -->
+    <repositories><!-- Maven中央仓库（默认） -->
         <repository>
-            <id>aliyun-maven</id>
-            <url>https://maven.aliyun.com/repository/public</url>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
         </repository>
+
+        <!-- 使用阿里云的 Maven 仓库镜像，加快依赖下载速度 -->
+<!--        <repository>-->
+<!--            <id>aliyun-maven</id>-->
+<!--            <url>https://maven.aliyun.com/repository/public</url>-->
+<!--        </repository>-->
     </repositories>
 
     <!-- 项目依赖配置 -->
@@ -41,6 +47,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <!-- H2 数据库，用于测试 -->
+        <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+            <version>3.1.0</version>
         </dependency>
 
         <!-- Spring Boot Web Starter，提供 REST API 支持 -->
@@ -59,8 +71,26 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <optional>true</optional>
         </dependency>
+
+        <!-- Swagger -->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>2.6.0</version>
+        </dependency>
+<!--        引入 Apache POI 依赖-->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.3.0</version> <!-- 最新版本，检查版本号 -->
+        </dependency>
+        <!-- WebSocket 支持 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-websocket</artifactId>
+        </dependency>
+
 
         <!-- MySQL 连接器，用于连接 MySQL 数据库 -->
         <dependency>
@@ -70,6 +100,8 @@
             <scope>runtime</scope>
         </dependency>
 
+
+
         <!-- Spring Boot DevTools，提供开发时的热部署功能 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -78,11 +110,21 @@
             <optional>true</optional>
         </dependency>
 
+
         <!-- Spring Boot Test Starter，提供测试框架支持 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.jayway.jsonpath</groupId>
+            <artifactId>json-path</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-common</artifactId>
+            <version>1.6.14</version>
         </dependency>
     </dependencies>
 
