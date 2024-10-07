@@ -6,6 +6,7 @@ import lombok.Data;
 import jakarta.persistence.*;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.math.BigDecimal;
 
 /**
  * 建筑模板表，定义建筑的基础信息，如名称、是否可升级、最大等级等。
@@ -47,4 +48,6 @@ public class BuildingTemplate {
     @Schema(description = "最大等级", example = "10")
     @ExcelColumn(headerName = "最大等级", comment = "建筑的最大等级")
     private int maxLevel; // 建筑的最大等级
+
+
 }

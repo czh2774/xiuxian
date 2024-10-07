@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebSocket Demo</title>
+  <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1.5.1/dist/sockjs.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+  <script type="text/javascript">
+    var stompClient = null;
+
+    // 连接 WebSocket 服务器
+    function connect() {
+      var socket = new SockJS('/ws');  // 使用 SockJS 连接 WebSocket 端点
+      stompClient = Stomp.over(socket);  // 使用 STOMP 协议进行通信
+      stompClient.connect({}, function (frame) {
+        console.log('Connected: ' + frame);  // 成功连接后在控制台打印连接信息
+        stompClient.subscribe('/topic/greetings', function (greeting) {  // 订阅主题 "/topic/greetings"
+          showGreeting(greeting.body);  // 收到消息时调用 showGreeting 方法
+        });
+      });
+    }
+
+    // 断开 WebSocket 连接
+    function disconnect() {
+      if (stompClient !== null) {
+        stompClient.disconnect();  // 断开连接
+      }
+      console.log("Disconnected");
+    }
+
+    // 发送名称到服务器
+    function sendName() {
+      var name = document.getElementById('name').value;  // 获取输入框中的名称
+      stompClient.send("/app/hello", {}, name);  // 通过 "/app/hello" 发送消息
+    }
+
+    // 显示服务器返回的问候消息
+    function showGreeting(message) {
+      var response = document.getElementById('response');
+      response.innerHTML += "<p>" + message + "</p>";  // 将消息显示在页面上
+    }
+  </script>
+</head>
+<body>
+<h2>WebSocket Demo</h2>
+<div>
+  <input type="text" id="name" placeholder="Enter your name"/>  <!-- 输入框，用于输入名称 -->
+  <button onclick="sendName()">Send</button>  <!-- 点击按钮发送消息 -->
+</div>
+<div id="response"></div>  <!-- 显示响应消息的区域 -->
+
+<script type="text/javascript">
+  connect();  // 页面加载时自动连接 WebSocket
+</script>
+</body>
+</html>

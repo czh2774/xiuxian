@@ -7,28 +7,28 @@ import java.util.logging.Logger;
  *
  * @param <T> 响应数据的类型
  */
-public class ApiResponse<T> {
-    private static final Logger LOGGER = Logger.getLogger(ApiResponse.class.getName());
+public class CustomApiResponse<T> {
+    private static final Logger LOGGER = Logger.getLogger(CustomApiResponse.class.getName());
     private int status;   // HTTP 状态码
     private String message; // 响应消息
     private T data;       // 响应数据
 
     // 无参构造方法
-    public ApiResponse() {}
+    public CustomApiResponse() {}
 
     // 构造方法：只有状态码
-    public ApiResponse(int status) {
+    public CustomApiResponse(int status) {
         setStatus(status);
     }
 
     // 构造方法：状态码和消息
-    public ApiResponse(int status, String message) {
+    public CustomApiResponse(int status, String message) {
         setStatus(status);
         setMessage(message);
     }
 
     // 构造方法：状态码、消息和数据
-    public ApiResponse(int status, String message, T data) {
+    public CustomApiResponse(int status, String message, T data) {
         setStatus(status);
         setMessage(message);
         setData(data);

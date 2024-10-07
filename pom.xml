@@ -61,6 +61,7 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+
         <!-- Spring Boot Validation，提供输入数据验证 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
