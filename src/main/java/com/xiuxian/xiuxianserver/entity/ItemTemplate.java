@@ -1,6 +1,6 @@
 package com.xiuxian.xiuxianserver.entity;
 
-import com.xiuxian.xiuxianserver.annotations.ExcelColumn;
+import com.xiuxian.xiuxianserver.util.ExcelColumn;
 import com.xiuxian.xiuxianserver.enums.RarityEnum;
 import com.xiuxian.xiuxianserver.enums.VisualEffectEnum;
 import com.xiuxian.xiuxianserver.enums.ChestTypeEnum;

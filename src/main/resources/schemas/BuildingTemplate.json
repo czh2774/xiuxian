@@ -1,0 +1,24 @@
+{
+  "type" : "object",
+  "properties" : {
+    "buildingTemplateId" : {
+      "type" : "integer"
+    },
+    "name" : {
+      "type" : "string"
+    },
+    "description" : {
+      "type" : "string"
+    },
+    "isUpgradeable" : { },
+    "imageUrl" : {
+      "type" : "string"
+    },
+    "requiredPlayerLevel" : {
+      "type" : "integer"
+    },
+    "maxLevel" : {
+      "type" : "integer"
+    }
+  }
+}

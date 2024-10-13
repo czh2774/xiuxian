@@ -1,0 +1,23 @@
+{
+  "type" : "object",
+  "properties" : {
+    "itemInstanceId" : {
+      "type" : "string"
+    },
+    "characterId" : {
+      "type" : "string"
+    },
+    "itemTemplateId" : {
+      "type" : "string"
+    },
+    "quantity" : {
+      "type" : "integer"
+    },
+    "acquiredAt" : { },
+    "itemCategory" : { },
+    "lastUsedAt" : { },
+    "isEquipped" : { },
+    "createdAt" : { },
+    "updatedAt" : { }
+  }
+}

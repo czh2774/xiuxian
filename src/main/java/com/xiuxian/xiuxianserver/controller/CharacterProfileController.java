@@ -1,154 +1,141 @@
 package com.xiuxian.xiuxianserver.controller;
 
 import com.xiuxian.xiuxianserver.dto.*;
-import com.xiuxian.xiuxianserver.entity.CharacterProfile;
 import com.xiuxian.xiuxianserver.service.CharacterProfileService;
-import com.xiuxian.xiuxianserver.util.SnowflakeIdGenerator;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.responses.ApiResponses;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 /**
- * CharacterProfileController 用于处理与角色相关的 API 请求。
+ * CharacterProfileController
+ * 处理与角色档案相关的请求，并将其转发到服务层进行处理。
  */
 @RestController
-@RequestMapping("/api/characters")
+@RequestMapping("/profiles")
 public class CharacterProfileController {
 
     private final CharacterProfileService characterProfileService;
-    private final SnowflakeIdGenerator snowflakeIdGenerator;
 
-    @Autowired
-    public CharacterProfileController(CharacterProfileService characterProfileService, SnowflakeIdGenerator snowflakeIdGenerator) {
+    public CharacterProfileController(CharacterProfileService characterProfileService) {
         this.characterProfileService = characterProfileService;
-        this.snowflakeIdGenerator = snowflakeIdGenerator;
     }
 
     /**
-     * 创建新角色
-     * @param createDTO 包含新角色的相关信息
-     * @return 创建成功的角色信息
+     * 创建新的角色档案
+     *
+     * @param createDTO 创建角色档案请求的DTO
+     * @return 创建成功后的角色档案DTO
      */
-    @Operation(summary = "创建新角色", description = "通过提供必要的角色信息创建一个新角色")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "201", description = "角色创建成功"),
-            @ApiResponse(responseCode = "400", description = "请求参数有误")
-    })
     @PostMapping("/create")
-    public CharacterProfile createCharacter(@RequestBody CharacterProfileCreateDTO createDTO) {
-        CharacterProfile characterProfile = new CharacterProfile();
+    @Operation(summary = "创建新的角色档案", description = "创建新角色时使用")
+    @ApiResponse(responseCode = "201", description = "角色档案创建成功")
+    public CharacterProfileDTO createProfile(@RequestBody CharacterProfileCreateDTO createDTO) {
+        return characterProfileService.createCharacterProfile(createDTO);
+    }
 
-        // 生成雪花ID
-        long characterId = snowflakeIdGenerator.nextId();
-        characterProfile.setCharacterId(characterId); // 设置生成的角色ID
-        characterProfile.setStatus("normal"); // 或者您想要的其他默认值
-        characterProfile.setPlayerId(createDTO.getPlayerId());
-        characterProfile.setName(createDTO.getName());
-        characterProfile.setFaction(createDTO.getFaction());
 
-        // 其他属性可以设置为默认值或随机生成
-        characterProfile.setAvatar("default_avatar_url");
-        characterProfile.setCombatPower(0);
-        characterProfile.setTitleLevel(0);
-        characterProfile.setOfficialPosition("none");
-        characterProfile.setCreatedAt(LocalDateTime.now());
-        characterProfile.setUpdatedAt(LocalDateTime.now());
-
-        // 调用服务层方法进行角色的创建
-        return characterProfileService.createCharacterProfile(characterProfile);
+    /**
+     * 根据角色ID获取角色档案的所有信息
+     *
+     * @param requestDTO 包含角色ID的请求DTO
+     * @return 角色的基本信息
+     */
+    @PostMapping("/allInfo")
+    @Operation(summary = "获取角色的所有信息", description = "根据角色ID查询角色的所有信息")
+    @ApiResponse(responseCode = "200", description = "获取角色的所有信息成功")
+    public CharacterProfileDTO getProfileBasicInfo(@RequestBody CharacterProfileDTO requestDTO) {
+        return characterProfileService.getCharacterProfileAllInfo(requestDTO.getCharacterId());
     }
 
     /**
-     * 根据ID获取角色
-     * @param request 包含角色ID的请求体
-     * @return 角色信息
+     * 根据角色ID获取角色档案的基本信息
+     *
+     * @param requestDTO 包含角色ID的请求DTO
+     * @return 角色的基本信息
      */
-    @Operation(summary = "根据ID获取角色", description = "根据角色ID获取角色信息")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "成功获取角色信息"),
-            @ApiResponse(responseCode = "404", description = "角色未找到")
-    })
-    @PostMapping("/getById")
-    public CharacterProfile getCharacterById(@RequestBody CharacterIdRequestDTO request) {
-        return characterProfileService.getCharacterProfileById(request.getCharacterId());
+    @PostMapping("/basicInfo")
+    @Operation(summary = "获取角色的基本信息", description = "根据角色ID查询角色的基本信息")
+    @ApiResponse(responseCode = "200", description = "获取角色的基本信息成功")
+    public CharacterProfileBasicInfoDTO getProfileBasicInfo(@RequestBody CharacterIdRequestDTO requestDTO) {
+        return characterProfileService.getCharacterProfileBasicInfo(requestDTO.getCharacterId());
     }
 
     /**
-     * 更新角色信息
-     * @param updateDTO 包含更新信息的角色DTO
-     * @return 更新后的角色信息
+     * 根据角色ID获取角色的资源信息
+     *
+     * @param requestDTO 包含角色ID的请求DTO
+     * @return 角色的资源信息
      */
-    @Operation(summary = "更新角色信息", description = "通过提供角色ID和更新字段更新角色信息")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "角色信息更新成功"),
-            @ApiResponse(responseCode = "404", description = "角色未找到")
-    })
-    @PostMapping("/update")
-    public CharacterProfile updateCharacter(@RequestBody CharacterProfileUpdateDTO updateDTO) {
-        CharacterProfile characterProfile = characterProfileService.getCharacterProfileById(updateDTO.getCharacterId());
-
-        // 根据DTO更新角色信息
-        if (updateDTO.getName() != null) characterProfile.setName(updateDTO.getName());
-        if (updateDTO.getAvatar() != null) characterProfile.setAvatar(updateDTO.getAvatar());
-        // 更新其它字段...
-
-        return characterProfileService.updateCharacterProfile(characterProfile);
+    @PostMapping("/resourceInfo")
+    @Operation(summary = "获取角色的资源信息", description = "根据角色ID查询角色的资源信息")
+    @ApiResponse(responseCode = "200", description = "获取角色的资源信息成功")
+    public CharacterProfileResourceInfoDTO getProfileResourceInfo(@RequestBody CharacterIdRequestDTO requestDTO) {
+        return characterProfileService.getCharacterProfileResourceInfo(requestDTO.getCharacterId());
     }
 
     /**
-     * 删除角色
-     * @param characterId 角色ID
+     * 更新角色的资源信息
+     *
+     * @param updateDTO 角色资源更新请求DTO
      */
-    @Operation(summary = "删除角色", description = "根据角色ID删除角色")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "204", description = "角色删除成功"),
-            @ApiResponse(responseCode = "404", description = "角色未找到")
-    })
-    @PostMapping("/delete")
-    public void deleteCharacter(@RequestBody Long characterId) {
-        characterProfileService.deleteCharacterProfile(characterId);
+    @PostMapping("/updateResource")
+    @Operation(summary = "更新角色的资源信息", description = "更新角色的资源信息，如金币、经验等")
+    @ApiResponse(responseCode = "200", description = "角色资源更新成功")
+    public void updateProfileResource(@RequestBody CharacterProfileResourceUpdateDTO updateDTO) {
+        characterProfileService.updateCharacterProfileResource(updateDTO);
     }
 
     /**
-     * 获取所有角色
-     * @return 所有角色信息的列表
+     * 更新角色派系信息
+     *
+     * @param factionUpdateDTO 角色派系更新请求DTO
      */
-    @Operation(summary = "获取所有角色", description = "获取所有角色信息")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "成功获取所有角色信息")
-    })
-    @PostMapping("/getAll")
-    public List<CharacterProfile> getAllCharacters() {
-        return characterProfileService.getAllCharacterProfiles();
-    }
-
-    // 更新角色势力
     @PostMapping("/updateFaction")
-    public CharacterProfile updateFaction(@RequestBody CharacterProfileFactionUpdateDTO factionUpdateDTO) {
-        CharacterProfile characterProfile = characterProfileService.getCharacterProfileById(factionUpdateDTO.getCharacterId());
-        characterProfile.setFaction(factionUpdateDTO.getFaction());
-        return characterProfileService.updateCharacterProfile(characterProfile);
+    @Operation(summary = "更新角色的派系信息", description = "更新角色的派系，如加入新的派系")
+    @ApiResponse(responseCode = "200", description = "角色派系更新成功")
+    public void updateProfileFaction(@RequestBody CharacterProfileFactionUpdateDTO factionUpdateDTO) {
+        characterProfileService.updateCharacterFaction(factionUpdateDTO);
     }
 
-    // 获取角色的资源信息
-    @PostMapping("/getResourceInfo")
-    public CharacterProfileResourceInfoDTO getResourceInfo(@RequestBody Long characterId) {
-        return characterProfileService.getResourceInfo(characterId);
+    /**
+     * 部分更新角色的档案信息
+     *
+     * @param partialUpdateDTO 角色档案部分更新请求DTO
+     * @return 更新后的角色档案信息
+     */
+    @PostMapping("/partialUpdate")
+    @Operation(summary = "部分更新角色档案信息", description = "部分更新角色档案信息")
+    @ApiResponse(responseCode = "200", description = "角色档案部分更新成功")
+    public CharacterProfileDTO partialUpdateProfile(@RequestBody CharacterProfilePartialUpdateDTO partialUpdateDTO) {
+        return characterProfileService.partialUpdateCharacterProfile(partialUpdateDTO);
     }
 
-    // 更新角色的资源
-    @PostMapping("/updateResources")
-    public CharacterProfile updateResources(@RequestBody CharacterProfileResourceUpdateDTO resourceUpdateDTO) {
-        CharacterProfile characterProfile = characterProfileService.getCharacterProfileById(resourceUpdateDTO.getCharacterId());
-        // 更新资源字段
-        if (resourceUpdateDTO.getYuanbao() >= 0) characterProfile.setYuanbao(resourceUpdateDTO.getYuanbao());
-        if (resourceUpdateDTO.getCopperCoins() >= 0) characterProfile.setCopperCoins(resourceUpdateDTO.getCopperCoins());
-        return characterProfileService.updateCharacterProfile(characterProfile);
+    /**
+     * 完整更新角色的档案信息
+     *
+     * @param updateDTO 角色档案更新请求DTO
+     * @return 更新后的角色档案信息
+     */
+    @PostMapping("/update")
+    @Operation(summary = "更新角色档案信息", description = "完整更新角色档案信息")
+    @ApiResponse(responseCode = "200", description = "角色档案更新成功")
+
+    public CharacterProfileDTO updateProfile(@Valid @RequestBody CharacterProfileUpdateDTO updateDTO) {
+        return characterProfileService.updateCharacterProfile(updateDTO);
+    }
+
+    /**
+     * 删除角色档案
+     *
+     * @param requestDTO 包含角色ID的请求DTO
+     */
+    @PostMapping("/delete")
+    @Operation(summary = "删除角色档案", description = "根据角色ID删除角色档案")
+    @ApiResponse(responseCode = "204", description = "角色档案删除成功")
+    public void deleteProfile(@RequestBody CharacterIdRequestDTO requestDTO) {
+        characterProfileService.deleteCharacterProfile(requestDTO.getCharacterId());
     }
 }
-

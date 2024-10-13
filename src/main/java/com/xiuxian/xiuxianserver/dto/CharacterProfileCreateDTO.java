@@ -1,20 +1,26 @@
 package com.xiuxian.xiuxianserver.dto;
 
-import lombok.Data;
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
- * 创建角色 DTO
+ * CharacterProfileCreateDTO
+ * 用于创建新角色档案的DTO类
  */
 @Data
-@Schema(description = "创建角色 DTO，包含创建角色所需的属性")
+@NoArgsConstructor
+@AllArgsConstructor
+@Schema(description = "角色档案创建DTO")
 public class CharacterProfileCreateDTO {
-    @Schema(description = "所属玩家ID")
-    private Long playerId; // 所属玩家ID
+    @Schema(description = "角色Token", example = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VySWQiLCJleHAiOjE2Mjg3NzUyNDQsImlhdCI6MTYyODc3MTY0NH0.XU6n89QVceCJH0QsSY8JgUSQYBO5E3UrTZa4dX09MK8\n")
+    private String token;
 
-    @Schema(description = "角色名称")
-    private String name; // 角色名称
+    @Schema(description = "角色名", example = "Hero")
+    private String name;
 
-    @Schema(description = "角色所属势力ID")
-    private String faction; // 角色所属势力ID
+
+    @Schema(description = "角色派系ID", example = "2001")
+    private String faction;
 }

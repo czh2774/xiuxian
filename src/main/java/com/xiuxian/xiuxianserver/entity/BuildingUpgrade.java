@@ -1,7 +1,7 @@
 package com.xiuxian.xiuxianserver.entity;
 
 import com.xiuxian.xiuxianserver.util.ExcelField;
-import com.xiuxian.xiuxianserver.annotations.ExcelColumn;
+import com.xiuxian.xiuxianserver.util.ExcelColumn;
 import lombok.Data;
 import jakarta.persistence.*;
 
@@ -35,15 +35,24 @@ public class BuildingUpgrade {
     @ExcelColumn(headerName = "升级时间", comment = "升级到该等级所需的时间，单位为秒")
     private int upgradeTime; // 升级时间
 
-    @Schema(description = "资源消耗", example = "{\"wood\": 500, \"iron\": 300}")
-    @ExcelColumn(headerName = "资源消耗", comment = "升级该建筑所需的资源，JSON格式")
-    private String resourceCost; // 资源消耗（JSON格式）
+    // 修改后的资源消耗字段
+    @Schema(description = "消耗的粮食数量", example = "500")
+    @ExcelColumn(headerName = "消耗粮食", comment = "升级该建筑所需的粮食")
+    private int foodCost; // 消耗粮食
 
-    @Schema(description = "建筑效果", example = "{\"resource_bonus\": {\"wood\": 10}}")
+    @Schema(description = "消耗的木材数量", example = "300")
+    @ExcelColumn(headerName = "消耗木材", comment = "升级该建筑所需的木材")
+    private int woodCost; // 消耗木材
+
+    @Schema(description = "消耗的铁矿数量", example = "200")
+    @ExcelColumn(headerName = "消耗铁矿", comment = "升级该建筑所需的铁矿")
+    private int ironCost; // 消耗铁矿
+
+    @Schema(description = "建筑效果", example = "[{CAVALRY_STOCK_CAPACITY: 1},{INFANTRY_TRAINING_AMOUNT.2}")
     @ExcelColumn(headerName = "建筑效果", comment = "升级后的建筑效果，JSON格式")
     private String effect; // 建筑效果（JSON格式）
 
-    @Schema(description = "升级条件", example = "{\"required_buildings\": [{\"building_id\": 2, \"level\": 5}], \"player_level\": 10}")
+    @Schema(description = "升级条件", example = "[{required_buildings:[{building_id:2,level:5}],player_level:10},{required_buildings:[{building_id:4,level:5}],player_level:10}]")
     @ExcelColumn(headerName = "升级条件", comment = "升级的前置条件，JSON格式")
     private String upgradeRequirements; // 升级条件（JSON格式）
 }

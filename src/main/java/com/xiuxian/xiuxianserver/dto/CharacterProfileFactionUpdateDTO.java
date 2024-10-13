@@ -1,9 +1,13 @@
 package com.xiuxian.xiuxianserver.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Schema(description = "角色势力更新信息传输对象，用于更新角色的势力")
 public class CharacterProfileFactionUpdateDTO {
 

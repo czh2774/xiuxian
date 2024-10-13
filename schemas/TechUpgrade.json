@@ -1,0 +1,71 @@
+{
+  "type" : "object",
+  "properties" : {
+    "techUpgradeId" : {
+      "type" : "integer"
+    },
+    "techTemplateId" : {
+      "type" : "integer"
+    },
+    "level" : {
+      "type" : "integer"
+    },
+    "researchTime" : {
+      "type" : "integer"
+    },
+    "researchRequirements" : {
+      "type" : "object",
+      "properties" : {
+        "required_buildings" : {
+          "type" : "array",
+          "items" : {
+            "type" : "object",
+            "properties" : {
+              "building_id" : {
+                "type" : "integer"
+              },
+              "level" : {
+                "type" : "integer"
+              }
+            }
+          }
+        },
+        "required_techs" : {
+          "type" : "array",
+          "items" : {
+            "type" : "object",
+            "properties" : {
+              "tech_id" : {
+                "type" : "integer"
+              }
+            }
+          }
+        }
+      }
+    },
+    "resourceCost" : {
+      "type" : "object",
+      "properties" : {
+        "wood" : {
+          "type" : "integer"
+        },
+        "iron" : {
+          "type" : "integer"
+        }
+      }
+    },
+    "effect" : {
+      "type" : "object",
+      "properties" : {
+        "resource_bonus" : {
+          "type" : "object",
+          "properties" : {
+            "food" : {
+              "type" : "integer"
+            }
+          }
+        }
+      }
+    }
+  }
+}

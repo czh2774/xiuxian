@@ -1,0 +1,35 @@
+[{
+        "effects": [
+                {
+                        "type": "LAND_BUILDING_LEVEL_LIMIT",
+                        "baseValue": 4,
+                        "bonusValue": 1
+                },
+                {
+                        "type": "HERO_LEVEL_LIMIT",
+                        "baseValue": 3,
+                        "bonusValue": 3
+                }
+        ]
+},
+{
+"effects": [
+{
+"type": "DAILY_TREASURE_STORE_PURCHASE",
+"baseValue": 22,
+"bonusValue": 2
+}
+]
+}
+        ]
+},
+{
+"effects": [
+{
+"type": "DAILY_BOAT_COUNT",
+"baseValue": 6,
+"bonusValue": 1
+}
+]
+}
+]

@@ -1,0 +1,15 @@
+{
+  "type" : "object",
+  "properties" : {
+    "id" : {
+      "type" : "integer"
+    },
+    "userId" : {
+      "type" : "integer"
+    },
+    "loginTime" : { },
+    "ipAddress" : {
+      "type" : "string"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "type" : "object",
+  "properties" : {
+    "resourcePointId" : {
+      "type" : "integer"
+    },
+    "name" : {
+      "type" : "string"
+    },
+    "description" : {
+      "type" : "string"
+    },
+    "resourceType" : { },
+    "resourceProductionRate" : {
+      "type" : "integer"
+    },
+    "maxStorageHours" : {
+      "type" : "integer"
+    },
+    "gatheringTime" : {
+      "type" : "integer"
+    },
+    "resourcePointLevel" : {
+      "type" : "integer"
+    },
+    "coordinates" : {
+      "type" : "string"
+    }
+  }
+}

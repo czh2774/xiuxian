@@ -4,6 +4,7 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.transaction.annotation.Transactional;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
@@ -12,6 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
  * 目的：测试 MySQL 数据库连接是否正常
  * 注释：通过 EntityManager 执行简单的数据库操作，确保数据库连接成功。
  */
+@DirtiesContext
 @SpringBootTest
 public class DatabaseConnectionTest {
 

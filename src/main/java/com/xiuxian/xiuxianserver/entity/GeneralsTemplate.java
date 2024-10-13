@@ -6,7 +6,7 @@ import lombok.Data;
 import jakarta.persistence.*;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import com.xiuxian.xiuxianserver.annotations.ExcelColumn;
+import com.xiuxian.xiuxianserver.util.ExcelColumn;
 import java.util.List;
 
 /**

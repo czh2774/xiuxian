@@ -1,0 +1,69 @@
+{
+  "type" : "object",
+  "properties" : {
+    "characterId" : {
+      "type" : "integer"
+    },
+    "playerId" : {
+      "type" : "integer"
+    },
+    "name" : {
+      "type" : "string"
+    },
+    "faction" : {
+      "type" : "string"
+    },
+    "level" : {
+      "type" : "integer"
+    },
+    "avatar" : {
+      "type" : "string"
+    },
+    "combatPower" : {
+      "type" : "integer"
+    },
+    "titleLevel" : {
+      "type" : "integer"
+    },
+    "titlePrivileges" : {
+      "type" : "object",
+      "properties" : {
+        "bonus" : {
+          "type" : "string"
+        }
+      }
+    },
+    "officialPosition" : {
+      "type" : "string"
+    },
+    "governorCityId" : {
+      "type" : "integer"
+    },
+    "yuanbao" : {
+      "type" : "integer"
+    },
+    "warMerits" : {
+      "type" : "integer"
+    },
+    "reputation" : {
+      "type" : "integer"
+    },
+    "copperCoins" : {
+      "type" : "integer"
+    },
+    "food" : {
+      "type" : "integer"
+    },
+    "wood" : {
+      "type" : "integer"
+    },
+    "ironOre" : {
+      "type" : "integer"
+    },
+    "status" : {
+      "type" : "string"
+    },
+    "createdAt" : { },
+    "updatedAt" : { }
+  }
+}

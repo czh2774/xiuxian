@@ -1,7 +1,7 @@
 package com.xiuxian.xiuxianserver.entity;
 
 import com.xiuxian.xiuxianserver.util.ExcelField;
-import com.xiuxian.xiuxianserver.annotations.ExcelColumn;
+import com.xiuxian.xiuxianserver.util.ExcelColumn;
 import lombok.Data;
 import jakarta.persistence.*;
 

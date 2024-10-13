@@ -1,0 +1,17 @@
+{
+  "title" : "ItemTemplate",
+  "type" : "object",
+  "properties" : {
+    "id" : { },
+    "name" : { },
+    "type" : { },
+    "rarity" : { },
+    "description" : { },
+    "iconPath" : { },
+    "obtainMethod" : { },
+    "jumpFunctions" : { },
+    "isChest" : { },
+    "chestType" : { },
+    "visualEffect" : { }
+  }
+}

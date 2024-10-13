@@ -1,0 +1,51 @@
+{
+  "type" : "object",
+  "properties" : {
+    "buildingUpgradeId" : {
+      "type" : "integer"
+    },
+    "buildingTemplateId" : {
+      "type" : "integer"
+    },
+    "level" : {
+      "type" : "integer"
+    },
+    "upgradeTime" : {
+      "type" : "integer"
+    },
+    "foodCost" : {
+      "type" : "integer"
+    },
+    "woodCost" : {
+      "type" : "integer"
+    },
+    "ironCost" : {
+      "type" : "integer"
+    },
+    "effect" : {
+      "type" : "string"
+    },
+    "upgradeRequirements" : {
+      "type" : "object",
+      "properties" : {
+        "required_buildings" : {
+          "type" : "array",
+          "items" : {
+            "type" : "object",
+            "properties" : {
+              "building_id" : {
+                "type" : "integer"
+              },
+              "level" : {
+                "type" : "integer"
+              }
+            }
+          }
+        },
+        "player_level" : {
+          "type" : "integer"
+        }
+      }
+    }
+  }
+}

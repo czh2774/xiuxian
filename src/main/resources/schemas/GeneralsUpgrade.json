@@ -1,0 +1,41 @@
+{
+  "type" : "object",
+  "properties" : {
+    "generalUpgradeId" : {
+      "type" : "integer"
+    },
+    "generalTemplateId" : {
+      "type" : "integer"
+    },
+    "level" : {
+      "type" : "integer"
+    },
+    "requiredExperience" : {
+      "type" : "integer"
+    },
+    "attackIncrease" : {
+      "type" : "integer"
+    },
+    "defenseIncrease" : {
+      "type" : "integer"
+    },
+    "troopsIncrease" : {
+      "type" : "integer"
+    },
+    "speedIncrease" : {
+      "type" : "integer"
+    },
+    "skillUnlock" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "talentUnlock" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    }
+  }
+}

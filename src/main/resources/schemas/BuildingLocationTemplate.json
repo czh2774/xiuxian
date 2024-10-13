@@ -1,0 +1,14 @@
+{
+  "type" : "object",
+  "properties" : {
+    "locationId" : {
+      "type" : "integer"
+    },
+    "xCoordinate" : { },
+    "yCoordinate" : { },
+    "buildingTemplateId" : {
+      "type" : "integer"
+    },
+    "isUnlocked" : { }
+  }
+}

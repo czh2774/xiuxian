@@ -1,0 +1,14 @@
+{
+  "type" : "object",
+  "properties" : {
+    "id" : {
+      "type" : "integer"
+    },
+    "playerId" : {
+      "type" : "integer"
+    },
+    "featureId" : {
+      "type" : "integer"
+    }
+  }
+}

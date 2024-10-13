@@ -1,0 +1,29 @@
+{
+  "type" : "object",
+  "properties" : {
+    "skillId" : {
+      "type" : "integer"
+    },
+    "name" : {
+      "type" : "string"
+    },
+    "description" : {
+      "type" : "string"
+    },
+    "effect" : {
+      "type" : "object",
+      "properties" : {
+        "damage" : {
+          "type" : "integer"
+        }
+      }
+    },
+    "targetType" : {
+      "type" : "string"
+    },
+    "unlockLevel" : {
+      "type" : "integer"
+    },
+    "generalType" : { }
+  }
+}

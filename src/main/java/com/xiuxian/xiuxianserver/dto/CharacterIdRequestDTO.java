@@ -1,11 +1,20 @@
 package com.xiuxian.xiuxianserver.dto;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
- * DTO 用于获取角色信息时请求角色ID
+ * CharacterIdRequestDTO
+ * 用于封装包含角色ID的请求数据传输对象。
  */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Schema(description = "角色ID请求DTO")
 public class CharacterIdRequestDTO {
-    private Long characterId; // 角色ID
+
+    @Schema(description = "角色ID", example = "1001")
+    private Long characterId;
 }

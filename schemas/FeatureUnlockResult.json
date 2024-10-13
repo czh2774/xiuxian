@@ -1,0 +1,17 @@
+{
+  "type" : "object",
+  "properties" : {
+    "resultId" : {
+      "type" : "integer"
+    },
+    "featureId" : {
+      "type" : "integer"
+    },
+    "featureType" : {
+      "type" : "string"
+    },
+    "conditionId" : {
+      "type" : "integer"
+    }
+  }
+}

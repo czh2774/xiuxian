@@ -1,12 +1,17 @@
 package com.xiuxian.xiuxianserver.dto;
 
+import com.xiuxian.xiuxianserver.entity.CharacterProfile;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.NoArgsConstructor;
 
 /**
  * 角色资源信息 DTO
  */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Schema(description = "角色资源信息 DTO，包含角色的资源属性")
 public class CharacterProfileResourceInfoDTO {
     @Schema(description = "角色唯一ID")
@@ -32,4 +37,13 @@ public class CharacterProfileResourceInfoDTO {
 
     @Schema(description = "铁矿")
     private int ironOre; // 铁矿
+    public CharacterProfileResourceInfoDTO(CharacterProfile profile) {
+        this.yuanbao = profile.getYuanbao();         // 元宝数量
+        this.warMerits = profile.getWarMerits();     // 战功数量
+        this.reputation = profile.getReputation();   // 声望值
+        this.copperCoins = profile.getCopperCoins(); // 铜币数量
+        this.food = profile.getFood();               // 粮食数量
+        this.wood = profile.getWood();               // 木材数量
+        this.ironOre = profile.getIronOre();         // 铁矿数量
+    }
 }

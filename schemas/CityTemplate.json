@@ -1,0 +1,36 @@
+{
+  "type" : "object",
+  "properties" : {
+    "cityTemplateId" : {
+      "type" : "integer"
+    },
+    "name" : {
+      "type" : "string"
+    },
+    "description" : {
+      "type" : "string"
+    },
+    "factionId" : {
+      "type" : "integer"
+    },
+    "coordinates" : {
+      "type" : "string"
+    },
+    "buildingCapacity" : {
+      "type" : "integer"
+    },
+    "defenseValue" : {
+      "type" : "integer"
+    },
+    "dailyTaxGold" : {
+      "type" : "integer"
+    },
+    "dailyTaxSilver" : {
+      "type" : "integer"
+    },
+    "cityLevel" : { },
+    "iconUrl" : {
+      "type" : "string"
+    }
+  }
+}

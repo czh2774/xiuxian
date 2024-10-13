@@ -1,0 +1,32 @@
+{
+  "type" : "object",
+  "properties" : {
+    "troopTemplateId" : {
+      "type" : "integer"
+    },
+    "name" : {
+      "type" : "string"
+    },
+    "description" : {
+      "type" : "string"
+    },
+    "troopType" : {
+      "type" : "string"
+    },
+    "baseAttack" : {
+      "type" : "integer"
+    },
+    "baseDefense" : {
+      "type" : "integer"
+    },
+    "baseHealth" : {
+      "type" : "integer"
+    },
+    "baseSpeed" : {
+      "type" : "integer"
+    },
+    "maxTier" : {
+      "type" : "integer"
+    }
+  }
+}

@@ -19,5 +19,6 @@ public enum FeaturePromptType {
     BREAKTHROUGH_CAVALRY,  // 可突破骑兵兵阶
     BREAKTHROUGH_ARCHER,   // 可突破弓兵兵阶
     BREAKTHROUGH_MAGE,     // 可突破方士兵阶
-    PROMOTE_NOBILITY       // 可提升爵位
+    PROMOTE_NOBILITY,       // 可提升爵位
+    UPGRADE_AVAILABLE  // 可升级提示
 }

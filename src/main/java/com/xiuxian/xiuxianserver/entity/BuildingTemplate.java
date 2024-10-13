@@ -1,12 +1,11 @@
 package com.xiuxian.xiuxianserver.entity;
 
 import com.xiuxian.xiuxianserver.util.ExcelField;
-import com.xiuxian.xiuxianserver.annotations.ExcelColumn;
+import com.xiuxian.xiuxianserver.util.ExcelColumn;
 import lombok.Data;
 import jakarta.persistence.*;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import java.math.BigDecimal;
 
 /**
  * 建筑模板表，定义建筑的基础信息，如名称、是否可升级、最大等级等。

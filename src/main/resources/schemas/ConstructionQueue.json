@@ -1,0 +1,20 @@
+{
+  "type" : "object",
+  "properties" : {
+    "queueId" : {
+      "type" : "string"
+    },
+    "characterId" : {
+      "type" : "string"
+    },
+    "buildingId" : {
+      "type" : "string"
+    },
+    "queueIndex" : {
+      "type" : "integer"
+    },
+    "startTime" : { },
+    "endTime" : { },
+    "status" : { }
+  }
+}
