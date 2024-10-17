@@ -10,6 +10,14 @@ import java.util.List;
  * 角色档案服务接口，定义角色档案相关的业务逻辑接口。
  */
 public interface CharacterProfileService {
+    /**
+     * 根据用户ID查找角色
+     *
+     * @param playerId 根据用户ID查找角色
+     * @return 根据用户ID查找角色
+     */
+
+    CharacterProfile findByPlayerId(Long playerId);
 
     /**
      * 创建角色档案

@@ -1,30 +1,34 @@
 {
+  "$schema" : "http://json-schema.org/draft-07/schema#",
   "type" : "object",
   "properties" : {
-    "resourcePointId" : {
-      "type" : "integer"
-    },
-    "name" : {
+    "coordinates" : {
       "type" : "string"
     },
     "description" : {
       "type" : "string"
     },
-    "resourceType" : { },
-    "resourceProductionRate" : {
+    "gatheringTime" : {
       "type" : "integer"
     },
     "maxStorageHours" : {
       "type" : "integer"
     },
-    "gatheringTime" : {
+    "name" : {
+      "type" : "string"
+    },
+    "resourcePointId" : {
       "type" : "integer"
     },
     "resourcePointLevel" : {
       "type" : "integer"
     },
-    "coordinates" : {
-      "type" : "string"
+    "resourceProductionRate" : {
+      "type" : "integer"
+    },
+    "resourceType" : {
+      "type" : "string",
+      "enum" : [ "WOOD", "IRON", "GRAIN" ]
     }
   }
 }

@@ -1,0 +1,42 @@
+{
+  "$schema" : "http://json-schema.org/draft-07/schema#",
+  "type" : "object",
+  "properties" : {
+    "chestType" : {
+      "type" : "string",
+      "enum" : [ "RANDOM", "FIXED", "MULTI_CHOICE" ]
+    },
+    "description" : {
+      "type" : "string"
+    },
+    "iconPath" : {
+      "type" : "string"
+    },
+    "id" : {
+      "type" : "integer"
+    },
+    "isChest" : {
+      "type" : "boolean"
+    },
+    "jumpFunctions" : {
+      "type" : "string"
+    },
+    "name" : {
+      "type" : "string"
+    },
+    "obtainMethod" : {
+      "type" : "string"
+    },
+    "rarity" : {
+      "type" : "string",
+      "enum" : [ "COMMON", "RARE", "EPIC", "LEGENDARY" ]
+    },
+    "type" : {
+      "type" : "string"
+    },
+    "visualEffect" : {
+      "type" : "string",
+      "enum" : [ "NO_EFFECT", "AURA", "GLOW", "FLAME", "RAINBOW" ]
+    }
+  }
+}

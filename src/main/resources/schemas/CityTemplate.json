@@ -1,26 +1,19 @@
 {
+  "$schema" : "http://json-schema.org/draft-07/schema#",
   "type" : "object",
   "properties" : {
-    "cityTemplateId" : {
+    "buildingCapacity" : {
       "type" : "integer"
     },
-    "name" : {
-      "type" : "string"
+    "cityLevel" : {
+      "type" : "string",
+      "enum" : [ "COUNTY", "PREFECTURE", "PASS", "CAPITAL", "METROPOLIS" ]
     },
-    "description" : {
-      "type" : "string"
-    },
-    "factionId" : {
+    "cityTemplateId" : {
       "type" : "integer"
     },
     "coordinates" : {
       "type" : "string"
-    },
-    "buildingCapacity" : {
-      "type" : "integer"
-    },
-    "defenseValue" : {
-      "type" : "integer"
     },
     "dailyTaxGold" : {
       "type" : "integer"
@@ -28,8 +21,19 @@
     "dailyTaxSilver" : {
       "type" : "integer"
     },
-    "cityLevel" : { },
+    "defenseValue" : {
+      "type" : "integer"
+    },
+    "description" : {
+      "type" : "string"
+    },
+    "factionId" : {
+      "type" : "integer"
+    },
     "iconUrl" : {
+      "type" : "string"
+    },
+    "name" : {
       "type" : "string"
     }
   }

@@ -1,29 +1,28 @@
 {
+  "$schema" : "http://json-schema.org/draft-07/schema#",
   "type" : "object",
   "properties" : {
-    "skillId" : {
-      "type" : "integer"
-    },
-    "name" : {
-      "type" : "string"
-    },
     "description" : {
       "type" : "string"
     },
     "effect" : {
-      "type" : "object",
-      "properties" : {
-        "damage" : {
-          "type" : "integer"
-        }
-      }
+      "type" : "string"
+    },
+    "generalType" : {
+      "type" : "string",
+      "enum" : [ "WEN_GUAN", "WU_JIANG", "QUAN_CAI" ]
+    },
+    "name" : {
+      "type" : "string"
+    },
+    "skillId" : {
+      "type" : "integer"
     },
     "targetType" : {
       "type" : "string"
     },
     "unlockLevel" : {
       "type" : "integer"
-    },
-    "generalType" : { }
+    }
   }
 }

@@ -1,32 +1,33 @@
 {
+  "$schema" : "http://json-schema.org/draft-07/schema#",
   "type" : "object",
   "properties" : {
-    "buildingUpgradeId" : {
-      "type" : "integer"
-    },
     "buildingTemplateId" : {
       "type" : "integer"
     },
-    "level" : {
-      "type" : "integer"
-    },
-    "upgradeTime" : {
-      "type" : "integer"
-    },
-    "foodCost" : {
-      "type" : "integer"
-    },
-    "woodCost" : {
-      "type" : "integer"
-    },
-    "ironCost" : {
+    "buildingUpgradeId" : {
       "type" : "integer"
     },
     "effect" : {
       "type" : "string"
     },
+    "foodCost" : {
+      "type" : "integer"
+    },
+    "ironCost" : {
+      "type" : "integer"
+    },
+    "level" : {
+      "type" : "integer"
+    },
     "upgradeRequirements" : {
       "type" : "string"
+    },
+    "upgradeTime" : {
+      "type" : "integer"
+    },
+    "woodCost" : {
+      "type" : "integer"
     }
   }
 }

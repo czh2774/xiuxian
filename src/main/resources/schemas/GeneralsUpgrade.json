@@ -1,10 +1,17 @@
 {
+  "$schema" : "http://json-schema.org/draft-07/schema#",
   "type" : "object",
   "properties" : {
-    "generalUpgradeId" : {
+    "attackIncrease" : {
+      "type" : "integer"
+    },
+    "defenseIncrease" : {
       "type" : "integer"
     },
     "generalTemplateId" : {
+      "type" : "integer"
+    },
+    "generalUpgradeId" : {
       "type" : "integer"
     },
     "level" : {
@@ -13,29 +20,17 @@
     "requiredExperience" : {
       "type" : "integer"
     },
-    "attackIncrease" : {
-      "type" : "integer"
-    },
-    "defenseIncrease" : {
-      "type" : "integer"
-    },
-    "troopsIncrease" : {
-      "type" : "integer"
+    "skillUnlock" : {
+      "type" : "string"
     },
     "speedIncrease" : {
       "type" : "integer"
     },
-    "skillUnlock" : {
-      "type" : "array",
-      "items" : {
-        "type" : "string"
-      }
-    },
     "talentUnlock" : {
-      "type" : "array",
-      "items" : {
-        "type" : "string"
-      }
+      "type" : "string"
+    },
+    "troopsIncrease" : {
+      "type" : "integer"
     }
   }
 }

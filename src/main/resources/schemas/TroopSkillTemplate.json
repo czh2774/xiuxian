@@ -1,34 +1,25 @@
 {
+  "$schema" : "http://json-schema.org/draft-07/schema#",
   "type" : "object",
   "properties" : {
-    "skillId" : {
-      "type" : "integer"
-    },
-    "name" : {
-      "type" : "string"
-    },
     "description" : {
       "type" : "string"
     },
     "effect" : {
-      "type" : "object",
-      "properties" : {
-        "defense" : {
-          "type" : "integer"
-        }
-      }
+      "type" : "string"
+    },
+    "name" : {
+      "type" : "string"
+    },
+    "skillId" : {
+      "type" : "integer"
     },
     "triggerCondition" : {
-      "type" : "object",
-      "properties" : {
-        "condition" : {
-          "type" : "string"
-        },
-        "value" : {
-          "type" : "integer"
-        }
-      }
+      "type" : "string"
     },
-    "troopType" : { }
+    "troopType" : {
+      "type" : "string",
+      "enum" : [ "INFANTRY", "CAVALRY", "ARCHER", "SPEARMAN" ]
+    }
   }
 }

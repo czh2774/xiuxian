@@ -1,58 +1,33 @@
 {
+  "$schema" : "http://json-schema.org/draft-07/schema#",
   "type" : "object",
   "properties" : {
-    "titleTemplateId" : {
-      "type" : "integer"
-    },
-    "name" : {
+    "description" : {
       "type" : "string"
     },
-    "description" : {
+    "effect" : {
       "type" : "string"
     },
     "iconUrl" : {
       "type" : "string"
     },
-    "effect" : {
-      "type" : "object",
-      "properties" : {
-        "resource_bonus" : {
-          "type" : "object",
-          "properties" : {
-            "wood" : {
-              "type" : "integer"
-            },
-            "iron" : {
-              "type" : "integer"
-            }
-          }
-        },
-        "military_bonus" : {
-          "type" : "object",
-          "properties" : {
-            "attack" : {
-              "type" : "integer"
-            }
-          }
-        }
-      }
-    },
     "levelRequirement" : {
-      "type" : "integer"
-    },
-    "previousTitleId" : {
       "type" : "integer"
     },
     "maxRank" : {
       "type" : "integer"
     },
+    "name" : {
+      "type" : "string"
+    },
+    "previousTitleId" : {
+      "type" : "integer"
+    },
     "privilegeStatus" : {
-      "type" : "object",
-      "properties" : {
-        "build_extra_barracks" : {
-          "type" : "boolean"
-        }
-      }
+      "type" : "string"
+    },
+    "titleTemplateId" : {
+      "type" : "integer"
     }
   }
 }

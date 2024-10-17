@@ -33,6 +33,12 @@ public class CharacterProfileServiceImpl implements CharacterProfileService {
     }
 
     @Override
+    public CharacterProfile findByPlayerId(Long playerId) {
+        return characterProfileRepository.findByPlayerId(playerId)
+                .orElseThrow(() -> new ResourceNotFoundException("角色未找到，Player ID: " + playerId));
+    }
+
+    @Override
     public CharacterProfileDTO createCharacterProfile(CharacterProfileCreateDTO createDTO) {
         if (createDTO.getName() == null || createDTO.getName().length() > MAX_NAME_LENGTH) {
             throw new IllegalArgumentException("Name cannot be null or too long");
@@ -45,7 +51,7 @@ public class CharacterProfileServiceImpl implements CharacterProfileService {
         profile.setName(createDTO.getName());
         profile.setFaction(createDTO.getFaction());
         profile.setOfficialPosition("Governor");
-        profile.setToken(createDTO.getToken());
+        profile.setPlayerId(createDTO.getPlayerId());
         CharacterProfile savedProfile = characterProfileRepository.save(profile);
         return new CharacterProfileDTO(savedProfile);
     }

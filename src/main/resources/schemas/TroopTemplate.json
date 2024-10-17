@@ -1,18 +1,7 @@
 {
+  "$schema" : "http://json-schema.org/draft-07/schema#",
   "type" : "object",
   "properties" : {
-    "troopTemplateId" : {
-      "type" : "integer"
-    },
-    "name" : {
-      "type" : "string"
-    },
-    "description" : {
-      "type" : "string"
-    },
-    "troopType" : {
-      "type" : "string"
-    },
     "baseAttack" : {
       "type" : "integer"
     },
@@ -25,8 +14,20 @@
     "baseSpeed" : {
       "type" : "integer"
     },
+    "description" : {
+      "type" : "string"
+    },
     "maxTier" : {
       "type" : "integer"
+    },
+    "name" : {
+      "type" : "string"
+    },
+    "troopTemplateId" : {
+      "type" : "integer"
+    },
+    "troopType" : {
+      "type" : "string"
     }
   }
 }

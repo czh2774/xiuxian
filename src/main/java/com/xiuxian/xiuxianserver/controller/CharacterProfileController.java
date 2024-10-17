@@ -43,10 +43,10 @@ public class CharacterProfileController {
      * @param requestDTO 包含角色ID的请求DTO
      * @return 角色的基本信息
      */
-    @PostMapping("/allInfo")
+    @PostMapping("/details")
     @Operation(summary = "获取角色的所有信息", description = "根据角色ID查询角色的所有信息")
     @ApiResponse(responseCode = "200", description = "获取角色的所有信息成功")
-    public CharacterProfileDTO getProfileBasicInfo(@RequestBody CharacterProfileDTO requestDTO) {
+    public CharacterProfileDTO getProfileDetails(@RequestBody CharacterProfileDTO requestDTO) {
         return characterProfileService.getCharacterProfileAllInfo(requestDTO.getCharacterId());
     }
 
@@ -56,10 +56,10 @@ public class CharacterProfileController {
      * @param requestDTO 包含角色ID的请求DTO
      * @return 角色的基本信息
      */
-    @PostMapping("/basicInfo")
+    @PostMapping("/info")
     @Operation(summary = "获取角色的基本信息", description = "根据角色ID查询角色的基本信息")
     @ApiResponse(responseCode = "200", description = "获取角色的基本信息成功")
-    public CharacterProfileBasicInfoDTO getProfileBasicInfo(@RequestBody CharacterIdRequestDTO requestDTO) {
+    public CharacterProfileBasicInfoDTO getProfileInfo(@RequestBody CharacterIdRequestDTO requestDTO) {
         return characterProfileService.getCharacterProfileBasicInfo(requestDTO.getCharacterId());
     }
 

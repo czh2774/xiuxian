@@ -1,52 +1,30 @@
 {
+  "$schema" : "http://json-schema.org/draft-07/schema#",
   "type" : "object",
   "properties" : {
-    "troopUpgradeId" : {
+    "effect" : {
+      "type" : "string"
+    },
+    "level" : {
+      "type" : "integer"
+    },
+    "resourceCost" : {
+      "type" : "string"
+    },
+    "tier" : {
       "type" : "integer"
     },
     "troopTemplateId" : {
       "type" : "integer"
     },
-    "level" : {
+    "troopUpgradeId" : {
       "type" : "integer"
     },
-    "tier" : {
-      "type" : "integer"
+    "upgradeRequirements" : {
+      "type" : "string"
     },
     "upgradeTime" : {
       "type" : "integer"
-    },
-    "resourceCost" : {
-      "type" : "object",
-      "properties" : {
-        "wood" : {
-          "type" : "integer"
-        },
-        "iron" : {
-          "type" : "integer"
-        }
-      }
-    },
-    "effect" : {
-      "type" : "object",
-      "properties" : {
-        "attack_bonus" : {
-          "type" : "object",
-          "properties" : {
-            "attack" : {
-              "type" : "integer"
-            }
-          }
-        }
-      }
-    },
-    "upgradeRequirements" : {
-      "type" : "object",
-      "properties" : {
-        "required_general_level" : {
-          "type" : "integer"
-        }
-      }
     }
   }
 }

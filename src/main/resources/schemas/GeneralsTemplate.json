@@ -1,90 +1,96 @@
 {
+  "$schema" : "http://json-schema.org/draft-07/schema#",
   "type" : "object",
   "properties" : {
-    "id" : {
-      "type" : "integer"
-    },
-    "name" : {
+    "appearanceTemplateId" : {
       "type" : "string"
     },
-    "rarity" : {
-      "type" : "integer"
-    },
-    "initialLevel" : {
-      "type" : "integer"
-    },
-    "initialStars" : {
-      "type" : "integer"
-    },
-    "strength" : {
-      "type" : "integer"
-    },
-    "intelligence" : {
-      "type" : "integer"
-    },
-    "charisma" : {
-      "type" : "integer"
-    },
-    "leadership" : {
-      "type" : "integer"
-    },
     "attack" : {
-      "type" : "integer"
-    },
-    "defense" : {
-      "type" : "integer"
-    },
-    "speed" : {
-      "type" : "integer"
-    },
-    "troops" : {
-      "type" : "integer"
-    },
-    "blockRate" : {
-      "type" : "integer"
-    },
-    "criticalHitRate" : {
       "type" : "integer"
     },
     "attackPerLevel" : {
       "type" : "integer"
     },
-    "defensePerLevel" : {
-      "type" : "integer"
-    },
-    "troopsPerLevel" : {
-      "type" : "integer"
-    },
     "attackPerTier" : {
+      "type" : "integer"
+    },
+    "awakeningTalentId" : {
+      "type" : "string"
+    },
+    "biography" : {
+      "type" : "string"
+    },
+    "blockRate" : {
+      "type" : "integer"
+    },
+    "charisma" : {
+      "type" : "integer"
+    },
+    "criticalHitRate" : {
+      "type" : "integer"
+    },
+    "defense" : {
+      "type" : "integer"
+    },
+    "defensePerLevel" : {
       "type" : "integer"
     },
     "defensePerTier" : {
       "type" : "integer"
     },
-    "troopsPerTier" : {
+    "description" : {
+      "type" : "string"
+    },
+    "frontTroopId" : {
       "type" : "integer"
+    },
+    "id" : {
+      "type" : "integer"
+    },
+    "initialLevel" : {
+      "type" : "integer"
+    },
+    "initialSkillIds" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "initialStars" : {
+      "type" : "integer"
+    },
+    "intelligence" : {
+      "type" : "integer"
+    },
+    "leadership" : {
+      "type" : "integer"
+    },
+    "name" : {
+      "type" : "string"
     },
     "normalTalentId" : {
       "type" : "string"
     },
-    "awakeningTalentId" : {
-      "type" : "string"
-    },
-    "initialSkillIds" : { },
-    "frontTroopId" : {
+    "rarity" : {
       "type" : "integer"
     },
     "rearTroopId" : {
       "type" : "integer"
     },
-    "appearanceTemplateId" : {
-      "type" : "string"
+    "speed" : {
+      "type" : "integer"
     },
-    "description" : {
-      "type" : "string"
+    "strength" : {
+      "type" : "integer"
     },
-    "biography" : {
-      "type" : "string"
+    "troops" : {
+      "type" : "integer"
+    },
+    "troopsPerLevel" : {
+      "type" : "integer"
+    },
+    "troopsPerTier" : {
+      "type" : "integer"
     }
   }
 }

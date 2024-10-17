@@ -31,8 +31,9 @@ public class CharacterProfile {
     private Long characterId; // 角色唯一ID
 
     @Column(nullable = false)
-    @Schema(description = "角色所属玩家TOKEN", example = "5001")
-    private String token; // 所属玩家token
+    @Schema(description = "角色所属的用户ID")
+    private Long playerId; // 关联的用户ID
+
 
     @Column(nullable = false, length = 255)
     @Schema(description = "角色名称", example = "Hero")

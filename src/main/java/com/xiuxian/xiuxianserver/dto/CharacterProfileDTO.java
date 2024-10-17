@@ -19,8 +19,9 @@ public class CharacterProfileDTO {
     @Schema(description = "角色唯一ID")
     private Long characterId; // 角色唯一ID
 
-    @Schema(description = "所属玩家的token")
-    private String token; // 所属玩家token
+    @Schema(description = "角色所属的用户ID")
+    private Long playerId; // 关联的用户ID
+
 
     @Schema(description = "角色名称")
     private String name; // 角色名称
@@ -81,7 +82,7 @@ public class CharacterProfileDTO {
     public CharacterProfileDTO(CharacterProfile profile) {
 
         this.characterId = profile.getCharacterId();         // 角色唯一ID
-        this.token = profile.getToken();               // 关联玩家token
+        this.playerId = profile.getPlayerId();               // 关联玩家ID
         this.name = profile.getName();                       // 角色名称
         this.faction = profile.getFaction();                 // 角色派系
         this.level = profile.getLevel();                     // 角色等级

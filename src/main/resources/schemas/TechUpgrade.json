@@ -1,71 +1,27 @@
 {
+  "$schema" : "http://json-schema.org/draft-07/schema#",
   "type" : "object",
   "properties" : {
-    "techUpgradeId" : {
-      "type" : "integer"
-    },
-    "techTemplateId" : {
-      "type" : "integer"
+    "effect" : {
+      "type" : "string"
     },
     "level" : {
       "type" : "integer"
     },
+    "researchRequirements" : {
+      "type" : "string"
+    },
     "researchTime" : {
       "type" : "integer"
     },
-    "researchRequirements" : {
-      "type" : "object",
-      "properties" : {
-        "required_buildings" : {
-          "type" : "array",
-          "items" : {
-            "type" : "object",
-            "properties" : {
-              "building_id" : {
-                "type" : "integer"
-              },
-              "level" : {
-                "type" : "integer"
-              }
-            }
-          }
-        },
-        "required_techs" : {
-          "type" : "array",
-          "items" : {
-            "type" : "object",
-            "properties" : {
-              "tech_id" : {
-                "type" : "integer"
-              }
-            }
-          }
-        }
-      }
-    },
     "resourceCost" : {
-      "type" : "object",
-      "properties" : {
-        "wood" : {
-          "type" : "integer"
-        },
-        "iron" : {
-          "type" : "integer"
-        }
-      }
+      "type" : "string"
     },
-    "effect" : {
-      "type" : "object",
-      "properties" : {
-        "resource_bonus" : {
-          "type" : "object",
-          "properties" : {
-            "food" : {
-              "type" : "integer"
-            }
-          }
-        }
-      }
+    "techTemplateId" : {
+      "type" : "integer"
+    },
+    "techUpgradeId" : {
+      "type" : "integer"
     }
   }
 }
