@@ -25,12 +25,12 @@ public class UserModel {
     @Column(nullable = false, updatable = false)
     @Schema(description = "全局唯一玩家ID")
     @Comment("全局唯一玩家ID")
-    private Long playerId;  // 全局唯一玩家ID
+    private long id;  // 全局唯一玩家ID
 
     @Column(nullable = false, length = 64)
     @Schema(description = "平台用户唯一标识符（如微信的openid）")
     @Comment("平台用户唯一标识符（如微信的openid）")
-    private Long platformUserId;  // 平台用户唯一标识符
+    private long platformUserId;  // 平台用户唯一标识符
 
     @Column(length = 64)
     @Schema(description = "跨平台唯一标识符（如微信的unionId）")

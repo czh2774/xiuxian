@@ -62,7 +62,7 @@ public class UserServiceImpl implements UserService {
     // 创建新用户的方法
     public UserModel createNewUser(UserDTO userDTO) {
         UserModel newUser = UserModel.builder()
-                .playerId(userDTO.getPlayId() != null ? userDTO.getPlayId() : generatePlayerId())  // 使用 DTO 中的 playId 或生成新 playId
+                .id(userDTO.getPlayId() != null ? userDTO.getPlayId() : generatePlayerId())  // 使用 DTO 中的 playId 或生成新 playId
                 .platformUserId(userDTO.getPlatformUserId())  // 确保 platformUserId 不为空
                 .name(userDTO.getName() != null ? userDTO.getName() : generateDefaultName(userDTO))  // 生成默认名称
                 .loginType(userDTO.getLoginType() != null ? userDTO.getLoginType() : "WECHAT")  // 设置默认登录方式

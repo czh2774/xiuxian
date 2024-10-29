@@ -18,12 +18,10 @@ public class CharacterProfileCreateDTO {
     @Schema(description = "角色名", example = "Hero")
     private String name;
 
-    @Schema(description = "角色头像", example = "hero_avatar.png")
-    private String avatar;
+
 
     @Schema(description = "角色派系ID", example = "2001")
     private String faction;
 
-    @Schema(description = "所属玩家ID", example = "12345")
-    private Long playerId;
+
 }

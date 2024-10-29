@@ -20,10 +20,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
 public class CityTemplate {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false, updatable = false)
     @ExcelColumn(headerName = "城市模板ID", comment = "城市唯一标识符")
-    private Long cityTemplateId; // 城市模板ID
+    private Long id; // 城市模板ID
 
     @Schema(description = "城市名称", example = "洛阳")
     @ExcelColumn(headerName = "城市名称", comment = "城市的名称")

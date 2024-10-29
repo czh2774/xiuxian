@@ -20,10 +20,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
 public class ResourcePointTemplate {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false, updatable = false)
     @ExcelColumn(headerName = "资源点ID", comment = "资源点唯一标识符")
-    private Long resourcePointId; // 资源点ID
+    private Long id; // 资源点ID
 
     @Schema(description = "资源点名称", example = "伐木场")
     @ExcelColumn(headerName = "资源点名称", comment = "资源点的名称")

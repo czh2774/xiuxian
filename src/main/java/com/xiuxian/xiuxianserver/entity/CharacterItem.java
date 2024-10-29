@@ -23,18 +23,17 @@ import java.time.LocalDateTime;
 public class CharacterItem {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false, updatable = false)
-    @Schema(description = "道具实例的唯一标识符", example = "UUID格式")
-    private String itemInstanceId; // 道具实例ID
+    @Schema(description = "道具实例的唯一标识符", example = "雪花ID")
+    private Long id; // 道具实例ID
 
     @Column(nullable = false)
     @Schema(description = "角色的唯一标识符", example = "UUID格式")
-    private String characterId; // 角色ID
+    private Long characterId; // 角色ID
 
     @Column(nullable = false)
     @Schema(description = "道具模板的唯一标识符", example = "UUID格式")
-    private String itemTemplateId; // 道具模板ID
+    private Long itemTemplateId; // 道具模板ID
 
     @Column(nullable = false)
     @Schema(description = "道具数量", example = "1")

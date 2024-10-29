@@ -82,7 +82,17 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+            <version>1.5.0.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-processor</artifactId>
+            <version>1.5.0.Final</version>
+            <scope>provided</scope>
+        </dependency>
         <!-- Spring Boot Validation，提供输入数据验证 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

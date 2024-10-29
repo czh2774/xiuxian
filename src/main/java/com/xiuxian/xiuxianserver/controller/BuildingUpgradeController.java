@@ -1,13 +1,18 @@
 package com.xiuxian.xiuxianserver.controller;
 
-import com.xiuxian.xiuxianserver.dto.CustomApiResponse;
-import com.xiuxian.xiuxianserver.entity.BuildingUpgrade;
+import com.xiuxian.xiuxianserver.dto.BuildingUpgradeDTO;
+import com.xiuxian.xiuxianserver.dto.BuildingUpgradeRequestDTO;
+import com.xiuxian.xiuxianserver.exception.ResourceNotFoundException;
 import com.xiuxian.xiuxianserver.service.BuildingUpgradeService;
+import com.xiuxian.xiuxianserver.util.CustomApiResponse;
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import jakarta.servlet.http.HttpServletRequest;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,8 +21,10 @@ import java.util.List;
  * BuildingUpgradeController 用于处理与建筑升级相关的 API 请求。
  */
 @RestController
-@RequestMapping("/api/buildings")
+@RequestMapping("/building/upgrade")
 public class BuildingUpgradeController {
+
+    private static final Logger logger = LoggerFactory.getLogger(BuildingUpgradeController.class);
 
     @Autowired
     private BuildingUpgradeService buildingUpgradeService;
@@ -25,7 +32,7 @@ public class BuildingUpgradeController {
     /**
      * 获取所有建筑升级的列表。
      *
-     * @return 包含所有建筑升级的统一响应
+     * @return 包含所有建筑升级DTO的统一响应
      */
     @Operation(summary = "获取所有建筑升级", description = "返回所有建筑升级的列表")
     @ApiResponses(value = {
@@ -33,15 +40,25 @@ public class BuildingUpgradeController {
             @ApiResponse(responseCode = "500", description = "服务器内部错误")
     })
     @PostMapping("/getAllUpgrades")
-    public CustomApiResponse<List<BuildingUpgrade>> getAllBuildingUpgrades() {
-        List<BuildingUpgrade> upgrades = buildingUpgradeService.getAllBuildingUpgrades();
-        return new CustomApiResponse<>(200, "成功", upgrades);
+    public CustomApiResponse<List<BuildingUpgradeDTO>> getAllBuildingUpgrades(HttpServletRequest request) {
+        logger.info("请求获取所有建筑升级数据，来源IP: {}", request.getRemoteAddr());
+
+        List<BuildingUpgradeDTO> upgrades;
+        try {
+            upgrades = buildingUpgradeService.getAllBuildingUpgrades();
+            logger.info("成功获取建筑升级列表，总计: {} 条记录", upgrades.size());
+        } catch (Exception e) {
+            logger.error("获取建筑升级数据时发生错误: {}", e.getMessage(), e);
+            return new CustomApiResponse<>(HttpStatus.INTERNAL_SERVER_ERROR.value(), "获取建筑升级数据失败", null, request.getRequestURI());
+        }
+
+        return new CustomApiResponse<>(HttpStatus.OK.value(), "成功", upgrades, request.getRequestURI());
     }
 
     /**
      * 根据建筑模板ID和目标升级等级获取建筑升级信息。
      *
-     * @param request 包含建筑模板ID和目标等级的请求
+     * @param requestDTO 包含建筑模板ID和目标等级的请求体
      * @return 包含建筑升级详情的统一响应
      */
     @Operation(summary = "根据建筑模板ID和目标升级等级获取建筑升级", description = "根据建筑模板ID和目标升级等级返回建筑升级信息")
@@ -51,34 +68,21 @@ public class BuildingUpgradeController {
             @ApiResponse(responseCode = "500", description = "服务器内部错误")
     })
     @PostMapping("/getByTemplateIdAndLevel")
-    public CustomApiResponse<BuildingUpgrade> getBuildingUpgradeByTemplateIdAndLevel(@RequestBody BuildingUpgradeRequest request) {
-        BuildingUpgrade upgrade = buildingUpgradeService.getBuildingUpgradeByTemplateIdAndLevel(request.getBuildingTemplateId(), request.getLevel());
-        return new CustomApiResponse<>(200, "成功", upgrade);
-    }
+    public CustomApiResponse<BuildingUpgradeDTO> getBuildingUpgradeByTemplateIdAndLevel(@RequestBody BuildingUpgradeRequestDTO requestDTO, HttpServletRequest httpServletRequest) {
+        logger.info("根据模板ID和等级获取建筑升级信息，模板ID: {}, 等级: {}", requestDTO.getBuildingTemplateId(), requestDTO.getLevel());
 
-    // 请求体类，用于传递参数
-    public static class BuildingUpgradeRequest {
-        @Schema(description = "建筑模板ID", example = "1")
-        private Long buildingTemplateId;
-
-        @Schema(description = "目标升级等级", example = "2")
-        private int level;
-
-        // Getter 和 Setter
-        public Long getBuildingTemplateId() {
-            return buildingTemplateId;
+        BuildingUpgradeDTO upgrade;
+        try {
+            upgrade = buildingUpgradeService.getBuildingUpgradeByTemplateIdAndLevel(requestDTO.getBuildingTemplateId(), requestDTO.getLevel());
+            logger.info("成功获取建筑升级信息，模板ID: {}, 等级: {}", requestDTO.getBuildingTemplateId(), requestDTO.getLevel());
+        } catch (ResourceNotFoundException e) {
+            logger.warn("未找到建筑升级信息，模板ID: {}, 等级: {}", requestDTO.getBuildingTemplateId(), requestDTO.getLevel());
+            return new CustomApiResponse<>(HttpStatus.NOT_FOUND.value(), "未找到建筑升级信息", null, httpServletRequest.getRequestURI());
+        } catch (Exception e) {
+            logger.error("获取建筑升级信息时发生错误: {}", e.getMessage(), e);
+            return new CustomApiResponse<>(HttpStatus.INTERNAL_SERVER_ERROR.value(), "获取建筑升级信息失败", null, httpServletRequest.getRequestURI());
         }
 
-        public void setBuildingTemplateId(Long buildingTemplateId) {
-            this.buildingTemplateId = buildingTemplateId;
-        }
-
-        public int getLevel() {
-            return level;
-        }
-
-        public void setLevel(int level) {
-            this.level = level;
-        }
+        return new CustomApiResponse<>(HttpStatus.OK.value(), "成功", upgrade, httpServletRequest.getRequestURI());
     }
 }

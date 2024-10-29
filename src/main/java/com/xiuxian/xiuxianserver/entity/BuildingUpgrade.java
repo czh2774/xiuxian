@@ -19,9 +19,8 @@ import io.swagger.v3.oas.annotations.media.Schema;
 public class BuildingUpgrade {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @ExcelColumn(headerName = "建筑升级ID", comment = "建筑升级唯一标识符")
-    private Long buildingUpgradeId; // 建筑升级ID
+    private Long id; // 建筑升级ID
 
     @Schema(description = "建筑模板ID", example = "1")
     @ExcelColumn(headerName = "建筑模板ID", comment = "关联的建筑模板ID")

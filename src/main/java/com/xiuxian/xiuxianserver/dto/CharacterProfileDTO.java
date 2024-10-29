@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 public class CharacterProfileDTO {
     @NotNull
     @Schema(description = "角色唯一ID")
-    private Long characterId; // 角色唯一ID
+    private Long id; // 角色唯一ID
 
     @Schema(description = "角色所属的用户ID")
     private Long playerId; // 关联的用户ID
@@ -81,7 +81,7 @@ public class CharacterProfileDTO {
     private LocalDateTime updatedAt; // 最后更新时间
     public CharacterProfileDTO(CharacterProfile profile) {
 
-        this.characterId = profile.getCharacterId();         // 角色唯一ID
+        this.id = profile.getId();         // 角色唯一ID
         this.playerId = profile.getPlayerId();               // 关联玩家ID
         this.name = profile.getName();                       // 角色名称
         this.faction = profile.getFaction();                 // 角色派系

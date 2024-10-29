@@ -3,9 +3,10 @@ package com.xiuxian.xiuxianserver.common;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import com.xiuxian.xiuxianserver.util.ApiResponse;
+import com.xiuxian.xiuxianserver.util.CustomApiResponse;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.stereotype.Component;
@@ -26,8 +27,8 @@ public class CustomAuthenticationEntryPoint implements AuthenticationEntryPoint 
             errorMessage = "JWT Token 无效";
         }
 
-        ApiResponse<Object> apiResponse = new ApiResponse<>(
-                "UNAUTHORIZED",
+        CustomApiResponse<Object> CustomApiResponse = new CustomApiResponse<>(
+                HttpStatus.UNAUTHORIZED.value(),
                 errorMessage,
                 null,
                 request.getRequestURI()
@@ -41,7 +42,7 @@ public class CustomAuthenticationEntryPoint implements AuthenticationEntryPoint 
         mapper.registerModule(new JavaTimeModule());  // 注册时间模块
         mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);  // 禁止时间戳写入
 
-        response.getWriter().write(mapper.writeValueAsString(apiResponse));
+        response.getWriter().write(mapper.writeValueAsString(CustomApiResponse));
     }
 
 }

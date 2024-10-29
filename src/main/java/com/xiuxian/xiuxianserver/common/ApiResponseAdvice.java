@@ -1,15 +1,14 @@
 package com.xiuxian.xiuxianserver.common;
 
+import com.xiuxian.xiuxianserver.util.CustomApiResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.MethodParameter;
-import org.springframework.http.HttpInputMessage;
-import org.springframework.http.HttpOutputMessage;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
-import com.xiuxian.xiuxianserver.dto.CustomApiResponse;
 
 /**
  * 全局响应封装器，自动将所有控制器的响应封装为 ApiResponse 类型。
@@ -47,9 +46,11 @@ public class ApiResponseAdvice implements ResponseBodyAdvice<Object> {
             logger.info("Returning existing ApiResponse without modification: {}", body);
             return body;
         }
-
+        if (body == null) {
+            body = new Object();  // 确保响应体不为 null
+        }
         // 封装为 ApiResponse 并记录日志
-        CustomApiResponse<Object> apiResponse = new CustomApiResponse<>(200, "Success", body);
+        CustomApiResponse<Object> apiResponse = new CustomApiResponse<Object>(HttpStatus.OK.value(), "Success", body,request.getURI().getPath());
         logger.info("Wrapping response into ApiResponse: {}", apiResponse);
 
         return apiResponse;

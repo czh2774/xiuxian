@@ -10,9 +10,7 @@ import jakarta.persistence.*;
 public class FeatureUnlockResult {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long resultId;
-
     private Long featureId; // 功能ID
     private String featureType; // 功能类型，例如建筑、科技、UI
     private Long conditionId; // 关联的条件ID

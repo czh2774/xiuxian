@@ -14,9 +14,8 @@ import java.time.LocalDateTime;
 public class CharacterBuilding {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Schema(description = "角色建筑实例的唯一标识符")
-    private Long characterBuildingId;  // 建筑实例ID
+    private Long id;  // 建筑实例ID
 
     @Schema(description = "角色ID，表示建筑属于哪个角色")
     private Long characterId;  // 角色ID

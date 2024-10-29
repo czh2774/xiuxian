@@ -4,6 +4,7 @@ import com.xiuxian.xiuxianserver.dto.*;
 import com.xiuxian.xiuxianserver.entity.CharacterProfile;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * CharacterProfileService
@@ -18,6 +19,16 @@ public interface CharacterProfileService {
      */
 
     CharacterProfile findByPlayerId(Long playerId);
+
+
+    /**
+     * 根据玩家ID获取角色数据
+     *
+     * @param playerId 平台用户的ID
+     * @return CharacterProfileDTO 角色数据传输对象，如果不存在则返回null
+     */
+    CharacterProfileDTO getCharacterByPlayerId(Long playerId);
+
 
     /**
      * 创建角色档案
@@ -87,4 +98,7 @@ public interface CharacterProfileService {
      * @param characterId 角色ID
      */
     void deleteCharacterProfile(Long characterId);
+
+    boolean existsByPlayerId(Long playerId); // 检查该用户是否已创建角色
+    boolean existsByName(String name);       // 检查角色名称是否重复
 }

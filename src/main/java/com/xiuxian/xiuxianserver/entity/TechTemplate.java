@@ -19,9 +19,8 @@ import io.swagger.v3.oas.annotations.media.Schema;
 public class TechTemplate {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @ExcelColumn(headerName = "科技模板ID", comment = "科技唯一标识符")
-    private Long techTemplateId; // 科技模板ID
+    private Long id; // 科技模板ID
 
     @Schema(description = "科技名称", example = "高级农业")
     @ExcelColumn(headerName = "科技名称", comment = "科技的名称")

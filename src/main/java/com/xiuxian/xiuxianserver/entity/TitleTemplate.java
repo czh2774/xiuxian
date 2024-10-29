@@ -19,10 +19,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
 public class TitleTemplate {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false, updatable = false)
     @ExcelColumn(headerName = "爵位模板ID", comment = "爵位唯一标识符")
-    private Long titleTemplateId; // 爵位模板ID
+    private Long id; // 爵位模板ID
 
     @Schema(description = "爵位名称", example = "大将军")
     @ExcelColumn(headerName = "爵位名称", comment = "爵位的名称")

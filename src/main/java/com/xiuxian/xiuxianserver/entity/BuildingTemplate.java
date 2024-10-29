@@ -19,10 +19,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
 public class BuildingTemplate {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Schema(description = "建筑模板唯一标识符")
     @ExcelColumn(headerName = "建筑模板ID", comment = "建筑唯一标识符")
-    private Long buildingTemplateId; // 建筑模板ID
+    private Long id; // 建筑模板ID
 
     @Schema(description = "建筑名称", example = "城墙")
     @ExcelColumn(headerName = "建筑名称", comment = "建筑的名称")

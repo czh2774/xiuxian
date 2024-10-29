@@ -14,9 +14,8 @@ import jakarta.persistence.*;
 public class Season {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false, updatable = false)
-    private Long seasonId; // 季节ID
+    private Long id; // 季节ID
 
     @Column(nullable = false, length = 50)
     private String name; // 季节名称（春、夏、秋、冬）

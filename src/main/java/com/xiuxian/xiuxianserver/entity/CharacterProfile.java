@@ -28,7 +28,7 @@ public class CharacterProfile {
     @Id
     @Column(nullable = false, updatable = false)
     @Schema(description = "角色的唯一标识符", example = "1001")
-    private Long characterId; // 角色唯一ID
+    private Long id; // 角色唯一ID
 
     @Column(nullable = false)
     @Schema(description = "角色所属的用户ID")

@@ -40,7 +40,7 @@ class UserControllerTest {
 
         // 初始化一个测试用户对象
         testUser = UserModel.builder()
-                .playerId(1001L)
+                .id(1001L)
                 .platformUserId(1846320926338191360L)
                 .name("TestUser")
                 .build();

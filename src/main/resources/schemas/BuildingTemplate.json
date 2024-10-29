@@ -1,27 +1,20 @@
-{
-  "$schema" : "http://json-schema.org/draft-07/schema#",
-  "type" : "object",
-  "properties" : {
-    "buildingTemplateId" : {
-      "type" : "integer"
-    },
-    "description" : {
-      "type" : "string"
-    },
-    "imageUrl" : {
-      "type" : "string"
-    },
-    "isUpgradeable" : {
-      "type" : "boolean"
-    },
-    "maxLevel" : {
-      "type" : "integer"
-    },
-    "name" : {
-      "type" : "string"
-    },
-    "requiredPlayerLevel" : {
-      "type" : "integer"
-    }
-  }
-}
+[
+	{
+		"buildingTemplateId": 1,
+		"description": "LOREM IPSUM L",
+		"imageUrl": "",
+		"isUpgradeable": true,
+		"maxLevel": 1,
+		"name": "LOREM I",
+		"requiredPlayerLevel": 1
+	},
+	{
+		"buildingTemplateId": 1,
+		"description": "LOREM IPSUM L",
+		"imageUrl": "",
+		"isUpgradeable": true,
+		"maxLevel": 1,
+		"name": "LOREM I",
+		"requiredPlayerLevel": 1
+	}
+]

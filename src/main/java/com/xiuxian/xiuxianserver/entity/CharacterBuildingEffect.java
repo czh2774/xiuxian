@@ -22,10 +22,9 @@ import java.time.LocalDateTime;
 public class CharacterBuildingEffect {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false, updatable = false)
     @Schema(description = "效果的唯一标识符", example = "UUID格式")
-    private String effectId; // 效果唯一ID (UUID)
+    private String id; // 效果唯一ID (UUID)
 
     @Column(nullable = false)
     @Schema(description = "角色的唯一标识符", example = "UUID格式")

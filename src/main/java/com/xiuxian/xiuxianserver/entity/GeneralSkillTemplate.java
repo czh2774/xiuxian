@@ -19,10 +19,9 @@ import com.xiuxian.xiuxianserver.enums.GeneralType;
 public class GeneralSkillTemplate {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Schema(description = "技能ID")
     @ExcelColumn(headerName = "技能ID", comment = "技能的唯一标识符")
-    private Long skillId;
+    private Long id;
 
     @Schema(description = "技能名称", example = "狂暴斩")
     @ExcelColumn(headerName = "技能名称", comment = "技能的名称")

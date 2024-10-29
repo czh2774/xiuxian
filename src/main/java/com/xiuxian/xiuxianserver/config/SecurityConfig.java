@@ -36,6 +36,7 @@ public class SecurityConfig {
 
                 .csrf(csrf -> csrf.disable())  // 关闭 CSRF 防护
                 .authorizeHttpRequests(authorize -> authorize
+                        .requestMatchers("/api/profiles/**").authenticated()  // 保护 profiles API
                         .requestMatchers("/api/user/**").authenticated()  // 保护用户 API
                         .requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()  // 允许对 Swagger 资源的访问
                         .anyRequest().authenticated()  // 其他请求需要认证

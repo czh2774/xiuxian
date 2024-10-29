@@ -10,9 +10,7 @@ import jakarta.persistence.*;
 public class FeatureUnlockCondition {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long conditionId;
-
     private String conditionType; // 条件类型，例如建筑等级、科技等
     private Long targetId; // 目标ID，例如建筑ID、科技ID
     private int conditionValue; // 需要满足的条件值

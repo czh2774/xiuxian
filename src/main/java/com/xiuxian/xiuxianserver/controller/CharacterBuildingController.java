@@ -1,76 +1,122 @@
 package com.xiuxian.xiuxianserver.controller;
 
-import com.xiuxian.xiuxianserver.dto.CharacterBuildingCreateRequestDTO;
-import com.xiuxian.xiuxianserver.dto.CharacterBuildingStatusUpdateDTO;
 import com.xiuxian.xiuxianserver.dto.CharacterBuildingDTO;
+import com.xiuxian.xiuxianserver.dto.CharacterBuildingCreateRequestDTO;
+import com.xiuxian.xiuxianserver.dto.BuildingStatusUpdateDTO;
 import com.xiuxian.xiuxianserver.service.CharacterBuildingService;
+import com.xiuxian.xiuxianserver.util.CustomApiResponse;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import org.springframework.beans.factory.annotation.Autowired;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import jakarta.servlet.http.HttpServletRequest;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 /**
- * CharacterBuildingController 是用于处理角色建筑相关请求的控制器类。
- * 它提供了创建建筑、更新建筑状态、获取角色所有建筑的API接口。
+ * CharacterBuildingController
+ * 处理与角色建筑相关的API请求
  */
 @RestController
-@RequestMapping("/character/buildings")
+@RequestMapping("/character/building")
 public class CharacterBuildingController {
+
+    private static final Logger logger = LoggerFactory.getLogger(CharacterBuildingController.class);
 
     private final CharacterBuildingService characterBuildingService;
 
-    /**
-     * 构造器注入 CharacterBuildingService。
-     *
-     * @param characterBuildingService 角色建筑服务对象
-     */
-    @Autowired
     public CharacterBuildingController(CharacterBuildingService characterBuildingService) {
         this.characterBuildingService = characterBuildingService;
     }
 
     /**
-     * 创建角色建筑的API接口。
-     * 该接口接收建筑创建请求的数据传输对象（DTO），并返回创建的建筑详细信息。
-     *
-     * @param createDTO 角色建筑创建请求的数据传输对象
-     * @return 创建的角色建筑的详细信息
-     */
-    @Operation(summary = "Create a new character building", description = "创建一个新的角色建筑")
-    @ApiResponse(responseCode = "201", description = "Building created successfully")
-    @PostMapping("/create")
-    public CharacterBuildingDTO createBuilding(@RequestBody CharacterBuildingCreateRequestDTO createDTO) {
-        return characterBuildingService.createCharacterBuildingInstance(createDTO);
-    }
-
-    /**
-     * 更新角色建筑状态的API接口。
-     * 该接口接收状态更新请求的数据传输对象（DTO），并返回更新后的建筑详细信息。
-     *
-     * @param updateDTO 角色建筑状态更新请求的数据传输对象
-     * @return 更新后的角色建筑的详细信息
-     */
-    @Operation(summary = "Update character building status", description = "更新角色建筑的状态")
-    @ApiResponse(responseCode = "200", description = "Building status updated successfully")
-    @PutMapping("/status")
-    public CharacterBuildingDTO updateBuildingStatus(@RequestBody CharacterBuildingStatusUpdateDTO updateDTO) {
-        characterBuildingService.updateCharacterBuildingStatus(updateDTO.getBuildingId(), updateDTO.getNewStatus());
-        return characterBuildingService.getCharacterBuildingById(updateDTO.getBuildingId());
-    }
-
-    /**
-     * 获取角色所有建筑的API接口。
-     * 该接口根据角色ID返回该角色的所有建筑实例。
+     * 获取角色的所有建筑信息
      *
      * @param characterId 角色ID
-     * @return 角色的所有建筑实例的列表
+     * @return 角色建筑列表的响应
      */
-    @Operation(summary = "Get all character buildings", description = "获取角色所有的建筑")
-    @ApiResponse(responseCode = "200", description = "List of character buildings retrieved successfully")
-    @GetMapping("/{characterId}")
-    public List<CharacterBuildingDTO> getAllBuildings(@PathVariable Long characterId) {
-        return characterBuildingService.getCharacterBuildingsByCharacterId(characterId);
+    @Operation(summary = "获取角色的所有建筑信息", description = "根据角色ID获取所有建筑信息")
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "成功返回角色建筑信息"),
+            @ApiResponse(responseCode = "404", description = "角色建筑信息未找到"),
+            @ApiResponse(responseCode = "500", description = "服务器内部错误")
+    })
+    @PostMapping("/list")
+    public ResponseEntity<CustomApiResponse<List<CharacterBuildingDTO>>> getAllCharacterBuildings(@RequestBody Long characterId, HttpServletRequest request) {
+        logger.info("获取角色建筑信息，角色ID: {}", characterId);
+
+        List<CharacterBuildingDTO> buildings;
+        try {
+            buildings = characterBuildingService.getCharacterBuildingsByCharacterId(characterId);  // 调用正确的方法
+            logger.info("成功获取角色建筑信息，角色ID: {}", characterId);
+        } catch (Exception e) {
+            logger.error("获取角色建筑信息时发生错误，角色ID: {}, 错误: {}", characterId, e.getMessage());
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(
+                    CustomApiResponse.error(HttpStatus.INTERNAL_SERVER_ERROR.value(), "获取角色建筑信息失败", request.getRequestURI()));
+        }
+
+        return ResponseEntity.ok(CustomApiResponse.success("成功获取角色建筑信息", buildings, request.getRequestURI()));
+    }
+
+    /**
+     * 创建角色的建筑实例
+     *
+     * @param createRequestDTO 角色建筑创建请求体
+     * @return 创建的角色建筑的响应
+     */
+    @Operation(summary = "创建角色建筑实例", description = "根据请求体创建角色的建筑实例")
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "成功创建角色建筑"),
+            @ApiResponse(responseCode = "400", description = "请求体错误"),
+            @ApiResponse(responseCode = "500", description = "服务器内部错误")
+    })
+    @PostMapping("/create")
+    public ResponseEntity<CustomApiResponse<CharacterBuildingDTO>> createCharacterBuilding(@RequestBody CharacterBuildingCreateRequestDTO createRequestDTO, HttpServletRequest request) {
+        logger.info("创建角色建筑实例，角色ID: {}, 建筑模板ID: {}", createRequestDTO.getCharacterId(), createRequestDTO.getBuildingTemplateId());
+
+        CharacterBuildingDTO building;
+        try {
+            building = characterBuildingService.createCharacterBuildingInstance(createRequestDTO);  // 使用正确的方法
+            logger.info("成功创建角色建筑实例，角色ID: {}", createRequestDTO.getCharacterId());
+        } catch (Exception e) {
+            logger.error("创建角色建筑实例时发生错误，错误: {}", e.getMessage());
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(
+                    CustomApiResponse.error(HttpStatus.INTERNAL_SERVER_ERROR.value(), "创建角色建筑失败", request.getRequestURI()));
+        }
+
+        return ResponseEntity.ok(CustomApiResponse.success("成功创建角色建筑", building, request.getRequestURI()));
+    }
+
+    /**
+     * 更新角色建筑状态
+     *
+     * @param buildingStatusUpdateDTO 状态更新请求体
+     * @return 更新结果的响应
+     */
+    @Operation(summary = "更新角色建筑状态", description = "根据请求体更新角色建筑的状态")
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "成功更新角色建筑状态"),
+            @ApiResponse(responseCode = "400", description = "请求体错误"),
+            @ApiResponse(responseCode = "500", description = "服务器内部错误")
+    })
+    @PostMapping("/update-status")
+    public ResponseEntity<CustomApiResponse<Void>> updateCharacterBuildingStatus(@RequestBody BuildingStatusUpdateDTO buildingStatusUpdateDTO, HttpServletRequest request) {
+        logger.info("更新角色建筑状态，建筑ID: {}", buildingStatusUpdateDTO.getBuildingId());
+
+        try {
+            // 解包 DTO 中的 buildingId 和 newStatus，调用服务层方法
+            characterBuildingService.updateCharacterBuildingStatus(buildingStatusUpdateDTO.getBuildingId(), buildingStatusUpdateDTO.getNewStatus());
+            logger.info("成功更新角色建筑状态，建筑ID: {}", buildingStatusUpdateDTO.getBuildingId());
+        } catch (Exception e) {
+            logger.error("更新角色建筑状态时发生错误，错误: {}", e.getMessage());
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(
+                    CustomApiResponse.error(HttpStatus.INTERNAL_SERVER_ERROR.value(), "更新角色建筑状态失败", request.getRequestURI()));
+        }
+
+        return ResponseEntity.ok(CustomApiResponse.success("成功更新角色建筑状态", null, request.getRequestURI()));
     }
 }

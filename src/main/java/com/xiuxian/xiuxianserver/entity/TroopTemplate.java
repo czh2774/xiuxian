@@ -19,9 +19,8 @@ import io.swagger.v3.oas.annotations.media.Schema;
 public class TroopTemplate {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @ExcelColumn(headerName = "兵种模板ID", comment = "兵种唯一标识符")
-    private Long troopTemplateId; // 兵种模板ID
+    private Long id; // 兵种模板ID
 
     @Schema(description = "兵种名称", example = "骑兵")
     @ExcelColumn(headerName = "兵种名称", comment = "兵种的名称")

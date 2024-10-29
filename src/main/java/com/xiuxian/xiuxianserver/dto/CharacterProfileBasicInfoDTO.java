@@ -27,7 +27,7 @@ public class CharacterProfileBasicInfoDTO {
 
     // 构造函数：从 CharacterProfile 实体中构建 DTO
     public CharacterProfileBasicInfoDTO(CharacterProfile profile) {
-        this.characterId = profile.getCharacterId();  // 调用 getCharacterId()
+        this.characterId = profile.getId();  // 调用 getCharacterId()
         this.name = profile.getName();
         this.level = profile.getLevel();
     }

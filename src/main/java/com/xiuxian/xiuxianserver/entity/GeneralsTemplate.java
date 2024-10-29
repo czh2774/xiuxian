@@ -21,7 +21,6 @@ import java.util.List;
 public class GeneralsTemplate {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Schema(description = "武将模板唯一标识符")
     @ExcelColumn(headerName = "ID", comment = "武将唯一标识符")
     private Long id;

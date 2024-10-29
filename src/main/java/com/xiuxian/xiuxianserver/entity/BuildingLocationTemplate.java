@@ -1,21 +1,22 @@
 package com.xiuxian.xiuxianserver.entity;
 
 import com.xiuxian.xiuxianserver.util.ExcelColumn;
+import com.xiuxian.xiuxianserver.util.ExcelField;
 import jakarta.persistence.*;
 import lombok.Data;
 import io.swagger.v3.oas.annotations.media.Schema;
 
+@ExcelField
 @Data
 @Entity
-@Table(name = "building_location")
+@Table(name = "building_location_template")
 @Schema(description = "建筑位置实体类，存储建筑的坐标和解锁状态信息")
 public class BuildingLocationTemplate {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Schema(description = "建筑位置ID")
-    @ExcelColumn(headerName = "建筑位置ID", comment = "location_id")
-    private Long locationId;  // 建筑位置ID
+    @ExcelColumn(headerName = "建筑位置ID", comment = "id")
+    private Long id;  // 建筑位置ID
 
     @Schema(description = "X坐标")
     @ExcelColumn(headerName = "X坐标", comment = "x_coordinate")

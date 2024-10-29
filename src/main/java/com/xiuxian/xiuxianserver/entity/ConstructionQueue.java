@@ -22,18 +22,17 @@ import java.time.LocalDateTime;
 public class ConstructionQueue {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false, updatable = false)
-    @Schema(description = "队列的唯一标识符", example = "UUID格式")
-    private String queueId; // 队列唯一ID (UUID)
+    @Schema(description = "队列的唯一标识符", example = "雪花ID")
+    private long id; // 队列唯一ID (UUID)
 
     @Column(nullable = false)
     @Schema(description = "角色的唯一标识符", example = "UUID格式")
-    private String characterId; // 角色ID (关联角色表)
+    private long characterId; // 角色ID (关联角色表)
 
     @Column(nullable = false)
     @Schema(description = "建筑的唯一标识符", example = "UUID格式")
-    private String buildingId; // 建筑ID (关联建筑表)
+    private long buildingId; // 建筑ID (关联建筑表)
 
     @Column(nullable = false)
     @Schema(description = "建造队列的索引值（1 或 2）", example = "1")

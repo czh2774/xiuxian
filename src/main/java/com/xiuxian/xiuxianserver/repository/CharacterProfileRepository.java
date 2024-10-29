@@ -10,4 +10,6 @@ import java.util.Optional;
 public interface CharacterProfileRepository extends JpaRepository<CharacterProfile, Long> {
     // 可以添加自定义查询方法
     Optional<CharacterProfile> findByPlayerId(Long playerId);
+    boolean existsByPlayerId(Long playerId);
+    boolean existsByName(String name);
 }

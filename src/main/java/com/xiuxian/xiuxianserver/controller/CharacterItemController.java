@@ -1,76 +1,77 @@
 package com.xiuxian.xiuxianserver.controller;
 
-import com.xiuxian.xiuxianserver.enums.ItemCategory;
+import com.xiuxian.xiuxianserver.dto.CharacterItemDTO;
+import com.xiuxian.xiuxianserver.dto.IdRequestDTO;
 import com.xiuxian.xiuxianserver.service.CharacterItemService;
-import com.xiuxian.xiuxianserver.service.impl.CharacterItemServiceImpl;
-import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.responses.ApiResponses;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 /**
- * CharacterItemController
- * 处理与玩家道具相关的请求，并将其转发到服务层进行处理。
+ * CharacterItemController类，处理角色道具的API请求。
+ * 所有操作均使用POST请求。
  */
 @RestController
-@RequestMapping("/items")
+@RequestMapping("/character/item")
 public class CharacterItemController {
 
-    private final CharacterItemService characterItemService;
-    private static final Logger logger = LoggerFactory.getLogger(CharacterItemController.class);
+    @Autowired
+    private CharacterItemService characterItemService;
 
-    public CharacterItemController(CharacterItemServiceImpl characterItemService) {
-        this.characterItemService = characterItemService;
+    /**
+     * 根据ID获取角色道具实例
+     * @param request 请求体，包含道具实例ID
+     * @return 角色道具DTO对象
+     */
+    @PostMapping("/getById")
+    public ResponseEntity<CharacterItemDTO> getCharacterItemById(@RequestBody IdRequestDTO request) {
+        CharacterItemDTO item = characterItemService.getCharacterItemById(request.getId());
+        return ResponseEntity.ok(item);
     }
 
     /**
-     * 根据玩家ID查询该玩家拥有的所有道具及其数量。
-     *
-     * @param characterId 玩家ID
-     * @return 玩家道具及其数量的列表
+     * 获取指定角色的所有道具实例
+     * @param request 请求体，包含角色ID
+     * @return 角色的所有道具实例DTO对象列表
      */
-    @PostMapping("/all")
-    @Operation(summary = "根据玩家ID查询所有道具", description = "通过玩家ID查询玩家拥有的所有道具及其数量。")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "查询成功"),
-            @ApiResponse(responseCode = "404", description = "未找到玩家或道具")
-    })
-    public List<Object[]> getAllItemsByCharacterId(@RequestParam String characterId) {
-        try {
-            logger.info("查询玩家 {} 拥有的所有道具", characterId);
-            return characterItemService.getAllItemsByCharacterId(characterId);
-        } catch (Exception e) {
-            logger.error("获取玩家 {} 的道具时出现错误: {}", characterId, e.getMessage());
-            throw new RuntimeException("未能获取玩家道具信息");
-        }
+    @PostMapping("/getByCharacterId")
+    public ResponseEntity<List<CharacterItemDTO>> getCharacterItemsByCharacterId(@RequestBody IdRequestDTO request) {
+        List<CharacterItemDTO> items = characterItemService.getCharacterItemsByCharacterId(request.getId());
+        return ResponseEntity.ok(items);
     }
 
     /**
-     * 根据玩家ID和道具类型查询该类型对应的道具及其数量。
-     *
-     * @param characterId 玩家ID
-     * @param itemCategory 道具类型
-     * @return 符合条件的道具及其数量的列表
+     * 创建角色道具实例
+     * @param request 创建道具实例的DTO请求体
+     * @return 创建后的角色道具DTO对象
      */
-    @PostMapping("/by-type")
-    @Operation(summary = "根据玩家ID和道具类型查询道具", description = "通过玩家ID和道具类型查询该类型的所有道具及其数量。")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "查询成功"),
-            @ApiResponse(responseCode = "404", description = "未找到符合条件的道具")
-    })
-    public List<Object[]> getItemsByTypeAndCharacterId(@RequestParam String characterId, @RequestParam ItemCategory itemCategory) {
-        try {
-            logger.info("查询玩家 {} 的 {} 类型的道具", characterId, itemCategory);
-            return characterItemService.findItemsByItemCategoryAndCharacterId(characterId, itemCategory);
-        } catch (Exception e) {
-            logger.error("查询玩家 {} 的 {} 类型的道具时出现错误: {}", characterId, itemCategory, e.getMessage());
-            throw new RuntimeException("未能获取指定类型的玩家道具信息");
-        }
+    @PostMapping("/create")
+    public ResponseEntity<CharacterItemDTO> createCharacterItem(@RequestBody CharacterItemDTO request) {
+        CharacterItemDTO item = characterItemService.createCharacterItem(request);
+        return ResponseEntity.ok(item);
     }
 
+    /**
+     * 更新指定道具实例的记录
+     * @param request 更新道具实例的DTO请求体，包含道具实例ID和更新内容
+     * @return 更新后的角色道具DTO对象
+     */
+    @PostMapping("/update")
+    public ResponseEntity<CharacterItemDTO> updateCharacterItem(@RequestBody CharacterItemDTO request) {
+        CharacterItemDTO item = characterItemService.updateCharacterItem(request.getItemInstanceId(), request);
+        return ResponseEntity.ok(item);
+    }
 
+    /**
+     * 删除指定ID的角色道具实例
+     * @param request 请求体，包含道具实例ID
+     * @return 空的响应体，状态为OK
+     */
+    @PostMapping("/delete")
+    public ResponseEntity<Void> deleteCharacterItem(@RequestBody IdRequestDTO request) {
+        characterItemService.deleteCharacterItem(request.getId());
+        return ResponseEntity.ok().build();
+    }
 }

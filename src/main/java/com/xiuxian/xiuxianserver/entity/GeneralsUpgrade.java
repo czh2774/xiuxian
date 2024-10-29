@@ -19,10 +19,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
 public class GeneralsUpgrade {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Schema(description = "武将升级唯一标识符")
     @ExcelColumn(headerName = "武将升级ID", comment = "武将升级记录唯一标识符")
-    private Long generalUpgradeId;
+    private Long id;
 
     @Schema(description = "武将模板ID", example = "1")
     @ExcelColumn(headerName = "武将模板ID", comment = "关联的武将模板ID")
