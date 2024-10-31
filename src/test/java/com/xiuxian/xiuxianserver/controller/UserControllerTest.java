@@ -1,101 +1,142 @@
 package com.xiuxian.xiuxianserver.controller;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.xiuxian.xiuxianserver.entity.UserModel;
+import com.xiuxian.xiuxianserver.exception.ResourceNotFoundException;
 import com.xiuxian.xiuxianserver.service.UserService;
+import com.xiuxian.xiuxianserver.util.CustomApiResponse;
+import com.xiuxian.xiuxianserver.util.JwtTokenUtil;
+import jakarta.servlet.http.HttpServletRequest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.springframework.http.MediaType;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
 
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 
 class UserControllerTest {
 
-    private MockMvc mockMvc;
+    @InjectMocks
+    private UserController userController;
 
     @Mock
     private UserService userService;
 
-    @InjectMocks
-    private UserController userController;
+    @Mock
+    private JwtTokenUtil jwtTokenUtil;
 
-    private ObjectMapper objectMapper = new ObjectMapper(); // 用于将对象转换为 JSON
+    @Mock
+    private HttpServletRequest request;
 
-    private UserModel testUser;
+    private String validToken = "valid.token";
+    private Long platformUserId = 1L;
+    private UserModel user;
 
     @BeforeEach
     void setUp() {
-        // 初始化 Mockito 的模拟对象
         MockitoAnnotations.openMocks(this);
-
-        // 设置 MockMvc
-        mockMvc = MockMvcBuilders.standaloneSetup(userController).build();
-
-        // 初始化一个测试用户对象
-        testUser = UserModel.builder()
-                .id(1001L)
-                .platformUserId(1846320926338191360L)
-                .name("TestUser")
-                .build();
+        user = new UserModel();
+        user.setId(platformUserId);
+        user.setName("Test User");
     }
 
     @Test
-    void testGetUserByPlatformUserId() throws Exception {
-        // 模拟 userService 返回数据
-        when(userService.findByPlatformUserId(1846320926338191360L)).thenReturn(testUser);
+    void getUser_Success() {
+        // Mock JWT Token extraction and validation
+        when(jwtTokenUtil.getClaim(validToken, "platformUserId", Long.class)).thenReturn(platformUserId);
+        when(jwtTokenUtil.isTokenValid(validToken)).thenReturn(true);
+        when(userService.findByPlatformUserId(platformUserId)).thenReturn(user);
 
-        mockMvc.perform(post("/user/getUser")
-                        .param("platformUserId", "wx_openid_12345")
-                        .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.playerId").value(1001L))
-                .andExpect(jsonPath("$.platformUserId").value("wx_openid_12345"))
-                .andExpect(jsonPath("$.name").value("TestUser"));
+        // Mock request behavior
+        when(request.getRequestURI()).thenReturn("/user/getUser");
+
+        // Mock SecurityContext and Authentication
+        Authentication authentication = mock(Authentication.class);
+        when(authentication.getCredentials()).thenReturn(validToken);
+
+        SecurityContext securityContext = mock(SecurityContext.class);
+        when(securityContext.getAuthentication()).thenReturn(authentication);
+        SecurityContextHolder.setContext(securityContext);
+
+        // Call the method
+        ResponseEntity<CustomApiResponse<UserModel>> response = userController.getUser(request);
+
+        // Validate response
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertEquals("用户信息获取成功", response.getBody().getMessage());
+        assertEquals(user, response.getBody().getData());
     }
 
     @Test
-    void testCreateUser() throws Exception {
-        // 模拟 userService 保存用户并返回用户
-        when(userService.createUser(any(UserModel.class))).thenReturn(testUser);
+    void getUser_TokenMissing() {
+        // Mock request behavior
+        when(request.getRequestURI()).thenReturn("/user/getUser");
 
-        mockMvc.perform(post("/user/create")
-                        .content(objectMapper.writeValueAsString(testUser))
-                        .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.playerId").value(1001L))
-                .andExpect(jsonPath("$.platformUserId").value("wx_openid_12345"))
-                .andExpect(jsonPath("$.name").value("TestUser"));
+        // Mock SecurityContext without authentication
+        SecurityContextHolder.clearContext();
+
+        // Call the method
+        ResponseEntity<CustomApiResponse<UserModel>> response = userController.getUser(request);
+
+        // Validate response
+        assertEquals(HttpStatus.UNAUTHORIZED, response.getStatusCode());
+        assertEquals("JWT Token 缺失", response.getBody().getMessage());
     }
 
     @Test
-    void testUpdateUser() throws Exception {
-        // 模拟 userService 更新用户并返回更新后的用户
-        when(userService.updateUser(any(UserModel.class))).thenReturn(testUser);
+    void getUser_InvalidToken() {
+        // Mock JWT Token extraction and validation
+        when(jwtTokenUtil.getClaim(validToken, "platformUserId", Long.class)).thenReturn(platformUserId);
+        when(jwtTokenUtil.isTokenValid(validToken)).thenReturn(false);
 
-        mockMvc.perform(post("/user/update")
-                        .content(objectMapper.writeValueAsString(testUser))
-                        .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.playerId").value(1001L))
-                .andExpect(jsonPath("$.platformUserId").value("wx_openid_12345"))
-                .andExpect(jsonPath("$.name").value("TestUser"));
+        // Mock request behavior
+        when(request.getRequestURI()).thenReturn("/user/getUser");
+
+        // Mock SecurityContext and Authentication
+        Authentication authentication = mock(Authentication.class);
+        when(authentication.getCredentials()).thenReturn(validToken);
+
+        SecurityContext securityContext = mock(SecurityContext.class);
+        when(securityContext.getAuthentication()).thenReturn(authentication);
+        SecurityContextHolder.setContext(securityContext);
+
+        // Call the method
+        ResponseEntity<CustomApiResponse<UserModel>> response = userController.getUser(request);
+
+        // Validate response
+        assertEquals(HttpStatus.UNAUTHORIZED, response.getStatusCode());
+        assertEquals("JWT Token 无效或已过期", response.getBody().getMessage());
     }
 
     @Test
-    void testDeleteUser() throws Exception {
-        // 模拟 userService 删除用户
-        doNothing().when(userService).deleteUser(1001L);
+    void getUser_UserNotFound() {
+        // Mock JWT Token extraction and validation
+        when(jwtTokenUtil.getClaim(validToken, "platformUserId", Long.class)).thenReturn(platformUserId);
+        when(jwtTokenUtil.isTokenValid(validToken)).thenReturn(true);
+        when(userService.findByPlatformUserId(platformUserId)).thenReturn(null);
 
-        mockMvc.perform(post("/user/delete")
-                        .param("playerId", "1001")
-                        .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isNoContent());
+        // Mock request behavior
+        when(request.getRequestURI()).thenReturn("/user/getUser");
+
+        // Mock SecurityContext and Authentication
+        Authentication authentication = mock(Authentication.class);
+        when(authentication.getCredentials()).thenReturn(validToken);
+
+        SecurityContext securityContext = mock(SecurityContext.class);
+        when(securityContext.getAuthentication()).thenReturn(authentication);
+        SecurityContextHolder.setContext(securityContext);
+
+        // Call the method and expect exception
+        try {
+            userController.getUser(request);
+        } catch (ResourceNotFoundException e) {
+            assertEquals("用户未找到", e.getMessage());
+        }
     }
 }

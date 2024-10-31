@@ -1,6 +1,7 @@
 package com.xiuxian.xiuxianserver.entity;
-import cn.hutool.core.util.IdUtil;
 
+import cn.hutool.core.util.IdUtil;
+import com.xiuxian.xiuxianserver.dto.CharacterProfileDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +10,6 @@ import lombok.NoArgsConstructor;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.hibernate.annotations.CreationTimestamp;
 
-import java.math.BigInteger;
 import java.time.LocalDateTime;
 
 /**
@@ -34,7 +34,6 @@ public class CharacterProfile {
     @Schema(description = "角色所属的用户ID")
     private Long playerId; // 关联的用户ID
 
-
     @Column(nullable = false, length = 255)
     @Schema(description = "角色名称", example = "Hero")
     private String name; // 角色名称
@@ -45,19 +44,23 @@ public class CharacterProfile {
 
     @Column(nullable = false)
     @Schema(description = "角色等级", example = "10")
-    private int level=1; // 角色等级
+    @Builder.Default
+    private int level = 1; // 角色等级
 
     @Column(nullable = true, length = 255)
     @Schema(description = "角色的头像路径", example = "/images/avatar.png")
-    private String avatar="/images/avatar.png"; // 角色头像路径
+    @Builder.Default
+    private String avatar = "/images/avatar.png"; // 角色头像路径
 
     @Column(nullable = false)
     @Schema(description = "角色的战斗力", example = "1500")
-    private int combatPower=0; // 角色战斗力
+    @Builder.Default
+    private int combatPower = 0; // 角色战斗力
 
     @Column(nullable = false)
     @Schema(description = "角色的头衔等级", example = "3")
-    private int titleLevel=1; // 角色头衔等级
+    @Builder.Default
+    private int titleLevel = 1; // 角色头衔等级
 
     @Column(columnDefinition = "JSON", nullable = true)
     @Schema(description = "头衔特权，JSON格式", example = "{\"bonus\":\"10%\"}")
@@ -65,7 +68,8 @@ public class CharacterProfile {
 
     @Column(nullable = false)
     @Schema(description = "角色的官方职位", example = "Governor")
-    private String officialPosition="Governor"; // 角色的官方职位
+    @Builder.Default
+    private String officialPosition = "Governor"; // 角色的官方职位
 
     @Column(nullable = true)
     @Schema(description = "角色担任城主的城市ID", example = "3001")
@@ -74,35 +78,43 @@ public class CharacterProfile {
     // 资源信息
     @Column(nullable = false, columnDefinition = "INT DEFAULT 0")
     @Schema(description = "角色的元宝数量", example = "1000")
-    private int yuanbao=0; // 元宝数量
+    @Builder.Default
+    private int yuanbao = 0; // 元宝数量
 
     @Column(nullable = false, columnDefinition = "INT DEFAULT 0")
     @Schema(description = "角色的战功数量", example = "200")
-    private int warMerits=0; // 战功数量
+    @Builder.Default
+    private int warMerits = 0; // 战功数量
 
     @Column(nullable = false, columnDefinition = "INT DEFAULT 0")
     @Schema(description = "角色的声望值", example = "1500")
-    private int reputation=0; // 声望值
+    @Builder.Default
+    private int reputation = 0; // 声望值
 
     @Column(nullable = false, columnDefinition = "INT DEFAULT 0")
     @Schema(description = "角色的铜币数量", example = "5000")
-    private int copperCoins=5000; // 铜币数量
+    @Builder.Default
+    private int copperCoins = 5000; // 铜币数量
 
     @Column(nullable = false, columnDefinition = "INT DEFAULT 0")
-    @Schema(description = "角色的粮食数量=3000", example = "3000")
-    private int food; // 粮食数量
+    @Schema(description = "角色的粮食数量", example = "3000")
+    @Builder.Default
+    private int food = 3000; // 粮食数量
 
     @Column(nullable = false, columnDefinition = "INT DEFAULT 0")
     @Schema(description = "角色的木材数量", example = "2000")
-    private int wood=2000; // 木材数量
+    @Builder.Default
+    private int wood = 2000; // 木材数量
 
     @Column(nullable = false, columnDefinition = "INT DEFAULT 0")
     @Schema(description = "角色的铁矿数量", example = "1000")
-    private int ironOre=1000; // 铁矿数量
+    @Builder.Default
+    private int ironOre = 1000; // 铁矿数量
 
     @Column(nullable = false, columnDefinition = "VARCHAR(50) DEFAULT 'Active'")
     @Schema(description = "角色当前状态", example = "Active")
-    private String status="Active"; // 角色当前状态
+    @Builder.Default
+    private String status = "Active"; // 角色当前状态
 
     @CreationTimestamp
     @Column(nullable = false, updatable = false)
@@ -114,5 +126,30 @@ public class CharacterProfile {
     @Schema(description = "角色最后更新时间", example = "2024-01-02T15:00:00")
     private LocalDateTime updatedAt; // 角色最后更新时间
 
-
+    // 转换为 DTO 的方法
+    public CharacterProfileDTO toDTO() {
+        CharacterProfileDTO dto = new CharacterProfileDTO();
+        dto.setId(this.id);
+        dto.setPlayerId(this.playerId);
+        dto.setName(this.name);
+        dto.setFaction(this.faction);
+        dto.setLevel(this.level);
+        dto.setAvatar(this.avatar);
+        dto.setCombatPower(this.combatPower);
+        dto.setTitleLevel(this.titleLevel);
+        dto.setTitlePrivileges(this.titlePrivileges);
+        dto.setOfficialPosition(this.officialPosition);
+        dto.setGovernorCityId(this.governorCityId);
+        dto.setYuanbao(this.yuanbao);
+        dto.setWarMerits(this.warMerits);
+        dto.setReputation(this.reputation);
+        dto.setCopperCoins(this.copperCoins);
+        dto.setFood(this.food);
+        dto.setWood(this.wood);
+        dto.setIronOre(this.ironOre);
+        dto.setStatus(this.status);
+        dto.setCreatedAt(this.createdAt);
+        dto.setUpdatedAt(this.updatedAt);
+        return dto;
+    }
 }

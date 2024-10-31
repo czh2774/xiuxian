@@ -13,7 +13,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <!-- 项目信息 --><!-- 项目依赖配置 -->
+    <!-- 项目信息 -->
     <groupId>com.xiuxian</groupId>
     <artifactId>xiuxian-server</artifactId>
     <version>0.0.1-SNAPSHOT</version> <!-- 项目版本 -->
@@ -26,19 +26,18 @@
         <java.version>17</java.version>
     </properties>
 
-
     <!-- Maven 仓库配置 -->
-    <repositories><!-- Maven中央仓库（默认） -->
+    <repositories>
+        <!-- Maven中央仓库（默认） -->
         <repository>
             <id>central</id>
             <url>https://repo.maven.apache.org/maven2</url>
         </repository>
-
         <!-- 使用阿里云的 Maven 仓库镜像，加快依赖下载速度 -->
-<!--        <repository>-->
-<!--            <id>aliyun-maven</id>-->
-<!--            <url>https://maven.aliyun.com/repository/public</url>-->
-<!--        </repository>-->
+        <!-- <repository> -->
+        <!--     <id>aliyun-maven</id> -->
+        <!--     <url>https://maven.aliyun.com/repository/public</url> -->
+        <!-- </repository> -->
     </repositories>
 
     <!-- 项目依赖配置 -->
@@ -48,11 +47,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
+
         <!-- Flyway，用于数据库迁移 -->
-<!--        <dependency>-->
-<!--            <groupId>org.flywaydb</groupId>-->
-<!--            <artifactId>flyway-mysql</artifactId>-->
-<!--        </dependency>-->
+        <!-- <dependency> -->
+        <!--     <groupId>org.flywaydb</groupId> -->
+        <!--     <artifactId>flyway-mysql</artifactId> -->
+        <!-- </dependency> -->
 
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
@@ -82,17 +82,6 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.mapstruct</groupId>
-            <artifactId>mapstruct</artifactId>
-            <version>1.5.0.Final</version>
-        </dependency>
-        <dependency>
-            <groupId>org.mapstruct</groupId>
-            <artifactId>mapstruct-processor</artifactId>
-            <version>1.5.0.Final</version>
-            <scope>provided</scope>
-        </dependency>
         <!-- Spring Boot Validation，提供输入数据验证 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -117,7 +106,6 @@
             <version>5.8.11</version> <!-- 根据需要可以选择更新版本 -->
         </dependency>
 
-
         <dependency>
             <groupId>com.github.victools</groupId>
             <artifactId>jsonschema-generator</artifactId>
@@ -133,7 +121,7 @@
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
             <version>2.6.0</version>
         </dependency>
-<!--        引入 Apache POI 依赖-->
+        <!-- 引入 Apache POI 依赖 -->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
@@ -145,15 +133,12 @@
             <artifactId>spring-boot-starter-websocket</artifactId>
         </dependency>
 
-
         <!-- MySQL 连接器，用于连接 MySQL 数据库 -->
         <dependency>
             <groupId>org.mariadb.jdbc</groupId>
             <artifactId>mariadb-java-client</artifactId>
             <version>2.7.3</version>  <!-- 可以根据最新版本调整 -->
         </dependency>
-
-
 
         <!-- Spring Boot DevTools，提供开发时的热部署功能 -->
         <dependency>
@@ -162,7 +147,6 @@
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
-
 
         <!-- Spring Boot Test Starter，提供测试框架支持 -->
         <dependency>
@@ -211,7 +195,6 @@
             <artifactId>jackson-datatype-jsr310</artifactId>
             <version>2.12.5</version> <!-- 根据您的项目版本选择合适的版本 -->
         </dependency>
-
     </dependencies>
 
     <!-- 项目构建配置 -->
@@ -226,14 +209,15 @@
 
             <!-- Maven Compiler 插件，用于指定 Java 编译版本 -->
             <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
                     <source>17</source> <!-- 使用 JDK 17 编译源代码 -->
                     <target>17</target> <!-- 目标 JDK 版本 -->
                 </configuration>
             </plugin>
 
+            <!-- Maven Surefire 插件，用于测试 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -243,6 +227,7 @@
                 </configuration>
             </plugin>
         </plugins>
+
     </build>
 
 </project>
