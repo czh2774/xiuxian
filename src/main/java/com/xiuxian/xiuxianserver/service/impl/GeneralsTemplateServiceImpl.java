@@ -1,6 +1,6 @@
 package com.xiuxian.xiuxianserver.service.impl;
 
-import com.xiuxian.xiuxianserver.converter.GeneralsTemplateConverter;
+import com.xiuxian.xiuxianserver.Mapper.GeneralsTemplateMapper;
 import com.xiuxian.xiuxianserver.dto.GeneralsTemplateCreateRequestDTO;
 import com.xiuxian.xiuxianserver.dto.GeneralsTemplateDTO;
 import com.xiuxian.xiuxianserver.dto.GeneralsTemplateUpdateRequestDTO;
@@ -14,9 +14,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
- * GeneralsTemplateServiceImpl实现类，负责处理武将模板的具体业务逻辑。
+ * GeneralsTemplateServiceImpl 实现类，负责处理武将模板的具体业务逻辑。
  */
 @Service
 public class GeneralsTemplateServiceImpl implements GeneralsTemplateService {
@@ -26,129 +27,78 @@ public class GeneralsTemplateServiceImpl implements GeneralsTemplateService {
     @Autowired
     private GeneralsTemplateRepository generalsTemplateRepository;
 
+    @Autowired
+    private GeneralsTemplateMapper generalsTemplateMapper;
+
     /**
-     * 根据ID获取武将模板
-     * @param id 武将模板ID
-     * @return 武将模板的DTO对象
+     * 根据 ID 获取武将模板
+     * @param id 武将模板 ID
+     * @return 武将模板的 DTO 对象
      */
     @Override
     public GeneralsTemplateDTO getGeneralTemplateById(Long id) {
-        logger.info("Fetching GeneralsTemplate with ID: {}", id);
+        logger.info("获取 ID 为 {} 的武将模板", id);
         GeneralsTemplate template = generalsTemplateRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Template not found with ID: " + id));
-        return GeneralsTemplateConverter.toDto(template);
+                .orElseThrow(() -> new ResourceNotFoundException("未找到 ID 为 " + id + " 的武将模板"));
+        return generalsTemplateMapper.toDTO(template);
     }
 
     /**
      * 获取所有武将模板
-     * @return 武将模板的DTO列表
+     * @return 武将模板的 DTO 列表
      */
     @Override
     public List<GeneralsTemplateDTO> getAllGeneralTemplates() {
-        logger.info("Fetching all GeneralsTemplates");
+        logger.info("获取所有武将模板");
         List<GeneralsTemplate> templates = generalsTemplateRepository.findAll();
-        return templates.stream().map(GeneralsTemplateConverter::toDto).toList();
+        return templates.stream().map(generalsTemplateMapper::toDTO).collect(Collectors.toList());
     }
 
     /**
      * 创建一个新的武将模板
-     * @param request 创建模板请求的DTO对象
-     * @return 创建后的武将模板DTO对象
+     * @param request 创建模板请求的 DTO 对象
+     * @return 创建后的武将模板 DTO 对象
      */
     @Override
     public GeneralsTemplateDTO createGeneralTemplate(GeneralsTemplateCreateRequestDTO request) {
-        logger.info("Creating a new GeneralsTemplate with name: {}", request.getName());
-
-        // 使用 Builder 模式创建 GeneralsTemplate 实体
-        GeneralsTemplate template = GeneralsTemplate.builder()
-                .name(request.getName())
-                .rarity(request.getRarity())
-                .initialLevel(request.getInitialLevel())
-                .initialStars(request.getInitialStars())
-                .strength(request.getStrength())
-                .intelligence(request.getIntelligence())
-                .charisma(request.getCharisma())
-                .leadership(request.getLeadership())
-                .attack(request.getAttack())
-                .defense(request.getDefense())
-                .troops(request.getTroops())
-                .speed(request.getSpeed())
-                .attackPerLevel(request.getAttackPerLevel())
-                .defensePerLevel(request.getDefensePerLevel())
-                .troopsPerLevel(request.getTroopsPerLevel())
-                .attackPerTier(request.getAttackPerTier())
-                .defensePerTier(request.getDefensePerTier())
-                .troopsPerTier(request.getTroopsPerTier())
-                .normalTalentId(request.getNormalTalentId())
-                .awakeningTalentId(request.getAwakeningTalentId())
-                .initialSkillIds(request.getInitialSkillIds())
-                .frontTroopId(request.getFrontTroopId())
-                .rearTroopId(request.getRearTroopId())
-                .appearanceTemplateId(request.getAppearanceTemplateId())
-                .description(request.getDescription())
-                .biography(request.getBiography())
-                .build();
-
+        logger.info("创建新的武将模板，名称: {}", request.getName());
+        GeneralsTemplate template = generalsTemplateMapper.toEntity(request);
         generalsTemplateRepository.save(template);
-        logger.info("GeneralsTemplate created successfully with ID: {}", template.getId());
-        return GeneralsTemplateConverter.toDto(template);
+        logger.info("成功创建武将模板，ID: {}", template.getId());
+        return generalsTemplateMapper.toDTO(template);
     }
 
     /**
-     * 更新指定ID的武将模板信息
-     * @param id 武将模板ID
-     * @param request 更新请求的DTO对象
-     * @return 更新后的武将模板DTO对象
+     * 更新指定 ID 的武将模板信息
+     * @param id 武将模板 ID
+     * @param request 更新请求的 DTO 对象
+     * @return 更新后的武将模板 DTO 对象
      */
     @Override
     public GeneralsTemplateDTO updateGeneralTemplate(Long id, GeneralsTemplateUpdateRequestDTO request) {
-        logger.info("Updating GeneralsTemplate with ID: {}", id);
+        logger.info("更新 ID 为 {} 的武将模板", id);
         GeneralsTemplate template = generalsTemplateRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Template not found with ID: " + id));
+                .orElseThrow(() -> new ResourceNotFoundException("未找到 ID 为 " + id + " 的武将模板"));
 
-        // 更新实体的字段
-        template.setName(request.getName());
-        template.setRarity(request.getRarity());
-        template.setInitialLevel(request.getInitialLevel());
-        template.setInitialStars(request.getInitialStars());
-        template.setStrength(request.getStrength());
-        template.setIntelligence(request.getIntelligence());
-        template.setCharisma(request.getCharisma());
-        template.setLeadership(request.getLeadership());
-        template.setAttack(request.getAttack());
-        template.setDefense(request.getDefense());
-        template.setTroops(request.getTroops());
-        template.setSpeed(request.getSpeed());
-        template.setAttackPerLevel(request.getAttackPerLevel());
-        template.setDefensePerLevel(request.getDefensePerLevel());
-        template.setTroopsPerLevel(request.getTroopsPerLevel());
-        template.setAttackPerTier(request.getAttackPerTier());
-        template.setDefensePerTier(request.getDefensePerTier());
-        template.setTroopsPerTier(request.getTroopsPerTier());
-        template.setNormalTalentId(request.getNormalTalentId());
-        template.setAwakeningTalentId(request.getAwakeningTalentId());
-        template.setInitialSkillIds(request.getInitialSkillIds());
-        template.setFrontTroopId(request.getFrontTroopId());
-        template.setRearTroopId(request.getRearTroopId());
-        template.setAppearanceTemplateId(request.getAppearanceTemplateId());
-        template.setDescription(request.getDescription());
-        template.setBiography(request.getBiography());
+        // 使用映射器更新实体对象
+        GeneralsTemplate updatedTemplate = generalsTemplateMapper.toEntity(request);
+        updatedTemplate.setId(template.getId()); // 保留原 ID
 
-        generalsTemplateRepository.save(template);
-        logger.info("GeneralsTemplate updated successfully with ID: {}", template.getId());
-        return GeneralsTemplateConverter.toDto(template);
+        generalsTemplateRepository.save(updatedTemplate);
+        logger.info("成功更新武将模板，ID: {}", updatedTemplate.getId());
+        return generalsTemplateMapper.toDTO(updatedTemplate);
     }
 
     /**
-     * 删除指定ID的武将模板
-     * @param id 武将模板ID
+     * 删除指定 ID 的武将模板
+     * @param id 武将模板 ID
      */
     @Override
     public void deleteGeneralTemplate(Long id) {
-        logger.info("Deleting GeneralsTemplate with ID: {}", id);
+        logger.info("删除 ID 为 {} 的武将模板", id);
         GeneralsTemplate template = generalsTemplateRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Template not found with ID: " + id));
+                .orElseThrow(() -> new ResourceNotFoundException("未找到 ID 为 " + id + " 的武将模板"));
         generalsTemplateRepository.delete(template);
-        logger.info("GeneralsTemplate deleted successfully with ID: {}", id);
+        logger.info("成功删除武将模板，ID: {}", id);
     }
 }

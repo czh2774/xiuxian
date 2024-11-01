@@ -16,7 +16,7 @@ public class ItemTemplateDTO {
     private String iconPath;            // 图标路径
     private String obtainMethod;        // 获取方式
     private String jumpFunctions;       // 跳转功能
-    private boolean isChest;            // 是否为宝箱
+    private boolean chest;            // 是否为宝箱
     private ChestTypeEnum chestType;    // 宝箱类型
     private VisualEffectEnum visualEffect; // 视觉效果
     private ItemCategory itemCategory;  // 道具类别
@@ -33,7 +33,7 @@ public class ItemTemplateDTO {
         this.iconPath = itemTemplate.getIconPath();
         this.obtainMethod = itemTemplate.getObtainMethod();
         this.jumpFunctions = itemTemplate.getJumpFunctions();
-        this.isChest = itemTemplate.isChest();
+        this.chest = itemTemplate.isChest();
         this.chestType = itemTemplate.getChestType();
         this.visualEffect = itemTemplate.getVisualEffect();
         this.itemCategory = itemTemplate.getItemCategory(); // 设置道具类别

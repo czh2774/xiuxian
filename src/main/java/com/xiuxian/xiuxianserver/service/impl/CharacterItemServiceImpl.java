@@ -1,5 +1,6 @@
 package com.xiuxian.xiuxianserver.service.impl;
 
+import com.xiuxian.xiuxianserver.Mapper.CharacterItemMapper;
 import com.xiuxian.xiuxianserver.dto.CharacterItemDTO;
 import com.xiuxian.xiuxianserver.dto.ItemTemplateDTO;
 import com.xiuxian.xiuxianserver.entity.CharacterItem;
@@ -15,7 +16,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import cn.hutool.core.lang.Snowflake;
 
-import jakarta.validation.Valid; // 使用 Jakarta Validation
+import jakarta.validation.Valid;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -25,13 +26,16 @@ import java.util.stream.Collectors;
 public class CharacterItemServiceImpl implements CharacterItemService {
 
     private static final Logger logger = LoggerFactory.getLogger(CharacterItemServiceImpl.class);
-    @Autowired
-    private ItemTemplateService itemTemplateService;
+
+    private final ItemTemplateService itemTemplateService;
     private final CharacterItemRepository characterItemRepository;
     private final Snowflake snowflake;
 
     @Autowired
-    public CharacterItemServiceImpl(CharacterItemRepository characterItemRepository, Snowflake snowflake) {
+    public CharacterItemServiceImpl(ItemTemplateService itemTemplateService,
+                                    CharacterItemRepository characterItemRepository,
+                                    Snowflake snowflake) {
+        this.itemTemplateService = itemTemplateService;
         this.characterItemRepository = characterItemRepository;
         this.snowflake = snowflake;
     }
@@ -42,36 +46,28 @@ public class CharacterItemServiceImpl implements CharacterItemService {
         CharacterItem item = characterItemRepository.findById(itemInstanceId)
                 .orElseThrow(() -> new ResourceNotFoundException("道具未找到，ID: " + itemInstanceId));
         logger.info("成功获取角色道具，ID: {}", itemInstanceId);
-        return new CharacterItemDTO(item);
+        return CharacterItemMapper.INSTANCE.toDTO(item);
     }
 
     @Override
     public List<CharacterItemDTO> getCharacterItemsByCharacterId(long characterId) {
         logger.info("开始获取角色的所有道具，角色ID: {}", characterId);
         List<CharacterItem> items = characterItemRepository.findByCharacterId(characterId);
-        List<CharacterItemDTO> itemDTOs = items.stream().map(CharacterItemDTO::new).collect(Collectors.toList());
         logger.info("成功获取角色的所有道具，角色ID: {}, 道具数量: {}", characterId, items.size());
-        return itemDTOs;
+        return items.stream()
+                .map(CharacterItemMapper.INSTANCE::toDTO)
+                .collect(Collectors.toList());
     }
 
     @Override
     @Transactional
     public CharacterItemDTO createCharacterItem(@Valid CharacterItemDTO request) {
         logger.info("开始创建角色道具实例，角色ID: {}, 模板ID: {}", request.getCharacterId(), request.getItemTemplateId());
-
-        CharacterItem item = new CharacterItem();
+        CharacterItem item = CharacterItemMapper.INSTANCE.toEntity(request);
         item.setId(snowflake.nextId());
-        item.setCharacterId(request.getCharacterId());
-        item.setItemTemplateId(request.getItemTemplateId());
-        item.setQuantity(request.getQuantity());
-        item.setAcquiredAt(request.getAcquiredAt());
-        item.setItemCategory(request.getItemCategory());
-        item.setLastUsedAt(request.getLastUsedAt());
-        item.setEquipped(request.isEquipped());
-
         CharacterItem savedItem = characterItemRepository.save(item);
         logger.info("成功创建角色道具实例，道具ID: {}", savedItem.getId());
-        return new CharacterItemDTO(savedItem);
+        return CharacterItemMapper.INSTANCE.toDTO(savedItem);
     }
 
     @Override
@@ -80,95 +76,71 @@ public class CharacterItemServiceImpl implements CharacterItemService {
         logger.info("开始更新角色道具实例，ID: {}", itemInstanceId);
         CharacterItem item = characterItemRepository.findById(itemInstanceId)
                 .orElseThrow(() -> new ResourceNotFoundException("道具未找到，ID: " + itemInstanceId));
-
         item.setQuantity(request.getQuantity());
         item.setLastUsedAt(request.getLastUsedAt());
         item.setEquipped(request.isEquipped());
-
         CharacterItem updatedItem = characterItemRepository.save(item);
         logger.info("成功更新角色道具实例，ID: {}", itemInstanceId);
-        return new CharacterItemDTO(updatedItem);
+        return CharacterItemMapper.INSTANCE.toDTO(updatedItem);
     }
-
-    @Override
-    @Transactional
-    public void deleteCharacterItem(long itemInstanceId) {
-        logger.info("开始删除角色道具实例，ID: {}", itemInstanceId);
-        if (!characterItemRepository.existsById(itemInstanceId)) {
-            logger.error("删除失败，道具未找到，ID: {}", itemInstanceId);
-            throw new ResourceNotFoundException("道具未找到，ID: " + itemInstanceId);
-        }
-        characterItemRepository.deleteById(itemInstanceId);
-        logger.info("成功删除角色道具实例，ID: {}", itemInstanceId);
-    }
-
-    @Override
-    @Transactional
-    public void useItem(long itemInstanceId, int quantity) {
-        logger.info("开始使用道具，道具ID: {}, 使用数量: {}", itemInstanceId, quantity);
-        CharacterItem item = characterItemRepository.findById(itemInstanceId)
-                .orElseThrow(() -> new ResourceNotFoundException("道具未找到，ID: " + itemInstanceId));
-
-        if (item.getQuantity() < quantity) {
-            logger.error("使用道具失败，数量不足，道具ID: {}", itemInstanceId);
-            throw new IllegalArgumentException("道具数量不足，无法使用");
-        }
-
-        item.setQuantity(item.getQuantity() - quantity);
-        characterItemRepository.save(item);
-        logger.info("成功使用道具，道具ID: {}, 剩余数量: {}", itemInstanceId, item.getQuantity());
-    }
-
 
     @Override
     @Transactional
     public List<CharacterItemDTO> initializeDefaultItems(long characterId) {
         logger.info("开始初始化角色的默认道具列表，角色ID: {}", characterId);
+        List<Long> defaultTemplateIds = List.of(1L, 2L);
 
-        // 假设存在的 ItemTemplateService 用于获取道具模板数据
-        List<Long> defaultTemplateIds = List.of(1L, 2L); // 默认的道具模板 ID 列表，可以根据需要调整
-
-        List<CharacterItemDTO> defaultItems = defaultTemplateIds.stream()
+        List<CharacterItem> defaultItems = defaultTemplateIds.stream()
                 .map(templateId -> {
-                    ItemTemplateDTO template = itemTemplateService.getItemTemplateById(templateId); // 获取道具模板
-                    return new CharacterItemDTO(
-                            null,
-                            characterId,
-                            template.getId(), // 使用模板 ID
-                            10,               // 默认数量，可以自定义
-                            LocalDateTime.now(),
-                            template.getItemCategory(), // 从模板中获取道具类别
-                            null,
-                            false,
-                            LocalDateTime.now(),
-                            LocalDateTime.now()
-                    );
-                })
+                    ItemTemplateDTO template = itemTemplateService.getItemTemplateById(templateId);
+                    CharacterItem item = new CharacterItem();
+                    item.setId(snowflake.nextId());
+                    item.setCharacterId(characterId);
+                    item.setItemTemplateId(template.getId());
+                    item.setQuantity(10);
+                    item.setAcquiredAt(LocalDateTime.now());
+                    item.setItemCategory(template.getItemCategory());
+                    item.setLastUsedAt(null);
+                    item.setEquipped(false);
+                    return item;
+                }).collect(Collectors.toList());
+
+        characterItemRepository.saveAll(defaultItems);
+        logger.info("成功初始化角色的默认道具列表，角色ID: {}, 道具数量: {}", characterId, defaultItems.size());
+        return defaultItems.stream()
+                .map(CharacterItemMapper.INSTANCE::toDTO)
                 .collect(Collectors.toList());
-
-        List<CharacterItem> savedItems = defaultItems.stream().map(itemDTO -> {
-            CharacterItem item = new CharacterItem();
-            item.setId(snowflake.nextId());
-            item.setCharacterId(characterId);
-            item.setItemTemplateId(itemDTO.getItemTemplateId());
-            item.setQuantity(itemDTO.getQuantity());
-            item.setAcquiredAt(itemDTO.getAcquiredAt());
-            item.setItemCategory(itemDTO.getItemCategory());
-            item.setLastUsedAt(itemDTO.getLastUsedAt());
-            item.setEquipped(itemDTO.isEquipped());
-            return item;
-        }).collect(Collectors.toList());
-
-        // 保存所有道具实例
-        characterItemRepository.saveAll(savedItems);
-
-        logger.info("成功初始化角色的默认道具列表，角色ID: {}, 道具数量: {}", characterId, savedItems.size());
-        return savedItems.stream().map(CharacterItemDTO::new).collect(Collectors.toList());
     }
 
+    @Override
+    @Transactional
+    public void deleteCharacterItem(long id) {
+        logger.info("开始删除角色道具，ID: {}", id);
+        if (!characterItemRepository.existsById(id)) {
+            throw new ResourceNotFoundException("道具未找到，ID: " + id);
+        }
+        characterItemRepository.deleteById(id);
+        logger.info("成功删除角色道具，ID: {}", id);
+    }
 
+    @Override
+    @Transactional
+    public void useItem(long itemInstanceId, int quantity) {
+        logger.info("开始使用道具，ID: {}, 数量: {}", itemInstanceId, quantity);
+        CharacterItem item = characterItemRepository.findById(itemInstanceId)
+                .orElseThrow(() -> new ResourceNotFoundException("道具未找到，ID: " + itemInstanceId));
 
+        if (item.getQuantity() < quantity) {
+            throw new IllegalArgumentException("道具数量不足，无法使用");
+        }
 
-
-
+        item.setQuantity(item.getQuantity() - quantity);
+        if (item.getQuantity() == 0) {
+            characterItemRepository.delete(item);
+            logger.info("道具已用尽并删除，ID: {}", itemInstanceId);
+        } else {
+            characterItemRepository.save(item);
+            logger.info("道具使用成功，剩余数量: {}", item.getQuantity());
+        }
+    }
 }

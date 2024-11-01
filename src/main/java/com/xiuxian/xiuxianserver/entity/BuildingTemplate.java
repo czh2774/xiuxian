@@ -12,7 +12,6 @@ import lombok.NoArgsConstructor;
  * 建筑模板表，定义建筑的基础信息，如名称、是否可升级、最大等级等。
  * 支持生成 Excel 文件，带有注解。
  */
-@Builder
 @ExcelField
 @Data
 @Entity

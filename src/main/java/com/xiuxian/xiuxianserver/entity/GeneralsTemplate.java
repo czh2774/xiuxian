@@ -17,7 +17,6 @@ import java.util.List;
  * 支持生成 Excel 文件，带有注解。
  */
 @ExcelField
-@Builder
 @NoArgsConstructor
 @Data
 @Entity

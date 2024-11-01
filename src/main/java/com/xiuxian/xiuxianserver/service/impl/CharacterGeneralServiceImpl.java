@@ -4,6 +4,7 @@ import cn.hutool.core.lang.Snowflake;
 import com.xiuxian.xiuxianserver.dto.CharacterGeneralDTO;
 import com.xiuxian.xiuxianserver.entity.CharacterGeneral;
 import com.xiuxian.xiuxianserver.exception.ResourceNotFoundException;
+import com.xiuxian.xiuxianserver.Mapper.CharacterGeneralMapper;
 import com.xiuxian.xiuxianserver.repository.CharacterGeneralRepository;
 import com.xiuxian.xiuxianserver.service.CharacterGeneralService;
 import org.slf4j.Logger;
@@ -27,10 +28,12 @@ public class CharacterGeneralServiceImpl implements CharacterGeneralService {
     private CharacterGeneralRepository characterGeneralRepository;
 
     private final Snowflake snowflake;
+    private final CharacterGeneralMapper characterGeneralMapper;
 
     @Autowired
-    public CharacterGeneralServiceImpl(Snowflake snowflake) {
+    public CharacterGeneralServiceImpl(Snowflake snowflake, CharacterGeneralMapper characterGeneralMapper) {
         this.snowflake = snowflake;
+        this.characterGeneralMapper = characterGeneralMapper;
     }
 
     /**
@@ -44,7 +47,7 @@ public class CharacterGeneralServiceImpl implements CharacterGeneralService {
         CharacterGeneral general = characterGeneralRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("未找到武将，ID：" + id));
         logger.info("成功获取武将信息，ID：{}", id);
-        return convertToDTO(general);
+        return characterGeneralMapper.toDTO(general);
     }
 
     /**
@@ -57,7 +60,7 @@ public class CharacterGeneralServiceImpl implements CharacterGeneralService {
     public List<CharacterGeneralDTO> getCharacterGeneralsByCharacterId(Long characterId) {
         List<CharacterGeneral> generals = characterGeneralRepository.findByCharacterId(characterId);
         logger.info("获取角色ID为 {} 的武将列表，共 {} 个武将", characterId, generals.size());
-        return generals.stream().map(this::convertToDTO).collect(Collectors.toList());
+        return generals.stream().map(characterGeneralMapper::toDTO).collect(Collectors.toList());
     }
 
     /**
@@ -75,7 +78,7 @@ public class CharacterGeneralServiceImpl implements CharacterGeneralService {
 
         characterGeneralRepository.save(general);
         logger.info("创建新武将成功，ID：{}", id);
-        return convertToDTO(general);
+        return characterGeneralMapper.toDTO(general);
     }
 
     /**
@@ -99,7 +102,7 @@ public class CharacterGeneralServiceImpl implements CharacterGeneralService {
 
         characterGeneralRepository.save(general);
         logger.info("更新武将成功，ID：{}", id);
-        return convertToDTO(general);
+        return characterGeneralMapper.toDTO(general);
     }
 
     /**
@@ -150,22 +153,5 @@ public class CharacterGeneralServiceImpl implements CharacterGeneralService {
         characterGeneralRepository.saveAll(defaultGenerals);
         logger.info("初始化 {} 的默认武将列表，角色ID：{}", defaultGenerals.size(), characterId);
         return defaultGenerals;
-    }
-
-    /**
-     * DTO转换方法
-     */
-    private CharacterGeneralDTO convertToDTO(CharacterGeneral general) {
-        CharacterGeneralDTO dto = new CharacterGeneralDTO();
-        dto.setId(general.getId());
-        dto.setCharacterId(general.getCharacterId());
-        dto.setGeneralTemplateId(general.getGeneralTemplateId());
-        dto.setLevel(general.getLevel());
-        dto.setStars(general.getStars());
-        dto.setExperience(general.getExperience());
-        dto.setStatus(general.getStatus());
-        dto.setEquippedItems(general.getEquippedItems());
-        dto.setCurrentSkills(general.getCurrentSkills());
-        return dto;
     }
 }
