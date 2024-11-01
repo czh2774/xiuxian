@@ -5,19 +5,19 @@ import io.swagger.v3.oas.annotations.media.Schema;
 /**
  * 枚举类定义道具的稀有度。
  */
-@Schema(description = "道具稀有度枚举")
+@Schema(description = "稀有度枚举")
 public enum RarityEnum {
 
-    @Schema(description = "普通道具")
+    @Schema(description = "普通")
     COMMON("普通", 1, "#FFFFFF"),
 
-    @Schema(description = "稀有道具")
+    @Schema(description = "稀有")
     RARE("稀有", 2, "#00FF00"),
 
-    @Schema(description = "史诗道具")
+    @Schema(description = "史诗")
     EPIC("史诗", 3, "#FF00FF"),
 
-    @Schema(description = "传奇道具")
+    @Schema(description = "传奇")
     LEGENDARY("传奇", 4, "#FFD700");
 
     private final String displayName;

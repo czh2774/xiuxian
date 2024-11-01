@@ -3,6 +3,7 @@ package com.xiuxian.xiuxianserver.service.impl;
 import com.xiuxian.xiuxianserver.dto.TaskTemplateDTO;
 import com.xiuxian.xiuxianserver.entity.TaskTemplate;
 import com.xiuxian.xiuxianserver.entity.TaskReward;
+import com.xiuxian.xiuxianserver.exception.CustomConversionException;
 import com.xiuxian.xiuxianserver.exception.ResourceNotFoundException;
 import com.xiuxian.xiuxianserver.repository.TaskTemplateRepository;
 import com.xiuxian.xiuxianserver.service.TaskTemplateService;
@@ -153,31 +154,32 @@ public class TaskTemplateServiceImpl implements TaskTemplateService {
         );
     }
 
-    /**
-     * 将 TaskTemplateDTO 转换为实体对象 TaskTemplate。
-     *
-     * @param dto DTO对象
-     * @return 实体对象
-     */
     private TaskTemplate convertToEntity(TaskTemplateDTO dto) {
-        return TaskTemplate.builder()
-                .name(dto.getName())
-                .description(dto.getDescription())
-                .type(TaskTemplate.TaskType.valueOf(dto.getType()))
-                .goalType(TaskTemplate.TaskGoalType.valueOf(dto.getGoalType()))
-                .goalValue(dto.getGoalValue())
-                .rewards(dto.getRewards().stream()
-                        .map(rewardDTO -> {
-                            TaskReward reward = new TaskReward();
-                            reward.setType(TaskTemplate.RewardType.valueOf(rewardDTO.getType()));
-                            reward.setValue(rewardDTO.getValue());
-                            return reward;
-                        })
-                        .collect(Collectors.toList()))
-                .preTaskId(dto.getPreTaskId())
-                .requiredPlayerLevel(dto.getRequiredPlayerLevel())
-                .status(TaskTemplate.TaskStatus.valueOf(dto.getStatus()))
-                .triggerNextTask(dto.isTriggerNextTask())
-                .build();
+        try {
+            return TaskTemplate.builder()
+                    .name(dto.getName())
+                    .description(dto.getDescription())
+                    .type(TaskTemplate.TaskType.valueOf(dto.getType()))
+                    .goalType(TaskTemplate.TaskGoalType.valueOf(dto.getGoalType()))
+                    .goalValue(dto.getGoalValue())
+                    .rewards(dto.getRewards().stream()
+                            .map(rewardDTO -> {
+                                TaskTemplate.Reward reward = new TaskTemplate.Reward(); // 使用 TaskTemplate.Reward
+                                reward.setType(TaskTemplate.RewardType.valueOf(rewardDTO.getType()));
+                                reward.setValue(rewardDTO.getValue());
+                                return reward;
+                            })
+                            .collect(Collectors.toList()))
+                    .preTaskId(dto.getPreTaskId())
+                    .requiredPlayerLevel(dto.getRequiredPlayerLevel())
+                    .status(TaskTemplate.TaskStatus.valueOf(dto.getStatus()))
+                    .triggerNextTask(dto.isTriggerNextTask())
+                    .build();
+        } catch (IllegalArgumentException e) {
+            // Handle conversion error
+            throw new CustomConversionException("Error converting TaskTemplateDTO to TaskTemplate", e);
+        }
     }
+
+
 }

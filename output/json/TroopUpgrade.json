@@ -1,0 +1,10 @@
+[ {
+  "id" : 1,
+  "troopTemplateId" : null,
+  "level" : 1,
+  "tier" : 1,
+  "upgradeTime" : 0,
+  "resourceCost" : null,
+  "effect" : "1.0",
+  "upgradeRequirements" : null
+} ]

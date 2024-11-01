@@ -1,4 +1,4 @@
-package com.xiuxian.xiuxianserver.entity;  // 添加正确的包声明
+package com.xiuxian.xiuxianserver.entity;
 
 import com.xiuxian.xiuxianserver.util.StringListConverter;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -16,7 +16,7 @@ public class CharacterGeneral {
 
     @Id
     @Column(name = "id", nullable = false, unique = true)
-    @Schema(description = "角色武将记录的唯一标识符，由雪花ID生成")
+    @Schema(description = "角色武将记录的唯一标识符")
     private Long id;
 
     @Column(name = "character_id", nullable = false)

@@ -1,0 +1,711 @@
+[ {
+  "id" : 10001,
+  "buildingTemplateId" : null,
+  "level" : 1,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10002,
+  "buildingTemplateId" : null,
+  "level" : 2,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10003,
+  "buildingTemplateId" : null,
+  "level" : 3,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10004,
+  "buildingTemplateId" : null,
+  "level" : 4,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10005,
+  "buildingTemplateId" : null,
+  "level" : 5,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10006,
+  "buildingTemplateId" : null,
+  "level" : 6,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10007,
+  "buildingTemplateId" : null,
+  "level" : 7,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10008,
+  "buildingTemplateId" : null,
+  "level" : 8,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10009,
+  "buildingTemplateId" : null,
+  "level" : 9,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10010,
+  "buildingTemplateId" : null,
+  "level" : 10,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10011,
+  "buildingTemplateId" : null,
+  "level" : 11,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10012,
+  "buildingTemplateId" : null,
+  "level" : 12,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10013,
+  "buildingTemplateId" : null,
+  "level" : 13,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10014,
+  "buildingTemplateId" : null,
+  "level" : 14,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10015,
+  "buildingTemplateId" : null,
+  "level" : 15,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10016,
+  "buildingTemplateId" : null,
+  "level" : 16,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10017,
+  "buildingTemplateId" : null,
+  "level" : 17,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10018,
+  "buildingTemplateId" : null,
+  "level" : 18,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10019,
+  "buildingTemplateId" : null,
+  "level" : 19,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10020,
+  "buildingTemplateId" : null,
+  "level" : 20,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10021,
+  "buildingTemplateId" : null,
+  "level" : 21,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10022,
+  "buildingTemplateId" : null,
+  "level" : 22,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10023,
+  "buildingTemplateId" : null,
+  "level" : 23,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10024,
+  "buildingTemplateId" : null,
+  "level" : 24,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10025,
+  "buildingTemplateId" : null,
+  "level" : 25,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10026,
+  "buildingTemplateId" : null,
+  "level" : 26,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10027,
+  "buildingTemplateId" : null,
+  "level" : 27,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10028,
+  "buildingTemplateId" : null,
+  "level" : 28,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10029,
+  "buildingTemplateId" : null,
+  "level" : 29,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10030,
+  "buildingTemplateId" : null,
+  "level" : 30,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10031,
+  "buildingTemplateId" : null,
+  "level" : 31,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10032,
+  "buildingTemplateId" : null,
+  "level" : 32,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10033,
+  "buildingTemplateId" : null,
+  "level" : 33,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10034,
+  "buildingTemplateId" : null,
+  "level" : 34,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10035,
+  "buildingTemplateId" : null,
+  "level" : 35,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"LAND_BUILDING_LEVEL_LIMIT\",\"baseValue\":4,\"bonusValue\":1},{\"type\":\"HERO_LEVEL_LIMIT\",\"baseValue\":3,\"bonusValue\":3}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10036,
+  "buildingTemplateId" : null,
+  "level" : 1,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10037,
+  "buildingTemplateId" : null,
+  "level" : 2,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10038,
+  "buildingTemplateId" : null,
+  "level" : 3,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10039,
+  "buildingTemplateId" : null,
+  "level" : 4,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10040,
+  "buildingTemplateId" : null,
+  "level" : 5,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10041,
+  "buildingTemplateId" : null,
+  "level" : 6,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10042,
+  "buildingTemplateId" : null,
+  "level" : 7,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10043,
+  "buildingTemplateId" : null,
+  "level" : 8,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10044,
+  "buildingTemplateId" : null,
+  "level" : 9,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10045,
+  "buildingTemplateId" : null,
+  "level" : 10,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10046,
+  "buildingTemplateId" : null,
+  "level" : 11,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10047,
+  "buildingTemplateId" : null,
+  "level" : 12,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10048,
+  "buildingTemplateId" : null,
+  "level" : 13,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10049,
+  "buildingTemplateId" : null,
+  "level" : 14,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10050,
+  "buildingTemplateId" : null,
+  "level" : 15,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10051,
+  "buildingTemplateId" : null,
+  "level" : 16,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10052,
+  "buildingTemplateId" : null,
+  "level" : 17,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10053,
+  "buildingTemplateId" : null,
+  "level" : 18,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10054,
+  "buildingTemplateId" : null,
+  "level" : 19,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10055,
+  "buildingTemplateId" : null,
+  "level" : 20,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10056,
+  "buildingTemplateId" : null,
+  "level" : 21,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10057,
+  "buildingTemplateId" : null,
+  "level" : 22,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10058,
+  "buildingTemplateId" : null,
+  "level" : 23,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10059,
+  "buildingTemplateId" : null,
+  "level" : 24,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10060,
+  "buildingTemplateId" : null,
+  "level" : 25,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10061,
+  "buildingTemplateId" : null,
+  "level" : 26,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10062,
+  "buildingTemplateId" : null,
+  "level" : 27,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10063,
+  "buildingTemplateId" : null,
+  "level" : 28,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10064,
+  "buildingTemplateId" : null,
+  "level" : 29,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10065,
+  "buildingTemplateId" : null,
+  "level" : 30,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10066,
+  "buildingTemplateId" : null,
+  "level" : 31,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10067,
+  "buildingTemplateId" : null,
+  "level" : 32,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10068,
+  "buildingTemplateId" : null,
+  "level" : 33,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10069,
+  "buildingTemplateId" : null,
+  "level" : 34,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10070,
+  "buildingTemplateId" : null,
+  "level" : 35,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\"effects\":[{\"type\":\"DAILY_TREASURE_STORE_PURCHASE\",\"baseValue\":22,\"bonusValue\":2}]}]}",
+  "upgradeRequirements" : null
+}, {
+  "id" : 10071,
+  "buildingTemplateId" : null,
+  "level" : 1,
+  "upgradeTime" : 0,
+  "foodCost" : 0,
+  "woodCost" : 0,
+  "ironCost" : 0,
+  "effect" : "{\n    \"effects\": [\n        {\n            \"type\": \"DAILY_SMALL_TRAINING_TIMES\",\n            \"baseValue\": 6,\n            \"bonusValue\": 1\n        }\n    ]\n}",
+  "upgradeRequirements" : null
+} ]

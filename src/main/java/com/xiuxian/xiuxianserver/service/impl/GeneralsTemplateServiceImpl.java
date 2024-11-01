@@ -1,5 +1,6 @@
 package com.xiuxian.xiuxianserver.service.impl;
 
+import com.xiuxian.xiuxianserver.converter.GeneralsTemplateConverter;
 import com.xiuxian.xiuxianserver.dto.GeneralsTemplateCreateRequestDTO;
 import com.xiuxian.xiuxianserver.dto.GeneralsTemplateDTO;
 import com.xiuxian.xiuxianserver.dto.GeneralsTemplateUpdateRequestDTO;
@@ -35,7 +36,7 @@ public class GeneralsTemplateServiceImpl implements GeneralsTemplateService {
         logger.info("Fetching GeneralsTemplate with ID: {}", id);
         GeneralsTemplate template = generalsTemplateRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Template not found with ID: " + id));
-        return convertToDTO(template);
+        return GeneralsTemplateConverter.toDto(template);
     }
 
     /**
@@ -46,7 +47,7 @@ public class GeneralsTemplateServiceImpl implements GeneralsTemplateService {
     public List<GeneralsTemplateDTO> getAllGeneralTemplates() {
         logger.info("Fetching all GeneralsTemplates");
         List<GeneralsTemplate> templates = generalsTemplateRepository.findAll();
-        return templates.stream().map(this::convertToDTO).toList();
+        return templates.stream().map(GeneralsTemplateConverter::toDto).toList();
     }
 
     /**
@@ -57,37 +58,40 @@ public class GeneralsTemplateServiceImpl implements GeneralsTemplateService {
     @Override
     public GeneralsTemplateDTO createGeneralTemplate(GeneralsTemplateCreateRequestDTO request) {
         logger.info("Creating a new GeneralsTemplate with name: {}", request.getName());
-        GeneralsTemplate template = new GeneralsTemplate();
-        template.setName(request.getName());
-        template.setRarity(request.getRarity());
-        template.setInitialLevel(request.getInitialLevel());
-        template.setInitialStars(request.getInitialStars());
-        template.setStrength(request.getStrength());
-        template.setIntelligence(request.getIntelligence());
-        template.setCharisma(request.getCharisma());
-        template.setLeadership(request.getLeadership());
-        template.setAttack(request.getAttack());
-        template.setDefense(request.getDefense());
-        template.setTroops(request.getTroops());
-        template.setSpeed(request.getSpeed());
-        template.setAttackPerLevel(request.getAttackPerLevel());
-        template.setDefensePerLevel(request.getDefensePerLevel());
-        template.setTroopsPerLevel(request.getTroopsPerLevel());
-        template.setAttackPerTier(request.getAttackPerTier());
-        template.setDefensePerTier(request.getDefensePerTier());
-        template.setTroopsPerTier(request.getTroopsPerTier());
-        template.setNormalTalentId(request.getNormalTalentId());
-        template.setAwakeningTalentId(request.getAwakeningTalentId());
-        template.setInitialSkillIds(request.getInitialSkillIds());
-        template.setFrontTroopId(request.getFrontTroopId());
-        template.setRearTroopId(request.getRearTroopId());
-        template.setAppearanceTemplateId(request.getAppearanceTemplateId());
-        template.setDescription(request.getDescription());
-        template.setBiography(request.getBiography());
+
+        // 使用 Builder 模式创建 GeneralsTemplate 实体
+        GeneralsTemplate template = GeneralsTemplate.builder()
+                .name(request.getName())
+                .rarity(request.getRarity())
+                .initialLevel(request.getInitialLevel())
+                .initialStars(request.getInitialStars())
+                .strength(request.getStrength())
+                .intelligence(request.getIntelligence())
+                .charisma(request.getCharisma())
+                .leadership(request.getLeadership())
+                .attack(request.getAttack())
+                .defense(request.getDefense())
+                .troops(request.getTroops())
+                .speed(request.getSpeed())
+                .attackPerLevel(request.getAttackPerLevel())
+                .defensePerLevel(request.getDefensePerLevel())
+                .troopsPerLevel(request.getTroopsPerLevel())
+                .attackPerTier(request.getAttackPerTier())
+                .defensePerTier(request.getDefensePerTier())
+                .troopsPerTier(request.getTroopsPerTier())
+                .normalTalentId(request.getNormalTalentId())
+                .awakeningTalentId(request.getAwakeningTalentId())
+                .initialSkillIds(request.getInitialSkillIds())
+                .frontTroopId(request.getFrontTroopId())
+                .rearTroopId(request.getRearTroopId())
+                .appearanceTemplateId(request.getAppearanceTemplateId())
+                .description(request.getDescription())
+                .biography(request.getBiography())
+                .build();
 
         generalsTemplateRepository.save(template);
         logger.info("GeneralsTemplate created successfully with ID: {}", template.getId());
-        return convertToDTO(template);
+        return GeneralsTemplateConverter.toDto(template);
     }
 
     /**
@@ -102,6 +106,7 @@ public class GeneralsTemplateServiceImpl implements GeneralsTemplateService {
         GeneralsTemplate template = generalsTemplateRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Template not found with ID: " + id));
 
+        // 更新实体的字段
         template.setName(request.getName());
         template.setRarity(request.getRarity());
         template.setInitialLevel(request.getInitialLevel());
@@ -131,7 +136,7 @@ public class GeneralsTemplateServiceImpl implements GeneralsTemplateService {
 
         generalsTemplateRepository.save(template);
         logger.info("GeneralsTemplate updated successfully with ID: {}", template.getId());
-        return convertToDTO(template);
+        return GeneralsTemplateConverter.toDto(template);
     }
 
     /**
@@ -145,38 +150,5 @@ public class GeneralsTemplateServiceImpl implements GeneralsTemplateService {
                 .orElseThrow(() -> new ResourceNotFoundException("Template not found with ID: " + id));
         generalsTemplateRepository.delete(template);
         logger.info("GeneralsTemplate deleted successfully with ID: {}", id);
-    }
-
-    // DTO转换方法
-    private GeneralsTemplateDTO convertToDTO(GeneralsTemplate template) {
-        GeneralsTemplateDTO dto = new GeneralsTemplateDTO();
-        dto.setId(template.getId());
-        dto.setName(template.getName());
-        dto.setRarity(template.getRarity());
-        dto.setInitialLevel(template.getInitialLevel());
-        dto.setInitialStars(template.getInitialStars());
-        dto.setStrength(template.getStrength());
-        dto.setIntelligence(template.getIntelligence());
-        dto.setCharisma(template.getCharisma());
-        dto.setLeadership(template.getLeadership());
-        dto.setAttack(template.getAttack());
-        dto.setDefense(template.getDefense());
-        dto.setTroops(template.getTroops());
-        dto.setSpeed(template.getSpeed());
-        dto.setAttackPerLevel(template.getAttackPerLevel());
-        dto.setDefensePerLevel(template.getDefensePerLevel());
-        dto.setTroopsPerLevel(template.getTroopsPerLevel());
-        dto.setAttackPerTier(template.getAttackPerTier());
-        dto.setDefensePerTier(template.getDefensePerTier());
-        dto.setTroopsPerTier(template.getTroopsPerTier());
-        dto.setNormalTalentId(template.getNormalTalentId());
-        dto.setAwakeningTalentId(template.getAwakeningTalentId());
-        dto.setInitialSkillIds(template.getInitialSkillIds());
-        dto.setFrontTroopId(template.getFrontTroopId());
-        dto.setRearTroopId(template.getRearTroopId());
-        dto.setAppearanceTemplateId(template.getAppearanceTemplateId());
-        dto.setDescription(template.getDescription());
-        dto.setBiography(template.getBiography());
-        return dto;
     }
 }

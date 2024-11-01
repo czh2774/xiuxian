@@ -87,4 +87,14 @@ public class GlobalExceptionHandler {
         logger.error("服务器内部错误: {}", ex.getMessage(), ex);
         return buildResponse(HttpStatus.INTERNAL_SERVER_ERROR, "服务器发生了未知错误，请稍后重试", request);
     }
+
+    /**
+     * 处理自定义转换异常
+     */
+    @ExceptionHandler(CustomConversionException.class)
+    public ResponseEntity<CustomApiResponse<Object>> handleCustomConversionException(CustomConversionException ex, HttpServletRequest request) {
+        logger.error("数据转换错误: {}", ex.getMessage());
+        return buildResponse(HttpStatus.BAD_REQUEST, "数据转换错误，请检查输入数据的格式或内容", request);
+    }
+
 }

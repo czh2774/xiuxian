@@ -1,45 +1,61 @@
 package com.xiuxian.xiuxianserver.service;
 
 import com.xiuxian.xiuxianserver.dto.CharacterGeneralDTO;
+import com.xiuxian.xiuxianserver.entity.CharacterGeneral;
+
 import java.util.List;
 
 /**
- * CharacterGeneralService接口，定义角色武将管理的服务合同。
+ * CharacterGeneralService接口
+ * 定义角色武将相关的业务逻辑接口
  */
 public interface CharacterGeneralService {
 
     /**
-     * 根据ID获取角色武将实例
-     * @param id 角色武将实例ID
-     * @return 角色武将的DTO对象
+     * 根据ID获取武将数据
+     *
+     * @param id 武将ID
+     * @return 武将数据传输对象
      */
     CharacterGeneralDTO getCharacterGeneralById(Long id);
 
     /**
-     * 获取指定角色的所有武将实例
+     * 根据角色ID获取武将列表
+     *
      * @param characterId 角色ID
-     * @return 武将实例DTO对象列表
+     * @return 武将数据传输对象列表
      */
     List<CharacterGeneralDTO> getCharacterGeneralsByCharacterId(Long characterId);
 
     /**
-     * 创建角色武将实例
-     * @param request 创建角色武将的请求DTO
-     * @return 创建后的角色武将DTO对象
+     * 创建新的武将
+     *
+     * @param request 武将请求数据传输对象
+     * @return 创建的武将数据传输对象
      */
     CharacterGeneralDTO createCharacterGeneral(CharacterGeneralDTO request);
 
     /**
-     * 更新指定ID的角色武将实例
-     * @param id 角色武将实例ID
-     * @param request 更新请求的DTO对象
-     * @return 更新后的角色武将DTO对象
+     * 更新武将数据
+     *
+     * @param id      武将ID
+     * @param request 武将请求数据传输对象
+     * @return 更新后的武将数据传输对象
      */
     CharacterGeneralDTO updateCharacterGeneral(Long id, CharacterGeneralDTO request);
 
     /**
-     * 删除指定ID的角色武将实例
-     * @param id 角色武将实例ID
+     * 删除武将
+     *
+     * @param id 武将ID
      */
     void deleteCharacterGeneral(Long id);
+
+    /**
+     * 初始化默认的武将列表
+     *
+     * @param characterId 角色ID
+     * @return 初始化后的武将列表
+     */
+    List<CharacterGeneral> initializeDefaultGenerals(Long characterId);
 }

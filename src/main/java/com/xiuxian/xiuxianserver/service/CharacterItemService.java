@@ -1,8 +1,6 @@
 package com.xiuxian.xiuxianserver.service;
 
 import com.xiuxian.xiuxianserver.dto.CharacterItemDTO;
-import org.springframework.expression.spel.ast.LongLiteral;
-
 import java.util.List;
 
 /**
@@ -44,4 +42,20 @@ public interface CharacterItemService {
      * @param itemInstanceId 道具实例ID
      */
     void deleteCharacterItem(long itemInstanceId);
+
+    /**
+     * 使用指定的道具实例
+     * @param itemInstanceId 道具实例ID
+     * @param quantity 使用数量
+     */
+    void useItem(long itemInstanceId, int quantity);
+
+    /**
+     * 为指定角色初始化默认道具列表
+     *
+     * @param characterId 角色ID
+     * @return 初始化后的角色道具实例DTO对象列表
+     */
+    List<CharacterItemDTO> initializeDefaultItems(long characterId);
+
 }

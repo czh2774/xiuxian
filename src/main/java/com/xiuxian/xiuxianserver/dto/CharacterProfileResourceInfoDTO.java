@@ -38,6 +38,7 @@ public class CharacterProfileResourceInfoDTO {
     @Schema(description = "铁矿")
     private int ironOre; // 铁矿
     public CharacterProfileResourceInfoDTO(CharacterProfile profile) {
+        this.characterId = profile.getId();             // 角色唯一ID
         this.yuanbao = profile.getYuanbao();         // 元宝数量
         this.warMerits = profile.getWarMerits();     // 战功数量
         this.reputation = profile.getReputation();   // 声望值

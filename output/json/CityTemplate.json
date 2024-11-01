@@ -1,0 +1,13 @@
+[ {
+  "id" : 1,
+  "name" : "洛阳",
+  "description" : "东汉时期的都城",
+  "factionId" : null,
+  "coordinates" : "(135.23,45.55)",
+  "buildingCapacity" : 0,
+  "defenseValue" : 0,
+  "dailyTaxGold" : 0,
+  "dailyTaxSilver" : 0,
+  "cityLevel" : null,
+  "iconUrl" : null
+} ]

@@ -4,7 +4,6 @@ import com.xiuxian.xiuxianserver.util.ExcelField;
 import com.xiuxian.xiuxianserver.util.ExcelColumn;
 import lombok.Data;
 import jakarta.persistence.*;
-
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
@@ -19,33 +18,41 @@ import io.swagger.v3.oas.annotations.media.Schema;
 public class TroopUpgrade {
 
     @Id
+    @Column(name = "id", nullable = false, updatable = false)
     @ExcelColumn(headerName = "兵种升级ID", comment = "兵种升级唯一标识符")
     private Long id; // 兵种升级ID
 
+    @Column(name = "troop_template_id", nullable = false)
     @Schema(description = "兵种模板ID", example = "1")
     @ExcelColumn(headerName = "兵种模板ID", comment = "关联的兵种模板ID")
     private Long troopTemplateId; // 兵种模板ID（不使用外键）
 
+    @Column(name = "level", nullable = false)
     @Schema(description = "兵种等级", example = "1")
     @ExcelColumn(headerName = "兵种等级", comment = "兵种的当前等级")
     private int level; // 兵种等级
 
+    @Column(name = "tier", nullable = false)
     @Schema(description = "兵种兵阶", example = "2")
     @ExcelColumn(headerName = "兵种兵阶", comment = "兵种的当前兵阶")
     private int tier; // 兵种兵阶
 
+    @Column(name = "upgrade_time", nullable = false)
     @Schema(description = "升级时间", example = "1800")
     @ExcelColumn(headerName = "升级时间", comment = "升级到该等级所需的时间，单位为秒")
     private int upgradeTime; // 升级时间
 
+    @Column(name = "resource_cost", columnDefinition = "JSON")
     @Schema(description = "资源消耗", example = "{\"wood\": 500, \"iron\": 300}")
     @ExcelColumn(headerName = "资源消耗", comment = "升级该兵种所需的资源，JSON格式")
     private String resourceCost; // 资源消耗（JSON格式）
 
+    @Column(name = "effect", columnDefinition = "JSON")
     @Schema(description = "兵种效果", example = "{\"attack_bonus\": {\"attack\": 10}}")
     @ExcelColumn(headerName = "兵种效果", comment = "升级后的兵种效果，JSON格式")
     private String effect; // 兵种效果（JSON格式）
 
+    @Column(name = "upgrade_requirements", columnDefinition = "JSON")
     @Schema(description = "升级条件", example = "{\"required_general_level\": 10}")
     @ExcelColumn(headerName = "升级条件", comment = "升级的前置条件，JSON格式")
     private String upgradeRequirements; // 升级条件（JSON格式）
