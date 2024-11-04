@@ -7,6 +7,8 @@ import jakarta.persistence.*;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 
+import java.util.List;
+
 /**
  * 建筑升级表，存储建筑每一级的升级时间、资源消耗、升级条件和效果。
  * 支持生成 Excel 文件，带有注解。
@@ -47,9 +49,7 @@ public class BuildingUpgrade {
     @ExcelColumn(headerName = "消耗铁矿", comment = "升级该建筑所需的铁矿")
     private int ironCost; // 消耗铁矿
 
-    @Schema(description = "建筑效果", example = "[{CAVALRY_STOCK_CAPACITY: 1},{INFANTRY_TRAINING_AMOUNT.2}")
-    @ExcelColumn(headerName = "建筑效果", comment = "升级后的建筑效果，JSON格式")
-    private String effect; // 建筑效果（JSON格式）
+
 
     @Schema(description = "升级条件", example = "[{required_buildings:[{building_id:2,level:5}],player_level:10},{required_buildings:[{building_id:4,level:5}],player_level:10}]")
     @ExcelColumn(headerName = "升级条件", comment = "升级的前置条件，JSON格式")

@@ -12,7 +12,6 @@ public class BuildingUpgradeDTO {
     private int foodCost;
     private int woodCost;
     private int ironCost;
-    private String effect;
 
     // Constructors
     public BuildingUpgradeDTO() {}
@@ -25,7 +24,9 @@ public class BuildingUpgradeDTO {
         this.foodCost = foodCost;
         this.woodCost = woodCost;
         this.ironCost = ironCost;
-        this.effect = effect;
+    }
+
+    public BuildingUpgradeDTO(Long id, Long buildingTemplateId, int level, int upgradeTime, int foodCost, int woodCost, int ironCost) {
     }
 
     // Getters and Setters
@@ -85,11 +86,5 @@ public class BuildingUpgradeDTO {
         this.ironCost = ironCost;
     }
 
-    public String getEffect() {
-        return effect;
-    }
 
-    public void setEffect(String effect) {
-        this.effect = effect;
-    }
 }

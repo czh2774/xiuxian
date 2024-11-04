@@ -45,14 +45,4 @@ public class BuildingTemplate {
     @ExcelColumn(headerName = "建筑图标URL", comment = "建筑的图标链接")
     @Column(name = "image_url", columnDefinition = "VARCHAR(255) COMMENT '建筑的图标链接'")
     private String imageUrl; // 建筑图标的URL
-
-    @Schema(description = "建造所需的玩家等级", example = "1")
-    @ExcelColumn(headerName = "所需玩家等级", comment = "建造该建筑的最低玩家等级")
-    @Column(name = "required_player_level", columnDefinition = "INT COMMENT '建造该建筑的最低玩家等级'")
-    private int requiredPlayerLevel; // 建造该建筑的最低玩家等级
-
-    @Schema(description = "最大等级", example = "10")
-    @ExcelColumn(headerName = "最大等级", comment = "建筑的最大等级")
-    @Column(name = "max_level", columnDefinition = "INT COMMENT '建筑的最大等级'")
-    private int maxLevel; // 建筑的最大等级
 }

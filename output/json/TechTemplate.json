@@ -2,120 +2,120 @@
   "id" : 1,
   "name" : "高级农业",
   "description" : "提高粮食产量的农业科技",
-  "techType" : null,
-  "maxLevel" : 0
+  "tech_type" : "资源类",
+  "max_level" : 5
 }, {
   "id" : 2,
   "name" : "军事训练",
   "description" : "提升军队的训练效果，提高士兵的战斗力",
-  "techType" : null,
-  "maxLevel" : 0
+  "tech_type" : "军事类",
+  "max_level" : 5
 }, {
   "id" : 3,
   "name" : "城防强化",
   "description" : "加强城市防御，减少敌方攻击造成的伤害",
-  "techType" : null,
-  "maxLevel" : 0
+  "tech_type" : "防御类",
+  "max_level" : 4
 }, {
   "id" : 4,
   "name" : "采矿技术",
   "description" : "提升矿石的采集效率，增加资源产出",
-  "techType" : null,
-  "maxLevel" : 0
+  "tech_type" : "资源类",
+  "max_level" : 5
 }, {
   "id" : 5,
   "name" : "征兵术",
   "description" : "加快士兵的招募速度，缩短训练时间",
-  "techType" : null,
-  "maxLevel" : 0
+  "tech_type" : "军事类",
+  "max_level" : 3
 }, {
   "id" : 6,
   "name" : "医疗技术",
   "description" : "提升伤兵的恢复速度和治疗效果",
-  "techType" : null,
-  "maxLevel" : 0
+  "tech_type" : "后勤类",
+  "max_level" : 4
 }, {
   "id" : 7,
   "name" : "火药研发",
   "description" : "提高火器的威力和使用效率",
-  "techType" : null,
-  "maxLevel" : 0
+  "tech_type" : "军事类",
+  "max_level" : 5
 }, {
   "id" : 8,
   "name" : "贸易网络",
   "description" : "增加贸易效率和收益，提升经济实力",
-  "techType" : null,
-  "maxLevel" : 0
+  "tech_type" : "经济类",
+  "max_level" : 5
 }, {
   "id" : 9,
   "name" : "建筑强化",
   "description" : "提高建筑的耐久度和建造速度",
-  "techType" : null,
-  "maxLevel" : 0
+  "tech_type" : "建设类",
+  "max_level" : 4
 }, {
   "id" : 10,
   "name" : "战略侦察",
   "description" : "提高对敌方情报的获取能力，提升战略优势",
-  "techType" : null,
-  "maxLevel" : 0
+  "tech_type" : "情报类",
+  "max_level" : 3
 }, {
   "id" : 11,
   "name" : "武器研发",
   "description" : "提升武器的攻击力和耐久性",
-  "techType" : null,
-  "maxLevel" : 0
+  "tech_type" : "军事类",
+  "max_level" : 5
 }, {
   "id" : 12,
   "name" : "船舶制造",
   "description" : "提升船只的建造速度和耐久度",
-  "techType" : null,
-  "maxLevel" : 0
+  "tech_type" : "建设类",
+  "max_level" : 4
 }, {
   "id" : 13,
   "name" : "后勤补给",
   "description" : "提升部队的补给效率，减少战斗中的消耗",
-  "techType" : null,
-  "maxLevel" : 0
+  "tech_type" : "后勤类",
+  "max_level" : 4
 }, {
   "id" : 14,
   "name" : "高级铸造术",
   "description" : "提高兵器的铸造效率和质量",
-  "techType" : null,
-  "maxLevel" : 0
+  "tech_type" : "军事类",
+  "max_level" : 5
 }, {
   "id" : 15,
   "name" : "箭塔升级",
   "description" : "加强箭塔的攻击力和射程",
-  "techType" : null,
-  "maxLevel" : 0
+  "tech_type" : "防御类",
+  "max_level" : 3
 }, {
   "id" : 16,
   "name" : "粮仓扩建",
   "description" : "增加粮仓的容量，提高粮食储存上限",
-  "techType" : null,
-  "maxLevel" : 0
+  "tech_type" : "资源类",
+  "max_level" : 4
 }, {
   "id" : 17,
   "name" : "文化传播",
   "description" : "提升文化影响力，增加民心和稳定性",
-  "techType" : null,
-  "maxLevel" : 0
+  "tech_type" : "文化类",
+  "max_level" : 3
 }, {
   "id" : 18,
   "name" : "外交技巧",
   "description" : "提高与其他势力的外交成功率",
-  "techType" : null,
-  "maxLevel" : 0
+  "tech_type" : "外交类",
+  "max_level" : 4
 }, {
   "id" : 19,
   "name" : "骑兵训练",
   "description" : "加强骑兵的训练，提升其战斗力",
-  "techType" : null,
-  "maxLevel" : 0
+  "tech_type" : "军事类",
+  "max_level" : 5
 }, {
   "id" : 20,
   "name" : "水利工程",
   "description" : "提高水资源的利用效率，增加农业产量",
-  "techType" : null,
-  "maxLevel" : 0
+  "tech_type" : "资源类",
+  "max_level" : 4
 } ]

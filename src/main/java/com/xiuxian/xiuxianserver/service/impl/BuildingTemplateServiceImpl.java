@@ -79,7 +79,6 @@ public class BuildingTemplateServiceImpl implements BuildingTemplateService {
                 template.getId(),
                 template.getName(),
                 template.getDescription(),
-                template.getMaxLevel(),
                 template.isUpgradeable(),
                 template.getImageUrl()
         );

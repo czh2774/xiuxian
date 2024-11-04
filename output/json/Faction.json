@@ -2,18 +2,18 @@
   "id" : 1001,
   "name" : "蜀",
   "description" : "这是蜀国的介绍",
-  "leaderImageUrl" : "",
-  "selectionImageUrl" : ""
+  "leader_image_url" : "",
+  "selection_image_url" : ""
 }, {
   "id" : 1002,
   "name" : "魏",
   "description" : "这是魏国的介绍",
-  "leaderImageUrl" : "",
-  "selectionImageUrl" : ""
+  "leader_image_url" : "",
+  "selection_image_url" : ""
 }, {
   "id" : 1003,
   "name" : "吴",
   "description" : "这是吴国的介绍",
-  "leaderImageUrl" : "",
-  "selectionImageUrl" : ""
+  "leader_image_url" : "",
+  "selection_image_url" : ""
 } ]

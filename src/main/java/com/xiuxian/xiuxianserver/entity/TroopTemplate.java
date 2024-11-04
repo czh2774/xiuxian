@@ -27,10 +27,6 @@ public class TroopTemplate {
     @ExcelColumn(headerName = "兵种名称", comment = "兵种的名称")
     private String name; // 兵种名称
 
-    @Column(name = "description", length = 500, columnDefinition = "VARCHAR(500) COMMENT '兵种的描述'")
-    @Schema(description = "兵种描述", example = "快速且强力的近战单位")
-    @ExcelColumn(headerName = "兵种描述", comment = "兵种的描述")
-    private String description; // 兵种描述
 
     @Column(name = "troop_type", length = 50, columnDefinition = "VARCHAR(50) COMMENT '兵种的类型'")
     @Schema(description = "兵种类型", example = "近战")

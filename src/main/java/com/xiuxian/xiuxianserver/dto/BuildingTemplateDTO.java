@@ -17,7 +17,6 @@ public class BuildingTemplateDTO {
     private Long id;
     private String name;
     private String description;
-    private int maxLevel;
     private boolean isUpgradeable;
     private String imageUrl;
 }

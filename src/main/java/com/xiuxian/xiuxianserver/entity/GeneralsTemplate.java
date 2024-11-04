@@ -1,5 +1,6 @@
 package com.xiuxian.xiuxianserver.entity;
 
+import com.xiuxian.xiuxianserver.enums.GeneralRankEnum;
 import com.xiuxian.xiuxianserver.util.ExcelField;
 import com.xiuxian.xiuxianserver.util.StringListConverter;
 import lombok.Builder;
@@ -36,20 +37,19 @@ public class GeneralsTemplate {
     private String name;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "rarity", nullable = false, columnDefinition = "VARCHAR(20) COMMENT '武将的稀有度'")
-    @Schema(description = "武将稀有度", example = "COMMON")
-    @ExcelColumn(headerName = "稀有度", comment = "武将的稀有度")
-    private RarityEnum rarity;
+    @Column(name = "rank", nullable = false, columnDefinition = "VARCHAR(20) COMMENT '武将的品级'")
+    @Schema(description = "武将品级", example = "TALENTED")
+    @ExcelColumn(headerName = "品级", comment = "武将的品级")
+    private GeneralRankEnum rank;
 
-    @Column(name = "initial_level", nullable = false, columnDefinition = "INT COMMENT '武将的初始等级'")
-    @Schema(description = "武将初始等级", example = "1")
-    @ExcelColumn(headerName = "初始等级", comment = "武将的初始等级")
-    private int initialLevel;
 
-    @Column(name = "initial_stars", nullable = false, columnDefinition = "INT COMMENT '武将的初始星级'")
-    @Schema(description = "武将初始星级", example = "5")
-    @ExcelColumn(headerName = "初始星级", comment = "武将的初始星级")
-    private int initialStars;
+
+    @Column(name = "sort_order", nullable = false, columnDefinition = "INT COMMENT '手动排序字段'")
+    @Schema(description = "手动排序字段", example = "10")
+    @ExcelColumn(headerName = "排序值", comment = "手动设置的排序字段")
+    private int sortOrder;
+
+
 
     // 其他字段保持不变
     @Column(name = "strength", nullable = false, columnDefinition = "INT COMMENT '武将的力量值'")
@@ -92,45 +92,6 @@ public class GeneralsTemplate {
     @ExcelColumn(headerName = "兵力", comment = "武将的兵力值")
     private int troops;
 
-    @Column(name = "block_rate", nullable = false, columnDefinition = "INT COMMENT '武将的格挡率（百分比）'")
-    @Schema(description = "格挡率", example = "10")
-    @ExcelColumn(headerName = "格挡率", comment = "武将的格挡率（百分比）")
-    private int blockRate;
-
-    @Column(name = "critical_hit_rate", nullable = false, columnDefinition = "INT COMMENT '武将的暴击率（百分比）'")
-    @Schema(description = "暴击率", example = "20")
-    @ExcelColumn(headerName = "暴击率", comment = "武将的暴击率（百分比）")
-    private int criticalHitRate;
-
-    @Column(name = "attack_per_level", nullable = false, columnDefinition = "INT COMMENT '每级提升的攻击力'")
-    @Schema(description = "每级攻击力提升", example = "5")
-    @ExcelColumn(headerName = "每级攻击力提升", comment = "每级提升的攻击力")
-    private int attackPerLevel;
-
-    @Column(name = "defense_per_level", nullable = false, columnDefinition = "INT COMMENT '每级提升的防御力'")
-    @Schema(description = "每级防御力提升", example = "3")
-    @ExcelColumn(headerName = "每级防御力提升", comment = "每级提升的防御力")
-    private int defensePerLevel;
-
-    @Column(name = "troops_per_level", nullable = false, columnDefinition = "INT COMMENT '每级提升的兵力值'")
-    @Schema(description = "每级兵力值提升", example = "50")
-    @ExcelColumn(headerName = "每级兵力值提升", comment = "每级提升的兵力值")
-    private int troopsPerLevel;
-
-    @Column(name = "attack_per_tier", nullable = false, columnDefinition = "INT COMMENT '每阶提升的攻击力'")
-    @Schema(description = "每阶攻击力提升", example = "20")
-    @ExcelColumn(headerName = "每阶攻击力提升", comment = "每阶提升的攻击力")
-    private int attackPerTier;
-
-    @Column(name = "defense_per_tier", nullable = false, columnDefinition = "INT COMMENT '每阶提升的防御力'")
-    @Schema(description = "每阶防御力提升", example = "15")
-    @ExcelColumn(headerName = "每阶防御力提升", comment = "每阶提升的防御力")
-    private int defensePerTier;
-
-    @Column(name = "troops_per_tier", nullable = false, columnDefinition = "INT COMMENT '每阶提升的兵力值'")
-    @Schema(description = "每阶兵力值提升", example = "200")
-    @ExcelColumn(headerName = "每阶兵力值提升", comment = "每阶提升的兵力值")
-    private int troopsPerTier;
 
     @Column(name = "normal_talent_id", length = 36, columnDefinition = "VARCHAR(36) COMMENT '武将的普通天赋ID，可以为空'")
     @Schema(description = "普通天赋ID", example = "UUID", nullable = true)
@@ -172,4 +133,9 @@ public class GeneralsTemplate {
     @Schema(description = "武将的传记", example = "关羽是三国时期蜀汉名将")
     @ExcelColumn(headerName = "传记", comment = "武将的传记描述")
     private String biography;
+
+    @Column(name = "image_url", length = 255, columnDefinition = "VARCHAR(255) COMMENT '武将的图片URL'")
+    @Schema(description = "武将图片URL", example = "http://example.com/image.jpg")
+    @ExcelColumn(headerName = "图片URL", comment = "武将的图片URL")
+    private String imageUrl;
 }

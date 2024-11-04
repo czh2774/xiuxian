@@ -17,6 +17,6 @@ public enum TroopType {
     @Schema(description = "弓兵")
     ARCHER,
 
-    @Schema(description = "枪兵")
-    SPEARMAN
+    @Schema(description = "方士")
+    MAGE
 }

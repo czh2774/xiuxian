@@ -84,27 +84,8 @@ public class BuildingUpgradeServiceImpl implements BuildingUpgradeService {
                 upgrade.getUpgradeTime(),
                 upgrade.getFoodCost(),
                 upgrade.getWoodCost(),
-                upgrade.getIronCost(),
-                upgrade.getEffect()
+                upgrade.getIronCost()
         );
     }
 
-    /**
-     * 将 BuildingUpgrade 和 BuildingTemplate 实体转换为 DTO。
-     * @param upgrade BuildingUpgrade 实体
-     * @param template BuildingTemplate 实体
-     * @return DTO对象
-     */
-    private BuildingUpgradeDTO convertToDTO(BuildingUpgrade upgrade, BuildingTemplate template) {
-        return new BuildingUpgradeDTO(
-                upgrade.getId(),
-                template.getId(),  // 使用 buildingTemplateId 关联
-                upgrade.getLevel(),
-                upgrade.getUpgradeTime(),
-                upgrade.getFoodCost(),
-                upgrade.getWoodCost(),
-                upgrade.getIronCost(),
-                upgrade.getEffect()
-        );
-    }
 }

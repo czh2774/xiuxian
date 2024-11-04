@@ -57,7 +57,7 @@ public class ItemTemplate {
     @Schema(description = "道具的跳转功能，使用道具时跳转到指定功能")
     private String jumpFunctions;
 
-    @Column(name = "is_chest", nullable = false, columnDefinition = "BOOLEAN COMMENT '道具是否为宝箱类型'")
+    @Column(name = "chest", nullable = false, columnDefinition = "BOOLEAN COMMENT '道具是否为宝箱类型'")
     @ExcelColumn(headerName = "是否宝箱", comment = "道具是否为宝箱类型")
     @Schema(description = "标识道具是否为宝箱类型")
     private boolean chest;

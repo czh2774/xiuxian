@@ -1,0 +1,161 @@
+[ {
+  "id" : 1,
+  "name" : "狂暴斩",
+  "description" : "对敌方单体造成大量伤害",
+  "effect" : "{\"damage\": 300}",
+  "target_type" : "敌方单体",
+  "unlock_level" : 10,
+  "general_type" : "WEN_GUAN"
+}, {
+  "id" : 2,
+  "name" : "龙卷风",
+  "description" : "对敌方全体造成范围伤害",
+  "effect" : "{\"damage\": 150}",
+  "target_type" : "敌方全体",
+  "unlock_level" : 15,
+  "general_type" : "WU_JIANG"
+}, {
+  "id" : 3,
+  "name" : "火焰箭",
+  "description" : "发射火焰箭矢对敌方造成伤害",
+  "effect" : "{\"damage\": 200, \"burn\": 50}",
+  "target_type" : "敌方单体",
+  "unlock_level" : 12,
+  "general_type" : "WU_JIANG"
+}, {
+  "id" : 4,
+  "name" : "治愈术",
+  "description" : "回复友方单体大量生命",
+  "effect" : "{\"heal\": 250}",
+  "target_type" : "友方单体",
+  "unlock_level" : 10,
+  "general_type" : "WEN_GUAN"
+}, {
+  "id" : 5,
+  "name" : "神盾",
+  "description" : "为友方全体施加护盾",
+  "effect" : "{\"shield\": 100}",
+  "target_type" : "友方全体",
+  "unlock_level" : 20,
+  "general_type" : "WU_JIANG"
+}, {
+  "id" : 6,
+  "name" : "雷霆一击",
+  "description" : "对敌方单体造成高额雷电伤害",
+  "effect" : "{\"damage\": 350}",
+  "target_type" : "敌方单体",
+  "unlock_level" : 18,
+  "general_type" : "WU_JIANG"
+}, {
+  "id" : 7,
+  "name" : "冰冻术",
+  "description" : "冻结敌方单体并造成伤害",
+  "effect" : "{\"damage\": 150, \"freeze\": 2}",
+  "target_type" : "敌方单体",
+  "unlock_level" : 16,
+  "general_type" : "WEN_GUAN"
+}, {
+  "id" : 8,
+  "name" : "风之刃",
+  "description" : "对敌方全体造成风刃伤害",
+  "effect" : "{\"damage\": 180}",
+  "target_type" : "敌方全体",
+  "unlock_level" : 17,
+  "general_type" : "WU_JIANG"
+}, {
+  "id" : 9,
+  "name" : "毒雾",
+  "description" : "对敌方全体释放毒雾持续伤害",
+  "effect" : "{\"damage\": 50, \"poison\": 50}",
+  "target_type" : "敌方全体",
+  "unlock_level" : 14,
+  "general_type" : "WEN_GUAN"
+}, {
+  "id" : 10,
+  "name" : "勇猛冲锋",
+  "description" : "对敌方单体造成冲锋伤害",
+  "effect" : "{\"damage\": 280}",
+  "target_type" : "敌方单体",
+  "unlock_level" : 12,
+  "general_type" : "WU_JIANG"
+}, {
+  "id" : 11,
+  "name" : "震撼打击",
+  "description" : "对敌方单体造成震撼伤害",
+  "effect" : "{\"damage\": 320}",
+  "target_type" : "敌方单体",
+  "unlock_level" : 15,
+  "general_type" : "WU_JIANG"
+}, {
+  "id" : 12,
+  "name" : "圣光",
+  "description" : "为友方全体回复生命",
+  "effect" : "{\"heal\": 200}",
+  "target_type" : "友方全体",
+  "unlock_level" : 18,
+  "general_type" : "WEN_GUAN"
+}, {
+  "id" : 13,
+  "name" : "黑暗降临",
+  "description" : "对敌方全体造成黑暗伤害",
+  "effect" : "{\"damage\": 190}",
+  "target_type" : "敌方全体",
+  "unlock_level" : 19,
+  "general_type" : "WU_JIANG"
+}, {
+  "id" : 14,
+  "name" : "火球术",
+  "description" : "发射火球对敌方单体造成火焰伤害",
+  "effect" : "{\"damage\": 220}",
+  "target_type" : "敌方单体",
+  "unlock_level" : 13,
+  "general_type" : "WEN_GUAN"
+}, {
+  "id" : 15,
+  "name" : "狂怒",
+  "description" : "提升自身攻击力并造成伤害",
+  "effect" : "{\"damage\": 150, \"atk_boost\": 30}",
+  "target_type" : "自身",
+  "unlock_level" : 16,
+  "general_type" : "WU_JIANG"
+}, {
+  "id" : 16,
+  "name" : "冰霜之盾",
+  "description" : "为友方单体增加护盾并反弹伤害",
+  "effect" : "{\"shield\": 150, \"reflect\": 30}",
+  "target_type" : "友方单体",
+  "unlock_level" : 20,
+  "general_type" : "WEN_GUAN"
+}, {
+  "id" : 17,
+  "name" : "暗影突袭",
+  "description" : "对敌方单体进行暗影突袭",
+  "effect" : "{\"damage\": 250}",
+  "target_type" : "敌方单体",
+  "unlock_level" : 14,
+  "general_type" : "WU_JIANG"
+}, {
+  "id" : 18,
+  "name" : "光明之刃",
+  "description" : "对敌方单体发射光明剑刃",
+  "effect" : "{\"damage\": 300}",
+  "target_type" : "敌方单体",
+  "unlock_level" : 17,
+  "general_type" : "WU_JIANG"
+}, {
+  "id" : 19,
+  "name" : "狂战士",
+  "description" : "增加自身攻击力并对敌方造成伤害",
+  "effect" : "{\"damage\": 280, \"atk_boost\": 20}",
+  "target_type" : "自身",
+  "unlock_level" : 15,
+  "general_type" : "WU_JIANG"
+}, {
+  "id" : 20,
+  "name" : "天罚之雷",
+  "description" : "召唤雷霆惩罚敌方全体",
+  "effect" : "{\"damage\": 200, \"stun\": 1}",
+  "target_type" : "敌方全体",
+  "unlock_level" : 20,
+  "general_type" : "WEN_GUAN"
+} ]

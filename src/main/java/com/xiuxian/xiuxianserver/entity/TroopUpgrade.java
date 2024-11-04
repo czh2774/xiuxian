@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * 兵种升级表，存储兵种的升级时间、资源消耗、兵阶提升条件和升级效果。
+ * 兵种升级表，存储兵种的升级铜币消耗、道具需求、兵阶提升条件和升级效果。
  * 支持生成 Excel 文件，带有注解。
  */
 @ExcelField
@@ -37,23 +37,29 @@ public class TroopUpgrade {
     @ExcelColumn(headerName = "兵种兵阶", comment = "兵种的当前兵阶")
     private int tier; // 兵种兵阶
 
-    @Column(name = "upgrade_time", nullable = false)
-    @Schema(description = "升级时间", example = "1800")
-    @ExcelColumn(headerName = "升级时间", comment = "升级到该等级所需的时间，单位为秒")
-    private int upgradeTime; // 升级时间
+    @Column(name = "coin_cost", nullable = false)
+    @Schema(description = "升级所需铜币", example = "1000")
+    @ExcelColumn(headerName = "铜币消耗", comment = "升级该兵种所需的铜币数量")
+    private int coinCost; // 升级所需铜币
 
-    @Column(name = "resource_cost", columnDefinition = "JSON")
-    @Schema(description = "资源消耗", example = "{\"wood\": 500, \"iron\": 300}")
-    @ExcelColumn(headerName = "资源消耗", comment = "升级该兵种所需的资源，JSON格式")
-    private String resourceCost; // 资源消耗（JSON格式）
+    @Column(name = "item1_id", nullable = true)
+    @Schema(description = "升级所需道具1ID", example = "101")
+    @ExcelColumn(headerName = "道具1ID", comment = "升级所需的第一个道具的ID")
+    private Long item1Id; // 升级所需道具1的ID
 
-    @Column(name = "effect", columnDefinition = "JSON")
-    @Schema(description = "兵种效果", example = "{\"attack_bonus\": {\"attack\": 10}}")
-    @ExcelColumn(headerName = "兵种效果", comment = "升级后的兵种效果，JSON格式")
-    private String effect; // 兵种效果（JSON格式）
+    @Column(name = "item1_quantity", nullable = true)
+    @Schema(description = "道具1数量", example = "5")
+    @ExcelColumn(headerName = "道具1数量", comment = "升级所需的第一个道具的数量")
+    private int item1Quantity; // 道具1的数量
 
-    @Column(name = "upgrade_requirements", columnDefinition = "JSON")
-    @Schema(description = "升级条件", example = "{\"required_general_level\": 10}")
-    @ExcelColumn(headerName = "升级条件", comment = "升级的前置条件，JSON格式")
-    private String upgradeRequirements; // 升级条件（JSON格式）
+    @Column(name = "item2_id", nullable = true)
+    @Schema(description = "升级所需道具2ID", example = "102")
+    @ExcelColumn(headerName = "道具2ID", comment = "升级所需的第二个道具的ID")
+    private Long item2Id; // 升级所需道具2的ID
+
+    @Column(name = "item2_quantity", nullable = true)
+    @Schema(description = "道具2数量", example = "3")
+    @ExcelColumn(headerName = "道具2数量", comment = "升级所需的第二个道具的数量")
+    private int item2Quantity; // 道具2的数量
+
 }

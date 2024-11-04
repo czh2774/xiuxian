@@ -2,6 +2,7 @@ package com.xiuxian.xiuxianserver.util;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.xiuxian.xiuxianserver.entity.TaskTemplate;
 import com.xiuxian.xiuxianserver.util.ExcelField;
 import jakarta.persistence.EntityManager;
@@ -31,7 +32,9 @@ public class JsonExporter {
     private final EntityManager entityManager = entityManagerFactory.createEntityManager();
 
     private final String outputDirectory = "output/json"; // 默认输出目录
-    private final ObjectMapper objectMapper = new ObjectMapper().setSerializationInclusion(JsonInclude.Include.ALWAYS);
+    private final ObjectMapper objectMapper = new ObjectMapper()
+            .setSerializationInclusion(JsonInclude.Include.ALWAYS)
+            .setPropertyNamingStrategy(PropertyNamingStrategies.SNAKE_CASE); // 设置为下划线命名策略
 
     // ANSI颜色代码
     private static final String GREEN = "\u001B[32m";

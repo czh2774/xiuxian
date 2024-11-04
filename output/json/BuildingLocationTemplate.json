@@ -1,127 +1,127 @@
 [ {
   "id" : 1001,
-  "buildingTemplateId" : null,
-  "isUnlocked" : null,
-  "xcoordinate" : null,
-  "ycoordinate" : null
+  "building_template_id" : 1001,
+  "is_unlocked" : true,
+  "ycoordinate" : 7.34,
+  "xcoordinate" : 10.43
 }, {
   "id" : 1002,
-  "buildingTemplateId" : null,
-  "isUnlocked" : null,
-  "xcoordinate" : null,
-  "ycoordinate" : null
+  "building_template_id" : 1002,
+  "is_unlocked" : true,
+  "ycoordinate" : 3.71,
+  "xcoordinate" : 2.47
 }, {
   "id" : 1003,
-  "buildingTemplateId" : null,
-  "isUnlocked" : null,
-  "xcoordinate" : null,
-  "ycoordinate" : null
+  "building_template_id" : 1003,
+  "is_unlocked" : true,
+  "ycoordinate" : 4.46,
+  "xcoordinate" : 0.24
 }, {
   "id" : 1004,
-  "buildingTemplateId" : null,
-  "isUnlocked" : null,
-  "xcoordinate" : null,
-  "ycoordinate" : null
-}, {
-  "id" : 1005,
-  "buildingTemplateId" : null,
-  "isUnlocked" : null,
-  "xcoordinate" : null,
-  "ycoordinate" : null
+  "building_template_id" : 1004,
+  "is_unlocked" : true,
+  "ycoordinate" : 2.72,
+  "xcoordinate" : 2.14
 }, {
   "id" : 1006,
-  "buildingTemplateId" : null,
-  "isUnlocked" : null,
-  "xcoordinate" : null,
-  "ycoordinate" : null
+  "building_template_id" : 1006,
+  "is_unlocked" : true,
+  "ycoordinate" : 1.81,
+  "xcoordinate" : -4.2
 }, {
   "id" : 1007,
-  "buildingTemplateId" : null,
-  "isUnlocked" : null,
-  "xcoordinate" : null,
-  "ycoordinate" : null
+  "building_template_id" : 1007,
+  "is_unlocked" : true,
+  "ycoordinate" : 0.82,
+  "xcoordinate" : -2.3
 }, {
   "id" : 1008,
-  "buildingTemplateId" : null,
-  "isUnlocked" : null,
-  "xcoordinate" : null,
-  "ycoordinate" : null
+  "building_template_id" : 1008,
+  "is_unlocked" : true,
+  "ycoordinate" : 1.55,
+  "xcoordinate" : 6.41
 }, {
   "id" : 1009,
-  "buildingTemplateId" : null,
-  "isUnlocked" : null,
-  "xcoordinate" : null,
-  "ycoordinate" : null
+  "building_template_id" : 1009,
+  "is_unlocked" : true,
+  "ycoordinate" : -0.72,
+  "xcoordinate" : 4.2
 }, {
   "id" : 1010,
-  "buildingTemplateId" : null,
-  "isUnlocked" : null,
-  "xcoordinate" : null,
-  "ycoordinate" : null
+  "building_template_id" : 1010,
+  "is_unlocked" : false,
+  "ycoordinate" : -1.6,
+  "xcoordinate" : 5.92
 }, {
   "id" : 1011,
-  "buildingTemplateId" : null,
-  "isUnlocked" : null,
-  "xcoordinate" : null,
-  "ycoordinate" : null
+  "building_template_id" : 1011,
+  "is_unlocked" : false,
+  "ycoordinate" : -1.66,
+  "xcoordinate" : 2.45
 }, {
   "id" : 1012,
-  "buildingTemplateId" : null,
-  "isUnlocked" : null,
-  "xcoordinate" : null,
-  "ycoordinate" : null
+  "building_template_id" : 1012,
+  "is_unlocked" : false,
+  "ycoordinate" : -2.54,
+  "xcoordinate" : 4.31
 }, {
   "id" : 1013,
-  "buildingTemplateId" : null,
-  "isUnlocked" : null,
-  "xcoordinate" : null,
-  "ycoordinate" : null
+  "building_template_id" : 1013,
+  "is_unlocked" : false,
+  "ycoordinate" : -1.02,
+  "xcoordinate" : -10.25
 }, {
   "id" : 1014,
-  "buildingTemplateId" : null,
-  "isUnlocked" : null,
-  "xcoordinate" : null,
-  "ycoordinate" : null
+  "building_template_id" : 1014,
+  "is_unlocked" : false,
+  "ycoordinate" : -2.12,
+  "xcoordinate" : -7.27
 }, {
   "id" : 1015,
-  "buildingTemplateId" : null,
-  "isUnlocked" : null,
-  "xcoordinate" : null,
-  "ycoordinate" : null
+  "building_template_id" : 1015,
+  "is_unlocked" : false,
+  "ycoordinate" : -7.55,
+  "xcoordinate" : -0.16
 }, {
   "id" : 1016,
-  "buildingTemplateId" : null,
-  "isUnlocked" : null,
-  "xcoordinate" : null,
-  "ycoordinate" : null
+  "building_template_id" : 1016,
+  "is_unlocked" : false,
+  "ycoordinate" : -6.44,
+  "xcoordinate" : -1.95
 }, {
   "id" : 1017,
-  "buildingTemplateId" : null,
-  "isUnlocked" : null,
-  "xcoordinate" : null,
-  "ycoordinate" : null
+  "building_template_id" : 1017,
+  "is_unlocked" : false,
+  "ycoordinate" : -2.97,
+  "xcoordinate" : 9.07
 }, {
   "id" : 1018,
-  "buildingTemplateId" : null,
-  "isUnlocked" : null,
-  "xcoordinate" : null,
-  "ycoordinate" : null
+  "building_template_id" : 1018,
+  "is_unlocked" : false,
+  "ycoordinate" : -1.99,
+  "xcoordinate" : -11.97
 }, {
   "id" : 1019,
-  "buildingTemplateId" : null,
-  "isUnlocked" : null,
-  "xcoordinate" : null,
-  "ycoordinate" : null
+  "building_template_id" : 1019,
+  "is_unlocked" : false,
+  "ycoordinate" : -3.31,
+  "xcoordinate" : -9.31
 }, {
   "id" : 1020,
-  "buildingTemplateId" : null,
-  "isUnlocked" : null,
-  "xcoordinate" : null,
-  "ycoordinate" : null
+  "building_template_id" : 1020,
+  "is_unlocked" : false,
+  "ycoordinate" : -8.94,
+  "xcoordinate" : -2.12
 }, {
   "id" : 1021,
-  "buildingTemplateId" : null,
-  "isUnlocked" : null,
-  "xcoordinate" : null,
-  "ycoordinate" : null
+  "building_template_id" : 1021,
+  "is_unlocked" : false,
+  "ycoordinate" : -7.7,
+  "xcoordinate" : -4.08
+}, {
+  "id" : 1022,
+  "building_template_id" : 1022,
+  "is_unlocked" : false,
+  "ycoordinate" : 1.76,
+  "xcoordinate" : -0.4
 } ]
