@@ -78,12 +78,5 @@ public interface CharacterBuildingService {
      */
     void updateFeaturePrompt(Long buildingId, FeaturePromptType newPrompt);
 
-    /**
-     * 为新角色创建默认建筑实例。
-     *
-     * 在新角色创建后，系统将为其自动创建一系列默认的建筑实例。
-     *
-     * @param characterId 角色的唯一标识符
-     */
-    void createDefaultBuildingsForCharacter(Long characterId);
+
 }

@@ -51,11 +51,5 @@ public interface CharacterGeneralService {
      */
     void deleteCharacterGeneral(Long id);
 
-    /**
-     * 初始化默认的武将列表
-     *
-     * @param characterId 角色ID
-     * @return 初始化后的武将列表
-     */
-    List<CharacterGeneral> initializeDefaultGenerals(Long characterId);
+
 }

@@ -61,8 +61,9 @@ public class JsonExporter {
 
             // Hibernate 配置
             settings.put("hibernate.dialect", "org.hibernate.dialect.MariaDBDialect");
-            settings.put("hibernate.hbm2ddl.auto", "update");
+            settings.put("hibernate.hbm2ddl.auto", "validate");
             settings.put("hibernate.show_sql", "true");
+            settings.put("hibernate.physical_naming_strategy", "org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl");
 
             configuration.setProperties(settings);
 

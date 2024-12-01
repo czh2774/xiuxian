@@ -50,12 +50,6 @@ public interface CharacterItemService {
      */
     void useItem(long itemInstanceId, int quantity);
 
-    /**
-     * 为指定角色初始化默认道具列表
-     *
-     * @param characterId 角色ID
-     * @return 初始化后的角色道具实例DTO对象列表
-     */
-    List<CharacterItemDTO> initializeDefaultItems(long characterId);
+
 
 }

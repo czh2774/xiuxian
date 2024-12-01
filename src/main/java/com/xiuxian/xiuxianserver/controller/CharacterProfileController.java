@@ -106,4 +106,55 @@ public class CharacterProfileController {
     public void deleteProfile(@RequestBody CharacterIdRequestDTO requestDTO) {
         characterProfileService.deleteCharacterProfile(requestDTO.getCharacterId());
     }
+
+
+    /**
+     * 检查角色名称是否已存在
+     */
+    @PostMapping("/checkName")
+    @Operation(summary = "检查角色名称是否已存在", description = "检查给定角色名称是否已被使用")
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "成功返回角色名称可用状态"),
+            @ApiResponse(responseCode = "400", description = "请求参数无效"),
+            @ApiResponse(responseCode = "500", description = "服务器内部错误")
+    })
+    public ResponseEntity<CustomApiResponse<Map<String, Object>>> checkName(@RequestBody @Valid CharacterProfileCreateDTO requestDTO, HttpServletRequest request) {
+        logger.info("接收到检查角色名称请求, 请求来源: {}, 角色名称: {}", request.getRemoteAddr(), requestDTO.getName());
+
+        Map<String, Object> responseData = new HashMap<>();
+
+        try {
+            // 检查角色名称是否存在
+            boolean exists = characterProfileService.existsByName(requestDTO.getName());
+            responseData.put("available", !exists); // 如果存在，available 为 false
+
+            return ResponseEntity.ok(CustomApiResponse.success("角色名称检查成功", responseData, request.getRequestURI()));
+        } catch (Exception e) {
+            logger.error("检查角色名称时出现错误: {}", e.getMessage());
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(CustomApiResponse.error(HttpStatus.INTERNAL_SERVER_ERROR.value(), "服务器内部错误", request.getRequestURI())); // 返回错误响应
+        }
+    }
+
+    /**
+     * 获取角色档案信息
+     */
+    @PostMapping("/getProfile")
+    @Operation(summary = "获取角色档案信息", description = "根据角色ID获取角色档案信息")
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "成功返回角色档案信息"),
+            @ApiResponse(responseCode = "404", description = "角色未找到")
+    })
+    public ResponseEntity<CustomApiResponse<CharacterProfileDTO>> getCharacterProfile(@RequestBody CharacterIdRequestDTO requestDTO, HttpServletRequest request) {
+        Long characterId = requestDTO.getCharacterId();
+        var profile = characterProfileService.getCharacterByPlayerId(characterId);
+
+        if (profile == null) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body(CustomApiResponse.error(HttpStatus.NOT_FOUND.value(), "角色未找到", request.getRequestURI()));
+        }
+
+        return ResponseEntity.ok(CustomApiResponse.success("角色档案信息获取成功", profile, request.getRequestURI()));
+    }
+
 }

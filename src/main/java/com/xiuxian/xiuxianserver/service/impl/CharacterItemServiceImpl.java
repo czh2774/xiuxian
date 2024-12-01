@@ -2,9 +2,7 @@ package com.xiuxian.xiuxianserver.service.impl;
 
 import com.xiuxian.xiuxianserver.Mapper.CharacterItemMapper;
 import com.xiuxian.xiuxianserver.dto.CharacterItemDTO;
-import com.xiuxian.xiuxianserver.dto.ItemTemplateDTO;
 import com.xiuxian.xiuxianserver.entity.CharacterItem;
-import com.xiuxian.xiuxianserver.enums.ItemCategory;
 import com.xiuxian.xiuxianserver.exception.ResourceNotFoundException;
 import com.xiuxian.xiuxianserver.repository.CharacterItemRepository;
 import com.xiuxian.xiuxianserver.service.CharacterItemService;
@@ -18,7 +16,6 @@ import cn.hutool.core.lang.Snowflake;
 
 import jakarta.validation.Valid;
 
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -84,33 +81,7 @@ public class CharacterItemServiceImpl implements CharacterItemService {
         return CharacterItemMapper.INSTANCE.toDTO(updatedItem);
     }
 
-    @Override
-    @Transactional
-    public List<CharacterItemDTO> initializeDefaultItems(long characterId) {
-        logger.info("开始初始化角色的默认道具列表，角色ID: {}", characterId);
-        List<Long> defaultTemplateIds = List.of(1L, 2L);
 
-        List<CharacterItem> defaultItems = defaultTemplateIds.stream()
-                .map(templateId -> {
-                    ItemTemplateDTO template = itemTemplateService.getItemTemplateById(templateId);
-                    CharacterItem item = new CharacterItem();
-                    item.setId(snowflake.nextId());
-                    item.setCharacterId(characterId);
-                    item.setItemTemplateId(template.getId());
-                    item.setQuantity(10);
-                    item.setAcquiredAt(LocalDateTime.now());
-                    item.setItemCategory(template.getItemCategory());
-                    item.setLastUsedAt(null);
-                    item.setEquipped(false);
-                    return item;
-                }).collect(Collectors.toList());
-
-        characterItemRepository.saveAll(defaultItems);
-        logger.info("成功初始化角色的默认道具列表，角色ID: {}, 道具数量: {}", characterId, defaultItems.size());
-        return defaultItems.stream()
-                .map(CharacterItemMapper.INSTANCE::toDTO)
-                .collect(Collectors.toList());
-    }
 
     @Override
     @Transactional

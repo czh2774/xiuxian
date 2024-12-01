@@ -1,0 +1,218 @@
+[ {
+  "effect_id" : 0,
+  "template_id" : 1001,
+  "effect_type" : "LAND_BUILDING_LEVEL_LIMIT",
+  "base_value" : 16,
+  "growth_coefficient" : 1,
+  "growth_multiplier" : 1.0
+}, {
+  "effect_id" : 0,
+  "template_id" : 1001,
+  "effect_type" : "LAND_BUILDING_LEVEL_LIMIT",
+  "base_value" : 16,
+  "growth_coefficient" : 1,
+  "growth_multiplier" : 1.0
+}, {
+  "effect_id" : 0,
+  "template_id" : 1001,
+  "effect_type" : "LAND_BUILDING_LEVEL_LIMIT",
+  "base_value" : 16,
+  "growth_coefficient" : 1,
+  "growth_multiplier" : 1.0
+}, {
+  "effect_id" : 0,
+  "template_id" : 1001,
+  "effect_type" : "LAND_BUILDING_LEVEL_LIMIT",
+  "base_value" : 16,
+  "growth_coefficient" : 1,
+  "growth_multiplier" : 1.0
+}, {
+  "effect_id" : 0,
+  "template_id" : 1001,
+  "effect_type" : "LAND_BUILDING_LEVEL_LIMIT",
+  "base_value" : 16,
+  "growth_coefficient" : 1,
+  "growth_multiplier" : 1.0
+}, {
+  "effect_id" : 0,
+  "template_id" : 1001,
+  "effect_type" : "LAND_BUILDING_LEVEL_LIMIT",
+  "base_value" : 16,
+  "growth_coefficient" : 1,
+  "growth_multiplier" : 1.0
+}, {
+  "effect_id" : 0,
+  "template_id" : 1001,
+  "effect_type" : "LAND_BUILDING_LEVEL_LIMIT",
+  "base_value" : 16,
+  "growth_coefficient" : 1,
+  "growth_multiplier" : 1.0
+}, {
+  "effect_id" : 0,
+  "template_id" : 1001,
+  "effect_type" : "LAND_BUILDING_LEVEL_LIMIT",
+  "base_value" : 16,
+  "growth_coefficient" : 1,
+  "growth_multiplier" : 1.0
+}, {
+  "effect_id" : 0,
+  "template_id" : 1001,
+  "effect_type" : "LAND_BUILDING_LEVEL_LIMIT",
+  "base_value" : 16,
+  "growth_coefficient" : 1,
+  "growth_multiplier" : 1.0
+}, {
+  "effect_id" : 0,
+  "template_id" : 1001,
+  "effect_type" : "LAND_BUILDING_LEVEL_LIMIT",
+  "base_value" : 16,
+  "growth_coefficient" : 1,
+  "growth_multiplier" : 1.0
+}, {
+  "effect_id" : 0,
+  "template_id" : 1001,
+  "effect_type" : "LAND_BUILDING_LEVEL_LIMIT",
+  "base_value" : 16,
+  "growth_coefficient" : 1,
+  "growth_multiplier" : 1.0
+}, {
+  "effect_id" : 0,
+  "template_id" : 1001,
+  "effect_type" : "LAND_BUILDING_LEVEL_LIMIT",
+  "base_value" : 16,
+  "growth_coefficient" : 1,
+  "growth_multiplier" : 1.0
+}, {
+  "effect_id" : 0,
+  "template_id" : 1001,
+  "effect_type" : "LAND_BUILDING_LEVEL_LIMIT",
+  "base_value" : 16,
+  "growth_coefficient" : 1,
+  "growth_multiplier" : 1.0
+}, {
+  "effect_id" : 0,
+  "template_id" : 1001,
+  "effect_type" : "LAND_BUILDING_LEVEL_LIMIT",
+  "base_value" : 16,
+  "growth_coefficient" : 1,
+  "growth_multiplier" : 1.0
+}, {
+  "effect_id" : 0,
+  "template_id" : 1001,
+  "effect_type" : "LAND_BUILDING_LEVEL_LIMIT",
+  "base_value" : 16,
+  "growth_coefficient" : 1,
+  "growth_multiplier" : 1.0
+}, {
+  "effect_id" : 0,
+  "template_id" : 1001,
+  "effect_type" : "LAND_BUILDING_LEVEL_LIMIT",
+  "base_value" : 16,
+  "growth_coefficient" : 1,
+  "growth_multiplier" : 1.0
+}, {
+  "effect_id" : 0,
+  "template_id" : 1001,
+  "effect_type" : "LAND_BUILDING_LEVEL_LIMIT",
+  "base_value" : 16,
+  "growth_coefficient" : 1,
+  "growth_multiplier" : 1.0
+}, {
+  "effect_id" : 0,
+  "template_id" : 1001,
+  "effect_type" : "LAND_BUILDING_LEVEL_LIMIT",
+  "base_value" : 16,
+  "growth_coefficient" : 1,
+  "growth_multiplier" : 1.0
+}, {
+  "effect_id" : 0,
+  "template_id" : 1001,
+  "effect_type" : "LAND_BUILDING_LEVEL_LIMIT",
+  "base_value" : 16,
+  "growth_coefficient" : 1,
+  "growth_multiplier" : 1.0
+}, {
+  "effect_id" : 0,
+  "template_id" : 1001,
+  "effect_type" : "LAND_BUILDING_LEVEL_LIMIT",
+  "base_value" : 16,
+  "growth_coefficient" : 1,
+  "growth_multiplier" : 1.0
+}, {
+  "effect_id" : 0,
+  "template_id" : 1001,
+  "effect_type" : "LAND_BUILDING_LEVEL_LIMIT",
+  "base_value" : 16,
+  "growth_coefficient" : 1,
+  "growth_multiplier" : 1.0
+}, {
+  "effect_id" : 0,
+  "template_id" : 1001,
+  "effect_type" : "LAND_BUILDING_LEVEL_LIMIT",
+  "base_value" : 16,
+  "growth_coefficient" : 1,
+  "growth_multiplier" : 1.0
+}, {
+  "effect_id" : 0,
+  "template_id" : 1001,
+  "effect_type" : "LAND_BUILDING_LEVEL_LIMIT",
+  "base_value" : 16,
+  "growth_coefficient" : 1,
+  "growth_multiplier" : 1.0
+}, {
+  "effect_id" : 0,
+  "template_id" : 1001,
+  "effect_type" : "LAND_BUILDING_LEVEL_LIMIT",
+  "base_value" : 16,
+  "growth_coefficient" : 1,
+  "growth_multiplier" : 1.0
+}, {
+  "effect_id" : 0,
+  "template_id" : 1001,
+  "effect_type" : "LAND_BUILDING_LEVEL_LIMIT",
+  "base_value" : 16,
+  "growth_coefficient" : 1,
+  "growth_multiplier" : 1.0
+}, {
+  "effect_id" : 0,
+  "template_id" : 1001,
+  "effect_type" : "LAND_BUILDING_LEVEL_LIMIT",
+  "base_value" : 16,
+  "growth_coefficient" : 1,
+  "growth_multiplier" : 1.0
+}, {
+  "effect_id" : 0,
+  "template_id" : 1001,
+  "effect_type" : "LAND_BUILDING_LEVEL_LIMIT",
+  "base_value" : 16,
+  "growth_coefficient" : 1,
+  "growth_multiplier" : 1.0
+}, {
+  "effect_id" : 0,
+  "template_id" : 1001,
+  "effect_type" : "LAND_BUILDING_LEVEL_LIMIT",
+  "base_value" : 16,
+  "growth_coefficient" : 1,
+  "growth_multiplier" : 1.0
+}, {
+  "effect_id" : 0,
+  "template_id" : 1001,
+  "effect_type" : "LAND_BUILDING_LEVEL_LIMIT",
+  "base_value" : 16,
+  "growth_coefficient" : 1,
+  "growth_multiplier" : 1.0
+}, {
+  "effect_id" : 0,
+  "template_id" : 1001,
+  "effect_type" : "LAND_BUILDING_LEVEL_LIMIT",
+  "base_value" : 16,
+  "growth_coefficient" : 1,
+  "growth_multiplier" : 1.0
+}, {
+  "effect_id" : 0,
+  "template_id" : 1001,
+  "effect_type" : "LAND_BUILDING_LEVEL_LIMIT",
+  "base_value" : 16,
+  "growth_coefficient" : 1,
+  "growth_multiplier" : 1.0
+} ]

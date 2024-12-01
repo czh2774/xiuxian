@@ -9,6 +9,7 @@ import com.xiuxian.xiuxianserver.enums.BuildingStatusType;
 import com.xiuxian.xiuxianserver.enums.FeaturePromptType;
 import com.xiuxian.xiuxianserver.exception.ResourceNotFoundException;
 import com.xiuxian.xiuxianserver.repository.CharacterBuildingRepository;
+import com.xiuxian.xiuxianserver.service.BuildingLocationService;
 import com.xiuxian.xiuxianserver.service.CharacterBuildingService;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
@@ -23,9 +24,9 @@ import java.util.stream.Collectors;
 public class CharacterBuildingServiceImpl implements CharacterBuildingService {
 
     private static final Logger logger = LoggerFactory.getLogger(CharacterBuildingServiceImpl.class);
-
     private final CharacterBuildingRepository characterBuildingRepository;
     private final Snowflake snowflake;
+
 
     @Override
     public List<CharacterBuildingDTO> getAllCharacterBuildings() {
@@ -97,19 +98,5 @@ public class CharacterBuildingServiceImpl implements CharacterBuildingService {
         logger.info("成功更新建筑ID为 {} 的功能提示为 {}", buildingId, newPrompt);
     }
 
-    @Override
-    public void createDefaultBuildingsForCharacter(Long characterId) {
-        logger.info("为角色ID {} 创建默认建筑", characterId);
-        Long defaultBuildingTemplateId = 1001L;
-        Long defaultLocationId = 1L;
-        CharacterBuilding building1 = new CharacterBuilding();
-        building1.setId(snowflake.nextId());
-        building1.setCharacterId(characterId);
-        building1.setBuildingTemplateId(defaultBuildingTemplateId);
-        building1.setLocationId(defaultLocationId);
-        building1.setCurrentLevel(1);
-        building1.setBuildingStatus(BuildingStatusType.IDLE);
-        characterBuildingRepository.save(building1);
-        logger.info("成功为角色ID {} 创建了默认建筑，建筑ID: {}", characterId, building1.getId());
-    }
+
 }

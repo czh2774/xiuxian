@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -18,5 +19,12 @@ public class BuildingLocationServiceImpl implements BuildingLocationService {
     public List<BuildingLocationTemplate> getBuildingLocationTemplates() {
         System.out.println("Fetching building location templates using repository...");
         return buildingLocationRepository.findAll();
+    }
+
+
+    @Override
+    public Optional<BuildingLocationTemplate> getLocationByTemplateId(Long templateId) {
+        // 使用 Repository 方法根据模板 ID 查询位置模板
+        return buildingLocationRepository.findByBuildingTemplateId(templateId);
     }
 }

@@ -16,6 +16,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * CharacterBuildingController
@@ -36,7 +37,7 @@ public class CharacterBuildingController {
     /**
      * 获取角色的所有建筑信息
      *
-     * @param characterId 角色ID
+     * @param requestBody 请求体，包含角色ID
      * @return 角色建筑列表的响应
      */
     @Operation(summary = "获取角色的所有建筑信息", description = "根据角色ID获取所有建筑信息")
@@ -46,12 +47,28 @@ public class CharacterBuildingController {
             @ApiResponse(responseCode = "500", description = "服务器内部错误")
     })
     @PostMapping("/list")
-    public ResponseEntity<CustomApiResponse<List<CharacterBuildingDTO>>> getAllCharacterBuildings(@RequestBody Long characterId, HttpServletRequest request) {
-        logger.info("获取角色建筑信息，角色ID: {}", characterId);
+    public ResponseEntity<CustomApiResponse<List<CharacterBuildingDTO>>> getAllCharacterBuildings(
+            @RequestBody Map<String, Object> requestBody, HttpServletRequest request) {
+        logger.info("收到获取角色建筑信息的请求：{}", requestBody);
+
+        Long characterId;
+        try {
+            // 提取 characterId 并进行类型转换
+            if (requestBody.containsKey("characterId")) {
+                characterId = Long.valueOf(requestBody.get("characterId").toString());
+            } else {
+                throw new IllegalArgumentException("请求体缺少 'characterId' 字段");
+            }
+        } catch (Exception e) {
+            logger.error("解析请求体失败：{}", e.getMessage());
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(
+                    CustomApiResponse.error(HttpStatus.BAD_REQUEST.value(), "无效的请求参数", request.getRequestURI()));
+        }
 
         List<CharacterBuildingDTO> buildings;
         try {
-            buildings = characterBuildingService.getCharacterBuildingsByCharacterId(characterId);  // 调用正确的方法
+            // 调用服务层获取建筑信息
+            buildings = characterBuildingService.getCharacterBuildingsByCharacterId(characterId);
             logger.info("成功获取角色建筑信息，角色ID: {}", characterId);
         } catch (Exception e) {
             logger.error("获取角色建筑信息时发生错误，角色ID: {}, 错误: {}", characterId, e.getMessage());
@@ -59,8 +76,10 @@ public class CharacterBuildingController {
                     CustomApiResponse.error(HttpStatus.INTERNAL_SERVER_ERROR.value(), "获取角色建筑信息失败", request.getRequestURI()));
         }
 
+        // 返回成功响应
         return ResponseEntity.ok(CustomApiResponse.success("成功获取角色建筑信息", buildings, request.getRequestURI()));
     }
+
 
     /**
      * 创建角色的建筑实例

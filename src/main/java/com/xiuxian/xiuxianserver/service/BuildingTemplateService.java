@@ -1,6 +1,7 @@
 package com.xiuxian.xiuxianserver.service;
 
 import com.xiuxian.xiuxianserver.dto.BuildingTemplateDTO;
+import com.xiuxian.xiuxianserver.entity.BuildingTemplate;
 import com.xiuxian.xiuxianserver.exception.ResourceNotFoundException;
 
 import java.util.List;
@@ -25,4 +26,13 @@ public interface BuildingTemplateService {
      * @throws ResourceNotFoundException 如果建筑模板未找到
      */
     BuildingTemplateDTO getBuildingTemplateById(Long id);
+
+
+    /**
+     * 根据ID列表获取对应的建筑模板
+     *
+     * @param templateIds 建筑模板ID列表
+     * @return 对应的建筑模板列表
+     */
+    List<BuildingTemplate> getTemplatesByIds(List<Long> templateIds);
 }

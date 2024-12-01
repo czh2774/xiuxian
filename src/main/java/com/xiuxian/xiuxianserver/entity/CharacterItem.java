@@ -62,4 +62,21 @@ public class CharacterItem {
     @Column(nullable = false)
     @Schema(description = "道具最后一次更新时间")
     private LocalDateTime updatedAt; // 记录更新时间
+
+    /**
+     * 在保存之前自动设置创建时间和更新时间
+     */
+    @PrePersist
+    protected void onCreate() {
+        this.createdAt = LocalDateTime.now();
+        this.updatedAt = LocalDateTime.now();
+    }
+
+    /**
+     * 在更新之前自动设置更新时间
+     */
+    @PreUpdate
+    protected void onUpdate() {
+        this.updatedAt = LocalDateTime.now();
+    }
 }

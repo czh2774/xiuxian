@@ -2,168 +2,102 @@
   "id" : 1001,
   "name" : "官邸",
   "description" : "皇室高级官员的住所，封地中最主要的建筑，直邸的等级将影响到其他建筑物的等级和英雄等级，官哪中还有代表你身份地位的爵位，记录你生平事边的史册，以及幕僚的住处幕府",
-  "image_url" : "/building_guandi_static",
-  "required_player_level" : 1,
-  "max_level" : 1000,
+  "image_url" : "Assets/Resources_moved/BuildingAssets/Sprites/Exterior/Building_Exterior_1001.png",
   "upgradeable" : true
 }, {
   "id" : 1002,
   "name" : "珍宝阁",
   "description" : "皇室宗亲收集宝物的地方，这里可以对主物进行制作、突破和洗炼，还可以购买一些零件。升级珍宝阁可以增加珍宝商店购买次数",
-  "image_url" : "/building_zhenbaoge_static",
-  "required_player_level" : 1,
-  "max_level" : 1000,
+  "image_url" : "Assets/Resources_moved/BuildingAssets/Sprites/Exterior/Building_Exterior_1002.png",
   "upgradeable" : true
 }, {
   "id" : 1003,
   "name" : "驿馆",
   "description" : "各方英雄陶冶情操的地方，在这里你可以接触到各方英雄，前提是你要请他们喝佳酿。升级驿馆可以增加用银两招募的次数",
-  "image_url" : "/building_yiguan_static",
-  "required_player_level" : 1,
-  "max_level" : 1000,
+  "image_url" : "Assets/Resources_moved/BuildingAssets/Sprites/Exterior/Building_Exterior_1003.png",
   "upgradeable" : true
 }, {
   "id" : 1004,
   "name" : "弓兵营",
   "description" : "一个训练弓兵的营地，升级兵营可以提升练兵速度、数星和库存上限，进一步强化弓兵能力",
-  "image_url" : "/building_gongbingying_static",
-  "required_player_level" : 1,
-  "max_level" : 1000,
+  "image_url" : "Assets/Resources_moved/BuildingAssets/Sprites/Exterior/Building_Exterior_1004.png",
+  "upgradeable" : true
+}, {
+  "id" : 1005,
+  "name" : "方士营",
+  "description" : "一个训练方式的营地，升级兵营可以提升方士的属性",
+  "image_url" : "Assets/Resources_moved/BuildingAssets/Sprites/Exterior/Building_Exterior_1005.png",
   "upgradeable" : true
 }, {
   "id" : 1006,
   "name" : "步兵营",
   "description" : "一个训练步兵的营地，升级兵营可以提升练兵速度、数是和库存上限，进一步强化步兵能力",
-  "image_url" : "/building_bubingying_static",
-  "required_player_level" : 1,
-  "max_level" : 1000,
+  "image_url" : "Assets/Resources_moved/BuildingAssets/Sprites/Exterior/Building_Exterior_1006.png",
   "upgradeable" : true
 }, {
   "id" : 1007,
   "name" : "骑兵营",
   "description" : "一个训练骑兵的营地，升级兵营可以提升练兵速度、数量和库存上限，进一步强化骑兵能力",
-  "image_url" : "/building_qibingying_static",
-  "required_player_level" : 1,
-  "max_level" : 1000,
+  "image_url" : "Assets/Resources_moved/BuildingAssets/Sprites/Exterior/Building_Exterior_1007.png",
   "upgradeable" : true
 }, {
   "id" : 1008,
   "name" : "军府",
   "description" : "古代朝廷的研究所，用来研究一切能进行研究的东西，只是你需要付出定的资源供养他们。升级车府可以提升科技等级上限和地图中部队移动速度",
-  "image_url" : "/building_junfu_static",
-  "required_player_level" : 1,
-  "max_level" : 1000,
+  "image_url" : "Assets/Resources_moved/BuildingAssets/Sprites/Exterior/Building_Exterior_1008.png",
   "upgradeable" : true
 }, {
   "id" : 1009,
   "name" : "演武场",
   "description" : "己方英雄进行练兵的场所，过关斩将和沙盘演义都能很好的检验英维们的实力。升级演武场可以增加英雄的带兵上限",
-  "image_url" : "/building_yanwuchang_static",
-  "required_player_level" : 1,
-  "max_level" : 1000,
+  "image_url" : "Assets/Resources_moved/BuildingAssets/Sprites/Exterior/Building_Exterior_1009.png",
   "upgradeable" : true
 }, {
   "id" : 1010,
   "name" : "辎重站",
   "description" : "朝廷用来存放物资的地方，在这里买到各种物资，不过听说不便宜。升级辎主站可以增加购买次数和每次购买得到的物资",
-  "image_url" : "/building_zizhongzhan_static",
-  "required_player_level" : 1,
-  "max_level" : 1000,
+  "image_url" : "Assets/Resources_moved/BuildingAssets/Sprites/Exterior/Building_Exterior_1010.png",
   "upgradeable" : false
 }, {
   "id" : 1011,
   "name" : "武馆",
   "description" : "三国各方势力大混战，投入已方最强阵容，与各方势力共同争夺三国至尊宝座。升级武馆可以增加部队的攻防\n屈性",
-  "image_url" : "/building_wuguan_static",
-  "required_player_level" : 1,
-  "max_level" : 1000,
+  "image_url" : "Assets/Resources_moved/BuildingAssets/Sprites/Exterior/Building_Exterior_1011.png",
   "upgradeable" : false
 }, {
   "id" : 1012,
   "name" : "书院",
   "description" : "提供给你和其他英雄学习的地方，在这里，你可以消耗英雄碎片获得技能和将魂，还能夜观天象，获取强大的星宿。升级书院可以增加问道所获得的将魂数量",
-  "image_url" : "/building_shuyuan_static",
-  "required_player_level" : 1,
-  "max_level" : 1000,
+  "image_url" : "Assets/Resources_moved/BuildingAssets/Sprites/Exterior/Building_Exterior_1012.png",
   "upgradeable" : false
 }, {
   "id" : 1013,
   "name" : "冶炼厂",
   "description" : "一个可以生产生铁的地方，升级后产早更高",
-  "image_url" : "/building_yelianchang_static",
-  "required_player_level" : 1,
-  "max_level" : 1000,
+  "image_url" : "Assets/Resources_moved/BuildingAssets/Sprites/Exterior/Building_Exterior_1013.png",
   "upgradeable" : true
 }, {
   "id" : 1014,
   "name" : "铸币厂",
   "description" : "一个可以生产银两的地方，升级后产皋更高",
-  "image_url" : "/building_zhubichang_static",
-  "required_player_level" : 1,
-  "max_level" : 1000,
+  "image_url" : "Assets/Resources_moved/BuildingAssets/Sprites/Exterior/Building_Exterior_1014.png",
   "upgradeable" : true
 }, {
   "id" : 1015,
   "name" : "农庄",
   "description" : "一个可以生产粮草的地方，升级后产\n星更高",
-  "image_url" : "/building_nongzhuang_static",
-  "required_player_level" : 1,
-  "max_level" : 1000,
+  "image_url" : "Assets/Resources_moved/BuildingAssets/Sprites/Exterior/Building_Exterior_1015.png",
   "upgradeable" : true
 }, {
   "id" : 1016,
   "name" : "锯木厂",
   "description" : "一个可以生产木材的地方，升级后产是更高",
-  "image_url" : "/building_jumuchang_static",
-  "required_player_level" : 1,
-  "max_level" : 1000,
+  "image_url" : "Assets/Resources_moved/BuildingAssets/Sprites/Exterior/Building_Exterior_1016.png",
   "upgradeable" : true
 }, {
   "id" : 1017,
   "name" : "商店",
   "description" : "购买商品的地方",
-  "image_url" : "/building_shangdian_static",
-  "required_player_level" : 1,
-  "max_level" : 1000,
+  "image_url" : "Assets/Resources_moved/BuildingAssets/Sprites/Exterior/Building_Exterior_1017.png",
   "upgradeable" : false
-}, {
-  "id" : 1018,
-  "name" : "冶炼厂",
-  "description" : "一个可以生产生铁的地方，升级后产早更高",
-  "image_url" : "/building_yelianchang_static",
-  "required_player_level" : 1,
-  "max_level" : 1000,
-  "upgradeable" : true
-}, {
-  "id" : 1019,
-  "name" : "铸币厂",
-  "description" : "一个可以生产银两的地方，升级后产皋更高",
-  "image_url" : "/building_zhubichang_static",
-  "required_player_level" : 1,
-  "max_level" : 1000,
-  "upgradeable" : true
-}, {
-  "id" : 1020,
-  "name" : "农庄",
-  "description" : "一个可以生产粮草的地方，升级后产\n星更高",
-  "image_url" : "/building_nongzhuang_static",
-  "required_player_level" : 1,
-  "max_level" : 1000,
-  "upgradeable" : true
-}, {
-  "id" : 1021,
-  "name" : "锯木厂",
-  "description" : "一个可以生产木材的地方，升级后产是更高",
-  "image_url" : "/building_jumuchang_static",
-  "required_player_level" : 1,
-  "max_level" : 1000,
-  "upgradeable" : true
-}, {
-  "id" : 1022,
-  "name" : "方士营",
-  "description" : "一个训练方式的营地，升级兵营可以提升方士的属性",
-  "image_url" : "/building_fangshiying_static",
-  "required_player_level" : 1,
-  "max_level" : 1000,
-  "upgradeable" : true
 } ]

@@ -1,0 +1,181 @@
+[ {
+  "id" : 1001,
+  "name" : "1级步兵",
+  "troop_type" : "INFANTRY",
+  "base_attack" : 400,
+  "base_defense" : 100,
+  "base_health" : 200,
+  "base_speed" : 10,
+  "max_tier" : 60
+}, {
+  "id" : 1002,
+  "name" : "1级弓兵",
+  "troop_type" : "ARCHER",
+  "base_attack" : 400,
+  "base_defense" : 100,
+  "base_health" : 200,
+  "base_speed" : 10,
+  "max_tier" : 60
+}, {
+  "id" : 1003,
+  "name" : "1级骑兵",
+  "troop_type" : "CAVALRY",
+  "base_attack" : 400,
+  "base_defense" : 100,
+  "base_health" : 200,
+  "base_speed" : 10,
+  "max_tier" : 60
+}, {
+  "id" : 1004,
+  "name" : "1级方士",
+  "troop_type" : "MAGE",
+  "base_attack" : 400,
+  "base_defense" : 100,
+  "base_health" : 200,
+  "base_speed" : 10,
+  "max_tier" : 60
+}, {
+  "id" : 1005,
+  "name" : "2级步兵",
+  "troop_type" : "INFANTRY",
+  "base_attack" : 400,
+  "base_defense" : 100,
+  "base_health" : 200,
+  "base_speed" : 10,
+  "max_tier" : 60
+}, {
+  "id" : 1006,
+  "name" : "2级弓兵",
+  "troop_type" : "ARCHER",
+  "base_attack" : 400,
+  "base_defense" : 100,
+  "base_health" : 200,
+  "base_speed" : 10,
+  "max_tier" : 60
+}, {
+  "id" : 1007,
+  "name" : "2级骑兵",
+  "troop_type" : "CAVALRY",
+  "base_attack" : 400,
+  "base_defense" : 100,
+  "base_health" : 200,
+  "base_speed" : 10,
+  "max_tier" : 60
+}, {
+  "id" : 1008,
+  "name" : "2级方士",
+  "troop_type" : "MAGE",
+  "base_attack" : 400,
+  "base_defense" : 100,
+  "base_health" : 200,
+  "base_speed" : 10,
+  "max_tier" : 60
+}, {
+  "id" : 1009,
+  "name" : "3级步兵",
+  "troop_type" : "INFANTRY",
+  "base_attack" : 400,
+  "base_defense" : 100,
+  "base_health" : 200,
+  "base_speed" : 10,
+  "max_tier" : 60
+}, {
+  "id" : 1010,
+  "name" : "3级弓兵",
+  "troop_type" : "ARCHER",
+  "base_attack" : 400,
+  "base_defense" : 100,
+  "base_health" : 200,
+  "base_speed" : 10,
+  "max_tier" : 60
+}, {
+  "id" : 1011,
+  "name" : "3级骑兵",
+  "troop_type" : "CAVALRY",
+  "base_attack" : 400,
+  "base_defense" : 100,
+  "base_health" : 200,
+  "base_speed" : 10,
+  "max_tier" : 60
+}, {
+  "id" : 1012,
+  "name" : "3级方士",
+  "troop_type" : "MAGE",
+  "base_attack" : 400,
+  "base_defense" : 100,
+  "base_health" : 200,
+  "base_speed" : 10,
+  "max_tier" : 60
+}, {
+  "id" : 1013,
+  "name" : "4级步兵",
+  "troop_type" : "INFANTRY",
+  "base_attack" : 400,
+  "base_defense" : 100,
+  "base_health" : 200,
+  "base_speed" : 10,
+  "max_tier" : 60
+}, {
+  "id" : 1014,
+  "name" : "4级弓兵",
+  "troop_type" : "ARCHER",
+  "base_attack" : 400,
+  "base_defense" : 100,
+  "base_health" : 200,
+  "base_speed" : 10,
+  "max_tier" : 60
+}, {
+  "id" : 1015,
+  "name" : "4级骑兵",
+  "troop_type" : "CAVALRY",
+  "base_attack" : 400,
+  "base_defense" : 100,
+  "base_health" : 200,
+  "base_speed" : 10,
+  "max_tier" : 60
+}, {
+  "id" : 1016,
+  "name" : "4级方士",
+  "troop_type" : "MAGE",
+  "base_attack" : 400,
+  "base_defense" : 100,
+  "base_health" : 200,
+  "base_speed" : 10,
+  "max_tier" : 60
+}, {
+  "id" : 1017,
+  "name" : "5级步兵",
+  "troop_type" : "INFANTRY",
+  "base_attack" : 400,
+  "base_defense" : 100,
+  "base_health" : 200,
+  "base_speed" : 10,
+  "max_tier" : 60
+}, {
+  "id" : 1018,
+  "name" : "5级弓兵",
+  "troop_type" : "ARCHER",
+  "base_attack" : 400,
+  "base_defense" : 100,
+  "base_health" : 200,
+  "base_speed" : 10,
+  "max_tier" : 60
+}, {
+  "id" : 1019,
+  "name" : "5级骑兵",
+  "troop_type" : "CAVALRY",
+  "base_attack" : 400,
+  "base_defense" : 100,
+  "base_health" : 200,
+  "base_speed" : 10,
+  "max_tier" : 60
+}, {
+  "id" : 1020,
+  "name" : "5级方士",
+  "troop_type" : "MAGE",
+  "base_attack" : 400,
+  "base_defense" : 100,
+  "base_health" : 200,
+  "base_speed" : 10,
+  "max_tier" : 60
+} ]

@@ -12,7 +12,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -118,40 +117,5 @@ public class CharacterGeneralServiceImpl implements CharacterGeneralService {
         logger.info("删除武将成功，ID：{}", id);
     }
 
-    /**
-     * 初始化默认的武将列表
-     *
-     * @param characterId 角色ID
-     * @return 初始化后的武将列表
-     */
-    @Override
-    public List<CharacterGeneral> initializeDefaultGenerals(Long characterId) {
-        List<CharacterGeneral> defaultGenerals = new ArrayList<>();
 
-        // 示例武将1
-        CharacterGeneral general1 = new CharacterGeneral();
-        general1.setId(snowflake.nextId());  // 使用雪花ID生成
-        general1.setCharacterId(characterId);
-        general1.setGeneralTemplateId(1L); // 模板ID
-        general1.setLevel(1);
-        general1.setStars(3);
-        general1.setExperience(0);
-        general1.setStatus("Active");
-        defaultGenerals.add(general1);
-
-        // 示例武将2
-        CharacterGeneral general2 = new CharacterGeneral();
-        general2.setId(snowflake.nextId());  // 使用雪花ID生成
-        general2.setCharacterId(characterId);
-        general2.setGeneralTemplateId(2L); // 模板ID
-        general2.setLevel(1);
-        general2.setStars(3);
-        general2.setExperience(0);
-        general2.setStatus("Active");
-        defaultGenerals.add(general2);
-
-        characterGeneralRepository.saveAll(defaultGenerals);
-        logger.info("初始化 {} 的默认武将列表，角色ID：{}", defaultGenerals.size(), characterId);
-        return defaultGenerals;
-    }
 }

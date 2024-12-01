@@ -83,4 +83,10 @@ public class BuildingTemplateServiceImpl implements BuildingTemplateService {
                 template.getImageUrl()
         );
     }
+
+    @Override
+    public List<BuildingTemplate> getTemplatesByIds(List<Long> templateIds) {
+        // 使用 Repository 方法根据 ID 列表查询模板
+        return buildingTemplateRepository.findByIdIn(templateIds);
+    }
 }
