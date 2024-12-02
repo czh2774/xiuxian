@@ -4,15 +4,12 @@ import com.xiuxian.xiuxianserver.dto.CooldownDTO;
 import com.xiuxian.xiuxianserver.entity.Cooldown;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.mapstruct.factory.Mappers;
 
 /**
  * 冷却时间管理实体和DTO的映射器
  */
-@Mapper
+@Mapper(componentModel = "spring")
 public interface CooldownMapper {
-
-    CooldownMapper INSTANCE = Mappers.getMapper(CooldownMapper.class);
 
     /**
      * 将 Cooldown 实体转换为 CooldownDTO
@@ -20,7 +17,7 @@ public interface CooldownMapper {
      * @param cooldown 冷却实体
      * @return 冷却DTO
      */
-    @Mapping(source = "characterId", target = "characterId")
+    @Mapping(target = "status", defaultValue = "ACTIVE")
     CooldownDTO toDTO(Cooldown cooldown);
 
     /**
@@ -29,6 +26,6 @@ public interface CooldownMapper {
      * @param cooldownDTO 冷却DTO
      * @return 冷却实体
      */
-    @Mapping(source = "characterId", target = "characterId")
+    @Mapping(target = "status", defaultValue = "ACTIVE")
     Cooldown toEntity(CooldownDTO cooldownDTO);
 }

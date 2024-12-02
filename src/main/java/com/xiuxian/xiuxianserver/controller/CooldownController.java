@@ -12,8 +12,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import jakarta.validation.Valid;
 
+import java.util.List;
 import java.util.Map;
+
+import com.xiuxian.xiuxianserver.dto.CooldownCheckRequest;
+import com.xiuxian.xiuxianserver.enums.CooldownType;
 
 /**
  * 冷却时间管理控制器
@@ -50,12 +55,13 @@ public class CooldownController {
 
         try {
             Long characterId = Long.valueOf(requestBody.get("characterId").toString());
-            String type = requestBody.get("type").toString();
+            String typeStr = requestBody.get("type").toString();
+            CooldownType type = CooldownType.valueOf(typeStr);
             Long targetId = Long.valueOf(requestBody.get("targetId").toString());
             int durationInSeconds = Integer.parseInt(requestBody.get("durationInSeconds").toString());
             int queueId = Integer.parseInt(requestBody.get("queueId").toString());
 
-            CooldownDTO cooldown = cooldownService.startCooldown(characterId, type, targetId, durationInSeconds);
+            CooldownDTO cooldown = cooldownService.startCooldown(characterId, type, targetId, durationInSeconds, queueId);
             logger.info("成功启动冷却：角色ID={}, 类型={}, 目标ID={}", characterId, type, targetId);
             return ResponseEntity.ok(CustomApiResponse.success("冷却启动成功", cooldown, request.getRequestURI()));
         } catch (Exception e) {
@@ -84,7 +90,8 @@ public class CooldownController {
 
         try {
             Long characterId = Long.valueOf(requestBody.get("characterId").toString());
-            String type = requestBody.get("type").toString();
+            String typeStr = requestBody.get("type").toString();
+            CooldownType type = CooldownType.valueOf(typeStr);
             Long targetId = Long.valueOf(requestBody.get("targetId").toString());
             int queueId = Integer.parseInt(requestBody.get("queueId").toString());
 
@@ -117,7 +124,8 @@ public class CooldownController {
 
         try {
             Long characterId = Long.valueOf(requestBody.get("characterId").toString());
-            String type = requestBody.get("type").toString();
+            String typeStr = requestBody.get("type").toString();
+            CooldownType type = CooldownType.valueOf(typeStr);
             Long targetId = Long.valueOf(requestBody.get("targetId").toString());
             int accelerationTime = Integer.parseInt(requestBody.get("accelerationTime").toString());
             int queueId = Integer.parseInt(requestBody.get("queueId").toString());
@@ -151,7 +159,8 @@ public class CooldownController {
 
         try {
             Long characterId = Long.valueOf(requestBody.get("characterId").toString());
-            String type = requestBody.get("type").toString();
+            String typeStr = requestBody.get("type").toString();
+            CooldownType type = CooldownType.valueOf(typeStr);
             Long targetId = Long.valueOf(requestBody.get("targetId").toString());
             int queueId = Integer.parseInt(requestBody.get("queueId").toString());
 
@@ -163,5 +172,26 @@ public class CooldownController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(
                     CustomApiResponse.error(HttpStatus.INTERNAL_SERVER_ERROR.value(), "完成冷却失败", request.getRequestURI()));
         }
+    }
+
+    // 查询特定类型的冷却状态
+    @PostMapping("/check")
+    public ResponseEntity<CustomApiResponse<CooldownDTO>> checkCooldown(
+            @Valid @RequestBody CooldownCheckRequest request, HttpServletRequest httpRequest) {
+        CooldownDTO cooldown = cooldownService.getCooldownStatus(
+            request.getCharacterId(),
+            request.getCooldownType(),
+            request.getTargetId(),
+            request.getQueueId()
+        );
+        return ResponseEntity.ok(CustomApiResponse.success("查询冷却状态成功", cooldown, httpRequest.getRequestURI()));
+    }
+
+    // 建议添加一个查询所有冷却的接口
+    @PostMapping("/list")
+    public ResponseEntity<CustomApiResponse<List<CooldownDTO>>> listCooldowns(
+            @RequestParam Long characterId, HttpServletRequest httpRequest) {
+        List<CooldownDTO> cooldowns = cooldownService.getCharacterCooldowns(characterId);
+        return ResponseEntity.ok(CustomApiResponse.success("查询冷却列表成功", cooldowns, httpRequest.getRequestURI()));
     }
 }

@@ -8,6 +8,7 @@ import com.xiuxian.xiuxianserver.entity.CharacterGeneral;
 import com.xiuxian.xiuxianserver.entity.CharacterItem;
 import com.xiuxian.xiuxianserver.enums.BuildingStatusType;
 import com.xiuxian.xiuxianserver.enums.ItemCategory;
+import com.xiuxian.xiuxianserver.mapper.CharacterProfileMapper;
 import com.xiuxian.xiuxianserver.repository.CharacterBuildingRepository;
 import com.xiuxian.xiuxianserver.repository.CharacterGeneralRepository;
 import com.xiuxian.xiuxianserver.repository.CharacterItemRepository;
@@ -16,6 +17,7 @@ import com.xiuxian.xiuxianserver.service.BuildingLocationService;
 import com.xiuxian.xiuxianserver.service.CharacterInitializationService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -35,6 +37,8 @@ public class CharacterInitializationServiceImpl implements CharacterInitializati
     private final CharacterProfileRepository characterProfileRepository;
     private final BuildingLocationService buildingLocationService;
     private final Snowflake snowflake;
+    @Autowired
+    private CharacterProfileMapper characterProfileMapper;
 
     public CharacterInitializationServiceImpl(CharacterItemRepository characterItemRepository,
                                               CharacterGeneralRepository characterGeneralRepository,
@@ -104,7 +108,7 @@ public class CharacterInitializationServiceImpl implements CharacterInitializati
     @Transactional
     public void initializeBuildingsForCharacter(Long characterId) {
         CharacterProfileDTO character = characterProfileRepository.findById(characterId)
-                .map(profile -> new CharacterProfileDTO(profile))
+                .map(characterProfileMapper::toDTO)
                 .orElseThrow(() -> new IllegalArgumentException("角色档案未找到，ID: " + characterId));
 
         List<Long> initialBuildingTemplateIds = List.of(1001L, 1002L);

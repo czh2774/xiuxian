@@ -6,11 +6,16 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 import jakarta.annotation.PostConstruct;  // 新增
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+
 import java.util.TimeZone;  // 新增
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
+@EnableTransactionManagement  // 添加事务管理支持
 @EnableJpaRepositories(basePackages = "com.xiuxian.xiuxianserver.repository")  // 扫描仓库
 @EntityScan(basePackages = "com.xiuxian.xiuxianserver.entity")  // 扫描实体类
+@EnableScheduling  // 启用定时任务
 public class XiuxianServerApplication {
 
     public static void main(String[] args) {

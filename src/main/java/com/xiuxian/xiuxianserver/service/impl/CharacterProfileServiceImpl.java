@@ -23,15 +23,17 @@ public class CharacterProfileServiceImpl implements CharacterProfileService {
     private final CharacterProfileRepository characterProfileRepository;
     private final CharacterInitializationService characterInitializationService;
     private final Snowflake snowflake;
-    private final CharacterProfileMapper mapper = CharacterProfileMapper.INSTANCE;
+    private final CharacterProfileMapper mapper;
     private static final int MAX_NAME_LENGTH = 50;
 
     public CharacterProfileServiceImpl(CharacterProfileRepository characterProfileRepository,
                                        CharacterInitializationService characterInitializationService,
-                                       Snowflake snowflake) {
+                                       Snowflake snowflake,
+                                       CharacterProfileMapper mapper) {
         this.characterProfileRepository = characterProfileRepository;
         this.characterInitializationService = characterInitializationService;
         this.snowflake = snowflake;
+        this.mapper = mapper;
     }
 
     @Override

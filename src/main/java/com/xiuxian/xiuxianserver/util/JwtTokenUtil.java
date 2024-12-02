@@ -2,6 +2,8 @@ package com.xiuxian.xiuxianserver.util;
 
 import com.xiuxian.xiuxianserver.exception.AuthenticationException;
 import io.jsonwebtoken.*;
+import io.jsonwebtoken.security.Keys;
+import io.jsonwebtoken.security.SecurityException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -69,12 +71,13 @@ public class JwtTokenUtil {
             token = token.substring(7).trim();
         }
         try {
-            final Claims claims = Jwts.parser()
-                    .setSigningKey(secret)
+            final Claims claims = Jwts.parserBuilder()
+                    .setSigningKey(Keys.hmacShaKeyFor(secret.getBytes()))
+                    .build()
                     .parseClaimsJws(token)
                     .getBody();
             return claimsResolver.apply(claims);
-        } catch (SignatureException e) {
+        } catch (SecurityException e) {
             logger.error("无效的 JWT 签名: {}", token, e);
             throw new AuthenticationException("无效的 JWT 签名", e);
         } catch (ExpiredJwtException e) {

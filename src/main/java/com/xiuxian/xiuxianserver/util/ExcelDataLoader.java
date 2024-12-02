@@ -20,12 +20,9 @@ import java.sql.SQLException;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class ExcelDataLoader {
 
-    private static final Logger logger = Logger.getLogger(ExcelDataLoader.class.getName());
     private final DataSource dataSource;
 
     // ANSI 颜色编码

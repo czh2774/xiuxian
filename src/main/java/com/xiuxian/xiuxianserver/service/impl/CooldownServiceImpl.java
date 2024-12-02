@@ -8,10 +8,17 @@ import com.xiuxian.xiuxianserver.service.CooldownService;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.stream.Collectors;
+
+import com.xiuxian.xiuxianserver.enums.CooldownStatus;
+import com.xiuxian.xiuxianserver.handler.CooldownHandlerManager;
+import com.xiuxian.xiuxianserver.enums.CooldownType;
 
 /**
  * 冷却时间管理服务实现类
@@ -23,26 +30,14 @@ public class CooldownServiceImpl implements CooldownService {
     private final CooldownRepository cooldownRepository;
     private static final Logger logger = LoggerFactory.getLogger(CooldownServiceImpl.class);
     private final Snowflake snowflake;
+    private final CooldownHandlerManager handlerManager;
 
     @Override
-    public CooldownDTO startCooldown(Long characterId, String type, Long targetId, int durationInSeconds) {
+    public CooldownDTO startCooldown(Long characterId, CooldownType type, Long targetId, int durationInSeconds, int queueId) {
         LocalDateTime now = LocalDateTime.now();
 
-        // 查询角色当前未完成的冷却任务
-        List<Cooldown> activeCooldowns = cooldownRepository.findByCharacterIdAndTypeAndIsCompletedFalse(characterId, type);
-
-        // 分配队列ID：从1开始，选择最小的空闲队列
-        int queueId = 1; // 队列ID从1开始
-        for (Cooldown cooldown : activeCooldowns) {
-            if (cooldown.getQueueId() == queueId) {
-                queueId++; // 如果队列ID被占用，尝试下一个
-            } else {
-                break; // 找到空闲队列
-            }
-        }
-
         // 最大队列限制检查
-        int maxQueues = 2; // 假设最大支持2个队列，可以从配置中加载
+        int maxQueues = 2;
         if (queueId > maxQueues) {
             throw new RuntimeException("建筑升级队列已满，无法启动新的冷却任务");
         }
@@ -67,30 +62,53 @@ public class CooldownServiceImpl implements CooldownService {
 
 
     @Override
-    public CooldownDTO getCooldownStatus(Long characterId, String type, Long targetId, int queueId) {
+    public CooldownDTO getCooldownStatus(Long characterId, CooldownType type, Long targetId, int queueId) {
         Cooldown cooldown = cooldownRepository.findByCharacterIdAndTypeAndQueueIdAndTargetId(characterId, type, queueId, targetId)
                 .orElseThrow(() -> new RuntimeException("未找到冷却时间记录"));
-        logger.info("查询冷却状态: 用户ID={}, 类型={}, 队列ID={}, 目标ID={}, 当前状态={}", characterId, type, queueId, targetId, cooldown.getIsCompleted());
         return new CooldownDTO(cooldown);
     }
 
     @Override
-    public boolean accelerateCooldown(Long userId, String type, Long targetId, int accelerationTime, int queueId) {
-        Cooldown cooldown = cooldownRepository.findByCharacterIdAndTypeAndQueueIdAndTargetId(userId, type, queueId, targetId)
+    public boolean accelerateCooldown(Long characterId, CooldownType type, Long targetId, int accelerationTime, int queueId) {
+        Cooldown cooldown = cooldownRepository.findByCharacterIdAndTypeAndQueueIdAndTargetId(characterId, type, queueId, targetId)
                 .orElseThrow(() -> new RuntimeException("未找到冷却时间记录"));
         cooldown.setEndTime(cooldown.getEndTime().minusSeconds(accelerationTime));
         cooldownRepository.save(cooldown);
-        logger.info("加速冷却: 用户ID={}, 类型={}, 队列ID={}, 目标ID={}, 加速时间={}秒", userId, type, queueId, targetId, accelerationTime);
         return true;
     }
 
     @Override
-    public boolean completeCooldown(Long characterId, String type, Long targetId, int queueId) {
+    public boolean completeCooldown(Long characterId, CooldownType type, Long targetId, int queueId) {
         Cooldown cooldown = cooldownRepository.findByCharacterIdAndTypeAndQueueIdAndTargetId(characterId, type, queueId, targetId)
                 .orElseThrow(() -> new RuntimeException("未找到冷却时间记录"));
         cooldown.setIsCompleted(true);
         cooldownRepository.save(cooldown);
-        logger.info("手动完成冷却: 用户ID={}, 类型={}, 队列ID={}, 目标ID={}", characterId, type, queueId, targetId);
         return true;
+    }
+
+    // 添加定时任务
+    @Scheduled(fixedRate = 1000) // 每秒执行一次
+    @Transactional
+    public void checkCooldowns() {
+        List<Cooldown> expiredCooldowns = cooldownRepository
+            .findByEndTimeBeforeAndStatus(LocalDateTime.now(), CooldownStatus.ACTIVE);
+            
+        for (Cooldown cooldown : expiredCooldowns) {
+            try {
+                handlerManager.handleCooldownComplete(cooldown);
+                cooldown.setStatus(CooldownStatus.COMPLETED);
+                cooldownRepository.save(cooldown);
+            } catch (Exception e) {
+                logger.error("处理冷却完成失败: {}", e.getMessage(), e);
+            }
+        }
+    }
+
+    @Override
+    public List<CooldownDTO> getCharacterCooldowns(Long characterId) {
+        return cooldownRepository.findByCharacterId(characterId)
+            .stream()
+            .map(cooldown -> new CooldownDTO(cooldown))
+            .collect(Collectors.toList());
     }
 }

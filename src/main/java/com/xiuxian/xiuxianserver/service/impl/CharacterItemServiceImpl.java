@@ -24,11 +24,14 @@ public class CharacterItemServiceImpl implements CharacterItemService {
 
     private final CharacterItemRepository characterItemRepository;
     private final Snowflake snowflake;
+    private final CharacterItemMapper characterItemMapper;
 
     public CharacterItemServiceImpl(CharacterItemRepository characterItemRepository,
-                                    Snowflake snowflake) {
+                                    Snowflake snowflake,
+                                    CharacterItemMapper characterItemMapper) {
         this.characterItemRepository = characterItemRepository;
         this.snowflake = snowflake;
+        this.characterItemMapper = characterItemMapper;
     }
 
     @Override
@@ -37,7 +40,7 @@ public class CharacterItemServiceImpl implements CharacterItemService {
         CharacterItem item = characterItemRepository.findById(itemInstanceId)
                 .orElseThrow(() -> new ResourceNotFoundException("道具未找到，ID: " + itemInstanceId));
         logger.info("成功获取角色道具，ID: {}", itemInstanceId);
-        return CharacterItemMapper.INSTANCE.toDTO(item);
+        return characterItemMapper.toDTO(item);
     }
 
     @Override
@@ -46,7 +49,7 @@ public class CharacterItemServiceImpl implements CharacterItemService {
         List<CharacterItem> items = characterItemRepository.findByCharacterId(characterId);
         logger.info("成功获取角色的所有道具，角色ID: {}, 道具数量: {}", characterId, items.size());
         return items.stream()
-                .map(CharacterItemMapper.INSTANCE::toDTO)
+                .map(characterItemMapper::toDTO)
                 .collect(Collectors.toList());
     }
 
@@ -54,11 +57,11 @@ public class CharacterItemServiceImpl implements CharacterItemService {
     @Transactional
     public CharacterItemDTO createCharacterItem(@Valid CharacterItemDTO request) {
         logger.info("开始创建角色道具实例，角色ID: {}, 模板ID: {}", request.getCharacterId(), request.getItemTemplateId());
-        CharacterItem item = CharacterItemMapper.INSTANCE.toEntity(request);
+        CharacterItem item = characterItemMapper.toEntity(request);
         item.setId(snowflake.nextId());
         CharacterItem savedItem = characterItemRepository.save(item);
         logger.info("成功创建角色道具实例，道具ID: {}", savedItem.getId());
-        return CharacterItemMapper.INSTANCE.toDTO(savedItem);
+        return characterItemMapper.toDTO(savedItem);
     }
 
     @Override
@@ -72,7 +75,7 @@ public class CharacterItemServiceImpl implements CharacterItemService {
         item.setEquipped(request.isEquipped());
         CharacterItem updatedItem = characterItemRepository.save(item);
         logger.info("成功更新角色道具实例，ID: {}", itemInstanceId);
-        return CharacterItemMapper.INSTANCE.toDTO(updatedItem);
+        return characterItemMapper.toDTO(updatedItem);
     }
 
 

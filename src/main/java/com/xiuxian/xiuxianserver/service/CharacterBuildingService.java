@@ -36,4 +36,6 @@ public interface CharacterBuildingService {
      */
     void updateBuildingStatus(Long buildingId, BuildingStatusType status);
 
+    void completeBuildingUpgrade(Long characterId, Long buildingId);
+
 }

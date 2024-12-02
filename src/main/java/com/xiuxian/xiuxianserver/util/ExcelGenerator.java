@@ -1,7 +1,5 @@
 package com.xiuxian.xiuxianserver.util;
 
-import com.xiuxian.xiuxianserver.util.ExcelColumn;
-import com.xiuxian.xiuxianserver.util.ExcelField;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -140,7 +138,6 @@ public class ExcelGenerator {
 
         for (Field field : fields) {
             if (field.isAnnotationPresent(ExcelColumn.class)) {
-                ExcelColumn excelColumn = field.getAnnotation(ExcelColumn.class);
 
                 // 第一行填写字段注释
                 Cell commentCell = commentRow.createCell(cellIndex);

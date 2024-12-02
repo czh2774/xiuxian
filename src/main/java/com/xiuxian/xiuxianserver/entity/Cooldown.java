@@ -1,5 +1,7 @@
 package com.xiuxian.xiuxianserver.entity;
 
+import com.xiuxian.xiuxianserver.enums.CooldownStatus;
+import com.xiuxian.xiuxianserver.enums.CooldownType;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -20,7 +22,8 @@ public class Cooldown {
     private Long characterId; // 角色ID
 
     @Column(nullable = false)
-    private String type; // CD类型（建筑升级、科技研究、装备突破）
+    @Enumerated(EnumType.STRING)
+    private CooldownType type; // CD类型（建筑升级、科技研究、装备突破）
 
     @Column(nullable = false)
     private Long targetId; // 目标ID（如建筑ID、科技ID、装备ID）
@@ -36,4 +39,7 @@ public class Cooldown {
 
     @Column(nullable = false)
     private Boolean isCompleted = false; // 是否完成
+
+    @Enumerated(EnumType.STRING)
+    private CooldownStatus status = CooldownStatus.ACTIVE;
 }

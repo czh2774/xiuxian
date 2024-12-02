@@ -50,4 +50,17 @@ public class CharacterBuildingServiceImpl implements CharacterBuildingService {
         building.setBuildingStatus(status);
         characterBuildingRepository.save(building);
     }
+
+    @Override
+    public void completeBuildingUpgrade(Long characterId, Long buildingId) {
+        CharacterBuilding building = characterBuildingRepository.findById(buildingId)
+            .orElseThrow(() -> new ResourceNotFoundException("建筑不存在"));
+        
+        building.setCurrentLevel(building.getCurrentLevel() + 1);
+        building.setBuildingStatus(BuildingStatusType.IDLE);
+        characterBuildingRepository.save(building);
+        
+        logger.info("建筑升级完成 - 角色ID: {}, 建筑ID: {}, 新等级: {}", 
+            characterId, buildingId, building.getCurrentLevel());
+    }
 }
