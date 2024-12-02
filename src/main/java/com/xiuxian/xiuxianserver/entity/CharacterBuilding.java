@@ -52,9 +52,12 @@ public class CharacterBuilding {
     @Schema(description = "增长的类型：兵力、科技、突破、道具等")
     private String growthType;  // 增长类型
 
-    @Schema(description = "增长实例ID，如科技ID、道具ID等")
+    @Schema(description = "增长的实例ID，如科技ID、道具ID等")
     private Long growthId;  // 增长实例ID
 
     @Schema(description = "增长的数值或等级，如兵力数量、科技等级等")
     private int growthValue;  // 增长数值或等级
+
+    @Schema(description = "最后修改时间")
+    private LocalDateTime lastModifiedTime;  // 最后修改时间
 }

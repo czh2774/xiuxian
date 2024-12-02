@@ -69,6 +69,12 @@ public class CharacterProfileDTO {
     @Schema(description = "铁矿")
     private int ironOre;
 
+    @Schema(description = "最大建筑升级队列数量", example = "2")
+    private int maxBuildingUpgradeQueues = 2; // 最大建筑升级队列数量
+
+    @Schema(description = "当前使用的建筑升级队列数量", example = "1")
+    private int currentBuildingUpgradeQueues = 0; // 当前使用的建筑升级队列数量
+
     @Schema(description = "角色状态")
     private String status;
 
@@ -98,6 +104,8 @@ public class CharacterProfileDTO {
         this.food = profile.getFood();
         this.wood = profile.getWood();
         this.ironOre = profile.getIronOre();
+        this.maxBuildingUpgradeQueues = profile.getMaxBuildingUpgradeQueues();
+        this.currentBuildingUpgradeQueues = profile.getCurrentBuildingUpgradeQueues();
         this.status = profile.getStatus();
         this.createdAt = profile.getCreatedAt();
         this.updatedAt = profile.getUpdatedAt();

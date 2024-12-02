@@ -13,6 +13,7 @@ import java.util.List;
  * CharacterGeneralDTO类，用于传输角色武将实例的数据。
  */
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class CharacterGeneralDTO {

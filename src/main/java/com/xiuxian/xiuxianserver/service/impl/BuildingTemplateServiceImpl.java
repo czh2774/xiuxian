@@ -3,6 +3,7 @@ package com.xiuxian.xiuxianserver.service.impl;
 import com.xiuxian.xiuxianserver.dto.BuildingTemplateDTO;
 import com.xiuxian.xiuxianserver.entity.BuildingTemplate;
 import com.xiuxian.xiuxianserver.exception.ResourceNotFoundException;
+import com.xiuxian.xiuxianserver.mapper.BuildingTemplateMapper;
 import com.xiuxian.xiuxianserver.repository.BuildingTemplateRepository;
 import com.xiuxian.xiuxianserver.service.BuildingTemplateService;
 import lombok.RequiredArgsConstructor;
@@ -23,6 +24,7 @@ public class BuildingTemplateServiceImpl implements BuildingTemplateService {
     private static final Logger logger = LoggerFactory.getLogger(BuildingTemplateServiceImpl.class);
 
     private final BuildingTemplateRepository buildingTemplateRepository;
+    private final BuildingTemplateMapper buildingTemplateMapper;
 
     /**
      * 获取所有建筑模板的列表。
@@ -37,7 +39,7 @@ public class BuildingTemplateServiceImpl implements BuildingTemplateService {
 
         // 将实体列表转换为DTO列表
         List<BuildingTemplateDTO> templateDTOs = templates.stream()
-                .map(this::convertToDTO)
+                .map(buildingTemplateMapper::toDTO)
                 .collect(Collectors.toList());
 
         logger.info("成功获取所有建筑模板，总计: {} 个", templateDTOs.size());
@@ -64,24 +66,7 @@ public class BuildingTemplateServiceImpl implements BuildingTemplateService {
 
         logger.info("成功获取建筑模板，ID: {}", id);
 
-        // 将实体转换为DTO
-        return convertToDTO(template);
-    }
-
-    /**
-     * 将 BuildingTemplate 实体转换为 DTO。
-     *
-     * @param template 实体对象
-     * @return DTO对象
-     */
-    private BuildingTemplateDTO convertToDTO(BuildingTemplate template) {
-        return new BuildingTemplateDTO(
-                template.getId(),
-                template.getName(),
-                template.getDescription(),
-                template.isUpgradeable(),
-                template.getImageUrl()
-        );
+        return buildingTemplateMapper.toDTO(template);
     }
 
     @Override

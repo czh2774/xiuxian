@@ -3,12 +3,12 @@ package com.xiuxian.xiuxianserver.service.impl;
 import com.xiuxian.xiuxianserver.dto.ItemTemplateDTO;
 import com.xiuxian.xiuxianserver.entity.ItemTemplate;
 import com.xiuxian.xiuxianserver.exception.ResourceNotFoundException;
+import com.xiuxian.xiuxianserver.mapper.ItemTemplateMapper;
 import com.xiuxian.xiuxianserver.repository.ItemTemplateRepository;
 import com.xiuxian.xiuxianserver.service.ItemTemplateService;
-import com.xiuxian.xiuxianserver.Mapper.ItemTemplateMapper;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import jakarta.transaction.Transactional;
@@ -22,7 +22,6 @@ public class ItemTemplateServiceImpl implements ItemTemplateService {
     private final ItemTemplateRepository itemTemplateRepository;
     private final ItemTemplateMapper mapper = ItemTemplateMapper.INSTANCE;
 
-    @Autowired
     public ItemTemplateServiceImpl(ItemTemplateRepository itemTemplateRepository) {
         this.itemTemplateRepository = itemTemplateRepository;
     }

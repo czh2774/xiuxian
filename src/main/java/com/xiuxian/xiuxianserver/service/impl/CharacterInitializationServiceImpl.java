@@ -13,11 +13,9 @@ import com.xiuxian.xiuxianserver.repository.CharacterGeneralRepository;
 import com.xiuxian.xiuxianserver.repository.CharacterItemRepository;
 import com.xiuxian.xiuxianserver.repository.CharacterProfileRepository;
 import com.xiuxian.xiuxianserver.service.BuildingLocationService;
-import com.xiuxian.xiuxianserver.service.BuildingTemplateService;
 import com.xiuxian.xiuxianserver.service.CharacterInitializationService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -35,22 +33,18 @@ public class CharacterInitializationServiceImpl implements CharacterInitializati
     private final CharacterGeneralRepository characterGeneralRepository;
     private final CharacterBuildingRepository characterBuildingRepository;
     private final CharacterProfileRepository characterProfileRepository;
-    private final BuildingTemplateService buildingTemplateService;
     private final BuildingLocationService buildingLocationService;
     private final Snowflake snowflake;
 
-    @Autowired
     public CharacterInitializationServiceImpl(CharacterItemRepository characterItemRepository,
                                               CharacterGeneralRepository characterGeneralRepository,
                                               CharacterBuildingRepository characterBuildingRepository,
                                               CharacterProfileRepository characterProfileRepository,
-                                              BuildingTemplateService buildingTemplateService,
                                               BuildingLocationService buildingLocationService, Snowflake snowflake) {
         this.characterItemRepository = characterItemRepository;
         this.characterGeneralRepository = characterGeneralRepository;
         this.characterBuildingRepository = characterBuildingRepository;
         this.characterProfileRepository = characterProfileRepository;
-        this.buildingTemplateService = buildingTemplateService;
         this.buildingLocationService = buildingLocationService;
         this.snowflake = snowflake;
     }

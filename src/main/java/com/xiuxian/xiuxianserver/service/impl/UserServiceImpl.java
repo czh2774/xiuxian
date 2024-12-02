@@ -1,7 +1,5 @@
 package com.xiuxian.xiuxianserver.service.impl;
 
-import cn.hutool.core.lang.Snowflake;
-import cn.hutool.core.util.IdUtil;
 import com.xiuxian.xiuxianserver.dto.UserDTO;
 import com.xiuxian.xiuxianserver.entity.UserModel;
 import com.xiuxian.xiuxianserver.repository.UserRepository;
@@ -17,8 +15,6 @@ import java.util.Collections;
 
 @Service
 public class UserServiceImpl implements UserService {
-    // 初始化 Snowflake 实例，参数为workerId 和 datacenterId
-    private final Snowflake snowflake = IdUtil.getSnowflake(1, 2);
     @Autowired
     private UserRepository userRepository;
 

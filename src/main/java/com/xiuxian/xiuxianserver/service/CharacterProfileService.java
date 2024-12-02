@@ -87,4 +87,31 @@ public interface CharacterProfileService {
      * @return 如果名称已存在返回true，否则返回false
      */
     boolean existsByName(String name);
+
+
+    /**
+     * 检查角色资源是否足够
+     * @param characterId 角色ID
+     * @param resourceType 资源类型
+     * @param requiredAmount 所需数量
+     * @return true 如果资源足够
+     */
+    boolean hasSufficientResource(Long characterId, String resourceType, int requiredAmount);
+
+    /**
+     * 扣除角色资源
+     * @param characterId 角色ID
+     * @param resourceType 资源类型
+     * @param amount 扣除数量
+     */
+    void deductResource(Long characterId, String resourceType, int amount);
+
+    /**
+     *增加角色资源
+     * @param characterId
+     * @param resourceType
+     * @param amount
+     */
+    void addResource(Long characterId, String resourceType, int amount) ;
+
 }

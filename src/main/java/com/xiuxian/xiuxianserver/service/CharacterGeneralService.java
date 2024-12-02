@@ -1,8 +1,6 @@
 package com.xiuxian.xiuxianserver.service;
 
 import com.xiuxian.xiuxianserver.dto.CharacterGeneralDTO;
-import com.xiuxian.xiuxianserver.entity.CharacterGeneral;
-
 import java.util.List;
 
 /**

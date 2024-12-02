@@ -2,7 +2,6 @@ package com.xiuxian.xiuxianserver.service.impl;
 
 import com.xiuxian.xiuxianserver.dto.TaskTemplateDTO;
 import com.xiuxian.xiuxianserver.entity.TaskTemplate;
-import com.xiuxian.xiuxianserver.entity.TaskReward;
 import com.xiuxian.xiuxianserver.exception.CustomConversionException;
 import com.xiuxian.xiuxianserver.exception.ResourceNotFoundException;
 import com.xiuxian.xiuxianserver.repository.TaskTemplateRepository;

@@ -1,4 +1,4 @@
-package com.xiuxian.xiuxianserver.Mapper;
+package com.xiuxian.xiuxianserver.mapper;
 
 import com.xiuxian.xiuxianserver.dto.CharacterProfileDTO;
 import com.xiuxian.xiuxianserver.dto.CharacterProfileUpdateDTO;

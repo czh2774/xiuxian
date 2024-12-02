@@ -1,6 +1,5 @@
 package com.xiuxian.xiuxianserver.entity;
 
-import cn.hutool.core.util.IdUtil;
 import com.xiuxian.xiuxianserver.dto.CharacterProfileDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -111,6 +110,16 @@ public class CharacterProfile {
     @Builder.Default
     private int ironOre = 1000; // 铁矿数量
 
+    @Column(nullable = false)
+    @Schema(description = "最大建筑升级队列数量", example = "2")
+    @Builder.Default
+    private int maxBuildingUpgradeQueues = 2; // 最大建筑升级队列数量
+
+    @Column(nullable = false)
+    @Schema(description = "当前使用的建筑升级队列数量", example = "1")
+    @Builder.Default
+    private int currentBuildingUpgradeQueues = 0; // 当前使用的建筑升级队列数量
+
     @Column(nullable = false, columnDefinition = "VARCHAR(50) DEFAULT 'Active'")
     @Schema(description = "角色当前状态", example = "Active")
     @Builder.Default
@@ -150,6 +159,13 @@ public class CharacterProfile {
         dto.setStatus(this.status);
         dto.setCreatedAt(this.createdAt);
         dto.setUpdatedAt(this.updatedAt);
+
+        // 添加建筑队列字段
+        dto.setMaxBuildingUpgradeQueues(this.maxBuildingUpgradeQueues);
+        dto.setCurrentBuildingUpgradeQueues(this.currentBuildingUpgradeQueues);
+
         return dto;
     }
+
 }
+

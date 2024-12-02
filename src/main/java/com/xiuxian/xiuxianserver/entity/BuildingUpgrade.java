@@ -2,6 +2,7 @@ package com.xiuxian.xiuxianserver.entity;
 
 import com.xiuxian.xiuxianserver.util.ExcelField;
 import com.xiuxian.xiuxianserver.util.ExcelColumn;
+import com.xiuxian.xiuxianserver.util.JsonUtils;
 import lombok.Data;
 import jakarta.persistence.*;
 
@@ -55,6 +56,10 @@ public class BuildingUpgrade {
 
     @Schema(description = "升级条件", example = "[{required_buildings:[{building_id:2,level:5}],player_level:10}]")
     @ExcelColumn(headerName = "升级条件", comment = "升级的前置条件，JSON格式")
-    @Column(name = "upgrade_requirements", nullable = false, columnDefinition = "TEXT") // 显式映射，可能需要 TEXT 类型
+    @Column(name = "upgrade_requirements", columnDefinition = "TEXT")
     private String upgradeRequirements; // 升级条件（JSON格式）
+
+    public ValidationCondition getUpgradeRequirements() {
+        return JsonUtils.parseJson(upgradeRequirements, ValidationCondition.class);
+    }
 }

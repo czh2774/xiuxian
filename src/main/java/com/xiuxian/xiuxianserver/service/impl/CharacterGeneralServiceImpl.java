@@ -4,7 +4,7 @@ import cn.hutool.core.lang.Snowflake;
 import com.xiuxian.xiuxianserver.dto.CharacterGeneralDTO;
 import com.xiuxian.xiuxianserver.entity.CharacterGeneral;
 import com.xiuxian.xiuxianserver.exception.ResourceNotFoundException;
-import com.xiuxian.xiuxianserver.Mapper.CharacterGeneralMapper;
+import com.xiuxian.xiuxianserver.mapper.CharacterGeneralMapper;
 import com.xiuxian.xiuxianserver.repository.CharacterGeneralRepository;
 import com.xiuxian.xiuxianserver.service.CharacterGeneralService;
 import org.slf4j.Logger;
@@ -29,7 +29,6 @@ public class CharacterGeneralServiceImpl implements CharacterGeneralService {
     private final Snowflake snowflake;
     private final CharacterGeneralMapper characterGeneralMapper;
 
-    @Autowired
     public CharacterGeneralServiceImpl(Snowflake snowflake, CharacterGeneralMapper characterGeneralMapper) {
         this.snowflake = snowflake;
         this.characterGeneralMapper = characterGeneralMapper;

@@ -4,14 +4,13 @@ import cn.hutool.core.lang.Snowflake;
 import com.xiuxian.xiuxianserver.dto.*;
 import com.xiuxian.xiuxianserver.entity.CharacterProfile;
 import com.xiuxian.xiuxianserver.exception.ResourceNotFoundException;
-import com.xiuxian.xiuxianserver.Mapper.CharacterProfileMapper;
+import com.xiuxian.xiuxianserver.mapper.CharacterProfileMapper;
 import com.xiuxian.xiuxianserver.repository.CharacterProfileRepository;
 import com.xiuxian.xiuxianserver.service.CharacterInitializationService;
 import com.xiuxian.xiuxianserver.service.CharacterProfileService;
 import jakarta.transaction.Transactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import static com.xiuxian.xiuxianserver.util.UserContextUtil.getCurrentUser;
@@ -27,7 +26,6 @@ public class CharacterProfileServiceImpl implements CharacterProfileService {
     private final CharacterProfileMapper mapper = CharacterProfileMapper.INSTANCE;
     private static final int MAX_NAME_LENGTH = 50;
 
-    @Autowired
     public CharacterProfileServiceImpl(CharacterProfileRepository characterProfileRepository,
                                        CharacterInitializationService characterInitializationService,
                                        Snowflake snowflake) {
@@ -136,4 +134,83 @@ public class CharacterProfileServiceImpl implements CharacterProfileService {
         return characterProfileRepository.findByPlayerId(playerId)
                 .orElseThrow(() -> new ResourceNotFoundException("角色未找到，Player ID: " + playerId));
     }
+
+
+    @Override
+    public boolean hasSufficientResource(Long characterId, String resourceType, int requiredAmount) {
+        CharacterProfile profile = characterProfileRepository.findById(characterId)
+                .orElseThrow(() -> new RuntimeException("角色不存在，ID: " + characterId));
+
+        switch (resourceType.toLowerCase()) {
+            case "yuanbao":
+                return profile.getYuanbao() >= requiredAmount;
+            case "coppercoins":
+                return profile.getCopperCoins() >= requiredAmount;
+            case "food":
+                return profile.getFood() >= requiredAmount;
+            case "wood":
+                return profile.getWood() >= requiredAmount;
+            case "ironore":
+                return profile.getIronOre() >= requiredAmount;
+            default:
+                throw new IllegalArgumentException("未知的资源类型：" + resourceType);
+        }
+    }
+
+    @Override
+    public void deductResource(Long characterId, String resourceType, int amount) {
+        CharacterProfile profile = characterProfileRepository.findById(characterId)
+                .orElseThrow(() -> new RuntimeException("角色不存在，ID: " + characterId));
+
+        switch (resourceType.toLowerCase()) {
+            case "yuanbao":
+                profile.setYuanbao(profile.getYuanbao() - amount);
+                break;
+            case "coppercoins":
+                profile.setCopperCoins(profile.getCopperCoins() - amount);
+                break;
+            case "food":
+                profile.setFood(profile.getFood() - amount);
+                break;
+            case "wood":
+                profile.setWood(profile.getWood() - amount);
+                break;
+            case "ironore":
+                profile.setIronOre(profile.getIronOre() - amount);
+                break;
+            default:
+                throw new IllegalArgumentException("未知的资源类型：" + resourceType);
+        }
+
+        characterProfileRepository.save(profile);
+    }
+    public void addResource(Long characterId, String resourceType, int amount) {
+        // 1. 获取角色信息
+        CharacterProfile characterProfile = characterProfileRepository.findById(characterId)
+                .orElseThrow(() -> new ResourceNotFoundException("未找到角色ID为 " + characterId + " 的信息"));
+
+        // 2. 根据资源类型更新资源数量
+        switch (resourceType) {
+            case "wood":
+                characterProfile.setWood(characterProfile.getWood() + amount);
+                break;
+            case "food":
+                characterProfile.setFood(characterProfile.getFood() + amount);
+                break;
+            case "ironOre":
+                characterProfile.setIronOre(characterProfile.getIronOre() + amount);
+                break;
+            case "yuanbao":
+                characterProfile.setYuanbao(characterProfile.getYuanbao() + amount);
+                break;
+            default:
+                throw new IllegalArgumentException("未知的资源类型：" + resourceType);
+        }
+
+        // 3. 保存更新后的角色信息
+        characterProfileRepository.save(characterProfile);
+    }
+
 }
+
+

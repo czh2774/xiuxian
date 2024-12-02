@@ -2,7 +2,6 @@ package com.xiuxian.xiuxianserver.entity;
 
 import com.xiuxian.xiuxianserver.util.ExcelField;
 import com.xiuxian.xiuxianserver.util.ExcelColumn;
-import lombok.Builder;
 import lombok.Data;
 import jakarta.persistence.*;
 import io.swagger.v3.oas.annotations.media.Schema;

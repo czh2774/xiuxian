@@ -1,11 +1,11 @@
 package com.xiuxian.xiuxianserver.service.impl;
 
-import com.xiuxian.xiuxianserver.Mapper.GeneralsTemplateMapper;
 import com.xiuxian.xiuxianserver.dto.GeneralsTemplateCreateRequestDTO;
 import com.xiuxian.xiuxianserver.dto.GeneralsTemplateDTO;
 import com.xiuxian.xiuxianserver.dto.GeneralsTemplateUpdateRequestDTO;
 import com.xiuxian.xiuxianserver.entity.GeneralsTemplate;
 import com.xiuxian.xiuxianserver.exception.ResourceNotFoundException;
+import com.xiuxian.xiuxianserver.mapper.GeneralsTemplateMapper;
 import com.xiuxian.xiuxianserver.repository.GeneralsTemplateRepository;
 import com.xiuxian.xiuxianserver.service.GeneralsTemplateService;
 import org.springframework.beans.factory.annotation.Autowired;

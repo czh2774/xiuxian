@@ -3,12 +3,10 @@ package com.xiuxian.xiuxianserver.entity;
 import com.xiuxian.xiuxianserver.enums.GeneralRankEnum;
 import com.xiuxian.xiuxianserver.util.ExcelField;
 import com.xiuxian.xiuxianserver.util.StringListConverter;
-import lombok.Builder;
 import lombok.Data;
 import jakarta.persistence.*;
 import io.swagger.v3.oas.annotations.media.Schema;
 import com.xiuxian.xiuxianserver.util.ExcelColumn;
-import com.xiuxian.xiuxianserver.enums.RarityEnum;
 import lombok.NoArgsConstructor;
 
 import java.util.List;

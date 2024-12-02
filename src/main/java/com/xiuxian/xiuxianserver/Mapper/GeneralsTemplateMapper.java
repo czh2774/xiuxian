@@ -1,11 +1,10 @@
-package com.xiuxian.xiuxianserver.Mapper;
+package com.xiuxian.xiuxianserver.mapper;
 
 import com.xiuxian.xiuxianserver.dto.GeneralsTemplateCreateRequestDTO;
 import com.xiuxian.xiuxianserver.dto.GeneralsTemplateUpdateRequestDTO;
 import com.xiuxian.xiuxianserver.dto.GeneralsTemplateDTO;
 import com.xiuxian.xiuxianserver.entity.GeneralsTemplate;
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
 
 @Mapper(componentModel = "spring")
 public interface GeneralsTemplateMapper {

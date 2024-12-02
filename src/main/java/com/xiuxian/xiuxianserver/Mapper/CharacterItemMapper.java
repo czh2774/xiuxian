@@ -1,4 +1,4 @@
-package com.xiuxian.xiuxianserver.Mapper;
+package com.xiuxian.xiuxianserver.mapper;
 
 import com.xiuxian.xiuxianserver.dto.CharacterItemDTO;
 import com.xiuxian.xiuxianserver.entity.CharacterItem;

@@ -1,7 +1,6 @@
 package com.xiuxian.xiuxianserver.service.impl;
 
 import com.xiuxian.xiuxianserver.dto.BuildingUpgradeDTO;
-import com.xiuxian.xiuxianserver.entity.BuildingTemplate;
 import com.xiuxian.xiuxianserver.entity.BuildingUpgrade;
 import com.xiuxian.xiuxianserver.exception.ResourceNotFoundException;
 import com.xiuxian.xiuxianserver.repository.BuildingUpgradeRepository;

@@ -1,7 +1,6 @@
 package com.xiuxian.xiuxianserver.service;
 
 import com.xiuxian.xiuxianserver.entity.CharacterGeneral;
-import com.xiuxian.xiuxianserver.entity.CharacterBuilding;
 import java.util.List;
 
 /**

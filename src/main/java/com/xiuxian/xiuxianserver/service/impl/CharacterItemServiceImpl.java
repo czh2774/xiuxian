@@ -1,15 +1,13 @@
 package com.xiuxian.xiuxianserver.service.impl;
 
-import com.xiuxian.xiuxianserver.Mapper.CharacterItemMapper;
 import com.xiuxian.xiuxianserver.dto.CharacterItemDTO;
 import com.xiuxian.xiuxianserver.entity.CharacterItem;
 import com.xiuxian.xiuxianserver.exception.ResourceNotFoundException;
+import com.xiuxian.xiuxianserver.mapper.CharacterItemMapper;
 import com.xiuxian.xiuxianserver.repository.CharacterItemRepository;
 import com.xiuxian.xiuxianserver.service.CharacterItemService;
-import com.xiuxian.xiuxianserver.service.ItemTemplateService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import cn.hutool.core.lang.Snowflake;
@@ -24,15 +22,11 @@ public class CharacterItemServiceImpl implements CharacterItemService {
 
     private static final Logger logger = LoggerFactory.getLogger(CharacterItemServiceImpl.class);
 
-    private final ItemTemplateService itemTemplateService;
     private final CharacterItemRepository characterItemRepository;
     private final Snowflake snowflake;
 
-    @Autowired
-    public CharacterItemServiceImpl(ItemTemplateService itemTemplateService,
-                                    CharacterItemRepository characterItemRepository,
+    public CharacterItemServiceImpl(CharacterItemRepository characterItemRepository,
                                     Snowflake snowflake) {
-        this.itemTemplateService = itemTemplateService;
         this.characterItemRepository = characterItemRepository;
         this.snowflake = snowflake;
     }
