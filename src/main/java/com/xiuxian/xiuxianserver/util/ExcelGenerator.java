@@ -43,6 +43,61 @@ public class ExcelGenerator {
     // 检查Excel文件和实体类字段是否一致
     private static void checkExcelConsistency(File excelFile, Class<?> clazz) throws IOException {
         System.out.println("Excel 文件已存在，正在检查与类 " + clazz.getSimpleName() + " 的字段是否一致...");
+        
+        // 获取Excel和类的字段信息
+        Map<String, String> excelFields = getExcelFields(excelFile);  // key: 字段名, value: 注释
+        Map<String, String> classFields = getClassFields(clazz);      // key: 字段名, value: 注释
+        
+        // 检查字段差异
+        boolean hasDifference = false;
+        
+        // 1. 检查缺失的字段
+        Set<String> missingInExcel = new HashSet<>(classFields.keySet());
+        missingInExcel.removeAll(excelFields.keySet());
+        if (!missingInExcel.isEmpty()) {
+            hasDifference = true;
+            System.out.println("\033[31m以下字段在类中存在但在Excel中缺失：");
+            for (String field : missingInExcel) {
+                System.out.println("  - " + field + " (" + classFields.get(field) + ")");
+            }
+            System.out.println("\033[0m");
+        }
+        
+        // 2. 检查多余的字段
+        Set<String> extraInExcel = new HashSet<>(excelFields.keySet());
+        extraInExcel.removeAll(classFields.keySet());
+        if (!extraInExcel.isEmpty()) {
+            hasDifference = true;
+            System.out.println("\033[31m以下字段在Excel中存在但在类中缺失：");
+            for (String field : extraInExcel) {
+                System.out.println("  - " + field + " (" + excelFields.get(field) + ")");
+            }
+            System.out.println("\033[0m");
+        }
+        
+        // 3. 检查注释差异
+        Set<String> commonFields = new HashSet<>(classFields.keySet());
+        commonFields.retainAll(excelFields.keySet());
+        for (String field : commonFields) {
+            String classComment = classFields.get(field);
+            String excelComment = excelFields.get(field);
+            if (!classComment.equals(excelComment)) {
+                hasDifference = true;
+                System.out.println("\033[31m字段 " + field + " 的注释不一致：");
+                System.out.println("  类中：" + classComment);
+                System.out.println("  Excel中：" + excelComment);
+                System.out.println("\033[0m");
+            }
+        }
+        
+        if (!hasDifference) {
+            System.out.println("\033[32mExcel文件与类定义完全一致\033[0m");
+        }
+    }
+
+    // 获取Excel文件中的字段信息
+    private static Map<String, String> getExcelFields(File excelFile) throws IOException {
+        Map<String, String> fields = new HashMap<>();
 
         try (FileInputStream fis = new FileInputStream(excelFile);
              Workbook workbook = new XSSFWorkbook(fis)) {
@@ -51,71 +106,29 @@ public class ExcelGenerator {
             Row commentRow = sheet.getRow(0);  // 第一行：字段注释
             Row fieldNameRow = sheet.getRow(1);  // 第二行：字段名称
 
-            // 获取实体类的字段信息
-            Field[] fields = clazz.getDeclaredFields();
-            List<String> classFieldNames = new ArrayList<>();
-            List<String> classComments = new ArrayList<>();
-
-            for (Field field : fields) {
-                if (field.isAnnotationPresent(ExcelColumn.class)) {
-                    ExcelColumn excelColumn = field.getAnnotation(ExcelColumn.class);
-                    classFieldNames.add(field.getName());
-                    classComments.add(excelColumn.headerName());
-                }
-            }
-
-            // 获取Excel文件中的字段信息
-            List<String> excelFieldNames = new ArrayList<>();
-            List<String> excelComments = new ArrayList<>();
-
             for (int i = 0; i < fieldNameRow.getPhysicalNumberOfCells(); i++) {
-                excelFieldNames.add(fieldNameRow.getCell(i).getStringCellValue());
-                excelComments.add(commentRow.getCell(i).getStringCellValue());
-            }
-
-            // 比较类中的字段和Excel中的字段
-            boolean isSame = true;
-
-            // 记录差异
-            if (!classFieldNames.equals(excelFieldNames)) {
-                isSame = false;
-                System.out.println("\033[31m字段不匹配，差异如下：\033[0m");
-                logFieldDifferences("字段", classFieldNames, excelFieldNames);
-            }
-
-            // 比较注释
-            if (!classComments.equals(excelComments)) {
-                isSame = false;
-                System.out.println("\033[31m注释不匹配，差异如下：\033[0m");
-                logFieldDifferences("注释", classComments, excelComments);
-            }
-
-            if (isSame) {
-                System.out.println("Excel文件与类 " + clazz.getSimpleName() + " 完全一致，无需更新。");
+                String fieldName = fieldNameRow.getCell(i).getStringCellValue();
+                String comment = commentRow.getCell(i).getStringCellValue();
+                fields.put(fieldName, comment);
             }
         }
+
+        return fields;
     }
 
-    // 日志输出字段差异
-    private static void logFieldDifferences(String type, List<String> classList, List<String> excelList) {
-        Set<String> classSet = new HashSet<>(classList);
-        Set<String> excelSet = new HashSet<>(excelList);
+    // 获取实体类的字段信息
+    private static Map<String, String> getClassFields(Class<?> clazz) {
+        Map<String, String> fields = new HashMap<>();
 
-        // 类中存在但在Excel中不存在的字段
-        Set<String> missingInExcel = new HashSet<>(classSet);
-        missingInExcel.removeAll(excelSet);
-
-        // Excel中存在但在类中不存在的字段
-        Set<String> missingInClass = new HashSet<>(excelSet);
-        missingInClass.removeAll(classSet);
-
-        if (!missingInExcel.isEmpty()) {
-            System.out.println("\033[31m" + type + "在类中存在但在Excel中不存在: " + missingInExcel + "\033[0m");
+        Field[] declaredFields = clazz.getDeclaredFields();
+        for (Field field : declaredFields) {
+            if (field.isAnnotationPresent(ExcelColumn.class)) {
+                ExcelColumn excelColumn = field.getAnnotation(ExcelColumn.class);
+                fields.put(field.getName(), excelColumn.headerName());
+            }
         }
 
-        if (!missingInClass.isEmpty()) {
-            System.out.println("\033[31m" + type + "在Excel中存在但在类中不存在: " + missingInClass + "\033[0m");
-        }
+        return fields;
     }
 
     // 创建新的Excel文件

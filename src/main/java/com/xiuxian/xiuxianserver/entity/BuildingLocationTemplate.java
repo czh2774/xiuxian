@@ -13,7 +13,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 @Data
 @Entity
 @Table(name = "building_location_template")
-@Schema(description = "建筑位置实体类，存储建筑的坐标和解锁状态信息")
+@Schema(description = "建筑位置模板，定义建筑位置的基础信息和解锁条件")
 public class BuildingLocationTemplate {
 
     @Id
@@ -37,8 +37,8 @@ public class BuildingLocationTemplate {
     @Column(name = "building_template_id", columnDefinition = "BIGINT COMMENT '建筑模板ID'")
     private Long buildingTemplateId;  // 建筑模板ID
 
-    @Schema(description = "位置是否解锁")
-    @ExcelColumn(headerName = "位置是否解锁", comment = "is_unlocked")
-    @Column(name = "is_unlocked", columnDefinition = "BOOLEAN COMMENT '位置是否解锁'")
-    private Boolean isUnlocked;  // 是否解锁
+    @Schema(description = "所需角色等级")
+    @ExcelColumn(headerName = "所需角色等级", comment = "required_character_level")
+    @Column(name = "required_character_level", columnDefinition = "INT COMMENT '解锁该建筑位置所需的角色等级'")
+    private Integer requiredCharacterLevel;  // 解锁该建筑位置所需的角色等级
 }

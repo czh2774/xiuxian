@@ -1,6 +1,7 @@
 package com.xiuxian.xiuxianserver.service;
 
 import com.xiuxian.xiuxianserver.dto.CharacterItemDTO;
+import com.xiuxian.xiuxianserver.enums.AccelerateItemType;
 import java.util.List;
 
 /**
@@ -50,6 +51,7 @@ public interface CharacterItemService {
      */
     void useItem(long itemInstanceId, int quantity);
 
-
+    boolean hasSufficientItems(Long characterId, AccelerateItemType itemType, int count);
+    void deductItems(Long characterId, AccelerateItemType itemType, int count);
 
 }

@@ -8,7 +8,6 @@ import java.util.List;
 public class GeneralsTemplateDTO {
     private Long id;
     private String name;
-    private String description;
     private GeneralRankEnum rank;
     private int sortOrder;
     private int strength;
@@ -25,6 +24,7 @@ public class GeneralsTemplateDTO {
     private Long frontTroopId;
     private Long rearTroopId;
     private String appearanceTemplateId;
+    private String description;
     private String biography;
     private String imageUrl;
 }

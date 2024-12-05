@@ -6,6 +6,7 @@ import com.xiuxian.xiuxianserver.exception.ResourceNotFoundException;
 import com.xiuxian.xiuxianserver.mapper.CharacterItemMapper;
 import com.xiuxian.xiuxianserver.repository.CharacterItemRepository;
 import com.xiuxian.xiuxianserver.service.CharacterItemService;
+import com.xiuxian.xiuxianserver.enums.AccelerateItemType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -109,6 +110,42 @@ public class CharacterItemServiceImpl implements CharacterItemService {
         } else {
             characterItemRepository.save(item);
             logger.info("道具使用成功，剩余数量: {}", item.getQuantity());
+        }
+    }
+
+    @Override
+    public boolean hasSufficientItems(Long characterId, AccelerateItemType itemType, int count) {
+        List<CharacterItem> items = characterItemRepository.findByCharacterIdAndItemTemplateId(
+            characterId, 
+            itemType.getItemId()
+        );
+        return items.stream()
+            .mapToInt(CharacterItem::getQuantity)
+            .sum() >= count;
+    }
+
+    @Override
+    @Transactional
+    public void deductItems(Long characterId, AccelerateItemType itemType, int count) {
+        List<CharacterItem> items = characterItemRepository.findByCharacterIdAndItemTemplateId(
+            characterId, 
+            itemType.getItemId()
+        );
+        int remainingCount = count;
+        
+        for (CharacterItem item : items) {
+            if (item.getQuantity() >= remainingCount) {
+                item.setQuantity(item.getQuantity() - remainingCount);
+                if (item.getQuantity() == 0) {
+                    characterItemRepository.delete(item);
+                } else {
+                    characterItemRepository.save(item);
+                }
+                break;
+            } else {
+                remainingCount -= item.getQuantity();
+                characterItemRepository.delete(item);
+            }
         }
     }
 }

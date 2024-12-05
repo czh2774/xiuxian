@@ -2,6 +2,7 @@ package com.xiuxian.xiuxianserver.controller;
 
 import com.xiuxian.xiuxianserver.dto.CooldownDTO;
 import com.xiuxian.xiuxianserver.service.CooldownService;
+import com.xiuxian.xiuxianserver.manager.CooldownManager;
 import com.xiuxian.xiuxianserver.util.CustomApiResponse;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -19,6 +20,7 @@ import java.util.Map;
 
 import com.xiuxian.xiuxianserver.dto.CooldownCheckRequest;
 import com.xiuxian.xiuxianserver.enums.CooldownType;
+import com.xiuxian.xiuxianserver.dto.cooldown.CooldownAccelerateRequest;
 
 /**
  * 冷却时间管理控制器
@@ -31,9 +33,11 @@ public class CooldownController {
     private static final Logger logger = LoggerFactory.getLogger(CooldownController.class);
 
     private final CooldownService cooldownService;
+    private final CooldownManager cooldownManager;
 
-    public CooldownController(CooldownService cooldownService) {
+    public CooldownController(CooldownService cooldownService, CooldownManager cooldownManager) {
         this.cooldownService = cooldownService;
+        this.cooldownManager = cooldownManager;
     }
 
     /**
@@ -108,7 +112,7 @@ public class CooldownController {
     /**
      * 加速冷却
      *
-     * @param requestBody 请求体，包含角色ID、类型、目标ID、加速时间和队列ID
+     * @param request 请求体，包含角色ID、类型、目标ID、加速时间和队列ID
      * @return 加速结果
      */
     @Operation(summary = "加速冷却", description = "通过道具或货币加速冷却时间")
@@ -119,24 +123,29 @@ public class CooldownController {
     })
     @PostMapping("/accelerate")
     public ResponseEntity<CustomApiResponse<Void>> accelerateCooldown(
-            @RequestBody Map<String, Object> requestBody, HttpServletRequest request) {
-        logger.info("收到加速冷却的请求：{}", requestBody);
-
+            @Valid @RequestBody CooldownAccelerateRequest request, HttpServletRequest httpRequest) {
         try {
-            Long characterId = Long.valueOf(requestBody.get("characterId").toString());
-            String typeStr = requestBody.get("type").toString();
-            CooldownType type = CooldownType.valueOf(typeStr);
-            Long targetId = Long.valueOf(requestBody.get("targetId").toString());
-            int accelerationTime = Integer.parseInt(requestBody.get("accelerationTime").toString());
-            int queueId = Integer.parseInt(requestBody.get("queueId").toString());
-
-            cooldownService.accelerateCooldown(characterId, type, targetId, accelerationTime, queueId);
-            logger.info("成功加速冷却：角色ID={}, 类型={}, 目标ID={}, 队列ID={}", characterId, type, targetId, queueId);
-            return ResponseEntity.ok(CustomApiResponse.success("冷却加速成功", null, request.getRequestURI()));
+            boolean success = cooldownManager.accelerateCooldown(
+                request.getCharacterId(),
+                request.getType(),
+                request.getTargetId(),
+                request.getItemType(),
+                request.getItemCount(),
+                request.getQueueId()
+            );
+            
+            if (success) {
+                logger.info("成功加速冷却：角色ID={}, 类型={}, 目标ID={}, 队列ID={}", 
+                    request.getCharacterId(), request.getType(), request.getTargetId(), request.getQueueId());
+                return ResponseEntity.ok(CustomApiResponse.success("冷却加速成功", null, httpRequest.getRequestURI()));
+            } else {
+                return ResponseEntity.badRequest().body(
+                    CustomApiResponse.error(400, "加速冷却失败", httpRequest.getRequestURI()));
+            }
         } catch (Exception e) {
             logger.error("加速冷却失败：{}", e.getMessage());
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(
-                    CustomApiResponse.error(HttpStatus.INTERNAL_SERVER_ERROR.value(), "加速冷却失败", request.getRequestURI()));
+            return ResponseEntity.internalServerError().body(
+                CustomApiResponse.error(500, "加速冷却失败: " + e.getMessage(), httpRequest.getRequestURI()));
         }
     }
 

@@ -2,10 +2,13 @@ package com.xiuxian.xiuxianserver.util;
 
 import com.xiuxian.xiuxianserver.exception.AuthenticationException;
 import io.jsonwebtoken.*;
+import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
 import io.jsonwebtoken.security.SecurityException;
+import java.security.Key;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
@@ -19,8 +22,11 @@ public class JwtTokenUtil {
 
     private static final Logger logger = LoggerFactory.getLogger(JwtTokenUtil.class);
 
-    // 从配置文件或环境变量中读取 JWT 密钥以保证安全
-    private String secret = "hmx5myP5zY4WOdZtdVIfv/VHJYLeWkwUpppNVTR+tmPEs2EFGlLpp65DdZB6PINFTlyVaLQ3sFzJZxKxAhMpbg==";
+    @Value("${jwt.secret}")
+    private String secret;
+
+    @Value("${jwt.expiration}")
+    private Long expiration;
 
     /**
      * 检查 Token 是否有效（非过期且合法）。
@@ -72,7 +78,7 @@ public class JwtTokenUtil {
         }
         try {
             final Claims claims = Jwts.parserBuilder()
-                    .setSigningKey(Keys.hmacShaKeyFor(secret.getBytes()))
+                    .setSigningKey(getSigningKey())
                     .build()
                     .parseClaimsJws(token)
                     .getBody();
@@ -107,5 +113,10 @@ public class JwtTokenUtil {
             logger.debug("Token 有效。过期时间: {}", expiration);
         }
         return isExpired;
+    }
+
+    private Key getSigningKey() {
+        byte[] keyBytes = Decoders.BASE64.decode(secret);
+        return Keys.hmacShaKeyFor(keyBytes);
     }
 }

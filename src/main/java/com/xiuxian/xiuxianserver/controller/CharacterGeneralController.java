@@ -1,6 +1,7 @@
 package com.xiuxian.xiuxianserver.controller;
 
 import com.xiuxian.xiuxianserver.dto.CharacterGeneralDTO;
+import com.xiuxian.xiuxianserver.dto.CharacterGeneralUpdateRequestDTO;
 import com.xiuxian.xiuxianserver.dto.IdRequestDTO;
 import com.xiuxian.xiuxianserver.service.CharacterGeneralService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,7 +60,7 @@ public class CharacterGeneralController {
      * @return 更新后的角色武将DTO对象
      */
     @PostMapping("/update")
-    public ResponseEntity<CharacterGeneralDTO> updateCharacterGeneral(@RequestBody CharacterGeneralDTO request) {
+    public ResponseEntity<CharacterGeneralDTO> updateCharacterGeneral(@RequestBody CharacterGeneralUpdateRequestDTO request) {
         CharacterGeneralDTO general = characterGeneralService.updateCharacterGeneral(request.getId(), request);
         return ResponseEntity.ok(general);
     }

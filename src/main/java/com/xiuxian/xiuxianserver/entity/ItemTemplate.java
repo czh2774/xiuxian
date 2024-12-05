@@ -64,7 +64,7 @@ public class ItemTemplate {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "chest_type", nullable = true, columnDefinition = "VARCHAR(20) COMMENT '宝箱的生成类型（随机生成、固定生成、多选生成等）'")
-    @ExcelColumn(headerName = "宝箱类型", comment = "宝箱的生成类型（随机生成、固定生成、多选生成等）")
+    @ExcelColumn(headerName = "宝箱类型", comment = "宝箱的生成类型（随机生成、固定生成、���选生成等）")
     @Schema(description = "宝箱的生成类型（如随机生成、固定生成、多选生成等）")
     private ChestTypeEnum chestType;
 

@@ -1,7 +1,9 @@
 package com.xiuxian.xiuxianserver.config;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;
+import org.springframework.web.socket.server.HandshakeInterceptor;
 import org.springframework.web.socket.config.annotation.EnableWebSocketMessageBroker;
 import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
 import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurer;
@@ -11,7 +13,10 @@ import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerCo
  */
 @Configuration
 @EnableWebSocketMessageBroker  // 启用 WebSocket 消息代理
+@RequiredArgsConstructor
 public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
+
+    private final HandshakeInterceptor handshakeInterceptor;
 
     @Override
     public void configureMessageBroker(MessageBrokerRegistry config) {
@@ -23,9 +28,9 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        // 注册 WebSocket 端点，允许 SockJS 回退选项并设置允许的跨域来源
         registry.addEndpoint("/ws")
-                .setAllowedOrigins("http://localhost:8080")  // 设置允许的来源
-                .withSockJS();  // 启用 SockJS 回退选项，支持不支持 WebSocket 的浏览器
+                .addInterceptors(handshakeInterceptor)
+                .setAllowedOrigins("http://localhost:8080")
+                .withSockJS();
     }
 }

@@ -2,6 +2,7 @@ package com.xiuxian.xiuxianserver.service.impl;
 
 import cn.hutool.core.lang.Snowflake;
 import com.xiuxian.xiuxianserver.dto.CharacterGeneralDTO;
+import com.xiuxian.xiuxianserver.dto.CharacterGeneralUpdateRequestDTO;
 import com.xiuxian.xiuxianserver.entity.CharacterGeneral;
 import com.xiuxian.xiuxianserver.exception.ResourceNotFoundException;
 import com.xiuxian.xiuxianserver.mapper.CharacterGeneralMapper;
@@ -70,10 +71,9 @@ public class CharacterGeneralServiceImpl implements CharacterGeneralService {
     @Override
     public CharacterGeneralDTO createCharacterGeneral(CharacterGeneralDTO request) {
         Long id = snowflake.nextId();
-        CharacterGeneral general = new CharacterGeneral(id, request.getCharacterId(), request.getGeneralTemplateId(),
-                request.getLevel(), request.getStars(), request.getExperience(), request.getStatus(),
-                request.getEquippedItems(), request.getCurrentSkills());
-
+        CharacterGeneral general = characterGeneralMapper.toEntity(request);
+        general.setId(id);
+        
         characterGeneralRepository.save(general);
         logger.info("创建新武将成功，ID：{}", id);
         return characterGeneralMapper.toDTO(general);
@@ -87,17 +87,11 @@ public class CharacterGeneralServiceImpl implements CharacterGeneralService {
      * @return 更新后的武将数据传输对象
      */
     @Override
-    public CharacterGeneralDTO updateCharacterGeneral(Long id, CharacterGeneralDTO request) {
+    public CharacterGeneralDTO updateCharacterGeneral(Long id, CharacterGeneralUpdateRequestDTO request) {
         CharacterGeneral general = characterGeneralRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("未找到武将，ID：" + id));
 
-        general.setLevel(request.getLevel());
-        general.setStars(request.getStars());
-        general.setExperience(request.getExperience());
-        general.setStatus(request.getStatus());
-        general.setEquippedItems(request.getEquippedItems());
-        general.setCurrentSkills(request.getCurrentSkills());
-
+        characterGeneralMapper.updateEntityFromDTO(request, general);
         characterGeneralRepository.save(general);
         logger.info("更新武将成功，ID：{}", id);
         return characterGeneralMapper.toDTO(general);

@@ -3,6 +3,7 @@ package com.xiuxian.xiuxianserver.mapper;
 import com.xiuxian.xiuxianserver.dto.CharacterProfileDTO;
 import com.xiuxian.xiuxianserver.dto.CharacterProfileUpdateDTO;
 import com.xiuxian.xiuxianserver.entity.CharacterProfile;
+import com.xiuxian.xiuxianserver.dto.response.CharacterInfo;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;
@@ -28,4 +29,10 @@ public interface CharacterProfileMapper {
     @Mapping(target = "updatedAt", ignore = true)
     @Mapping(target = "playerId", ignore = true)
     void updateEntityFromDTO(CharacterProfileUpdateDTO updateDTO, @MappingTarget CharacterProfile profile);
+
+    @Mapping(target = "id", source = "id")
+    @Mapping(target = "level", source = "level")
+    @Mapping(target = "maxPopulation", ignore = true)
+    @Mapping(target = "maxStorage", ignore = true)
+    CharacterInfo toCharacterInfo(CharacterProfile character);
 }

@@ -6,7 +6,7 @@
   "food_cost" : 100,
   "wood_cost" : 50,
   "iron_cost" : 50,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10002,
   "building_template_id" : 1001,
@@ -15,7 +15,7 @@
   "food_cost" : 200,
   "wood_cost" : 100,
   "iron_cost" : 100,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10003,
   "building_template_id" : 1001,
@@ -24,7 +24,7 @@
   "food_cost" : 300,
   "wood_cost" : 150,
   "iron_cost" : 150,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10004,
   "building_template_id" : 1001,
@@ -33,7 +33,7 @@
   "food_cost" : 400,
   "wood_cost" : 200,
   "iron_cost" : 200,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10005,
   "building_template_id" : 1001,
@@ -42,7 +42,7 @@
   "food_cost" : 500,
   "wood_cost" : 250,
   "iron_cost" : 250,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10006,
   "building_template_id" : 1001,
@@ -51,7 +51,7 @@
   "food_cost" : 600,
   "wood_cost" : 300,
   "iron_cost" : 300,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10007,
   "building_template_id" : 1001,
@@ -60,7 +60,7 @@
   "food_cost" : 700,
   "wood_cost" : 350,
   "iron_cost" : 350,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10008,
   "building_template_id" : 1001,
@@ -69,7 +69,7 @@
   "food_cost" : 800,
   "wood_cost" : 400,
   "iron_cost" : 400,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10009,
   "building_template_id" : 1001,
@@ -78,7 +78,7 @@
   "food_cost" : 900,
   "wood_cost" : 450,
   "iron_cost" : 450,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10010,
   "building_template_id" : 1001,
@@ -87,7 +87,7 @@
   "food_cost" : 1000,
   "wood_cost" : 500,
   "iron_cost" : 500,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10011,
   "building_template_id" : 1001,
@@ -96,7 +96,7 @@
   "food_cost" : 1100,
   "wood_cost" : 550,
   "iron_cost" : 550,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10012,
   "building_template_id" : 1001,
@@ -105,7 +105,7 @@
   "food_cost" : 1200,
   "wood_cost" : 600,
   "iron_cost" : 600,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10013,
   "building_template_id" : 1001,
@@ -114,7 +114,7 @@
   "food_cost" : 1300,
   "wood_cost" : 650,
   "iron_cost" : 650,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10014,
   "building_template_id" : 1001,
@@ -123,7 +123,7 @@
   "food_cost" : 1400,
   "wood_cost" : 700,
   "iron_cost" : 700,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10015,
   "building_template_id" : 1001,
@@ -132,7 +132,7 @@
   "food_cost" : 1500,
   "wood_cost" : 750,
   "iron_cost" : 750,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10016,
   "building_template_id" : 1001,
@@ -141,7 +141,7 @@
   "food_cost" : 1600,
   "wood_cost" : 800,
   "iron_cost" : 800,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10017,
   "building_template_id" : 1001,
@@ -150,7 +150,7 @@
   "food_cost" : 1700,
   "wood_cost" : 850,
   "iron_cost" : 850,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10018,
   "building_template_id" : 1001,
@@ -159,7 +159,7 @@
   "food_cost" : 1800,
   "wood_cost" : 900,
   "iron_cost" : 900,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10019,
   "building_template_id" : 1001,
@@ -168,7 +168,7 @@
   "food_cost" : 1900,
   "wood_cost" : 950,
   "iron_cost" : 950,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10020,
   "building_template_id" : 1001,
@@ -177,7 +177,7 @@
   "food_cost" : 2000,
   "wood_cost" : 1000,
   "iron_cost" : 1000,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10021,
   "building_template_id" : 1001,
@@ -186,7 +186,7 @@
   "food_cost" : 2100,
   "wood_cost" : 1050,
   "iron_cost" : 1050,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10022,
   "building_template_id" : 1001,
@@ -195,7 +195,7 @@
   "food_cost" : 2200,
   "wood_cost" : 1100,
   "iron_cost" : 1100,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10023,
   "building_template_id" : 1001,
@@ -204,7 +204,7 @@
   "food_cost" : 2300,
   "wood_cost" : 1150,
   "iron_cost" : 1150,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10024,
   "building_template_id" : 1001,
@@ -213,7 +213,7 @@
   "food_cost" : 2400,
   "wood_cost" : 1200,
   "iron_cost" : 1200,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10025,
   "building_template_id" : 1001,
@@ -222,7 +222,7 @@
   "food_cost" : 2500,
   "wood_cost" : 1250,
   "iron_cost" : 1250,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":7}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10026,
   "building_template_id" : 1001,
@@ -231,7 +231,7 @@
   "food_cost" : 2600,
   "wood_cost" : 1300,
   "iron_cost" : 1300,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10027,
   "building_template_id" : 1001,
@@ -240,7 +240,7 @@
   "food_cost" : 2700,
   "wood_cost" : 1350,
   "iron_cost" : 1350,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10028,
   "building_template_id" : 1001,
@@ -249,7 +249,7 @@
   "food_cost" : 2800,
   "wood_cost" : 1400,
   "iron_cost" : 1400,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10029,
   "building_template_id" : 1001,
@@ -258,7 +258,7 @@
   "food_cost" : 2900,
   "wood_cost" : 1450,
   "iron_cost" : 1450,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10030,
   "building_template_id" : 1001,
@@ -267,7 +267,7 @@
   "food_cost" : 3000,
   "wood_cost" : 1500,
   "iron_cost" : 1500,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10031,
   "building_template_id" : 1001,
@@ -276,7 +276,7 @@
   "food_cost" : 3100,
   "wood_cost" : 1550,
   "iron_cost" : 1550,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10032,
   "building_template_id" : 1001,
@@ -285,7 +285,7 @@
   "food_cost" : 3200,
   "wood_cost" : 1600,
   "iron_cost" : 1600,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10033,
   "building_template_id" : 1001,
@@ -294,7 +294,7 @@
   "food_cost" : 3300,
   "wood_cost" : 1650,
   "iron_cost" : 1650,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10034,
   "building_template_id" : 1001,
@@ -303,7 +303,7 @@
   "food_cost" : 3400,
   "wood_cost" : 1700,
   "iron_cost" : 1700,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10035,
   "building_template_id" : 1001,
@@ -312,7 +312,7 @@
   "food_cost" : 3500,
   "wood_cost" : 1750,
   "iron_cost" : 1750,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":7}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10036,
   "building_template_id" : 1002,
@@ -321,7 +321,7 @@
   "food_cost" : 300,
   "wood_cost" : 600,
   "iron_cost" : 600,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":1}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10037,
   "building_template_id" : 1002,
@@ -330,7 +330,7 @@
   "food_cost" : 350,
   "wood_cost" : 700,
   "iron_cost" : 700,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10038,
   "building_template_id" : 1002,
@@ -339,7 +339,7 @@
   "food_cost" : 400,
   "wood_cost" : 800,
   "iron_cost" : 800,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10039,
   "building_template_id" : 1002,
@@ -348,7 +348,7 @@
   "food_cost" : 450,
   "wood_cost" : 900,
   "iron_cost" : 900,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10040,
   "building_template_id" : 1002,
@@ -357,7 +357,7 @@
   "food_cost" : 500,
   "wood_cost" : 1000,
   "iron_cost" : 1000,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10041,
   "building_template_id" : 1002,
@@ -366,7 +366,7 @@
   "food_cost" : 550,
   "wood_cost" : 1100,
   "iron_cost" : 1100,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10042,
   "building_template_id" : 1002,
@@ -375,7 +375,7 @@
   "food_cost" : 600,
   "wood_cost" : 1200,
   "iron_cost" : 1200,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10043,
   "building_template_id" : 1002,
@@ -384,7 +384,7 @@
   "food_cost" : 650,
   "wood_cost" : 1300,
   "iron_cost" : 1300,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10044,
   "building_template_id" : 1002,
@@ -393,7 +393,7 @@
   "food_cost" : 700,
   "wood_cost" : 1400,
   "iron_cost" : 1400,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10045,
   "building_template_id" : 1002,
@@ -402,7 +402,7 @@
   "food_cost" : 750,
   "wood_cost" : 1500,
   "iron_cost" : 1500,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10046,
   "building_template_id" : 1002,
@@ -411,7 +411,7 @@
   "food_cost" : 800,
   "wood_cost" : 1600,
   "iron_cost" : 1600,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10047,
   "building_template_id" : 1002,
@@ -420,7 +420,7 @@
   "food_cost" : 850,
   "wood_cost" : 1700,
   "iron_cost" : 1700,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10048,
   "building_template_id" : 1002,
@@ -429,7 +429,7 @@
   "food_cost" : 900,
   "wood_cost" : 1800,
   "iron_cost" : 1800,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10049,
   "building_template_id" : 1002,
@@ -438,7 +438,7 @@
   "food_cost" : 950,
   "wood_cost" : 1900,
   "iron_cost" : 1900,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10050,
   "building_template_id" : 1002,
@@ -447,7 +447,7 @@
   "food_cost" : 1000,
   "wood_cost" : 2000,
   "iron_cost" : 2000,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10051,
   "building_template_id" : 1002,
@@ -456,7 +456,7 @@
   "food_cost" : 1050,
   "wood_cost" : 2100,
   "iron_cost" : 2100,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10052,
   "building_template_id" : 1002,
@@ -465,7 +465,7 @@
   "food_cost" : 1100,
   "wood_cost" : 2200,
   "iron_cost" : 2200,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10053,
   "building_template_id" : 1002,
@@ -474,7 +474,7 @@
   "food_cost" : 1150,
   "wood_cost" : 2300,
   "iron_cost" : 2300,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10054,
   "building_template_id" : 1002,
@@ -483,7 +483,7 @@
   "food_cost" : 1200,
   "wood_cost" : 2400,
   "iron_cost" : 2400,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10055,
   "building_template_id" : 1002,
@@ -492,7 +492,7 @@
   "food_cost" : 1250,
   "wood_cost" : 2500,
   "iron_cost" : 2500,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10056,
   "building_template_id" : 1002,
@@ -501,7 +501,7 @@
   "food_cost" : 1300,
   "wood_cost" : 2600,
   "iron_cost" : 2600,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10057,
   "building_template_id" : 1002,
@@ -510,7 +510,7 @@
   "food_cost" : 1350,
   "wood_cost" : 2700,
   "iron_cost" : 2700,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10058,
   "building_template_id" : 1002,
@@ -519,7 +519,7 @@
   "food_cost" : 1400,
   "wood_cost" : 2800,
   "iron_cost" : 2800,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10059,
   "building_template_id" : 1002,
@@ -528,7 +528,7 @@
   "food_cost" : 1450,
   "wood_cost" : 2900,
   "iron_cost" : 2900,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10060,
   "building_template_id" : 1002,
@@ -537,7 +537,7 @@
   "food_cost" : 1500,
   "wood_cost" : 3000,
   "iron_cost" : 3000,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":7}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10061,
   "building_template_id" : 1002,
@@ -546,7 +546,7 @@
   "food_cost" : 1550,
   "wood_cost" : 3100,
   "iron_cost" : 3100,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10062,
   "building_template_id" : 1002,
@@ -555,7 +555,7 @@
   "food_cost" : 1600,
   "wood_cost" : 3200,
   "iron_cost" : 3200,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10063,
   "building_template_id" : 1002,
@@ -564,7 +564,7 @@
   "food_cost" : 1650,
   "wood_cost" : 3300,
   "iron_cost" : 3300,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10064,
   "building_template_id" : 1002,
@@ -573,7 +573,7 @@
   "food_cost" : 1700,
   "wood_cost" : 3400,
   "iron_cost" : 3400,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10065,
   "building_template_id" : 1002,
@@ -582,7 +582,7 @@
   "food_cost" : 1750,
   "wood_cost" : 3500,
   "iron_cost" : 3500,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10066,
   "building_template_id" : 1002,
@@ -591,7 +591,7 @@
   "food_cost" : 1800,
   "wood_cost" : 3600,
   "iron_cost" : 3600,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10067,
   "building_template_id" : 1002,
@@ -600,7 +600,7 @@
   "food_cost" : 1850,
   "wood_cost" : 3700,
   "iron_cost" : 3700,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10068,
   "building_template_id" : 1002,
@@ -609,7 +609,7 @@
   "food_cost" : 1900,
   "wood_cost" : 3800,
   "iron_cost" : 3800,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10069,
   "building_template_id" : 1002,
@@ -618,7 +618,7 @@
   "food_cost" : 1950,
   "wood_cost" : 3900,
   "iron_cost" : 3900,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10070,
   "building_template_id" : 1002,
@@ -627,7 +627,7 @@
   "food_cost" : 2000,
   "wood_cost" : 4000,
   "iron_cost" : 4000,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":7}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10071,
   "building_template_id" : 1003,
@@ -636,7 +636,7 @@
   "food_cost" : 200,
   "wood_cost" : 300,
   "iron_cost" : 300,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":1}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10072,
   "building_template_id" : 1003,
@@ -645,7 +645,7 @@
   "food_cost" : 300,
   "wood_cost" : 400,
   "iron_cost" : 400,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10073,
   "building_template_id" : 1003,
@@ -654,7 +654,7 @@
   "food_cost" : 400,
   "wood_cost" : 500,
   "iron_cost" : 500,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10074,
   "building_template_id" : 1003,
@@ -663,7 +663,7 @@
   "food_cost" : 500,
   "wood_cost" : 600,
   "iron_cost" : 600,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10075,
   "building_template_id" : 1003,
@@ -672,7 +672,7 @@
   "food_cost" : 600,
   "wood_cost" : 700,
   "iron_cost" : 700,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10076,
   "building_template_id" : 1003,
@@ -681,7 +681,7 @@
   "food_cost" : 700,
   "wood_cost" : 800,
   "iron_cost" : 800,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10077,
   "building_template_id" : 1003,
@@ -690,7 +690,7 @@
   "food_cost" : 800,
   "wood_cost" : 900,
   "iron_cost" : 900,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10078,
   "building_template_id" : 1003,
@@ -699,7 +699,7 @@
   "food_cost" : 900,
   "wood_cost" : 1000,
   "iron_cost" : 1000,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10079,
   "building_template_id" : 1003,
@@ -708,7 +708,7 @@
   "food_cost" : 1000,
   "wood_cost" : 1100,
   "iron_cost" : 1100,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10080,
   "building_template_id" : 1003,
@@ -717,7 +717,7 @@
   "food_cost" : 1100,
   "wood_cost" : 1200,
   "iron_cost" : 1200,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10081,
   "building_template_id" : 1003,
@@ -726,7 +726,7 @@
   "food_cost" : 1200,
   "wood_cost" : 1300,
   "iron_cost" : 1300,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10082,
   "building_template_id" : 1003,
@@ -735,7 +735,7 @@
   "food_cost" : 1300,
   "wood_cost" : 1400,
   "iron_cost" : 1400,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10083,
   "building_template_id" : 1003,
@@ -744,7 +744,7 @@
   "food_cost" : 1400,
   "wood_cost" : 1500,
   "iron_cost" : 1500,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10084,
   "building_template_id" : 1003,
@@ -753,7 +753,7 @@
   "food_cost" : 1500,
   "wood_cost" : 1600,
   "iron_cost" : 1600,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10085,
   "building_template_id" : 1003,
@@ -762,7 +762,7 @@
   "food_cost" : 1600,
   "wood_cost" : 1700,
   "iron_cost" : 1700,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10086,
   "building_template_id" : 1003,
@@ -771,7 +771,7 @@
   "food_cost" : 1700,
   "wood_cost" : 1800,
   "iron_cost" : 1800,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10087,
   "building_template_id" : 1003,
@@ -780,7 +780,7 @@
   "food_cost" : 1800,
   "wood_cost" : 1900,
   "iron_cost" : 1900,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10088,
   "building_template_id" : 1003,
@@ -789,7 +789,7 @@
   "food_cost" : 1900,
   "wood_cost" : 2000,
   "iron_cost" : 2000,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10089,
   "building_template_id" : 1003,
@@ -798,7 +798,7 @@
   "food_cost" : 2000,
   "wood_cost" : 2100,
   "iron_cost" : 2100,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10090,
   "building_template_id" : 1003,
@@ -807,7 +807,7 @@
   "food_cost" : 2100,
   "wood_cost" : 2200,
   "iron_cost" : 2200,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10091,
   "building_template_id" : 1003,
@@ -816,7 +816,7 @@
   "food_cost" : 2200,
   "wood_cost" : 2300,
   "iron_cost" : 2300,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10092,
   "building_template_id" : 1003,
@@ -825,7 +825,7 @@
   "food_cost" : 2300,
   "wood_cost" : 2400,
   "iron_cost" : 2400,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10093,
   "building_template_id" : 1003,
@@ -834,7 +834,7 @@
   "food_cost" : 2400,
   "wood_cost" : 2500,
   "iron_cost" : 2500,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10094,
   "building_template_id" : 1003,
@@ -843,7 +843,7 @@
   "food_cost" : 2500,
   "wood_cost" : 2600,
   "iron_cost" : 2600,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10095,
   "building_template_id" : 1003,
@@ -852,7 +852,7 @@
   "food_cost" : 2600,
   "wood_cost" : 2700,
   "iron_cost" : 2700,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":7}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10096,
   "building_template_id" : 1003,
@@ -861,7 +861,7 @@
   "food_cost" : 2700,
   "wood_cost" : 2800,
   "iron_cost" : 2800,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10097,
   "building_template_id" : 1003,
@@ -870,7 +870,7 @@
   "food_cost" : 2800,
   "wood_cost" : 2900,
   "iron_cost" : 2900,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10098,
   "building_template_id" : 1003,
@@ -879,7 +879,7 @@
   "food_cost" : 2900,
   "wood_cost" : 3000,
   "iron_cost" : 3000,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10099,
   "building_template_id" : 1003,
@@ -888,7 +888,7 @@
   "food_cost" : 3000,
   "wood_cost" : 3100,
   "iron_cost" : 3100,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10100,
   "building_template_id" : 1003,
@@ -897,7 +897,7 @@
   "food_cost" : 3100,
   "wood_cost" : 3200,
   "iron_cost" : 3200,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10101,
   "building_template_id" : 1003,
@@ -906,7 +906,7 @@
   "food_cost" : 3200,
   "wood_cost" : 3300,
   "iron_cost" : 3300,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10102,
   "building_template_id" : 1003,
@@ -915,7 +915,7 @@
   "food_cost" : 3300,
   "wood_cost" : 3400,
   "iron_cost" : 3400,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10103,
   "building_template_id" : 1003,
@@ -924,7 +924,7 @@
   "food_cost" : 3400,
   "wood_cost" : 3500,
   "iron_cost" : 3500,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10104,
   "building_template_id" : 1003,
@@ -933,7 +933,7 @@
   "food_cost" : 3500,
   "wood_cost" : 3600,
   "iron_cost" : 3600,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10105,
   "building_template_id" : 1003,
@@ -942,7 +942,7 @@
   "food_cost" : 3600,
   "wood_cost" : 3700,
   "iron_cost" : 3700,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":7}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10106,
   "building_template_id" : 1004,
@@ -951,7 +951,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":1}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10107,
   "building_template_id" : 1004,
@@ -960,7 +960,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10108,
   "building_template_id" : 1004,
@@ -969,7 +969,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10109,
   "building_template_id" : 1004,
@@ -978,7 +978,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10110,
   "building_template_id" : 1004,
@@ -987,7 +987,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10111,
   "building_template_id" : 1004,
@@ -996,7 +996,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10112,
   "building_template_id" : 1004,
@@ -1005,7 +1005,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10113,
   "building_template_id" : 1004,
@@ -1014,7 +1014,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10114,
   "building_template_id" : 1004,
@@ -1023,7 +1023,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10115,
   "building_template_id" : 1004,
@@ -1032,7 +1032,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10116,
   "building_template_id" : 1004,
@@ -1041,7 +1041,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10117,
   "building_template_id" : 1004,
@@ -1050,7 +1050,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10118,
   "building_template_id" : 1004,
@@ -1059,7 +1059,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10119,
   "building_template_id" : 1004,
@@ -1068,7 +1068,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10120,
   "building_template_id" : 1004,
@@ -1077,7 +1077,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10121,
   "building_template_id" : 1004,
@@ -1086,7 +1086,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10122,
   "building_template_id" : 1004,
@@ -1095,7 +1095,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10123,
   "building_template_id" : 1004,
@@ -1104,7 +1104,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10124,
   "building_template_id" : 1004,
@@ -1113,7 +1113,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10125,
   "building_template_id" : 1004,
@@ -1122,7 +1122,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10126,
   "building_template_id" : 1004,
@@ -1131,7 +1131,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10127,
   "building_template_id" : 1004,
@@ -1140,7 +1140,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10128,
   "building_template_id" : 1004,
@@ -1149,7 +1149,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10129,
   "building_template_id" : 1004,
@@ -1158,7 +1158,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10130,
   "building_template_id" : 1004,
@@ -1167,7 +1167,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":7}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10131,
   "building_template_id" : 1004,
@@ -1176,7 +1176,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10132,
   "building_template_id" : 1004,
@@ -1185,7 +1185,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10133,
   "building_template_id" : 1004,
@@ -1194,7 +1194,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10134,
   "building_template_id" : 1004,
@@ -1203,7 +1203,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10135,
   "building_template_id" : 1004,
@@ -1212,7 +1212,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10136,
   "building_template_id" : 1004,
@@ -1221,7 +1221,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10137,
   "building_template_id" : 1004,
@@ -1230,7 +1230,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10138,
   "building_template_id" : 1004,
@@ -1239,7 +1239,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10139,
   "building_template_id" : 1004,
@@ -1248,7 +1248,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10140,
   "building_template_id" : 1004,
@@ -1257,7 +1257,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":7}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10141,
   "building_template_id" : 1005,
@@ -1266,7 +1266,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":1}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10142,
   "building_template_id" : 1005,
@@ -1275,7 +1275,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10143,
   "building_template_id" : 1005,
@@ -1284,7 +1284,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10144,
   "building_template_id" : 1005,
@@ -1293,7 +1293,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10145,
   "building_template_id" : 1005,
@@ -1302,7 +1302,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10146,
   "building_template_id" : 1005,
@@ -1311,7 +1311,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10147,
   "building_template_id" : 1005,
@@ -1320,7 +1320,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10148,
   "building_template_id" : 1005,
@@ -1329,7 +1329,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10149,
   "building_template_id" : 1005,
@@ -1338,7 +1338,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10150,
   "building_template_id" : 1005,
@@ -1347,7 +1347,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10151,
   "building_template_id" : 1005,
@@ -1356,7 +1356,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10152,
   "building_template_id" : 1005,
@@ -1365,7 +1365,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10153,
   "building_template_id" : 1005,
@@ -1374,7 +1374,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10154,
   "building_template_id" : 1005,
@@ -1383,7 +1383,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10155,
   "building_template_id" : 1005,
@@ -1392,7 +1392,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10156,
   "building_template_id" : 1005,
@@ -1401,7 +1401,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10157,
   "building_template_id" : 1005,
@@ -1410,7 +1410,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10158,
   "building_template_id" : 1005,
@@ -1419,7 +1419,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10159,
   "building_template_id" : 1005,
@@ -1428,7 +1428,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10160,
   "building_template_id" : 1005,
@@ -1437,7 +1437,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10161,
   "building_template_id" : 1005,
@@ -1446,7 +1446,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10162,
   "building_template_id" : 1005,
@@ -1455,7 +1455,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10163,
   "building_template_id" : 1005,
@@ -1464,7 +1464,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10164,
   "building_template_id" : 1005,
@@ -1473,7 +1473,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10165,
   "building_template_id" : 1005,
@@ -1482,7 +1482,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":7}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10166,
   "building_template_id" : 1005,
@@ -1491,7 +1491,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10167,
   "building_template_id" : 1005,
@@ -1500,7 +1500,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10168,
   "building_template_id" : 1005,
@@ -1509,7 +1509,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10169,
   "building_template_id" : 1005,
@@ -1518,7 +1518,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10170,
   "building_template_id" : 1005,
@@ -1527,7 +1527,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10171,
   "building_template_id" : 1005,
@@ -1536,7 +1536,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10172,
   "building_template_id" : 1005,
@@ -1545,7 +1545,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10173,
   "building_template_id" : 1005,
@@ -1554,7 +1554,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10174,
   "building_template_id" : 1005,
@@ -1563,7 +1563,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10175,
   "building_template_id" : 1005,
@@ -1572,7 +1572,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":7}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10176,
   "building_template_id" : 1006,
@@ -1581,7 +1581,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":1}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10177,
   "building_template_id" : 1006,
@@ -1590,7 +1590,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10178,
   "building_template_id" : 1006,
@@ -1599,7 +1599,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10179,
   "building_template_id" : 1006,
@@ -1608,7 +1608,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10180,
   "building_template_id" : 1006,
@@ -1617,7 +1617,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10181,
   "building_template_id" : 1006,
@@ -1626,7 +1626,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10182,
   "building_template_id" : 1006,
@@ -1635,7 +1635,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10183,
   "building_template_id" : 1006,
@@ -1644,7 +1644,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10184,
   "building_template_id" : 1006,
@@ -1653,7 +1653,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10185,
   "building_template_id" : 1006,
@@ -1662,7 +1662,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10186,
   "building_template_id" : 1006,
@@ -1671,7 +1671,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10187,
   "building_template_id" : 1006,
@@ -1680,7 +1680,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10188,
   "building_template_id" : 1006,
@@ -1689,7 +1689,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10189,
   "building_template_id" : 1006,
@@ -1698,7 +1698,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10190,
   "building_template_id" : 1006,
@@ -1707,7 +1707,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10191,
   "building_template_id" : 1006,
@@ -1716,7 +1716,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10192,
   "building_template_id" : 1006,
@@ -1725,7 +1725,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10193,
   "building_template_id" : 1006,
@@ -1734,7 +1734,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10194,
   "building_template_id" : 1006,
@@ -1743,7 +1743,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10195,
   "building_template_id" : 1006,
@@ -1752,7 +1752,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10196,
   "building_template_id" : 1006,
@@ -1761,7 +1761,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10197,
   "building_template_id" : 1006,
@@ -1770,7 +1770,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10198,
   "building_template_id" : 1006,
@@ -1779,7 +1779,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10199,
   "building_template_id" : 1006,
@@ -1788,7 +1788,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10200,
   "building_template_id" : 1006,
@@ -1797,7 +1797,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":7}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10201,
   "building_template_id" : 1006,
@@ -1806,7 +1806,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10202,
   "building_template_id" : 1006,
@@ -1815,7 +1815,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10203,
   "building_template_id" : 1006,
@@ -1824,7 +1824,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10204,
   "building_template_id" : 1006,
@@ -1833,7 +1833,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10205,
   "building_template_id" : 1006,
@@ -1842,7 +1842,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10206,
   "building_template_id" : 1006,
@@ -1851,7 +1851,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10207,
   "building_template_id" : 1006,
@@ -1860,7 +1860,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10208,
   "building_template_id" : 1006,
@@ -1869,7 +1869,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10209,
   "building_template_id" : 1006,
@@ -1878,7 +1878,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10210,
   "building_template_id" : 1006,
@@ -1887,7 +1887,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":7}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10211,
   "building_template_id" : 1007,
@@ -1896,7 +1896,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":1}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10212,
   "building_template_id" : 1007,
@@ -1905,7 +1905,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10213,
   "building_template_id" : 1007,
@@ -1914,7 +1914,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10214,
   "building_template_id" : 1007,
@@ -1923,7 +1923,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10215,
   "building_template_id" : 1007,
@@ -1932,7 +1932,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10216,
   "building_template_id" : 1007,
@@ -1941,7 +1941,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10217,
   "building_template_id" : 1007,
@@ -1950,7 +1950,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10218,
   "building_template_id" : 1007,
@@ -1959,7 +1959,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10219,
   "building_template_id" : 1007,
@@ -1968,7 +1968,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10220,
   "building_template_id" : 1007,
@@ -1977,7 +1977,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10221,
   "building_template_id" : 1007,
@@ -1986,7 +1986,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10222,
   "building_template_id" : 1007,
@@ -1995,7 +1995,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10223,
   "building_template_id" : 1007,
@@ -2004,7 +2004,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10224,
   "building_template_id" : 1007,
@@ -2013,7 +2013,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10225,
   "building_template_id" : 1007,
@@ -2022,7 +2022,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10226,
   "building_template_id" : 1007,
@@ -2031,7 +2031,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10227,
   "building_template_id" : 1007,
@@ -2040,7 +2040,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10228,
   "building_template_id" : 1007,
@@ -2049,7 +2049,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10229,
   "building_template_id" : 1007,
@@ -2058,7 +2058,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10230,
   "building_template_id" : 1007,
@@ -2067,7 +2067,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10231,
   "building_template_id" : 1007,
@@ -2076,7 +2076,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10232,
   "building_template_id" : 1007,
@@ -2085,7 +2085,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10233,
   "building_template_id" : 1007,
@@ -2094,7 +2094,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10234,
   "building_template_id" : 1007,
@@ -2103,7 +2103,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10235,
   "building_template_id" : 1007,
@@ -2112,7 +2112,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":7}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10236,
   "building_template_id" : 1007,
@@ -2121,7 +2121,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10237,
   "building_template_id" : 1007,
@@ -2130,7 +2130,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10238,
   "building_template_id" : 1007,
@@ -2139,7 +2139,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10239,
   "building_template_id" : 1007,
@@ -2148,7 +2148,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10240,
   "building_template_id" : 1007,
@@ -2157,7 +2157,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10241,
   "building_template_id" : 1007,
@@ -2166,7 +2166,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10242,
   "building_template_id" : 1007,
@@ -2175,7 +2175,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10243,
   "building_template_id" : 1007,
@@ -2184,7 +2184,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10244,
   "building_template_id" : 1007,
@@ -2193,7 +2193,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10245,
   "building_template_id" : 1007,
@@ -2202,7 +2202,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":7}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10246,
   "building_template_id" : 1008,
@@ -2211,7 +2211,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":1}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10247,
   "building_template_id" : 1008,
@@ -2220,7 +2220,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10248,
   "building_template_id" : 1008,
@@ -2229,7 +2229,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10249,
   "building_template_id" : 1008,
@@ -2238,7 +2238,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10250,
   "building_template_id" : 1008,
@@ -2247,7 +2247,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10251,
   "building_template_id" : 1008,
@@ -2256,7 +2256,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10252,
   "building_template_id" : 1008,
@@ -2265,7 +2265,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10253,
   "building_template_id" : 1008,
@@ -2274,7 +2274,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10254,
   "building_template_id" : 1008,
@@ -2283,7 +2283,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10255,
   "building_template_id" : 1008,
@@ -2292,7 +2292,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10256,
   "building_template_id" : 1008,
@@ -2301,7 +2301,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10257,
   "building_template_id" : 1008,
@@ -2310,7 +2310,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10258,
   "building_template_id" : 1008,
@@ -2319,7 +2319,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10259,
   "building_template_id" : 1008,
@@ -2328,7 +2328,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10260,
   "building_template_id" : 1008,
@@ -2337,7 +2337,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10261,
   "building_template_id" : 1008,
@@ -2346,7 +2346,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10262,
   "building_template_id" : 1008,
@@ -2355,7 +2355,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10263,
   "building_template_id" : 1008,
@@ -2364,7 +2364,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10264,
   "building_template_id" : 1008,
@@ -2373,7 +2373,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10265,
   "building_template_id" : 1008,
@@ -2382,7 +2382,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10266,
   "building_template_id" : 1008,
@@ -2391,7 +2391,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10267,
   "building_template_id" : 1008,
@@ -2400,7 +2400,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10268,
   "building_template_id" : 1008,
@@ -2409,7 +2409,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10269,
   "building_template_id" : 1008,
@@ -2418,7 +2418,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10270,
   "building_template_id" : 1008,
@@ -2427,7 +2427,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":7}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10271,
   "building_template_id" : 1008,
@@ -2436,7 +2436,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10272,
   "building_template_id" : 1008,
@@ -2445,7 +2445,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10273,
   "building_template_id" : 1008,
@@ -2454,7 +2454,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10274,
   "building_template_id" : 1008,
@@ -2463,7 +2463,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10275,
   "building_template_id" : 1008,
@@ -2472,7 +2472,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10276,
   "building_template_id" : 1008,
@@ -2481,7 +2481,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10277,
   "building_template_id" : 1008,
@@ -2490,7 +2490,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10278,
   "building_template_id" : 1008,
@@ -2499,7 +2499,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10279,
   "building_template_id" : 1008,
@@ -2508,7 +2508,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10280,
   "building_template_id" : 1008,
@@ -2517,7 +2517,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":7}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10281,
   "building_template_id" : 1009,
@@ -2526,7 +2526,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":1}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10282,
   "building_template_id" : 1009,
@@ -2535,7 +2535,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10283,
   "building_template_id" : 1009,
@@ -2544,7 +2544,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10284,
   "building_template_id" : 1009,
@@ -2553,7 +2553,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10285,
   "building_template_id" : 1009,
@@ -2562,7 +2562,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10286,
   "building_template_id" : 1009,
@@ -2571,7 +2571,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10287,
   "building_template_id" : 1009,
@@ -2580,7 +2580,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10288,
   "building_template_id" : 1009,
@@ -2589,7 +2589,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10289,
   "building_template_id" : 1009,
@@ -2598,7 +2598,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10290,
   "building_template_id" : 1009,
@@ -2607,7 +2607,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10291,
   "building_template_id" : 1009,
@@ -2616,7 +2616,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10292,
   "building_template_id" : 1009,
@@ -2625,7 +2625,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10293,
   "building_template_id" : 1009,
@@ -2634,7 +2634,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10294,
   "building_template_id" : 1009,
@@ -2643,7 +2643,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10295,
   "building_template_id" : 1009,
@@ -2652,7 +2652,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10296,
   "building_template_id" : 1009,
@@ -2661,7 +2661,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10297,
   "building_template_id" : 1009,
@@ -2670,7 +2670,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10298,
   "building_template_id" : 1009,
@@ -2679,7 +2679,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10299,
   "building_template_id" : 1009,
@@ -2688,7 +2688,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10300,
   "building_template_id" : 1009,
@@ -2697,7 +2697,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10301,
   "building_template_id" : 1009,
@@ -2706,7 +2706,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10302,
   "building_template_id" : 1009,
@@ -2715,7 +2715,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10303,
   "building_template_id" : 1009,
@@ -2724,7 +2724,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10304,
   "building_template_id" : 1009,
@@ -2733,7 +2733,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10305,
   "building_template_id" : 1009,
@@ -2742,7 +2742,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":7}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10306,
   "building_template_id" : 1009,
@@ -2751,7 +2751,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10307,
   "building_template_id" : 1009,
@@ -2760,7 +2760,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10308,
   "building_template_id" : 1009,
@@ -2769,7 +2769,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10309,
   "building_template_id" : 1009,
@@ -2778,7 +2778,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10310,
   "building_template_id" : 1009,
@@ -2787,7 +2787,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10311,
   "building_template_id" : 1009,
@@ -2796,7 +2796,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10312,
   "building_template_id" : 1009,
@@ -2805,7 +2805,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10313,
   "building_template_id" : 1009,
@@ -2814,7 +2814,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10314,
   "building_template_id" : 1009,
@@ -2823,7 +2823,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10315,
   "building_template_id" : 1009,
@@ -2832,7 +2832,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":7}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10316,
   "building_template_id" : 1010,
@@ -2841,7 +2841,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":1}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10317,
   "building_template_id" : 1010,
@@ -2850,7 +2850,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10318,
   "building_template_id" : 1010,
@@ -2859,7 +2859,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10319,
   "building_template_id" : 1010,
@@ -2868,7 +2868,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10320,
   "building_template_id" : 1010,
@@ -2877,7 +2877,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10321,
   "building_template_id" : 1010,
@@ -2886,7 +2886,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10322,
   "building_template_id" : 1010,
@@ -2895,7 +2895,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10323,
   "building_template_id" : 1010,
@@ -2904,7 +2904,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10324,
   "building_template_id" : 1010,
@@ -2913,7 +2913,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10325,
   "building_template_id" : 1010,
@@ -2922,7 +2922,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10326,
   "building_template_id" : 1010,
@@ -2931,7 +2931,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10327,
   "building_template_id" : 1010,
@@ -2940,7 +2940,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10328,
   "building_template_id" : 1010,
@@ -2949,7 +2949,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10329,
   "building_template_id" : 1010,
@@ -2958,7 +2958,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10330,
   "building_template_id" : 1010,
@@ -2967,7 +2967,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10331,
   "building_template_id" : 1010,
@@ -2976,7 +2976,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10332,
   "building_template_id" : 1010,
@@ -2985,7 +2985,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10333,
   "building_template_id" : 1010,
@@ -2994,7 +2994,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10334,
   "building_template_id" : 1010,
@@ -3003,7 +3003,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10335,
   "building_template_id" : 1010,
@@ -3012,7 +3012,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10336,
   "building_template_id" : 1010,
@@ -3021,7 +3021,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10337,
   "building_template_id" : 1010,
@@ -3030,7 +3030,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10338,
   "building_template_id" : 1010,
@@ -3039,7 +3039,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10339,
   "building_template_id" : 1010,
@@ -3048,7 +3048,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10340,
   "building_template_id" : 1010,
@@ -3057,7 +3057,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":7}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10341,
   "building_template_id" : 1010,
@@ -3066,7 +3066,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10342,
   "building_template_id" : 1010,
@@ -3075,7 +3075,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10343,
   "building_template_id" : 1010,
@@ -3084,7 +3084,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10344,
   "building_template_id" : 1010,
@@ -3093,7 +3093,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10345,
   "building_template_id" : 1010,
@@ -3102,7 +3102,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10346,
   "building_template_id" : 1010,
@@ -3111,7 +3111,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10347,
   "building_template_id" : 1010,
@@ -3120,7 +3120,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10348,
   "building_template_id" : 1010,
@@ -3129,7 +3129,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10349,
   "building_template_id" : 1010,
@@ -3138,7 +3138,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10350,
   "building_template_id" : 1010,
@@ -3147,7 +3147,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":7}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10351,
   "building_template_id" : 1011,
@@ -3156,7 +3156,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":1}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10352,
   "building_template_id" : 1011,
@@ -3165,7 +3165,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10353,
   "building_template_id" : 1011,
@@ -3174,7 +3174,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10354,
   "building_template_id" : 1011,
@@ -3183,7 +3183,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10355,
   "building_template_id" : 1011,
@@ -3192,7 +3192,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10356,
   "building_template_id" : 1011,
@@ -3201,7 +3201,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10357,
   "building_template_id" : 1011,
@@ -3210,7 +3210,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10358,
   "building_template_id" : 1011,
@@ -3219,7 +3219,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10359,
   "building_template_id" : 1011,
@@ -3228,7 +3228,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10360,
   "building_template_id" : 1011,
@@ -3237,7 +3237,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10361,
   "building_template_id" : 1011,
@@ -3246,7 +3246,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10362,
   "building_template_id" : 1011,
@@ -3255,7 +3255,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10363,
   "building_template_id" : 1011,
@@ -3264,7 +3264,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10364,
   "building_template_id" : 1011,
@@ -3273,7 +3273,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10365,
   "building_template_id" : 1011,
@@ -3282,7 +3282,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10366,
   "building_template_id" : 1011,
@@ -3291,7 +3291,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10367,
   "building_template_id" : 1011,
@@ -3300,7 +3300,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10368,
   "building_template_id" : 1011,
@@ -3309,7 +3309,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10369,
   "building_template_id" : 1011,
@@ -3318,7 +3318,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10370,
   "building_template_id" : 1011,
@@ -3327,7 +3327,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10371,
   "building_template_id" : 1011,
@@ -3336,7 +3336,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10372,
   "building_template_id" : 1011,
@@ -3345,7 +3345,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10373,
   "building_template_id" : 1011,
@@ -3354,7 +3354,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10374,
   "building_template_id" : 1011,
@@ -3363,7 +3363,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10375,
   "building_template_id" : 1011,
@@ -3372,7 +3372,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":7}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10376,
   "building_template_id" : 1011,
@@ -3381,7 +3381,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10377,
   "building_template_id" : 1011,
@@ -3390,7 +3390,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10378,
   "building_template_id" : 1011,
@@ -3399,7 +3399,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10379,
   "building_template_id" : 1011,
@@ -3408,7 +3408,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10380,
   "building_template_id" : 1011,
@@ -3417,7 +3417,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10381,
   "building_template_id" : 1011,
@@ -3426,7 +3426,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10382,
   "building_template_id" : 1011,
@@ -3435,7 +3435,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10383,
   "building_template_id" : 1011,
@@ -3444,7 +3444,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10384,
   "building_template_id" : 1011,
@@ -3453,7 +3453,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10385,
   "building_template_id" : 1011,
@@ -3462,7 +3462,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":7}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10386,
   "building_template_id" : 1012,
@@ -3471,7 +3471,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":1}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10387,
   "building_template_id" : 1012,
@@ -3480,7 +3480,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10388,
   "building_template_id" : 1012,
@@ -3489,7 +3489,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10389,
   "building_template_id" : 1012,
@@ -3498,7 +3498,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10390,
   "building_template_id" : 1012,
@@ -3507,7 +3507,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10391,
   "building_template_id" : 1012,
@@ -3516,7 +3516,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10392,
   "building_template_id" : 1012,
@@ -3525,7 +3525,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10393,
   "building_template_id" : 1012,
@@ -3534,7 +3534,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10394,
   "building_template_id" : 1012,
@@ -3543,7 +3543,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10395,
   "building_template_id" : 1012,
@@ -3552,7 +3552,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10396,
   "building_template_id" : 1012,
@@ -3561,7 +3561,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10397,
   "building_template_id" : 1012,
@@ -3570,7 +3570,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10398,
   "building_template_id" : 1012,
@@ -3579,7 +3579,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10399,
   "building_template_id" : 1012,
@@ -3588,7 +3588,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10400,
   "building_template_id" : 1012,
@@ -3597,7 +3597,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10401,
   "building_template_id" : 1012,
@@ -3606,7 +3606,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10402,
   "building_template_id" : 1012,
@@ -3615,7 +3615,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10403,
   "building_template_id" : 1012,
@@ -3624,7 +3624,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10404,
   "building_template_id" : 1012,
@@ -3633,7 +3633,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10405,
   "building_template_id" : 1012,
@@ -3642,7 +3642,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10406,
   "building_template_id" : 1012,
@@ -3651,7 +3651,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10407,
   "building_template_id" : 1012,
@@ -3660,7 +3660,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10408,
   "building_template_id" : 1012,
@@ -3669,7 +3669,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10409,
   "building_template_id" : 1012,
@@ -3678,7 +3678,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10410,
   "building_template_id" : 1012,
@@ -3687,7 +3687,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":7}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10411,
   "building_template_id" : 1012,
@@ -3696,7 +3696,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10412,
   "building_template_id" : 1012,
@@ -3705,7 +3705,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10413,
   "building_template_id" : 1012,
@@ -3714,7 +3714,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10414,
   "building_template_id" : 1012,
@@ -3723,7 +3723,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10415,
   "building_template_id" : 1012,
@@ -3732,7 +3732,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10416,
   "building_template_id" : 1012,
@@ -3741,7 +3741,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10417,
   "building_template_id" : 1012,
@@ -3750,7 +3750,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10418,
   "building_template_id" : 1012,
@@ -3759,7 +3759,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10419,
   "building_template_id" : 1012,
@@ -3768,7 +3768,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10420,
   "building_template_id" : 1012,
@@ -3777,7 +3777,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":7}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10421,
   "building_template_id" : 1013,
@@ -3786,7 +3786,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":1}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10422,
   "building_template_id" : 1013,
@@ -3795,7 +3795,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10423,
   "building_template_id" : 1013,
@@ -3804,7 +3804,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10424,
   "building_template_id" : 1013,
@@ -3813,7 +3813,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10425,
   "building_template_id" : 1013,
@@ -3822,7 +3822,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10426,
   "building_template_id" : 1013,
@@ -3831,7 +3831,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10427,
   "building_template_id" : 1013,
@@ -3840,7 +3840,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10428,
   "building_template_id" : 1013,
@@ -3849,7 +3849,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10429,
   "building_template_id" : 1013,
@@ -3858,7 +3858,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10430,
   "building_template_id" : 1013,
@@ -3867,7 +3867,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10431,
   "building_template_id" : 1013,
@@ -3876,7 +3876,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10432,
   "building_template_id" : 1013,
@@ -3885,7 +3885,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10433,
   "building_template_id" : 1013,
@@ -3894,7 +3894,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10434,
   "building_template_id" : 1013,
@@ -3903,7 +3903,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10435,
   "building_template_id" : 1013,
@@ -3912,7 +3912,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10436,
   "building_template_id" : 1013,
@@ -3921,7 +3921,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10437,
   "building_template_id" : 1013,
@@ -3930,7 +3930,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10438,
   "building_template_id" : 1013,
@@ -3939,7 +3939,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10439,
   "building_template_id" : 1013,
@@ -3948,7 +3948,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10440,
   "building_template_id" : 1013,
@@ -3957,7 +3957,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10441,
   "building_template_id" : 1013,
@@ -3966,7 +3966,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10442,
   "building_template_id" : 1013,
@@ -3975,7 +3975,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10443,
   "building_template_id" : 1013,
@@ -3984,7 +3984,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10444,
   "building_template_id" : 1013,
@@ -3993,7 +3993,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10445,
   "building_template_id" : 1013,
@@ -4002,7 +4002,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":7}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10446,
   "building_template_id" : 1013,
@@ -4011,7 +4011,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10447,
   "building_template_id" : 1013,
@@ -4020,7 +4020,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10448,
   "building_template_id" : 1013,
@@ -4029,7 +4029,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10449,
   "building_template_id" : 1013,
@@ -4038,7 +4038,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10450,
   "building_template_id" : 1013,
@@ -4047,7 +4047,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10451,
   "building_template_id" : 1013,
@@ -4056,7 +4056,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10452,
   "building_template_id" : 1013,
@@ -4065,7 +4065,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10453,
   "building_template_id" : 1013,
@@ -4074,7 +4074,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10454,
   "building_template_id" : 1013,
@@ -4083,7 +4083,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10455,
   "building_template_id" : 1013,
@@ -4092,7 +4092,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":7}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10456,
   "building_template_id" : 1014,
@@ -4101,7 +4101,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":1}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10457,
   "building_template_id" : 1014,
@@ -4110,7 +4110,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10458,
   "building_template_id" : 1014,
@@ -4119,7 +4119,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10459,
   "building_template_id" : 1014,
@@ -4128,7 +4128,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10460,
   "building_template_id" : 1014,
@@ -4137,7 +4137,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10461,
   "building_template_id" : 1014,
@@ -4146,7 +4146,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10462,
   "building_template_id" : 1014,
@@ -4155,7 +4155,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10463,
   "building_template_id" : 1014,
@@ -4164,7 +4164,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10464,
   "building_template_id" : 1014,
@@ -4173,7 +4173,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10465,
   "building_template_id" : 1014,
@@ -4182,7 +4182,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10466,
   "building_template_id" : 1014,
@@ -4191,7 +4191,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10467,
   "building_template_id" : 1014,
@@ -4200,7 +4200,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10468,
   "building_template_id" : 1014,
@@ -4209,7 +4209,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10469,
   "building_template_id" : 1014,
@@ -4218,7 +4218,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10470,
   "building_template_id" : 1014,
@@ -4227,7 +4227,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10471,
   "building_template_id" : 1014,
@@ -4236,7 +4236,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10472,
   "building_template_id" : 1014,
@@ -4245,7 +4245,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10473,
   "building_template_id" : 1014,
@@ -4254,7 +4254,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10474,
   "building_template_id" : 1014,
@@ -4263,7 +4263,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10475,
   "building_template_id" : 1014,
@@ -4272,7 +4272,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10476,
   "building_template_id" : 1014,
@@ -4281,7 +4281,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10477,
   "building_template_id" : 1014,
@@ -4290,7 +4290,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10478,
   "building_template_id" : 1014,
@@ -4299,7 +4299,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10479,
   "building_template_id" : 1014,
@@ -4308,7 +4308,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10480,
   "building_template_id" : 1014,
@@ -4317,7 +4317,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":7}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10481,
   "building_template_id" : 1014,
@@ -4326,7 +4326,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10482,
   "building_template_id" : 1014,
@@ -4335,7 +4335,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10483,
   "building_template_id" : 1014,
@@ -4344,7 +4344,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10484,
   "building_template_id" : 1014,
@@ -4353,7 +4353,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10485,
   "building_template_id" : 1014,
@@ -4362,7 +4362,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10486,
   "building_template_id" : 1014,
@@ -4371,7 +4371,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10487,
   "building_template_id" : 1014,
@@ -4380,7 +4380,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10488,
   "building_template_id" : 1014,
@@ -4389,7 +4389,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10489,
   "building_template_id" : 1014,
@@ -4398,7 +4398,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10490,
   "building_template_id" : 1014,
@@ -4407,7 +4407,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":7}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10491,
   "building_template_id" : 1015,
@@ -4416,7 +4416,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":1}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10492,
   "building_template_id" : 1015,
@@ -4425,7 +4425,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10493,
   "building_template_id" : 1015,
@@ -4434,7 +4434,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10494,
   "building_template_id" : 1015,
@@ -4443,7 +4443,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10495,
   "building_template_id" : 1015,
@@ -4452,7 +4452,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10496,
   "building_template_id" : 1015,
@@ -4461,7 +4461,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10497,
   "building_template_id" : 1015,
@@ -4470,7 +4470,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10498,
   "building_template_id" : 1015,
@@ -4479,7 +4479,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10499,
   "building_template_id" : 1015,
@@ -4488,7 +4488,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10500,
   "building_template_id" : 1015,
@@ -4497,7 +4497,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10501,
   "building_template_id" : 1015,
@@ -4506,7 +4506,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10502,
   "building_template_id" : 1015,
@@ -4515,7 +4515,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10503,
   "building_template_id" : 1015,
@@ -4524,7 +4524,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10504,
   "building_template_id" : 1015,
@@ -4533,7 +4533,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10505,
   "building_template_id" : 1015,
@@ -4542,7 +4542,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10506,
   "building_template_id" : 1015,
@@ -4551,7 +4551,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10507,
   "building_template_id" : 1015,
@@ -4560,7 +4560,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10508,
   "building_template_id" : 1015,
@@ -4569,7 +4569,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10509,
   "building_template_id" : 1015,
@@ -4578,7 +4578,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10510,
   "building_template_id" : 1015,
@@ -4587,7 +4587,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10511,
   "building_template_id" : 1015,
@@ -4596,7 +4596,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10512,
   "building_template_id" : 1015,
@@ -4605,7 +4605,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10513,
   "building_template_id" : 1015,
@@ -4614,7 +4614,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10514,
   "building_template_id" : 1015,
@@ -4623,7 +4623,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10515,
   "building_template_id" : 1015,
@@ -4632,7 +4632,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":7}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10516,
   "building_template_id" : 1015,
@@ -4641,7 +4641,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10517,
   "building_template_id" : 1015,
@@ -4650,7 +4650,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10518,
   "building_template_id" : 1015,
@@ -4659,7 +4659,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10519,
   "building_template_id" : 1015,
@@ -4668,7 +4668,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10520,
   "building_template_id" : 1015,
@@ -4677,7 +4677,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10521,
   "building_template_id" : 1015,
@@ -4686,7 +4686,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10522,
   "building_template_id" : 1015,
@@ -4695,7 +4695,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10523,
   "building_template_id" : 1015,
@@ -4704,7 +4704,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10524,
   "building_template_id" : 1015,
@@ -4713,7 +4713,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10525,
   "building_template_id" : 1015,
@@ -4722,7 +4722,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":7}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10526,
   "building_template_id" : 1016,
@@ -4731,7 +4731,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":1}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10527,
   "building_template_id" : 1016,
@@ -4740,7 +4740,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10528,
   "building_template_id" : 1016,
@@ -4749,7 +4749,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10529,
   "building_template_id" : 1016,
@@ -4758,7 +4758,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10530,
   "building_template_id" : 1016,
@@ -4767,7 +4767,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10531,
   "building_template_id" : 1016,
@@ -4776,7 +4776,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10532,
   "building_template_id" : 1016,
@@ -4785,7 +4785,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10533,
   "building_template_id" : 1016,
@@ -4794,7 +4794,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10534,
   "building_template_id" : 1016,
@@ -4803,7 +4803,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10535,
   "building_template_id" : 1016,
@@ -4812,7 +4812,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10536,
   "building_template_id" : 1016,
@@ -4821,7 +4821,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10537,
   "building_template_id" : 1016,
@@ -4830,7 +4830,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10538,
   "building_template_id" : 1016,
@@ -4839,7 +4839,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10539,
   "building_template_id" : 1016,
@@ -4848,7 +4848,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10540,
   "building_template_id" : 1016,
@@ -4857,7 +4857,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10541,
   "building_template_id" : 1016,
@@ -4866,7 +4866,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10542,
   "building_template_id" : 1016,
@@ -4875,7 +4875,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10543,
   "building_template_id" : 1016,
@@ -4884,7 +4884,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10544,
   "building_template_id" : 1016,
@@ -4893,7 +4893,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10545,
   "building_template_id" : 1016,
@@ -4902,7 +4902,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10546,
   "building_template_id" : 1016,
@@ -4911,7 +4911,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10547,
   "building_template_id" : 1016,
@@ -4920,7 +4920,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10548,
   "building_template_id" : 1016,
@@ -4929,7 +4929,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10549,
   "building_template_id" : 1016,
@@ -4938,7 +4938,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10550,
   "building_template_id" : 1016,
@@ -4947,7 +4947,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":7}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10551,
   "building_template_id" : 1016,
@@ -4956,7 +4956,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10552,
   "building_template_id" : 1016,
@@ -4965,7 +4965,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10553,
   "building_template_id" : 1016,
@@ -4974,7 +4974,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10554,
   "building_template_id" : 1016,
@@ -4983,7 +4983,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10555,
   "building_template_id" : 1016,
@@ -4992,7 +4992,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10556,
   "building_template_id" : 1016,
@@ -5001,7 +5001,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10557,
   "building_template_id" : 1016,
@@ -5010,7 +5010,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10558,
   "building_template_id" : 1016,
@@ -5019,7 +5019,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10559,
   "building_template_id" : 1016,
@@ -5028,7 +5028,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10560,
   "building_template_id" : 1016,
@@ -5037,7 +5037,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":7}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10561,
   "building_template_id" : 1017,
@@ -5046,7 +5046,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":1}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10562,
   "building_template_id" : 1017,
@@ -5055,7 +5055,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10563,
   "building_template_id" : 1017,
@@ -5064,7 +5064,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10564,
   "building_template_id" : 1017,
@@ -5073,7 +5073,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10565,
   "building_template_id" : 1017,
@@ -5082,7 +5082,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10566,
   "building_template_id" : 1017,
@@ -5091,7 +5091,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10567,
   "building_template_id" : 1017,
@@ -5100,7 +5100,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10568,
   "building_template_id" : 1017,
@@ -5109,7 +5109,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10569,
   "building_template_id" : 1017,
@@ -5118,7 +5118,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10570,
   "building_template_id" : 1017,
@@ -5127,7 +5127,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10571,
   "building_template_id" : 1017,
@@ -5136,7 +5136,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10572,
   "building_template_id" : 1017,
@@ -5145,7 +5145,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10573,
   "building_template_id" : 1017,
@@ -5154,7 +5154,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10574,
   "building_template_id" : 1017,
@@ -5163,7 +5163,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":2}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10575,
   "building_template_id" : 1017,
@@ -5172,7 +5172,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10576,
   "building_template_id" : 1017,
@@ -5181,7 +5181,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10577,
   "building_template_id" : 1017,
@@ -5190,7 +5190,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10578,
   "building_template_id" : 1017,
@@ -5199,7 +5199,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10579,
   "building_template_id" : 1017,
@@ -5208,7 +5208,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10580,
   "building_template_id" : 1017,
@@ -5217,7 +5217,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10581,
   "building_template_id" : 1017,
@@ -5226,7 +5226,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10582,
   "building_template_id" : 1017,
@@ -5235,7 +5235,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10583,
   "building_template_id" : 1017,
@@ -5244,7 +5244,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10584,
   "building_template_id" : 1017,
@@ -5253,7 +5253,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10585,
   "building_template_id" : 1017,
@@ -5262,7 +5262,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":7}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10586,
   "building_template_id" : 1017,
@@ -5271,7 +5271,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10587,
   "building_template_id" : 1017,
@@ -5280,7 +5280,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":3}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10588,
   "building_template_id" : 1017,
@@ -5289,7 +5289,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10589,
   "building_template_id" : 1017,
@@ -5298,7 +5298,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":3,\"level\":3}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10590,
   "building_template_id" : 1017,
@@ -5307,7 +5307,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":4}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10591,
   "building_template_id" : 1017,
@@ -5316,7 +5316,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10592,
   "building_template_id" : 1017,
@@ -5325,7 +5325,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":5}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10593,
   "building_template_id" : 1017,
@@ -5334,7 +5334,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10594,
   "building_template_id" : 1017,
@@ -5343,7 +5343,7 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":1,\"level\":1}],\"player_level\":6}"
+  "upgrade_requirements" : null
 }, {
   "id" : 10595,
   "building_template_id" : 1017,
@@ -5352,5 +5352,5 @@
   "food_cost" : 0,
   "wood_cost" : 0,
   "iron_cost" : 0,
-  "upgrade_requirements" : "{\"required_buildings\":[{\"building_id\":2,\"level\":2}],\"player_level\":7}"
+  "upgrade_requirements" : null
 } ]

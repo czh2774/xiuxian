@@ -1,6 +1,7 @@
 package com.xiuxian.xiuxianserver.service;
 
 import com.xiuxian.xiuxianserver.dto.CharacterGeneralDTO;
+import com.xiuxian.xiuxianserver.dto.CharacterGeneralUpdateRequestDTO;
 import java.util.List;
 
 /**
@@ -40,7 +41,7 @@ public interface CharacterGeneralService {
      * @param request 武将请求数据传输对象
      * @return 更新后的武将数据传输对象
      */
-    CharacterGeneralDTO updateCharacterGeneral(Long id, CharacterGeneralDTO request);
+    CharacterGeneralDTO updateCharacterGeneral(Long id, CharacterGeneralUpdateRequestDTO request);
 
     /**
      * 删除武将

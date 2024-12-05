@@ -31,6 +31,7 @@ public class CharacterBuilding {
 
     @Schema(description = "建筑的状态，使用枚举类表示：空闲中、研究中、升级中等")
     @Enumerated(EnumType.STRING)
+    @Column(name = "building_status", nullable = false)
     private BuildingStatusType buildingStatus = BuildingStatusType.IDLE;  // 建筑状态
 
     @Schema(description = "操作开始时间，记录当前操作的开始时间")

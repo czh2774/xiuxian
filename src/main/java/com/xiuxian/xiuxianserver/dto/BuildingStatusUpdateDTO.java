@@ -1,37 +1,17 @@
 package com.xiuxian.xiuxianserver.dto;
 
-import com.xiuxian.xiuxianserver.enums.BuildingStatusType;
+import jakarta.validation.constraints.NotNull;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 
-/**
- * BuildingStatusUpdateDTO
- * 用于更新角色建筑状态的请求体
- */
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class BuildingStatusUpdateDTO {
-
-    private Long buildingId;  // 建筑实例ID
-    private BuildingStatusType newStatus;  // 新的状态，使用枚举类型
-
-    // Constructors, Getters and Setters
-    public BuildingStatusUpdateDTO() {}
-
-    public BuildingStatusUpdateDTO(Long buildingId, BuildingStatusType newStatus) {
-        this.buildingId = buildingId;
-        this.newStatus = newStatus;
-    }
-
-    public Long getBuildingId() {
-        return buildingId;
-    }
-
-    public void setBuildingId(Long buildingId) {
-        this.buildingId = buildingId;
-    }
-
-    public BuildingStatusType getNewStatus() {
-        return newStatus;
-    }
-
-    public void setNewStatus(BuildingStatusType newStatus) {
-        this.newStatus = newStatus;
-    }
+    @NotNull(message = "建筑ID不能为空")
+    private Long buildingId;
+    
+    @NotNull(message = "队列ID不能为空")
+    private Integer queueId = 1;  // 默认队列
 }

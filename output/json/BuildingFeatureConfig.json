@@ -1,0 +1,176 @@
+[ {
+  "id" : 10001,
+  "building_template_id" : 1001,
+  "feature_type" : "TITLE",
+  "display_level" : 1,
+  "use_level" : 1,
+  "icon_url" : "building_feature_title"
+}, {
+  "id" : 10002,
+  "building_template_id" : 1001,
+  "feature_type" : "GOVERNMENT",
+  "display_level" : 1,
+  "use_level" : 1,
+  "icon_url" : "building_feature_government"
+}, {
+  "id" : 10003,
+  "building_template_id" : 1001,
+  "feature_type" : "ACHIEVEMENT",
+  "display_level" : 1,
+  "use_level" : 1,
+  "icon_url" : "building_feature_achievement"
+}, {
+  "id" : 10004,
+  "building_template_id" : 1002,
+  "feature_type" : "FORGE",
+  "display_level" : 1,
+  "use_level" : 1,
+  "icon_url" : "building_feature_forge"
+}, {
+  "id" : 10005,
+  "building_template_id" : 1002,
+  "feature_type" : "BREAKTHROUGH",
+  "display_level" : 1,
+  "use_level" : 1,
+  "icon_url" : "building_feature_breakthrough"
+}, {
+  "id" : 10006,
+  "building_template_id" : 1002,
+  "feature_type" : "REFINE",
+  "display_level" : 1,
+  "use_level" : 1,
+  "icon_url" : "building_feature_refine"
+}, {
+  "id" : 10007,
+  "building_template_id" : 1002,
+  "feature_type" : "ENHANCE",
+  "display_level" : 1,
+  "use_level" : 1,
+  "icon_url" : "building_feature_enhance"
+}, {
+  "id" : 10008,
+  "building_template_id" : 1003,
+  "feature_type" : "RECRUIT",
+  "display_level" : 1,
+  "use_level" : 1,
+  "icon_url" : "building_feature_recruit"
+}, {
+  "id" : 10009,
+  "building_template_id" : 1004,
+  "feature_type" : "TRAIN",
+  "display_level" : 1,
+  "use_level" : 1,
+  "icon_url" : "building_feature_train"
+}, {
+  "id" : 10010,
+  "building_template_id" : 1004,
+  "feature_type" : "RESEARCH",
+  "display_level" : 1,
+  "use_level" : 1,
+  "icon_url" : "building_feature_research"
+}, {
+  "id" : 10011,
+  "building_template_id" : 1005,
+  "feature_type" : "TRAIN",
+  "display_level" : 1,
+  "use_level" : 1,
+  "icon_url" : "building_feature_train"
+}, {
+  "id" : 10012,
+  "building_template_id" : 1005,
+  "feature_type" : "RESEARCH",
+  "display_level" : 1,
+  "use_level" : 1,
+  "icon_url" : "building_feature_research"
+}, {
+  "id" : 10013,
+  "building_template_id" : 1006,
+  "feature_type" : "TRAIN",
+  "display_level" : 1,
+  "use_level" : 1,
+  "icon_url" : "building_feature_train"
+}, {
+  "id" : 10014,
+  "building_template_id" : 1006,
+  "feature_type" : "RESEARCH",
+  "display_level" : 1,
+  "use_level" : 1,
+  "icon_url" : "building_feature_research"
+}, {
+  "id" : 10015,
+  "building_template_id" : 1007,
+  "feature_type" : "TRAIN",
+  "display_level" : 1,
+  "use_level" : 1,
+  "icon_url" : "building_feature_train"
+}, {
+  "id" : 10016,
+  "building_template_id" : 1007,
+  "feature_type" : "RESEARCH",
+  "display_level" : 1,
+  "use_level" : 1,
+  "icon_url" : "building_feature_research"
+}, {
+  "id" : 10017,
+  "building_template_id" : 1008,
+  "feature_type" : "TECH",
+  "display_level" : 1,
+  "use_level" : 1,
+  "icon_url" : "building_feature_tech"
+}, {
+  "id" : 10018,
+  "building_template_id" : 1009,
+  "feature_type" : "CHALLENGE",
+  "display_level" : 1,
+  "use_level" : 1,
+  "icon_url" : "building_feature_challenge"
+}, {
+  "id" : 10019,
+  "building_template_id" : 1009,
+  "feature_type" : "BATTLE_ARRAY",
+  "display_level" : 1,
+  "use_level" : 1,
+  "icon_url" : "building_feature_battle_array"
+}, {
+  "id" : 10020,
+  "building_template_id" : 1010,
+  "feature_type" : "RESOURCE_TRADE",
+  "display_level" : 1,
+  "use_level" : 1,
+  "icon_url" : "building_feature_resource_trade"
+}, {
+  "id" : 10021,
+  "building_template_id" : 1011,
+  "feature_type" : "CONQUEST",
+  "display_level" : 1,
+  "use_level" : 1,
+  "icon_url" : "building_feature_conquest"
+}, {
+  "id" : 10022,
+  "building_template_id" : 1011,
+  "feature_type" : "ARENA",
+  "display_level" : 1,
+  "use_level" : 1,
+  "icon_url" : "building_feature_arena"
+}, {
+  "id" : 10023,
+  "building_template_id" : 1012,
+  "feature_type" : "OBSERVE_STARS",
+  "display_level" : 1,
+  "use_level" : 1,
+  "icon_url" : "building_feature_observe_stars"
+}, {
+  "id" : 10024,
+  "building_template_id" : 1012,
+  "feature_type" : "BREAK_STARS",
+  "display_level" : 1,
+  "use_level" : 1,
+  "icon_url" : "building_feature_break_stars"
+}, {
+  "id" : 10025,
+  "building_template_id" : 1012,
+  "feature_type" : "ENLIGHTENMENT",
+  "display_level" : 1,
+  "use_level" : 1,
+  "icon_url" : "building_feature_enlightenment"
+} ]

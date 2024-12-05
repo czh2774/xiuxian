@@ -19,4 +19,12 @@ public interface CharacterItemRepository extends JpaRepository<CharacterItem, Lo
      * @return 角色道具实例列表
      */
     List<CharacterItem> findByCharacterId(Long characterId);
+
+    /**
+     * 根据角色ID和道具模板ID查找道具实例
+     * @param characterId 角色ID
+     * @param itemTemplateId 道具模板ID
+     * @return 角色道具实例列表
+     */
+    List<CharacterItem> findByCharacterIdAndItemTemplateId(Long characterId, Long itemTemplateId);
 }

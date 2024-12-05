@@ -36,4 +36,6 @@ public interface CharacterBuildingRepository extends JpaRepository<CharacterBuil
      * @return 指定状态的建筑实例列表
      */
     List<CharacterBuilding> findByCharacterIdAndBuildingStatus(Long characterId, BuildingStatusType buildingStatus);
+
+    boolean existsByCharacterIdAndLocationId(Long characterId, Long locationId);
 }

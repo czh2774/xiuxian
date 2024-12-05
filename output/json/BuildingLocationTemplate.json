@@ -1,127 +1,127 @@
 [ {
   "id" : 1001,
   "building_template_id" : 1001,
-  "is_unlocked" : true,
-  "ycoordinate" : 7.34,
-  "xcoordinate" : 10.43
+  "required_character_level" : 1,
+  "xcoordinate" : 10.43,
+  "ycoordinate" : 7.34
 }, {
   "id" : 1002,
   "building_template_id" : 1002,
-  "is_unlocked" : true,
-  "ycoordinate" : 3.71,
-  "xcoordinate" : 2.47
+  "required_character_level" : 1,
+  "xcoordinate" : 2.47,
+  "ycoordinate" : 3.71
 }, {
   "id" : 1003,
   "building_template_id" : 1003,
-  "is_unlocked" : true,
-  "ycoordinate" : 4.46,
-  "xcoordinate" : 0.24
+  "required_character_level" : 1,
+  "xcoordinate" : 0.24,
+  "ycoordinate" : 4.46
 }, {
   "id" : 1004,
   "building_template_id" : 1004,
-  "is_unlocked" : true,
-  "ycoordinate" : 2.72,
-  "xcoordinate" : 2.14
+  "required_character_level" : 1,
+  "xcoordinate" : 2.14,
+  "ycoordinate" : 2.72
 }, {
   "id" : 1005,
   "building_template_id" : 1005,
-  "is_unlocked" : false,
-  "ycoordinate" : 1.76,
-  "xcoordinate" : -0.4
+  "required_character_level" : 5,
+  "xcoordinate" : -0.4,
+  "ycoordinate" : 1.76
 }, {
   "id" : 1006,
   "building_template_id" : 1006,
-  "is_unlocked" : true,
-  "ycoordinate" : 1.81,
-  "xcoordinate" : -4.2
+  "required_character_level" : 1,
+  "xcoordinate" : -4.2,
+  "ycoordinate" : 1.81
 }, {
   "id" : 1007,
   "building_template_id" : 1007,
-  "is_unlocked" : true,
-  "ycoordinate" : 0.82,
-  "xcoordinate" : -2.3
+  "required_character_level" : 1,
+  "xcoordinate" : -2.3,
+  "ycoordinate" : 0.82
 }, {
   "id" : 1008,
   "building_template_id" : 1008,
-  "is_unlocked" : true,
-  "ycoordinate" : 1.55,
-  "xcoordinate" : 6.41
+  "required_character_level" : 1,
+  "xcoordinate" : 6.41,
+  "ycoordinate" : 1.55
 }, {
   "id" : 1009,
   "building_template_id" : 1009,
-  "is_unlocked" : true,
-  "ycoordinate" : -0.72,
-  "xcoordinate" : 4.2
+  "required_character_level" : 1,
+  "xcoordinate" : 4.2,
+  "ycoordinate" : -0.72
 }, {
   "id" : 1010,
   "building_template_id" : 1010,
-  "is_unlocked" : false,
-  "ycoordinate" : -1.6,
-  "xcoordinate" : 5.92
+  "required_character_level" : 5,
+  "xcoordinate" : 5.92,
+  "ycoordinate" : -1.6
 }, {
   "id" : 1011,
   "building_template_id" : 1011,
-  "is_unlocked" : false,
-  "ycoordinate" : -1.66,
-  "xcoordinate" : 2.45
+  "required_character_level" : 5,
+  "xcoordinate" : 2.45,
+  "ycoordinate" : -1.66
 }, {
   "id" : 1012,
   "building_template_id" : 1012,
-  "is_unlocked" : false,
-  "ycoordinate" : -2.54,
-  "xcoordinate" : 4.31
+  "required_character_level" : 5,
+  "xcoordinate" : 4.31,
+  "ycoordinate" : -2.54
 }, {
   "id" : 1013,
   "building_template_id" : 1013,
-  "is_unlocked" : false,
-  "ycoordinate" : -1.02,
-  "xcoordinate" : -10.25
+  "required_character_level" : 0,
+  "xcoordinate" : -10.25,
+  "ycoordinate" : -1.02
 }, {
   "id" : 1014,
   "building_template_id" : 1014,
-  "is_unlocked" : false,
-  "ycoordinate" : -2.12,
-  "xcoordinate" : -7.27
+  "required_character_level" : 8,
+  "xcoordinate" : -7.27,
+  "ycoordinate" : -2.12
 }, {
   "id" : 1015,
   "building_template_id" : 1015,
-  "is_unlocked" : false,
-  "ycoordinate" : -7.55,
-  "xcoordinate" : -0.16
+  "required_character_level" : 8,
+  "xcoordinate" : -0.16,
+  "ycoordinate" : -7.55
 }, {
   "id" : 1016,
   "building_template_id" : 1016,
-  "is_unlocked" : false,
-  "ycoordinate" : -6.44,
-  "xcoordinate" : -1.95
+  "required_character_level" : 8,
+  "xcoordinate" : -1.95,
+  "ycoordinate" : -6.44
 }, {
   "id" : 1017,
   "building_template_id" : 1017,
-  "is_unlocked" : false,
-  "ycoordinate" : -2.97,
-  "xcoordinate" : 9.07
+  "required_character_level" : 10,
+  "xcoordinate" : 9.07,
+  "ycoordinate" : -2.97
 }, {
   "id" : 1018,
   "building_template_id" : 1018,
-  "is_unlocked" : false,
-  "ycoordinate" : -1.99,
-  "xcoordinate" : -11.97
+  "required_character_level" : 10,
+  "xcoordinate" : -11.97,
+  "ycoordinate" : -1.99
 }, {
   "id" : 1019,
   "building_template_id" : 1019,
-  "is_unlocked" : false,
-  "ycoordinate" : -3.31,
-  "xcoordinate" : -9.31
+  "required_character_level" : 10,
+  "xcoordinate" : -9.31,
+  "ycoordinate" : -3.31
 }, {
   "id" : 1020,
   "building_template_id" : 1020,
-  "is_unlocked" : false,
-  "ycoordinate" : -8.94,
-  "xcoordinate" : -2.12
+  "required_character_level" : 12,
+  "xcoordinate" : -2.12,
+  "ycoordinate" : -8.94
 }, {
   "id" : 1021,
   "building_template_id" : 1021,
-  "is_unlocked" : false,
-  "ycoordinate" : -7.7,
-  "xcoordinate" : -4.08
+  "required_character_level" : 12,
+  "xcoordinate" : -4.08,
+  "ycoordinate" : -7.7
 } ]

@@ -81,4 +81,10 @@ public interface CooldownRepository extends JpaRepository<Cooldown, Long> {
 
     List<Cooldown> findByEndTimeBeforeAndStatus(LocalDateTime endTime, CooldownStatus status);
 
+    List<Cooldown> findByCharacterIdAndTypeAndStatus(
+        Long characterId, 
+        CooldownType type, 
+        CooldownStatus status
+    );
+
 }

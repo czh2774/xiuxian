@@ -56,4 +56,6 @@ public interface CooldownService {
     boolean completeCooldown(Long characterId, CooldownType type, Long targetId, int queueId);
 
     List<CooldownDTO> getCharacterCooldowns(Long characterId);
+
+    void registerCallback(CooldownType type, CooldownCompletionCallback callback);
 }

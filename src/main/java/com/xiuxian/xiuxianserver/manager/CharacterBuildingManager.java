@@ -2,24 +2,43 @@ package com.xiuxian.xiuxianserver.manager;
 
 import com.xiuxian.xiuxianserver.entity.CharacterBuilding;
 import com.xiuxian.xiuxianserver.entity.BuildingUpgrade;
+import com.xiuxian.xiuxianserver.entity.Cooldown;
 import com.xiuxian.xiuxianserver.enums.BuildingStatusType;
+import com.xiuxian.xiuxianserver.enums.CooldownType;
+import com.xiuxian.xiuxianserver.enums.CooldownStatus;
 import com.xiuxian.xiuxianserver.repository.CharacterBuildingRepository;
 import com.xiuxian.xiuxianserver.repository.BuildingUpgradeRepository;
+import com.xiuxian.xiuxianserver.repository.CooldownRepository;
+import com.xiuxian.xiuxianserver.service.CooldownCompletionCallback;
 import com.xiuxian.xiuxianserver.service.ValidationService;
+import com.xiuxian.xiuxianserver.service.CooldownService;
 import com.xiuxian.xiuxianserver.exception.BusinessException;
+import jakarta.annotation.PostConstruct;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import cn.hutool.core.lang.Snowflake;
+import lombok.RequiredArgsConstructor;
+import com.xiuxian.xiuxianserver.entity.CharacterProfile;
+import com.xiuxian.xiuxianserver.repository.CharacterProfileRepository;
+import lombok.extern.slf4j.Slf4j;
 
 import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
+import com.xiuxian.xiuxianserver.enums.ResourceType;
+import com.xiuxian.xiuxianserver.dto.response.MainCityUpgradeResponse;
+import com.xiuxian.xiuxianserver.mapper.BuildingMapper;
 
+@Slf4j
 @Component
-public class CharacterBuildingManager {
+@RequiredArgsConstructor
+public class CharacterBuildingManager implements CooldownCompletionCallback {
     private static final Logger logger = LoggerFactory.getLogger(CharacterBuildingManager.class);
 
     private final CharacterBuildingRepository characterBuildingRepository;
@@ -27,18 +46,39 @@ public class CharacterBuildingManager {
     private final ValidationService validationService;
     private final ResourceManager resourceManager;
     private final Snowflake snowflake;
+    private final CooldownService cooldownService;
+    private final CooldownRepository cooldownRepository;
+    private final CharacterProfileRepository characterProfileRepository;
+    private final CharacterLevelManager characterLevelManager;
+    private final BuildingMapper buildingMapper;
 
-    public CharacterBuildingManager(
-            CharacterBuildingRepository characterBuildingRepository,
-            BuildingUpgradeRepository buildingUpgradeRepository,
-            ValidationService validationService,
-            ResourceManager resourceManager,
-            Snowflake snowflake) {
-        this.characterBuildingRepository = characterBuildingRepository;
-        this.buildingUpgradeRepository = buildingUpgradeRepository;
-        this.validationService = validationService;
-        this.resourceManager = resourceManager;
-        this.snowflake = snowflake;
+    @PostConstruct
+    public void init() {
+        cooldownService.registerCallback(CooldownType.BUILDING_UPGRADE, this);
+    }
+
+    @Override
+    public void onCooldownComplete(Cooldown cooldown) {
+        try {
+            // 只需要更新建筑状态和队列数量
+            CharacterBuilding building = characterBuildingRepository.findById(cooldown.getTargetId())
+                .orElseThrow(() -> new BusinessException("建筑不存在"));
+                
+            building.setBuildingStatus(BuildingStatusType.IDLE);
+            building.setActionStartTime(null);
+            characterBuildingRepository.save(building);
+            
+            // 减少队列数量
+            CharacterProfile character = characterProfileRepository.findById(cooldown.getCharacterId())
+                .orElseThrow(() -> new BusinessException("角色不存在"));
+                
+            character.setCurrentBuildingUpgradeQueues(character.getCurrentBuildingUpgradeQueues() - 1);
+            characterProfileRepository.save(character);
+            
+        } catch (Exception e) {
+            log.error("Failed to complete building upgrade - buildingId: {}, error: {}", 
+                cooldown.getTargetId(), e.getMessage(), e);
+        }
     }
 
     /**
@@ -46,37 +86,78 @@ public class CharacterBuildingManager {
      */
     @Transactional
     public CharacterBuilding startUpgradeBuilding(Long buildingId) {
+        // 1. 获取建筑和升级信息
         CharacterBuilding building = characterBuildingRepository.findById(buildingId)
-                .orElseThrow(() -> new BusinessException("建筑不存在"));
-
-        // 检查建筑状态
+            .orElseThrow(() -> new BusinessException("建筑不存在"));
+            
+        // 2. 检查建筑状态
         if (building.getBuildingStatus() != BuildingStatusType.IDLE) {
-            throw new BusinessException("建筑状态异常，无法升级");
+            String currentStatus = building.getBuildingStatus().getDescription();
+            throw new BusinessException(
+                String.format("建筑当前状态为[%s]，只有空闲状态的建筑才能升级", currentStatus)
+            );
         }
 
-        // 获取下一级建筑升级信息
+        // 3. 检查角色等级限制（主城除外）
+        if (building.getBuildingTemplateId() != 1001L) {
+            CharacterProfile character = characterProfileRepository.findById(building.getCharacterId())
+                .orElseThrow(() -> new BusinessException("角色不存在"));
+                
+            int nextLevel = building.getCurrentLevel() + 1;
+            if (nextLevel > character.getLevel()) {
+                throw new BusinessException("建筑等级不能超过角色等级");
+            }
+        }
+        
+        // 3. 检查队列上限
+        CharacterProfile character = characterProfileRepository.findById(building.getCharacterId())
+            .orElseThrow(() -> new BusinessException("角色不存在"));
+            
+        if (character.getCurrentBuildingUpgradeQueues() >= character.getMaxBuildingUpgradeQueues()) {
+            throw new BusinessException("建筑升级队列已满");
+        }
+            
+        // 4. 获取可用的队列ID
+        int queueId = getAvailableQueueId(building.getCharacterId());
+        if (queueId == -1) {
+            throw new BusinessException("没有可用的升级队列");
+        }
+            
         BuildingUpgrade nextLevelUpgrade = buildingUpgradeRepository
-                .findByBuildingTemplateIdAndLevel(building.getBuildingTemplateId(), building.getCurrentLevel() + 1)
-                .orElseThrow(() -> new BusinessException("已达到最大等级"));
-
-        // 验证资源是否足够
+            .findByBuildingTemplateIdAndLevel(building.getBuildingTemplateId(), building.getCurrentLevel() + 1)
+            .orElseThrow(() -> new BusinessException("已达到最大等级"));
+            
+        // 3. 验证和扣除资源
         validateUpgradeResources(building.getCharacterId(), nextLevelUpgrade);
-
-        // 验证升级条件
-        if (!validationService.validateConditions(building.getCharacterId(), nextLevelUpgrade.getUpgradeRequirements())) {
-            throw new BusinessException("不满足升级条件");
-        }
-
+        
+        // 记录资源变化
+        Map<String, Integer> resourceChanges = new HashMap<>();
+        resourceChanges.put("food", -nextLevelUpgrade.getFoodCost());
+        resourceChanges.put("wood", -nextLevelUpgrade.getWoodCost());
+        resourceChanges.put("ironOre", -nextLevelUpgrade.getIronCost());
+        
         // 扣除资源
         deductUpgradeResources(building.getCharacterId(), nextLevelUpgrade);
-
-        // 设置建筑为升级状态
+        
+        // 立即提升建筑等级
+        building.setCurrentLevel(building.getCurrentLevel() + 1);
         building.setBuildingStatus(BuildingStatusType.UPGRADING);
         building.setActionStartTime(LocalDateTime.now());
-
-        logger.info("开始升级建筑，建筑ID: {}, 角色ID: {}, 当前等级: {}", 
-                   buildingId, building.getCharacterId(), building.getCurrentLevel());
-
+        building.setLastModifiedTime(LocalDateTime.now());
+        
+        // 启动冷却，用于跟踪建筑状态恢复
+        cooldownService.startCooldown(
+            building.getCharacterId(),
+            CooldownType.BUILDING_UPGRADE,
+            buildingId,
+            nextLevelUpgrade.getUpgradeTime(),
+            queueId
+        );
+        
+        // 更新队列数量
+        character.setCurrentBuildingUpgradeQueues(character.getCurrentBuildingUpgradeQueues() + 1);
+        characterProfileRepository.save(character);
+        
         return characterBuildingRepository.save(building);
     }
 
@@ -84,34 +165,49 @@ public class CharacterBuildingManager {
      * 完成建筑升级
      */
     @Transactional
-    public CharacterBuilding completeUpgrade(Long buildingId) {
+    public MainCityUpgradeResponse completeUpgrade(Long buildingId) {
         CharacterBuilding building = characterBuildingRepository.findById(buildingId)
                 .orElseThrow(() -> new BusinessException("建筑不存在"));
-
-        if (building.getBuildingStatus() != BuildingStatusType.UPGRADING) {
-            throw new BusinessException("建筑不在升级状态");
-        }
-
-        BuildingUpgrade upgrade = buildingUpgradeRepository
-                .findByBuildingTemplateIdAndLevel(building.getBuildingTemplateId(), building.getCurrentLevel() + 1)
-                .orElseThrow(() -> new BusinessException("升级信息不存在"));
-
-        // 检查升级时间是否已到
-        LocalDateTime expectedCompleteTime = building.getActionStartTime().plusSeconds(upgrade.getUpgradeTime());
-        if (LocalDateTime.now().isBefore(expectedCompleteTime)) {
-            throw new BusinessException("升级尚未完成");
-        }
-
+            
         // 完成升级
         building.setCurrentLevel(building.getCurrentLevel() + 1);
         building.setBuildingStatus(BuildingStatusType.IDLE);
         building.setActionStartTime(null);
         building.setLastModifiedTime(LocalDateTime.now());
+        
+        MainCityUpgradeResponse response = new MainCityUpgradeResponse();
+        Map<String, Integer> resourceChanges = new HashMap<>();
 
-        logger.info("完成建筑升级，建筑ID: {}, 角色ID: {}, 新等级: {}", 
-                   buildingId, building.getCharacterId(), building.getCurrentLevel());
+        // 记录资源消耗
+        BuildingUpgrade upgrade = buildingUpgradeRepository
+            .findByBuildingTemplateIdAndLevel(building.getBuildingTemplateId(), building.getCurrentLevel())
+            .orElseThrow(() -> new BusinessException("升级配置不存在"));
 
-        return characterBuildingRepository.save(building);
+        resourceChanges.put("food", -upgrade.getFoodCost());
+        resourceChanges.put("wood", -upgrade.getWoodCost());
+        resourceChanges.put("ironOre", -upgrade.getIronCost());
+        
+        response.setResourceChanges(resourceChanges);
+        
+        // 如果是主城建筑(ID: 1001)，同步提升角色等级
+        if (building.getBuildingTemplateId() == 1001L) {
+            // 处理等提升，获取新建筑和奖励
+            CharacterLevelManager.LevelUpResult levelUpResult = characterLevelManager.levelUp(
+                building.getCharacterId(), 
+                building.getCurrentLevel()
+            );
+            
+            // ��置响应数据
+            response.setCharacter(levelUpResult.getCharacterInfo());
+            response.setBuildings(levelUpResult.getNewBuildings());
+            response.setRewards(levelUpResult.getRewards());
+        }
+        
+        // 设置升级后的建筑信息
+        response.setBuilding(buildingMapper.toBuildingInfo(building));
+        
+        characterBuildingRepository.save(building);
+        return response;
     }
 
     /**
@@ -119,34 +215,33 @@ public class CharacterBuildingManager {
      */
     private void validateUpgradeResources(Long characterId, BuildingUpgrade upgrade) {
         // 验证粮食
-        if (!resourceManager.hasSufficientResources(characterId, "FOOD", upgrade.getFoodCost())) {
+        if (!resourceManager.hasSufficientResources(characterId, ResourceType.FOOD.getFieldName(), upgrade.getFoodCost())) {
             throw new BusinessException("粮食不足");
         }
         // 验证木材
-        if (!resourceManager.hasSufficientResources(characterId, "WOOD", upgrade.getWoodCost())) {
+        if (!resourceManager.hasSufficientResources(characterId, ResourceType.WOOD.getFieldName(), upgrade.getWoodCost())) {
             throw new BusinessException("木材不足");
         }
         // 验证铁矿
-        if (!resourceManager.hasSufficientResources(characterId, "IRON", upgrade.getIronCost())) {
+        if (!resourceManager.hasSufficientResources(characterId, ResourceType.IRON_ORE.getFieldName(), upgrade.getIronCost())) {
             throw new BusinessException("铁矿不足");
         }
     }
 
     /**
-     * 扣除升级所需资源
+     * 扣除升级需资源
      */
     private void deductUpgradeResources(Long characterId, BuildingUpgrade upgrade) {
-        Map<String, Integer> resourceCosts = new HashMap<>();
-        resourceCosts.put("FOOD", upgrade.getFoodCost());
-        resourceCosts.put("WOOD", upgrade.getWoodCost());
-        resourceCosts.put("IRON", upgrade.getIronCost());
+        Map<ResourceType, Integer> resourceCosts = new HashMap<ResourceType, Integer>();
+        resourceCosts.put(ResourceType.FOOD, upgrade.getFoodCost());
+        resourceCosts.put(ResourceType.WOOD, upgrade.getWoodCost());
+        resourceCosts.put(ResourceType.IRON_ORE, upgrade.getIronCost());
 
-        // 遍历并扣除每种资源
         resourceCosts.forEach((resourceType, amount) -> {
             if (amount > 0) {
-                resourceManager.deductResources(characterId, resourceType, amount);
+                resourceManager.deductResources(characterId, resourceType.getFieldName(), amount);
                 logger.debug("扣除资源 - 角色ID: {}, 资源类型: {}, 数量: {}", 
-                           characterId, resourceType, amount);
+                    characterId, resourceType.getDescription(), amount);
             }
         });
     }
@@ -156,7 +251,7 @@ public class CharacterBuildingManager {
      */
     @Transactional
     public CharacterBuilding createBuilding(Long characterId, Long buildingTemplateId, Long locationId) {
-        logger.info("创建角色建筑实例，角色ID: {}, 模板ID: {}", characterId, buildingTemplateId);
+        logger.info("创建角色筑实例，角色ID: {}, 模板ID: {}", characterId, buildingTemplateId);
 
         // 获取建筑一级的升级信息
         BuildingUpgrade initialUpgrade = buildingUpgradeRepository
@@ -185,5 +280,29 @@ public class CharacterBuildingManager {
         building.setLastModifiedTime(LocalDateTime.now());
 
         return characterBuildingRepository.save(building);
+    }
+
+    private int getAvailableQueueId(Long characterId) {
+        // 获取角色当前的级队列数量
+        int maxQueues = 2; // 最大队列数，可以从配置或角色属性获取
+        List<Cooldown> activeCooldowns = cooldownRepository
+            .findByCharacterIdAndTypeAndStatus(
+                characterId, 
+                CooldownType.BUILDING_UPGRADE, 
+                CooldownStatus.ACTIVE
+            );
+            
+        // 找到未使用的最小队��ID
+        Set<Integer> usedQueueIds = activeCooldowns.stream()
+            .map(Cooldown::getQueueId)
+            .collect(Collectors.toSet());
+            
+        for (int i = 1; i <= maxQueues; i++) {
+            if (!usedQueueIds.contains(i)) {
+                return i;
+            }
+        }
+        
+        return -1; // 没有可用队列
     }
 }

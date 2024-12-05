@@ -8,6 +8,8 @@ import com.xiuxian.xiuxianserver.manager.CharacterBuildingManager;
 import com.xiuxian.xiuxianserver.mapper.CharacterBuildingMapper;
 import com.xiuxian.xiuxianserver.util.CustomApiResponse;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import jakarta.servlet.http.HttpServletRequest;
@@ -16,16 +18,22 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import jakarta.validation.Valid;
 
 import java.util.List;
 import java.util.Map;
 
 import com.xiuxian.xiuxianserver.entity.CharacterBuilding;
+import com.xiuxian.xiuxianserver.exception.BusinessException;
+import lombok.extern.slf4j.Slf4j;
+import com.xiuxian.xiuxianserver.dto.BuildingUpgradeResponse;
+import com.xiuxian.xiuxianserver.dto.response.MainCityUpgradeResponse;
 
 /**
  * CharacterBuildingController
  * 处理与角色建筑相关的API请求
  */
+@Slf4j
 @RestController
 @RequestMapping("/character/building")
 public class CharacterBuildingController {
@@ -51,10 +59,10 @@ public class CharacterBuildingController {
      * @param requestBody 请求体，包含角色ID
      * @return 角色建筑列表的响应
      */
-    @Operation(summary = "获取角色的所有建筑信息", description = "根据角色ID获取所有建筑信息")
+    @Operation(summary = "获取角色的所有建筑信息", description = "根据角��ID获取所有建筑信息")
     @ApiResponses({
             @ApiResponse(responseCode = "200", description = "成功返回角色建筑信息"),
-            @ApiResponse(responseCode = "404", description = "角色建筑信息未找到"),
+            @ApiResponse(responseCode = "404", description = "色建筑信息未找到"),
             @ApiResponse(responseCode = "500", description = "服务器内部错误")
     })
     @PostMapping("/list")
@@ -80,7 +88,7 @@ public class CharacterBuildingController {
         try {
             // 调用服务层获取建筑信息
             buildings = characterBuildingService.getCharacterBuildingsByCharacterId(characterId);
-            logger.info("成功获取角色建筑信息，角色ID: {}", characterId);
+            logger.info("成功获取角色建筑息，角色ID: {}", characterId);
         } catch (Exception e) {
             logger.error("获取角色建筑信息时发生错误，角色ID: {}, 错误: {}", characterId, e.getMessage());
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(
@@ -147,18 +155,82 @@ public class CharacterBuildingController {
     public ResponseEntity<CustomApiResponse<CharacterBuildingDTO>> updateCharacterBuildingStatus(
             @RequestBody BuildingStatusUpdateDTO updateDTO, 
             HttpServletRequest request) {
-        logger.info("更新角色建筑状态,建筑ID: {}", updateDTO.getBuildingId());
-
         try {
-            CharacterBuilding building = buildingManager.startUpgradeBuilding(updateDTO.getBuildingId());
+            // 1. 调用管理器处理升级
+            CharacterBuilding building = buildingManager.startUpgradeBuilding(
+                updateDTO.getBuildingId()
+            );
+            
+            // 2. 转换并返回结果
             CharacterBuildingDTO dto = buildingMapper.toDTO(building);
-            logger.info("成功更新角色建筑状态,建筑ID: {}", updateDTO.getBuildingId());
-            return ResponseEntity.ok(CustomApiResponse.success("成功更新角色建筑状态", dto, request.getRequestURI()));
+            return ResponseEntity.ok(CustomApiResponse.success(
+                "成功开始建筑升级", 
+                dto, 
+                request.getRequestURI()
+            ));
+            
+        } catch (BusinessException e) {
+            log.warn("建筑升级业务异常: {}", e.getMessage());
+            return ResponseEntity.badRequest()
+                .body(CustomApiResponse.error(400, e.getMessage(), request.getRequestURI()));
         } catch (Exception e) {
-            logger.error("更新角色建筑状态时发生错误，错误: {}", e.getMessage());
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body(CustomApiResponse.error(HttpStatus.INTERNAL_SERVER_ERROR.value(), 
-                            "更新角色建筑状态失败", request.getRequestURI()));
+            log.error("建筑升级系统异常: ", e);
+            return ResponseEntity.status(500)
+                .body(CustomApiResponse.error(500, "系统错误", request.getRequestURI()));
         }
+    }
+
+    @PostMapping("/upgrade")
+    @Operation(
+        summary = "升级建筑", 
+        description = "开始建筑升级，服务端会自动分配升级队列"
+    )
+    @ApiResponses({
+        @ApiResponse(
+            responseCode = "200", 
+            description = "成功开始建筑升级",
+            content = @Content(mediaType = "application/json", schema = @Schema(implementation = BuildingUpgradeResponse.class))
+        ),
+        @ApiResponse(responseCode = "400", description = "请求参数错误"),
+        @ApiResponse(responseCode = "404", description = "建筑不存在"),
+        @ApiResponse(responseCode = "500", description = "服务器内部错误")
+    })
+    public ResponseEntity<CustomApiResponse<CharacterBuildingDTO>> upgradeBuilding(
+            @Valid @RequestBody 
+            @io.swagger.v3.oas.annotations.parameters.RequestBody(
+                description = "建筑升级请求",
+                required = true,
+                content = @Content(schema = @Schema(implementation = BuildingStatusUpdateDTO.class))
+            )
+            BuildingStatusUpdateDTO updateDTO, 
+            HttpServletRequest request) {
+        try {
+            CharacterBuilding building = buildingManager.startUpgradeBuilding(
+                updateDTO.getBuildingId()
+            );
+            
+            CharacterBuildingDTO dto = buildingMapper.toDTO(building);
+            return ResponseEntity.ok(CustomApiResponse.success(
+                "成功开始建筑升级", 
+                dto, 
+                request.getRequestURI()
+            ));
+            
+        } catch (BusinessException e) {
+            log.warn("建筑升级业务异常: {}", e.getMessage());
+            return ResponseEntity.badRequest()
+                .body(CustomApiResponse.error(400, e.getMessage(), request.getRequestURI()));
+        } catch (Exception e) {
+            log.error("建筑升级系统异常: ", e);
+            return ResponseEntity.status(500)
+                .body(CustomApiResponse.error(500, "系统错误", request.getRequestURI()));
+        }
+    }
+
+    @PutMapping("/{buildingId}/complete-upgrade")
+    public ResponseEntity<MainCityUpgradeResponse> completeUpgrade(
+            @PathVariable Long buildingId) {
+        MainCityUpgradeResponse response = buildingManager.completeUpgrade(buildingId);
+        return ResponseEntity.ok(response);
     }
 }
